@@ -261,7 +261,6 @@ ul{margin:0;padding:0;list-style:none}
 .anim{animation:fadeUp .38s cubic-bezier(.32,.72,.28,1) both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .d1{animation-delay:.04s}.d2{animation-delay:.08s}.d3{animation-delay:.12s}.d4{animation-delay:.16s}
-/* CARTEIRA / ID / HISTÓRICO / ESCORE / DIÁRIO / TUTOR / PS / ALIMENTOS / MARCAS / IDADE / DOENÇAS / BACKUP */
 .carteira{background:linear-gradient(180deg,#FFFFFF 0%,#FFFCF8 100%);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(27,36,52,.10);border:2px solid #FFE3D4;margin-bottom:16px}
 .carteira-header{background:linear-gradient(135deg,#FF7A45,#F0521B);padding:18px;color:#fff;position:relative;overflow:hidden}
 .carteira-header .ch-titulo{font-size:9.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;opacity:.85;position:relative;z-index:2}
@@ -328,7 +327,6 @@ ul{margin:0;padding:0;list-style:none}
 .hist-card .hc-body{flex:1;min-width:0}
 .hist-card .hc-title{font-size:13.5px;font-weight:800;line-height:1.3}
 .hist-card .hc-sub{font-size:11px;color:var(--muted);font-weight:700;margin-top:3px}
-.hist-card .hc-desc{font-size:11.5px;color:#4C5768;margin-top:6px;line-height:1.5}
 .hist-card .hc-del{position:absolute;top:9px;right:9px;width:26px;height:26px;border-radius:9px;background:#F8FAFD;display:grid;place-items:center;color:#C7CFDD}
 .hist-card .hc-del svg{width:13px;height:13px;fill:currentColor}
 .hist-card.tipo-consulta .hc-icon{background:var(--blue-soft);color:#3157C9}
@@ -436,9 +434,7 @@ ul{margin:0;padding:0;list-style:none}
 .backup-hist .bh-btn.del{background:var(--danger-soft);color:var(--danger);padding:7px 9px}
 .backup-hist .bh-btn.del svg{width:13px;height:13px;fill:currentColor}
 
-/* ============================================================
-   IA VET — CHAT
-============================================================ */
+/* CHAT */
 .chat-wrap{display:flex;flex-direction:column;height:100%;background:linear-gradient(180deg,#F8F9FD 0%,#F4F6FB 100%)}
 .chat-header{padding:14px 16px 12px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;position:relative;overflow:hidden;flex-shrink:0}
 .chat-header::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.10)}
@@ -447,15 +443,14 @@ ul{margin:0;padding:0;list-style:none}
 .chat-header .ia-nome{font-size:15.5px;font-weight:800;letter-spacing:-.2px}
 .chat-header .ia-status{font-size:11px;opacity:.88;font-weight:600;margin-top:2px;display:flex;align-items:center;gap:5px}
 .chat-header .ia-status .ia-dot-online{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 2px rgba(74,222,128,.3)}
+.chat-header .ia-status .ia-dot-offline{width:7px;height:7px;border-radius:50%;background:#FFB020;box-shadow:0 0 0 2px rgba(255,176,32,.3)}
 .chat-header-actions{display:flex;gap:6px;margin-left:auto}
 .chat-header-actions button{width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.18);display:grid;place-items:center}
 .chat-header-actions button svg{width:16px;height:16px;fill:#fff}
 .chat-pet-context{padding:8px 14px 10px;background:rgba(255,255,255,.10);position:relative;z-index:2;margin:10px -16px -12px;display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.10)}
 .chat-pet-context .pc-chip{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.18);padding:4px 9px;border-radius:8px;letter-spacing:.2px}
-.chat-pet-context .pc-chip svg{width:11px;height:11px;fill:currentColor}
 .chat-body{flex:1;overflow-y:auto;padding:16px 14px;scroll-behavior:smooth;display:flex;flex-direction:column;gap:12px;-webkit-overflow-scrolling:touch}
 .chat-body::-webkit-scrollbar{width:0}
-
 .msg-row{display:flex;gap:9px;align-items:flex-end;animation:msgIn .28s cubic-bezier(.32,.72,.28,1) both}
 @keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .msg-row.user{flex-direction:row-reverse}
@@ -466,9 +461,7 @@ ul{margin:0;padding:0;list-style:none}
 .msg-row.ia .msg-bubble{background:#fff;border:1px solid rgba(234,238,246,.9);border-bottom-left-radius:6px;color:#1B2434}
 .msg-row.user .msg-bubble{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff;border-bottom-right-radius:6px}
 .msg-bubble strong{font-weight:800}
-.msg-bubble .msg-list{margin:8px 0 0;padding:0;list-style:none}
-.msg-bubble .msg-list li{padding:4px 0 4px 16px;position:relative;font-size:12.5px}
-.msg-bubble .msg-list li::before{content:"•";position:absolute;left:4px;color:#9B5DE5;font-weight:800}
+.msg-bubble em{font-style:italic;color:#7B3FE5}
 .msg-time{font-size:9.5px;color:var(--muted);font-weight:700;margin-top:5px;text-align:right;opacity:.7}
 .msg-row.user .msg-time{color:rgba(255,255,255,.65)}
 .msg-tag{display:inline-block;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;padding:3px 7px;border-radius:6px;margin-bottom:6px}
@@ -476,19 +469,16 @@ ul{margin:0;padding:0;list-style:none}
 .msg-tag.alerta{background:#FFE9EF;color:#C42B50}
 .msg-tag.dica{background:#E4F8F5;color:#12897A}
 .msg-tag.emergencia{background:linear-gradient(135deg,#EF476F,#C42B50);color:#fff}
-
 .typing{display:flex;gap:4px;align-items:center;padding:13px 16px}
 .typing span{width:7px;height:7px;border-radius:50%;background:#9B5DE5;opacity:.4;animation:typingAnim 1.4s infinite}
 .typing span:nth-child(2){animation-delay:.2s}
 .typing span:nth-child(3){animation-delay:.4s}
 @keyframes typingAnim{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
-
 .chat-suggestions{padding:0 14px 12px;overflow-x:auto;scrollbar-width:none;flex-shrink:0}
 .chat-suggestions::-webkit-scrollbar{display:none}
 .sug-row{display:flex;gap:7px;padding-bottom:2px}
 .sug-chip{flex-shrink:0;padding:9px 13px;border-radius:12px;background:#fff;border:1.5px solid #E9E0F8;color:#6B31B8;font-size:11.5px;font-weight:800;transition:all .15s ease;white-space:nowrap}
 .sug-chip:active{transform:scale(.96);background:#F3EAFE}
-
 .chat-input-wrap{padding:10px 14px calc(10px + var(--safe-b));background:#fff;border-top:1px solid var(--line);flex-shrink:0}
 .chat-input-row{display:flex;gap:8px;align-items:flex-end;background:#F1F4F9;border-radius:22px;padding:6px 6px 6px 16px;transition:background .2s ease}
 .chat-input-row:focus-within{background:#EDE9FB}
@@ -503,7 +493,7 @@ ul{margin:0;padding:0;list-style:none}
 .chat-welcome h2{margin:0 0 8px;font-size:19px;font-weight:800;letter-spacing:-.3px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .chat-welcome p{margin:0 0 18px;font-size:13px;color:var(--muted);line-height:1.6;font-weight:600}
 .chat-welcome .cw-cat{margin-top:20px;display:flex;flex-direction:column;gap:8px;text-align:left}
-.chat-welcome .cw-cat-btn{display:flex;align-items:center;gap:11px;padding:12px 13px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);transition:transform .13s ease}
+.chat-welcome .cw-cat-btn{display:flex;align-items:center;gap:11px;padding:12px 13px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
 .chat-welcome .cw-cat-btn:active{transform:scale(.98)}
 .chat-welcome .cw-cat-ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:17px;flex-shrink:0}
 .chat-welcome .cw-cat-body{flex:1;text-align:left}
@@ -511,8 +501,11 @@ ul{margin:0;padding:0;list-style:none}
 .chat-welcome .cw-cat-desc{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
 .chat-welcome .cw-cat-arrow{width:16px;height:16px;fill:#C7CFDD}
 .chat-config-warn{margin:14px;padding:12px 14px;background:linear-gradient(140deg,#FFF6F0,#FFF0E8);border:1.5px solid #FFE3D4;border-radius:14px;font-size:11.5px;line-height:1.55;color:#8A6A55;font-weight:600;display:flex;gap:9px;align-items:flex-start}
+.chat-config-warn.ok{background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border-color:#C7E8E2;color:#2C7A70}
 .chat-config-warn .cw-ic{font-size:16px;flex-shrink:0;line-height:1.2}
-.chat-config-warn strong{color:#F05A1E}
+.api-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:9px;font-size:10.5px;font-weight:800;letter-spacing:.3px;text-transform:uppercase}
+.api-badge.ok{background:#E4F8F5;color:#12897A}
+.api-badge.warn{background:#FFF6E2;color:#B47800}
 
 @media(max-width:340px){
   .quick span{font-size:8.5px}
@@ -598,7 +591,6 @@ ul{margin:0;padding:0;list-style:none}
       <div id="doencasContent"></div>
     </section>
 
-    <!-- ============ PAGE 7 — IA VET ============ -->
     <section class="page chat-page" id="page-7">
       <div class="chat-wrap">
         <div class="chat-header">
@@ -606,7 +598,7 @@ ul{margin:0;padding:0;list-style:none}
             <div class="ia-avatar">🐾</div>
             <div>
               <div class="ia-nome">Dr. Pet IA</div>
-              <div class="ia-status"><span class="ia-dot-online"></span> <span id="iaStatus">Veterinário online</span></div>
+              <div class="ia-status" id="iaStatusRow"></div>
             </div>
             <div class="chat-header-actions">
               <button onclick="abrirModalConfigIA()" aria-label="Configurações">
@@ -619,11 +611,8 @@ ul{margin:0;padding:0;list-style:none}
           </div>
           <div class="chat-pet-context" id="chatPetContext"></div>
         </div>
-
         <div class="chat-body" id="chatBody"></div>
-
         <div class="chat-suggestions" id="chatSuggestions"></div>
-
         <div class="chat-input-wrap">
           <div class="chat-input-row">
             <textarea class="chat-input" id="chatInput" placeholder="Pergunte sobre seu pet..." rows="1" oninput="autoResizeChat(this)" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();enviarMensagem()}"></textarea>
@@ -693,11 +682,20 @@ ul{margin:0;padding:0;list-style:none}
 
 <script>
 /* ============================================================
-   BANCO DE DADOS E ESTADO
+   🔑 CONFIGURAÇÃO PADRÃO DA IA
 ============================================================ */
-const DB_KEY = 'petvida_v8';
+/* API Key pré-configurada do usuário. 
+   ⚠️ AVISO: Esta chave foi compartilhada publicamente. 
+   Recomenda-se revogá-la e gerar uma nova no painel do provedor. */
+const DEFAULT_IA_CONFIG = {
+  provider: 'gemini',
+  apiKey: 'AQ.Ab8RN6KHgKVv4nH5XrXOTFrBYs9BWuBeXAwym17-W8yCsZ4h0g',
+  model: 'gemini-1.5-flash'
+};
+
+const DB_KEY = 'petvida_v9';
 const BACKUP_KEY = 'petvida_backups';
-const IA_CONFIG_KEY = 'petvida_ia_config';
+const IA_CONFIG_KEY = 'petvida_ia_config_v9';
 const CHAT_HISTORY_KEY = 'petvida_chat_history';
 const MAX_AUTO_BACKUPS = 5;
 
@@ -709,12 +707,11 @@ let state = {
   chat: [], chatTyping: false
 };
 
-let iaConfig = {
-  provider: 'local',   // 'local' | 'openai' | 'gemini' | 'anthropic'
-  apiKey: '',
-  model: ''
-};
+let iaConfig = Object.assign({}, DEFAULT_IA_CONFIG);
 
+/* ============================================================
+   PERSISTÊNCIA
+============================================================ */
 function saveDB(){
   try{
     state.ultimaAtualizacao = new Date().toISOString();
@@ -744,8 +741,17 @@ function saveIAConfig(){ try{ localStorage.setItem(IA_CONFIG_KEY, JSON.stringify
 function loadIAConfig(){
   try{
     const raw = localStorage.getItem(IA_CONFIG_KEY);
-    if(raw){ const d = JSON.parse(raw); iaConfig = Object.assign(iaConfig, d); }
-  }catch(e){}
+    if(raw){
+      const d = JSON.parse(raw);
+      /* Se o usuário já salvou uma config, ela tem prioridade;
+         caso contrário usa o DEFAULT_IA_CONFIG com a chave pré-configurada */
+      iaConfig = Object.assign({}, DEFAULT_IA_CONFIG, d);
+    }
+    /* Se não havia nada salvo, salva o padrão automaticamente */
+    else {
+      saveIAConfig();
+    }
+  }catch(e){ iaConfig = Object.assign({}, DEFAULT_IA_CONFIG); }
 }
 function saveChatHistory(){
   try{
@@ -761,7 +767,7 @@ function loadChatHistory(){
 }
 
 /* ============================================================
-   SISTEMA DE BACKUP
+   BACKUP
 ============================================================ */
 function getBackups(){
   try{
@@ -815,7 +821,6 @@ function formatarTamanho(bytes){
   if(bytes < 1024*1024) return (bytes/1024).toFixed(1) + ' KB';
   return (bytes/1024/1024).toFixed(2) + ' MB';
 }
-
 function abrirModalBackup(){
   const backups = getBackups();
   const totalPets = state.pets.length;
@@ -876,7 +881,7 @@ function abrirModalBackup(){
 function salvarAgora(){ saveDB(); toast('Dados salvos! ✅'); setTimeout(()=> abrirModalBackup(), 400); }
 function exportarBackup(){
   try{
-    const dados = {app:'PetVida', versao:'v8', exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
+    const dados = {app:'PetVida', versao:'v9', exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
     const json = JSON.stringify(dados, null, 2);
     const blob = new Blob([json], {type: 'application/json;charset=utf-8'});
     const url = URL.createObjectURL(blob);
@@ -922,7 +927,7 @@ function previewImport(dados, nomeArq){
       </div>
     </div>
     <div class="blk"><h4><span class="b-ic">🐾</span>Pets no backup</h4>${lista || '<p>Nenhum pet.</p>'}</div>
-    <div class="blk warn"><h4><span class="b-ic">⚠️</span>Atenção</h4><p>Os <strong>${petsAtuais} pet${petsAtuais !== 1 ? 's' : ''}</strong> atuais serão substituídos pelos <strong>${qtdPets} pet${qtdPets !== 1 ? 's' : ''}</strong> do backup. Um backup automático foi criado antes.</p></div>`,
+    <div class="blk warn"><h4><span class="b-ic">⚠️</span>Atenção</h4><p>Os <strong>${petsAtuais} pet${petsAtuais !== 1 ? 's' : ''}</strong> atuais serão substituídos pelos <strong>${qtdPets} pet${qtdPets !== 1 ? 's' : ''}</strong> do backup.</p></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="confirmarImport(${JSON.stringify(JSON.stringify(dados))})">Restaurar backup</button>`);
 }
@@ -945,7 +950,7 @@ function confirmarImport(dadosJson){
 }
 function compartilharBackup(){
   try{
-    const dados = {app:'PetVida', versao:'v8', exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
+    const dados = {app:'PetVida', versao:'v9', exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
     const json = JSON.stringify(dados);
     const blob = new Blob([json], {type: 'application/json;charset=utf-8'});
     const file = new File([blob], `petvida-backup-${new Date().toISOString().slice(0,10)}.json`, {type: 'application/json'});
@@ -966,10 +971,7 @@ function restaurarBackup(id){
         <div class="bs-info">${new Date(b.data).toLocaleString('pt-BR')}<br>${b.qtdPets} pet${b.qtdPets !== 1 ? 's' : ''} · ${formatarTamanho(b.tamanho)} · ${b.motivo}</div>
       </div>
     </div>
-    <div class="blk warn"><h4><span class="b-ic">⚠️</span>Atenção</h4><p>Os dados atuais serão substituídos. Será criado um backup automático antes.</p></div>
-    <div class="blk purple"><h4><span class="b-ic">🐾</span>Pets neste backup</h4>
-      <ul>${b.dados.slice(0,5).map(p=>`<li>${p.emoji || '🐾'} <strong>${esc(p.nome)}</strong> · ${esc(p.raca||'SRD')}</li>`).join('')}${b.dados.length > 5 ? `<li>... e mais ${b.dados.length-5}</li>` : ''}</ul>
-    </div>`,
+    <div class="blk warn"><h4><span class="b-ic">⚠️</span>Atenção</h4><p>Os dados atuais serão substituídos.</p></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="confirmarRestauracaoBackup('${id}')">Restaurar</button>`);
 }
@@ -1122,61 +1124,59 @@ function padraoQr(pet, size){
 }
 
 /* ============================================================
-   PROTOCOLO VACINAL
+   PROTOCOLO / MARCAS / RECOMENDAÇÕES
 ============================================================ */
 const PROTOCOLO = {
   cao: [
-    {id:'verm1',   nome:'Vermifugação inicial',        sem:2,  obs:'Primeira dose a partir de 15 dias de vida.', tipo:'vermifugo'},
-    {id:'v10_1',   nome:'V10 (Polivalente) — 1ª dose', sem:6,  obs:'Protege contra cinomose, parvovirose, hepatite, leptospirose.', tipo:'v10'},
-    {id:'giar1',   nome:'Giárdia — 1ª dose',           sem:8,  obs:'Indicada em regiões com alta incidência.', tipo:'giardia'},
-    {id:'v10_2',   nome:'V10 — 2ª dose',               sem:9,  obs:'Intervalo de 21 a 30 dias.', tipo:'v10'},
-    {id:'gripe1',  nome:'Gripe Canina (KC)',           sem:10, obs:'Essencial para cães que frequentam creches e parques.', tipo:'gripe'},
-    {id:'v10_3',   nome:'V10 — 3ª dose',               sem:12, obs:'Fecha o protocolo inicial.', tipo:'v10'},
-    {id:'rab1',    nome:'Antirrábica — 1ª dose',       sem:16, obs:'Obrigatória por lei.', tipo:'rabica'},
-    {id:'v10ref',  nome:'Reforço V10 (anual)',         sem:52, obs:'Reforço anual.', tipo:'v10'},
-    {id:'rabref',  nome:'Reforço Antirrábica (anual)', sem:52, obs:'Reforço anual obrigatório.', tipo:'rabica'}
+    {id:'verm1', nome:'Vermifugação inicial', sem:2, obs:'A partir de 15 dias.', tipo:'vermifugo'},
+    {id:'v10_1', nome:'V10 — 1ª dose', sem:6, obs:'Protege contra cinomose, parvovirose e mais.', tipo:'v10'},
+    {id:'giar1', nome:'Giárdia — 1ª dose', sem:8, obs:'Regiões com alta incidência.', tipo:'giardia'},
+    {id:'v10_2', nome:'V10 — 2ª dose', sem:9, obs:'Intervalo de 21-30 dias.', tipo:'v10'},
+    {id:'gripe1', nome:'Gripe Canina (KC)', sem:10, obs:'Creches e parques.', tipo:'gripe'},
+    {id:'v10_3', nome:'V10 — 3ª dose', sem:12, obs:'Fecha protocolo inicial.', tipo:'v10'},
+    {id:'rab1', nome:'Antirrábica — 1ª dose', sem:16, obs:'Obrigatória por lei.', tipo:'rabica'},
+    {id:'v10ref', nome:'Reforço V10 (anual)', sem:52, obs:'Reforço anual.', tipo:'v10'},
+    {id:'rabref', nome:'Reforço Antirrábica', sem:52, obs:'Reforço anual.', tipo:'rabica'}
   ],
   gato: [
-    {id:'verm1',   nome:'Vermifugação inicial',        sem:2,  obs:'A partir de 15 dias de vida.', tipo:'vermifugo'},
-    {id:'v3_1',    nome:'V3/V4/V5 — 1ª dose',          sem:6,  obs:'Protege contra rinotraqueíte, calicivirose e panleucopenia.', tipo:'v3'},
-    {id:'felv1',   nome:'FeLV — 1ª dose',              sem:8,  obs:'Leucemia Felina.', tipo:'felv'},
-    {id:'v3_2',    nome:'V3/V4/V5 — 2ª dose',          sem:9,  obs:'Intervalo de 21 a 30 dias.', tipo:'v3'},
-    {id:'felv2',   nome:'FeLV — 2ª dose',              sem:11, obs:'Reforço 21 dias após a primeira.', tipo:'felv'},
-    {id:'v3_3',    nome:'V3/V4/V5 — 3ª dose',          sem:12, obs:'Fecha o protocolo inicial.', tipo:'v3'},
-    {id:'rab1',    nome:'Antirrábica — 1ª dose',       sem:16, obs:'A partir de 3 meses.', tipo:'rabica'},
-    {id:'v3ref',   nome:'Reforço V3/V4/V5 (anual)',    sem:52, obs:'Reforço anual.', tipo:'v3'},
-    {id:'rabref',  nome:'Reforço Antirrábica (anual)', sem:52, obs:'Reforço anual obrigatório.', tipo:'rabica'}
+    {id:'verm1', nome:'Vermifugação inicial', sem:2, obs:'A partir de 15 dias.', tipo:'vermifugo'},
+    {id:'v3_1', nome:'V3/V4/V5 — 1ª dose', sem:6, obs:'Rinotraqueíte, calicivirose, panleucopenia.', tipo:'v3'},
+    {id:'felv1', nome:'FeLV — 1ª dose', sem:8, obs:'Leucemia Felina.', tipo:'felv'},
+    {id:'v3_2', nome:'V3/V4/V5 — 2ª dose', sem:9, obs:'21-30 dias após.', tipo:'v3'},
+    {id:'felv2', nome:'FeLV — 2ª dose', sem:11, obs:'21 dias após.', tipo:'felv'},
+    {id:'v3_3', nome:'V3/V4/V5 — 3ª dose', sem:12, obs:'Fecha protocolo inicial.', tipo:'v3'},
+    {id:'rab1', nome:'Antirrábica — 1ª dose', sem:16, obs:'A partir de 3 meses.', tipo:'rabica'},
+    {id:'v3ref', nome:'Reforço V3/V4/V5', sem:52, obs:'Reforço anual.', tipo:'v3'},
+    {id:'rabref', nome:'Reforço Antirrábica', sem:52, obs:'Reforço anual.', tipo:'rabica'}
   ]
 };
-
 const MARCAS_VACINA = {
   cao: {
-    v10:       ['Vanguard (Zoetis)', 'Nobivac (MSD)', 'Defensor (Zoetis)', 'Recombitek (Boehringer)', 'Duramune (Elanco)', 'Canigen (Virbac)'],
-    rabica:    ['Raivac (Biovet)', 'Defensor R (Zoetis)', 'Rabisin (Boehringer)', 'Nobivac Rabies (MSD)', 'Rabigen (Virbac)'],
-    gripe:     ['Nobivac KC (MSD)', 'Bronchi-Shield (Elanco)', 'Vanguard CvK (Zoetis)'],
-    giardia:   ['GiardiaVax (Zoetis)', 'Protech Giardia (Elanco)'],
-    vermifugo: ['Drontal (Bayer)', 'Interceptor (Elanco)', 'Milbemax (Elanco)', 'Sentinel (MSD)']
+    v10:['Vanguard (Zoetis)','Nobivac (MSD)','Defensor (Zoetis)','Recombitek (Boehringer)','Canigen (Virbac)'],
+    rabica:['Raivac (Biovet)','Defensor R (Zoetis)','Rabisin (Boehringer)','Nobivac Rabies (MSD)'],
+    gripe:['Nobivac KC (MSD)','Bronchi-Shield (Elanco)'],
+    giardia:['GiardiaVax (Zoetis)','Protech Giardia (Elanco)'],
+    vermifugo:['Drontal (Bayer)','Interceptor (Elanco)','Milbemax (Elanco)']
   },
   gato: {
-    v3:        ['Felocell (Zoetis)', 'Purevax (Boehringer)', 'Nobivac Tricat (MSD)', 'Feligen (Virbac)'],
-    rabica:    ['Raivac (Biovet)', 'Defensor R (Zoetis)', 'Rabisin (Boehringer)', 'Nobivac Rabies (MSD)'],
-    felv:      ['Fel-O-Vax (Zoetis)', 'Leucogen (Virbac)', 'Purevax FeLV (Boehringer)'],
-    vermifugo: ['Drontal Cat (Bayer)', 'Milbemax (Elanco)', 'Profender (Bayer)']
+    v3:['Felocell (Zoetis)','Purevax (Boehringer)','Nobivac Tricat (MSD)'],
+    rabica:['Raivac (Biovet)','Defensor R (Zoetis)','Rabisin (Boehringer)'],
+    felv:['Fel-O-Vax (Zoetis)','Leucogen (Virbac)','Purevax FeLV (Boehringer)'],
+    vermifugo:['Drontal Cat (Bayer)','Milbemax (Elanco)','Profender (Bayer)']
   }
 };
 const MARCAS_POR_RACA = {
   'Labrador Retriever': {v10:'Vanguard (Zoetis)', rabica:'Defensor R (Zoetis)'},
-  'Golden Retriever':   {v10:'Nobivac (MSD)', rabica:'Rabisin (Boehringer)'},
-  'Shih Tzu':           {v10:'Canigen (Virbac)', rabica:'Rabigen (Virbac)'},
-  'Pug':                {v10:'Canigen (Virbac)', rabica:'Rabigen (Virbac)'},
-  'Bulldog Francês':    {v10:'Recombitek (Boehringer)', rabica:'Rabisin (Boehringer)'},
-  'Pastor Alemão':      {v10:'Nobivac (MSD)', rabica:'Defensor R (Zoetis)'},
-  'Rottweiler':         {v10:'Vanguard (Zoetis)', rabica:'Defensor R (Zoetis)'},
-  'Fila Brasileiro':    {v10:'Vanguard (Zoetis)', rabica:'Defensor R (Zoetis)'},
-  'Siamês':             {v10:'Felocell (Zoetis)', rabica:'Raivac (Biovet)'},
-  'Persa':              {v10:'Purevax (Boehringer)', rabica:'Rabisin (Boehringer)'},
-  'Maine Coon':         {v10:'Purevax (Boehringer)', rabica:'Rabisin (Boehringer)'},
-  'Sphynx':             {v10:'Purevax (Boehringer)', rabica:'Rabisin (Boehringer)'}
+  'Golden Retriever': {v10:'Nobivac (MSD)', rabica:'Rabisin (Boehringer)'},
+  'Shih Tzu': {v10:'Canigen (Virbac)', rabica:'Rabigen (Virbac)'},
+  'Pug': {v10:'Canigen (Virbac)', rabica:'Rabigen (Virbac)'},
+  'Pastor Alemão': {v10:'Nobivac (MSD)', rabica:'Defensor R (Zoetis)'},
+  'Rottweiler': {v10:'Vanguard (Zoetis)', rabica:'Defensor R (Zoetis)'},
+  'Fila Brasileiro': {v10:'Vanguard (Zoetis)', rabica:'Defensor R (Zoetis)'},
+  'Siamês': {v10:'Felocell (Zoetis)', rabica:'Raivac (Biovet)'},
+  'Persa': {v10:'Purevax (Boehringer)', rabica:'Rabisin (Boehringer)'},
+  'Maine Coon': {v10:'Purevax (Boehringer)', rabica:'Rabisin (Boehringer)'},
+  'Sphynx': {v10:'Purevax (Boehringer)', rabica:'Rabisin (Boehringer)'}
 };
 function recomendarMarcas(pet, tipoVacina){
   const marcasEsp = (MARCAS_VACINA[pet.especie]||{})[tipoVacina] || [];
@@ -1186,44 +1186,27 @@ function recomendarMarcas(pet, tipoVacina){
 }
 
 /* ============================================================
-   ILUSTRAÇÕES SVG DE RAÇAS
+   ILUSTRAÇÕES SVG
 ============================================================ */
 const VISUAL_RACAS = {
   'srd_c': {bg1:'#FFE9DC', bg2:'#FFD6C2', pelo:'#C28B5A', orelha:'caida', focinho:'medio', orelhaCor:'#A87244'},
-  'mucucho': {bg1:'#F0E6D2', bg2:'#E0CCAA', pelo:'#8B6942', orelha:'semi', focinho:'longo', orelhaCor:'#6B4E2E', extra:'robusto'},
-  'rafeiro': {bg1:'#EFE3D2', bg2:'#DCC8A8', pelo:'#7A5A3A', orelha:'caida', focinho:'longo', orelhaCor:'#5C4128', extra:'robusto'},
-  'terrier_br': {bg1:'#FFF0E0', bg2:'#FFE0C0', pelo:'#E4C9A0', orelha:'emPe', focinho:'medio', orelhaCor:'#C4A880', extra:'pintas'},
-  'pe_roxo': {bg1:'#EBE0D2', bg2:'#D5C4AA', pelo:'#6B5038', orelha:'caida', focinho:'medio', orelhaCor:'#4C3624'},
-  'pinscher_alemao': {bg1:'#F5EDE3', bg2:'#E5D5C2', pelo:'#4A3A2E', orelha:'emPe', focinho:'longo', orelhaCor:'#2E1E14'},
-  'pinscher_medio': {bg1:'#F5EDE3', bg2:'#E5D5C2', pelo:'#5A4030', orelha:'emPe', focinho:'medio', orelhaCor:'#3E2A1E'},
-  'pinscher_anao': {bg1:'#F5EDE3', bg2:'#E5D5C2', pelo:'#7A4A2A', orelha:'emPe', focinho:'curto', orelhaCor:'#5C3418'},
-  'pinscher_miniatura': {bg1:'#F5EDE3', bg2:'#E5D5C2', pelo:'#4A2E1E', orelha:'emPe', focinho:'curto', orelhaCor:'#2E180E'},
   'labrador': {bg1:'#FFF5E0', bg2:'#FFE6B5', pelo:'#E8C170', orelha:'caida', focinho:'medio', orelhaCor:'#D0A655', extra:'labrador'},
   'golden': {bg1:'#FFF5E0', bg2:'#FFE6B5', pelo:'#EFD08E', orelha:'caida', focinho:'medio', orelhaCor:'#DBB668', extra:'peludo'},
   'poodle': {bg1:'#F5EFE5', bg2:'#E5D8C2', pelo:'#F0E8D8', orelha:'caida', focinho:'longo', orelhaCor:'#D4C8B0', extra:'peludo'},
   'shihtzu': {bg1:'#F5E9DC', bg2:'#E8D0B8', pelo:'#E8D0B0', orelha:'caida', focinho:'achatado', orelhaCor:'#CFB090', extra:'peludo'},
   'yorkshire': {bg1:'#E9DFD2', bg2:'#D5C4AC', pelo:'#5A4234', orelha:'emPe', focinho:'curto', orelhaCor:'#3E2A20', extra:'peludo'},
-  'lhasa': {bg1:'#F0E4D2', bg2:'#DCC6A8', pelo:'#D4B888', orelha:'caida', focinho:'achatado', orelhaCor:'#B69860', extra:'peludo'},
   'pastor': {bg1:'#F0E0C8', bg2:'#DCC49A', pelo:'#8B6A44', orelha:'emPe', focinho:'longo', orelhaCor:'#5A4030', extra:'pastor'},
   'rottweiler': {bg1:'#E5D8C2', bg2:'#C8B896', pelo:'#2E241C', orelha:'caida', focinho:'medio', orelhaCor:'#1A120C', extra:'rottweiler'},
   'pug': {bg1:'#F5E6C8', bg2:'#E5CE9A', pelo:'#D6B876', orelha:'caida', focinho:'achatado', orelhaCor:'#B89858', extra:'pug'},
-  'bulldogfr': {bg1:'#F5EDE3', bg2:'#E0CCB5', pelo:'#D5C4A8', orelha:'emPe', focinho:'achatado', orelhaCor:'#B8A488', extra:'bulldog'},
-  'dachshund': {bg1:'#F0D8B8', bg2:'#D8B888', pelo:'#8B5A30', orelha:'caida', focinho:'longo', orelhaCor:'#6B4020'},
-  'border': {bg1:'#F0E4D2', bg2:'#D8C4A8', pelo:'#E8D8C0', orelha:'semi', focinho:'medio', orelhaCor:'#3A2A1E', extra:'border'},
   'husky': {bg1:'#E5EEF5', bg2:'#C8DCEC', pelo:'#5A6470', orelha:'emPe', focinho:'medio', orelhaCor:'#3A4450', extra:'husky'},
-  'maltes': {bg1:'#F5EFE5', bg2:'#E5D8C2', pelo:'#F5EFE0', orelha:'caida', focinho:'curto', orelhaCor:'#DDD2B8', extra:'peludo'},
-  'spitz': {bg1:'#FFF0D8', bg2:'#FFDCA5', pelo:'#F0C878', orelha:'emPe', focinho:'curto', orelhaCor:'#D0A850', extra:'peludo'},
-  'fila': {bg1:'#EFE0CC', bg2:'#D4B890', pelo:'#5A4230', orelha:'caida', focinho:'medio', orelhaCor:'#3E2A1E', extra:'robusto'},
+  'pinscher_miniatura': {bg1:'#F5EDE3', bg2:'#E5D5C2', pelo:'#4A2E1E', orelha:'emPe', focinho:'curto', orelhaCor:'#2E180E'},
   'srd_g': {bg1:'#DDF6F2', bg2:'#BEEAE3', pelo:'#8A7A6A', orelha:'gato', focinho:'gato', orelhaCor:'#6A5A4A', extra:'tigrado'},
   'siames': {bg1:'#EBE4D5', bg2:'#D5C8B0', pelo:'#F0E8D8', orelha:'gato', focinho:'gato', orelhaCor:'#3A2A20', extra:'siames'},
   'persa': {bg1:'#F5E8D8', bg2:'#E0C8A8', pelo:'#E8D0B5', orelha:'gato', focinho:'gatoAch', orelhaCor:'#C8B090', extra:'peludo'},
   'mainecoon': {bg1:'#E8DDC8', bg2:'#C8B596', pelo:'#9A7A55', orelha:'gato', focinho:'gato', orelhaCor:'#6B5038', extra:'peludo'},
-  'angora': {bg1:'#F5F0E5', bg2:'#DDD4C0', pelo:'#F5F0E5', orelha:'gato', focinho:'gato', orelhaCor:'#D5CCB8', extra:'peludo'},
   'sphynx': {bg1:'#F5DCC8', bg2:'#E5C4A8', pelo:'#E8C2A8', orelha:'gato', focinho:'gato', orelhaCor:'#C8A288', extra:'sphynx'},
   'bengal': {bg1:'#FFE0B5', bg2:'#F0C480', pelo:'#C89858', orelha:'gato', focinho:'gato', orelhaCor:'#8B6838', extra:'bengal'},
-  'ragdoll': {bg1:'#EBE4D5', bg2:'#D5C8B0', pelo:'#F0E8D8', orelha:'gato', focinho:'gato', orelhaCor:'#8B6A5A', extra:'ragdoll'},
-  'british': {bg1:'#E5DDD0', bg2:'#C8BCA5', pelo:'#8A7A66', orelha:'gato', focinho:'gato', orelhaCor:'#5A4E40', extra:'british'},
-  'noruegues': {bg1:'#E8DDC8', bg2:'#C8B596', pelo:'#8A6B4A', orelha:'gato', focinho:'gato', orelhaCor:'#5A4030', extra:'peludo'}
+  'british': {bg1:'#E5DDD0', bg2:'#C8BCA5', pelo:'#8A7A66', orelha:'gato', focinho:'gato', orelhaCor:'#5A4E40', extra:'british'}
 };
 
 function avatarRacaSVG(idRaca, especie){
@@ -1239,13 +1222,12 @@ function avatarRacaSVG(idRaca, especie){
     focinho = `<ellipse cx="60" cy="82" rx="14" ry="10" fill="#FFF" opacity=".55"/><path d="M56 76 L60 79 L64 76 L60 80 Z" fill="${v.orelhaCor}"/>`;
     olhos = `<ellipse cx="48" cy="68" rx="5" ry="6" fill="#1B2434"/><ellipse cx="72" cy="68" rx="5" ry="6" fill="#1B2434"/><ellipse cx="48" cy="66" rx="2" ry="2.5" fill="#FFF"/><ellipse cx="72" cy="66" rx="2" ry="2.5" fill="#FFF"/>`;
     if(v.extra === 'siames') extras = `<ellipse cx="60" cy="82" rx="16" ry="11" fill="#3A2A20" opacity=".8"/>`;
-    else if(v.extra === 'tigrado') extras = `<path d="M36 58 L42 62 M32 68 L40 70" stroke="#5A4A3A" stroke-width="2" stroke-linecap="round"/><path d="M84 58 L78 62 M88 68 L80 70" stroke="#5A4A3A" stroke-width="2" stroke-linecap="round"/>`;
-    else if(v.extra === 'bengal') extras = `<circle cx="40" cy="60" r="3" fill="#5A4030" opacity=".7"/><circle cx="80" cy="60" r="3" fill="#5A4030" opacity=".7"/><circle cx="34" cy="72" r="2.5" fill="#5A4030" opacity=".7"/><circle cx="86" cy="72" r="2.5" fill="#5A4030" opacity=".7"/>`;
+    else if(v.extra === 'tigrado') extras = `<path d="M36 58 L42 62" stroke="#5A4A3A" stroke-width="2" stroke-linecap="round"/><path d="M84 58 L78 62" stroke="#5A4A3A" stroke-width="2" stroke-linecap="round"/>`;
+    else if(v.extra === 'bengal') extras = `<circle cx="40" cy="60" r="3" fill="#5A4030" opacity=".7"/><circle cx="80" cy="60" r="3" fill="#5A4030" opacity=".7"/>`;
   } else {
     cabeca = `<ellipse cx="60" cy="72" rx="34" ry="32" fill="${v.pelo}"/>`;
     if(v.orelha === 'caida') orelhas = `<ellipse cx="28" cy="76" rx="11" ry="20" fill="${v.orelhaCor}" transform="rotate(-15 28 76)"/><ellipse cx="92" cy="76" rx="11" ry="20" fill="${v.orelhaCor}" transform="rotate(15 92 76)"/>`;
     else if(v.orelha === 'emPe') orelhas = `<path d="M32 54 L26 22 L52 44 Z" fill="${v.pelo}" stroke="${v.orelhaCor}" stroke-width="1"/><path d="M88 54 L94 22 L68 44 Z" fill="${v.pelo}" stroke="${v.orelhaCor}" stroke-width="1"/>`;
-    else if(v.orelha === 'semi') orelhas = `<path d="M30 58 L26 30 L50 46 Z" fill="${v.pelo}" stroke="${v.orelhaCor}" stroke-width="1"/><path d="M90 58 L94 30 L70 46 Z" fill="${v.pelo}" stroke="${v.orelhaCor}" stroke-width="1"/>`;
     if(v.focinho === 'achatado') focinho = `<ellipse cx="60" cy="84" rx="18" ry="12" fill="#3A2A1E" opacity=".85"/><ellipse cx="60" cy="80" rx="5" ry="3.5" fill="#1A0E08"/>`;
     else if(v.focinho === 'longo') focinho = `<ellipse cx="60" cy="88" rx="13" ry="14" fill="${v.pelo}"/><ellipse cx="60" cy="86" rx="4" ry="3" fill="#1A0E08"/>`;
     else focinho = `<ellipse cx="60" cy="85" rx="14" ry="10" fill="${v.pelo}"/><ellipse cx="60" cy="82" rx="4" ry="3" fill="#1A0E08"/>`;
@@ -1255,15 +1237,9 @@ function avatarRacaSVG(idRaca, especie){
     else if(v.extra === 'rottweiler') extras = `<path d="M30 82 Q40 100 60 100 Q80 100 90 82 Q80 90 60 90 Q40 90 30 82 Z" fill="#B89058" opacity=".7"/>`;
     else if(v.extra === 'pug') extras = `<path d="M40 76 Q46 74 50 76 M70 76 Q74 74 80 76" stroke="#3A2A1E" stroke-width="1" fill="none" opacity=".6"/>`;
     else if(v.extra === 'husky') extras = `<ellipse cx="60" cy="86" rx="10" ry="6" fill="#FFF" opacity=".6"/>`;
-    else if(v.extra === 'peludo') extras = `<circle cx="42" cy="58" r="2" fill="#FFF" opacity=".4"/><circle cx="78" cy="58" r="2" fill="#FFF" opacity=".4"/>`;
   }
-
   return `<svg class="raca-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <linearGradient id="bg${gid}" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="${v.bg1}"/><stop offset="100%" stop-color="${v.bg2}"/>
-      </linearGradient>
-    </defs>
+    <defs><linearGradient id="bg${gid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${v.bg1}"/><stop offset="100%" stop-color="${v.bg2}"/></linearGradient></defs>
     <rect width="120" height="120" fill="url(#bg${gid})"/>
     <circle cx="20" cy="18" r="22" fill="rgba(255,255,255,.35)"/>
     <circle cx="105" cy="105" r="30" fill="rgba(255,255,255,.22)"/>
@@ -1271,220 +1247,187 @@ function avatarRacaSVG(idRaca, especie){
   </svg>`;
 }
 
-/* ============================================================
-   RECOMENDAÇÕES / CUIDADOS / RAÇAS / DOENÇAS (compactado)
-============================================================ */
+/* Recomendações por idade (compactado) */
 const RECOMENDACOES_IDADE = {
   cao: {
-    filhote: {titulo:'Filhote (0-12m)', emoji:'🐶', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração para filhotes, 3-4 refeições ao dia','Proteína mín. 28% e gordura 15-20%','Cálcio e fósforo balanceados']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde e vacinas',itens:['Protocolo vacinal completo (V10, antirrábica)','Vermifugação a cada 15 dias até 3 meses','Castração a partir dos 6 meses']},
-      {ic:'🎾',cor:'#25C2B0',bg:'#E4F8F5',titulo:'Exercícios',itens:['Passeios curtos de 15-20 min, 3x ao dia','Brincadeiras de socialização','Não force exercícios intensos']},
-      {ic:'🎓',cor:'#9B5DE5',bg:'#F3EAFE',titulo:'Comportamento',itens:['Janela de socialização 3-14 meses','Adestramento básico desde os 3 meses','Evite deixar sozinho por muito tempo']}
+    filhote:{titulo:'Filhote',emoji:'🐶',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração para filhotes, 3-4 refeições','Proteína mín. 28%','Cálcio balanceado']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Protocolo vacinal completo','Vermifugação a cada 15 dias','Castração a partir dos 6 meses']},
+      {ic:'🎓',cor:'#9B5DE5',bg:'#F3EAFE',titulo:'Comportamento',itens:['Janela de socialização 3-14 meses','Adestramento básico desde 3 meses']}
     ]},
-    junior: {titulo:'Júnior (1-2a)', emoji:'🐕', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Transição para ração adulta','Proteína 24-28%','2 refeições ao dia']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Reforços vacinais anuais','Vermifugação a cada 3 meses','Controle de pulgas']},
-      {ic:'🎾',cor:'#25C2B0',bg:'#E4F8F5',titulo:'Exercícios',itens:['Exercício 45-60 min diário','Atividades de agilidade','Caminhadas mais longas']}
+    junior:{titulo:'Júnior',emoji:'🐕',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Transição para ração adulta','2 refeições por dia']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Reforços vacinais anuais','Vermifugação a cada 3 meses']}
     ]},
-    adulto: {titulo:'Adulto (2-7a)', emoji:'🦮', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração adulta premium','2 refeições em horários fixos','Meça a ração']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Vacinas anuais','Vermifugação 4-6 meses','Check-up anual']},
-      {ic:'🎾',cor:'#25C2B0',bg:'#E4F8F5',titulo:'Exercícios',itens:['30-60 min/dia','Brincadeiras interativas','Natação ajuda articulações']}
+    adulto:{titulo:'Adulto',emoji:'🦮',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração adulta premium','Meça a ração']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Vacinas anuais','Check-up anual']}
     ]},
-    senior: {titulo:'Sênior (7+)', emoji:'🐕‍🦺', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração sênior com condroprotetores','Menor fósforo e sódio','Proteína digestível']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Check-up 2x ao ano','Exames a cada 6 meses','Avaliação cardíaca']},
-      {ic:'🎾',cor:'#25C2B0',bg:'#E4F8F5',titulo:'Exercícios',itens:['Exercício leve 20-30 min','Evite saltos','Cama ortopédica']}
+    senior:{titulo:'Sênior',emoji:'🐕‍🦺',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração sênior com condroprotetores','Menor fósforo']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Check-up 2x ao ano','Exames a cada 6 meses']}
     ]}
   },
   gato: {
-    filhote: {titulo:'Filhote (0-12m)', emoji:'🐱', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração para filhotes (kitten)','Proteína mín. 34% animal','Taurina obrigatória']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['V3/V4/V5 a partir dos 6-8 sem','Teste FeLV/FIV','Vermifugação a cada 15 dias']},
-      {ic:'🎾',cor:'#25C2B0',bg:'#E4F8F5',titulo:'Brincadeiras',itens:['Brinquedos que simulam caça','Prateleiras para escalar','Arranhadores']}
+    filhote:{titulo:'Filhote',emoji:'🐱',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração para filhotes','Proteína mín. 34%','Taurina']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['V3/V4/V5 a partir de 6-8 sem','Teste FeLV/FIV']}
     ]},
-    junior: {titulo:'Júnior (1-2a)', emoji:'🐈', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Proteína acima 30%','2-3 refeições','Comedouro lento']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Reforços anuais','Exame FeLV/FIV','Controle de pulgas']}
+    junior:{titulo:'Júnior',emoji:'🐈',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Proteína acima 30%','2-3 refeições']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Reforços anuais','Controle de pulgas']}
     ]},
-    adulto: {titulo:'Adulto (2-7a)', emoji:'🐈', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração com taurina','pH urinário controlado','Água corrente']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Vacinas anuais','Check-up anual','Atenção renal']}
+    adulto:{titulo:'Adulto',emoji:'🐈',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração com taurina','pH urinário controlado']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Vacinas anuais','Check-up anual']}
     ]},
-    senior: {titulo:'Sênior (7+)', emoji:'🐈', categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração sênior baixo fósforo','Ômega 3','Aumente água']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Check-up 2x ao ano','Exames a cada 6 meses','Avaliação tireoide']}
+    senior:{titulo:'Sênior',emoji:'🐈',categorias:[
+      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração sênior baixo fósforo','Ômega 3']},
+      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Check-up 2x ao ano','Exames a cada 6 meses']}
     ]}
   }
 };
 
 const PRIMEIROS_CUIDADOS = {
   cao: [
-    {id:'c1',t:'Ambiente aquecido',d:'Mantenha entre 26-28 °C nas primeiras semanas.'},
-    {id:'c2',t:'Aleitamento materno',d:'Leite materno até os 30 dias. Nunca leite de vaca.'},
+    {id:'c1',t:'Ambiente aquecido',d:'26-28 °C nas primeiras semanas.'},
+    {id:'c2',t:'Aleitamento materno',d:'Leite materno até 30 dias.'},
     {id:'c3',t:'Vermifugação (15 dias)',d:'Repetir a cada 15 dias até 3 meses.'},
-    {id:'c4',t:'Desmame gradual',d:'A partir dos 30 dias, ração úmida para filhotes.'},
-    {id:'c5',t:'Primeira vacina (6-8 sem.)',d:'Inicie o protocolo vacinal.'},
-    {id:'c6',t:'Socialização (3-14 sem.)',d:'Janela crítica de socialização.'},
-    {id:'c7',t:'Castração (6+ meses)',d:'Previne ninhadas indesejadas.'},
+    {id:'c4',t:'Desmame gradual',d:'A partir dos 30 dias.'},
+    {id:'c5',t:'Primeira vacina (6-8 sem.)',d:'Inicie o protocolo.'},
+    {id:'c6',t:'Socialização (3-14 sem.)',d:'Janela crítica.'},
+    {id:'c7',t:'Castração (6+ meses)',d:'Previne ninhadas.'},
     {id:'c8',t:'Microchipagem',d:'Identificação permanente.'}
   ],
   gato: [
-    {id:'c1',t:'Ambiente aquecido',d:'Gatinhos precisam de calor constante.'},
+    {id:'c1',t:'Ambiente aquecido',d:'Calor constante.'},
     {id:'c2',t:'Aleitamento materno',d:'Colostro nas primeiras 24h.'},
     {id:'c3',t:'Vermifugação (15 dias)',d:'A partir dos 15 dias.'},
-    {id:'c4',t:'Desmame gradual',d:'Entre 30-45 dias.'},
+    {id:'c4',t:'Desmame gradual',d:'30-45 dias.'},
     {id:'c5',t:'Primeira vacina (6-8 sem.)',d:'Protocolo V3/V4/V5.'},
     {id:'c6',t:'Caixa de areia',d:'Uma por gato + uma extra.'},
-    {id:'c7',t:'Arranhador',d:'Fundamental para bem-estar.'},
+    {id:'c7',t:'Arranhador',d:'Bem-estar.'},
     {id:'c8',t:'Castração (6+ meses)',d:'Reduz cio e fugas.'}
   ]
 };
 
 const RACAS = [
-{id:'srd_c',nome:'SRD (Vira-lata)',esp:'cao',porte:'Variável',emoji:'🐕',peso:'5–40 kg',altura:'25–70 cm',vida:'12–16 anos',origem:'Brasil',temp:['Resistente','Equilibrado'],resumo:'Cão mais comum do Brasil.',cuidados:['Escovação semanal','Exercício diário'],saude:['Menor predisposição genética'],racao:'Ração conforme porte.'},
-{id:'mucucho',nome:'Mucucho',esp:'cao',porte:'Grande',emoji:'🐕',peso:'30–50 kg',altura:'56–70 cm',vida:'10–14 anos',origem:'Venezuela',temp:['Rústico','Trabalhador'],resumo:'Raça de trabalho da América Latina.',cuidados:['Exercício intenso'],saude:['Displasia'],racao:'Ração large breed.'},
-{id:'rafeiro',nome:'Rafeiro Brasileiro',esp:'cao',porte:'Grande',emoji:'🐕',peso:'30–45 kg',altura:'55–70 cm',vida:'10–14 anos',origem:'Brasil',temp:['Rústico','Guardião'],resumo:'Cão de fazenda.',cuidados:['Exercício diário'],saude:['Displasia'],racao:'Ração premium.'},
-{id:'terrier_br',nome:'Terrier Brasileiro',esp:'cao',porte:'Pequeno/Médio',emoji:'🐕',peso:'6–10 kg',altura:'33–40 cm',vida:'12–15 anos',origem:'Brasil',temp:['Vivaz','Esperto'],resumo:'Único terrier brasileiro.',cuidados:['Exercício 30-45 min'],saude:['Luxação de patela'],racao:'Ração pequeno/médio.'},
-{id:'pe_roxo',nome:'Pê-roxo',esp:'cao',porte:'Médio',emoji:'🐕',peso:'15–22 kg',altura:'45–55 cm',vida:'10–13 anos',origem:'Brasil',temp:['Leal','Trabalhador'],resumo:'Cão de fazenda brasileiro.',cuidados:['Exercício intenso'],saude:['Displasia'],racao:'Ração large breed.'},
-{id:'pinscher_alemao',nome:'Pinscher Alemão',esp:'cao',porte:'Médio',emoji:'🐕',peso:'14–20 kg',altura:'45–50 cm',vida:'12–14 anos',origem:'Alemanha',temp:['Vigilante','Inteligente'],resumo:'Pinscher de porte médio.',cuidados:['Exercício 45-60 min'],saude:['Displasia'],racao:'Ração médio porte.'},
-{id:'pinscher_medio',nome:'Pinscher Médio',esp:'cao',porte:'Médio',emoji:'🐕',peso:'7–14 kg',altura:'35–45 cm',vida:'12–15 anos',origem:'Alemanha',temp:['Alerta','Corajoso'],resumo:'Intermediário.',cuidados:['Exercício diário'],saude:['Luxação de patela'],racao:'Ração médio porte.'},
-{id:'pinscher_anao',nome:'Pinscher Anão',esp:'cao',porte:'Pequeno',emoji:'🐕',peso:'4–7 kg',altura:'25–32 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Enérgico','Esperto'],resumo:'Variação menor.',cuidados:['Exercício leve'],saude:['Luxação de patela'],racao:'Ração pequeno porte.'},
-{id:'pinscher_miniatura',nome:'Pinscher Miniatura',esp:'cao',porte:'Pequeno',emoji:'🐕',peso:'3–5 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Vigilante','Corajoso'],resumo:'Cão de alarme.',cuidados:['Exercício diário'],saude:['Luxação de patela'],racao:'Ração pequeno porte.'},
-{id:'labrador',nome:'Labrador Retriever',esp:'cao',porte:'Grande',emoji:'🦮',peso:'25–36 kg',altura:'54–57 cm',vida:'10–12 anos',origem:'Canadá',temp:['Dócil','Inteligente'],resumo:'Raça mais popular.',cuidados:['Exercício intenso'],saude:['Displasia','Obesidade'],racao:'Ração grande porte.'},
-{id:'golden',nome:'Golden Retriever',esp:'cao',porte:'Grande',emoji:'🐕‍🦺',peso:'25–34 kg',altura:'51–61 cm',vida:'10–12 anos',origem:'Escócia',temp:['Afetuoso','Paciente'],resumo:'Perfeito para famílias.',cuidados:['Escovação diária'],saude:['Displasia','Câncer'],racao:'Ração premium.'},
+{id:'srd_c',nome:'SRD (Vira-lata)',esp:'cao',porte:'Variável',emoji:'🐕',peso:'5–40 kg',altura:'25–70 cm',vida:'12–16 anos',origem:'Brasil',temp:['Resistente','Adaptável'],resumo:'Cão mais comum do Brasil.',cuidados:['Escovação semanal','Exercício diário'],saude:['Menor predisposição genética'],racao:'Ração conforme porte.'},
+{id:'labrador',nome:'Labrador Retriever',esp:'cao',porte:'Grande',emoji:'🦮',peso:'25–36 kg',altura:'54–57 cm',vida:'10–12 anos',origem:'Canadá',temp:['Dócil','Comilão'],resumo:'Raça mais popular.',cuidados:['Exercício intenso'],saude:['Displasia','Obesidade'],racao:'Ração grande porte.'},
+{id:'golden',nome:'Golden Retriever',esp:'cao',porte:'Grande',emoji:'🐕‍🦺',peso:'25–34 kg',altura:'51–61 cm',vida:'10–12 anos',origem:'Escócia',temp:['Afetuoso','Família'],resumo:'Perfeito para famílias.',cuidados:['Escovação diária'],saude:['Displasia','Câncer'],racao:'Ração premium.'},
 {id:'poodle',nome:'Poodle',esp:'cao',porte:'Pequeno/Médio',emoji:'🐩',peso:'4–25 kg',altura:'24–45 cm',vida:'12–17 anos',origem:'Alemanha/França',temp:['Inteligente','Ativo'],resumo:'Muito inteligente.',cuidados:['Tosa mensal'],saude:['Catarata'],racao:'Ração por porte.'},
 {id:'shihtzu',nome:'Shih Tzu',esp:'cao',porte:'Pequeno',emoji:'🐶',peso:'4–7 kg',altura:'20–28 cm',vida:'10–16 anos',origem:'Tibete',temp:['Companheiro','Calmo'],resumo:'Companhia por excelência.',cuidados:['Escovação diária'],saude:['Braquicefálico'],racao:'Ração pequeno porte.'},
 {id:'yorkshire',nome:'Yorkshire Terrier',esp:'cao',porte:'Pequeno',emoji:'🐕',peso:'2–3,5 kg',altura:'18–20 cm',vida:'13–16 anos',origem:'Inglaterra',temp:['Destemido','Enérgico'],resumo:'Pequeno e destemido.',cuidados:['Tosa 4-6 sem'],saude:['Luxação de patela'],racao:'Ração mini.'},
-{id:'lhasa',nome:'Lhasa Apso',esp:'cao',porte:'Pequeno',emoji:'🐶',peso:'5–8 kg',altura:'25–28 cm',vida:'12–15 anos',origem:'Tibete',temp:['Independente','Leal'],resumo:'Cão de templos tibetanos.',cuidados:['Escovação diária'],saude:['Problemas renais'],racao:'Ração pequeno porte.'},
 {id:'pastor',nome:'Pastor Alemão',esp:'cao',porte:'Grande',emoji:'🐕‍🦺',peso:'22–40 kg',altura:'55–65 cm',vida:'9–13 anos',origem:'Alemanha',temp:['Leal','Protetor'],resumo:'Cão de trabalho.',cuidados:['Exercício intenso'],saude:['Displasia'],racao:'Ração large breed.'},
 {id:'rottweiler',nome:'Rottweiler',esp:'cao',porte:'Grande',emoji:'🐕',peso:'35–60 kg',altura:'56–69 cm',vida:'8–10 anos',origem:'Alemanha',temp:['Protetor','Forte'],resumo:'Guarda por natureza.',cuidados:['Adestramento'],saude:['Displasia'],racao:'Ração premium.'},
 {id:'pug',nome:'Pug',esp:'cao',porte:'Pequeno',emoji:'🐶',peso:'6–8 kg',altura:'25–30 cm',vida:'12–15 anos',origem:'China',temp:['Brincalhão','Afetuoso'],resumo:'Companheiro e engraçado.',cuidados:['Evitar calor'],saude:['Braquicefálico'],racao:'Ração pequeno porte.'},
 {id:'bulldogfr',nome:'Bulldog Francês',esp:'cao',porte:'Pequeno/Médio',emoji:'🐶',peso:'8–14 kg',altura:'28–33 cm',vida:'10–12 anos',origem:'França',temp:['Carinhoso','Sociável'],resumo:'Ótimo com crianças.',cuidados:['Evitar calor'],saude:['Braquicefálico'],racao:'Ração pequeno porte.'},
-{id:'dachshund',nome:'Dachshund (Salsicha)',esp:'cao',porte:'Pequeno',emoji:'🌭',peso:'4–12 kg',altura:'13–27 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Curioso','Leal'],resumo:'Corpo longo e patas curtas.',cuidados:['Evitar escadas'],saude:['Hérnia de disco'],racao:'Ração pequeno porte.'},
+{id:'dachshund',nome:'Dachshund',esp:'cao',porte:'Pequeno',emoji:'🌭',peso:'4–12 kg',altura:'13–27 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Curioso','Leal'],resumo:'Corpo longo.',cuidados:['Evitar escadas'],saude:['Hérnia de disco'],racao:'Ração pequeno porte.'},
 {id:'border',nome:'Border Collie',esp:'cao',porte:'Médio',emoji:'🐕',peso:'14–20 kg',altura:'46–54 cm',vida:'12–15 anos',origem:'Escócia',temp:['Inteligente','Enérgico'],resumo:'O mais inteligente.',cuidados:['Exercício 2h/dia'],saude:['Displasia'],racao:'Ração ativo.'},
-{id:'husky',nome:'Siberian Husky',esp:'cao',porte:'Médio/Grande',emoji:'🐺',peso:'16–27 kg',altura:'50–60 cm',vida:'12–14 anos',origem:'Sibéria',temp:['Independente','Brincalhão'],resumo:'Cheio de energia.',cuidados:['Exercício intenso'],saude:['Displasia'],racao:'Ração médio/grande.'},
+{id:'husky',nome:'Siberian Husky',esp:'cao',porte:'Médio/Grande',emoji:'🐺',peso:'16–27 kg',altura:'50–60 cm',vida:'12–14 anos',origem:'Sibéria',temp:['Independente','Fugitivo'],resumo:'Cheio de energia.',cuidados:['Exercício intenso'],saude:['Displasia'],racao:'Ração médio/grande.'},
 {id:'maltes',nome:'Maltês',esp:'cao',porte:'Pequeno',emoji:'🐶',peso:'2–4 kg',altura:'20–25 cm',vida:'12–15 anos',origem:'Malta',temp:['Doce','Apegado'],resumo:'Pequeno e elegante.',cuidados:['Escovação diária'],saude:['Luxação de patela'],racao:'Ração mini.'},
-{id:'spitz',nome:'Spitz Alemão (Lulu)',esp:'cao',porte:'Pequeno',emoji:'🐶',peso:'1,8–3,5 kg',altura:'18–24 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Vivaz','Alerta'],resumo:'Bolinha de pelo.',cuidados:['Escovação 3x/sem'],saude:['Luxação de patela'],racao:'Ração mini.'},
+{id:'pinscher_miniatura',nome:'Pinscher Miniatura',esp:'cao',porte:'Pequeno',emoji:'🐕',peso:'3–5 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Vigilante','Corajoso'],resumo:'Cão de alarme.',cuidados:['Exercício diário'],saude:['Luxação de patela'],racao:'Ração pequeno porte.'},
 {id:'fila',nome:'Fila Brasileiro',esp:'cao',porte:'Grande',emoji:'🐕',peso:'40–70 kg',altura:'60–75 cm',vida:'9–12 anos',origem:'Brasil',temp:['Protetor','Corajoso'],resumo:'Raça brasileira.',cuidados:['Adestramento'],saude:['Displasia'],racao:'Ração large breed.'},
-{id:'srd_g',nome:'SRD (Gato de Pelo Curto)',esp:'gato',porte:'Médio',emoji:'🐈',peso:'3–5 kg',altura:'23–25 cm',vida:'12–18 anos',origem:'Brasil',temp:['Independente','Resistente'],resumo:'Gato mais comum.',cuidados:['Escovação semanal'],saude:['Menor predisposição'],racao:'Ração gatos adultos.'},
+{id:'srd_g',nome:'SRD (Gato de Pelo Curto)',esp:'gato',porte:'Médio',emoji:'🐈',peso:'3–5 kg',altura:'23–25 cm',vida:'12–18 anos',origem:'Brasil',temp:['Independente','Resistente'],resumo:'Gato mais comum.',cuidados:['Escovação semanal'],saude:['Menor predisposição'],racao:'Ração gatos.'},
 {id:'siames',nome:'Siamês',esp:'gato',porte:'Médio',emoji:'🐈',peso:'2,5–5,5 kg',altura:'23–25 cm',vida:'15–20 anos',origem:'Tailândia',temp:['Falante','Sociável'],resumo:'Muito comunicativo.',cuidados:['Muita atenção'],saude:['Amiloidose'],racao:'Ração pelo curto.'},
 {id:'persa',nome:'Persa',esp:'gato',porte:'Médio',emoji:'🐈‍⬛',peso:'3–6 kg',altura:'23–25 cm',vida:'12–16 anos',origem:'Irã',temp:['Calmo','Dócil'],resumo:'Elegante e sossegado.',cuidados:['Escovação diária'],saude:['PKD'],racao:'Ração pelo longo.'},
 {id:'mainecoon',nome:'Maine Coon',esp:'gato',porte:'Grande',emoji:'🐈',peso:'5–11 kg',altura:'25–41 cm',vida:'10–15 anos',origem:'EUA',temp:['Gentil','Gigante'],resumo:'O maior gato doméstico.',cuidados:['Escovação 3x/sem'],saude:['Cardiomiopatia'],racao:'Ração gatos grandes.'},
-{id:'angora',nome:'Angorá',esp:'gato',porte:'Médio',emoji:'🐈',peso:'3–5 kg',altura:'22–25 cm',vida:'12–18 anos',origem:'Turquia',temp:['Ágil','Brincalhão'],resumo:'Pelagem sedosa.',cuidados:['Escovação 2-3x/sem'],saude:['Surdez'],racao:'Ração semilongo.'},
 {id:'sphynx',nome:'Sphynx',esp:'gato',porte:'Médio',emoji:'🐈',peso:'3–5 kg',altura:'23–25 cm',vida:'9–15 anos',origem:'Canadá',temp:['Extrovertido','Apegado'],resumo:'Penugem fina.',cuidados:['Banho semanal'],saude:['Cardiomiopatia'],racao:'Ração calórica.'},
 {id:'bengal',nome:'Bengal',esp:'gato',porte:'Médio',emoji:'🐆',peso:'4–7 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'EUA',temp:['Ativo','Brincalhão'],resumo:'Aparência de leopardo.',cuidados:['Exercício intenso'],saude:['Cardiomiopatia'],racao:'Ração alto proteico.'},
-{id:'ragdoll',nome:'Ragdoll',esp:'gato',porte:'Grande',emoji:'🐈',peso:'4,5–9 kg',altura:'23–28 cm',vida:'12–17 anos',origem:'EUA',temp:['Relaxado','Dócil'],resumo:'Fica molinho no colo.',cuidados:['Escovação 2-3x/sem'],saude:['Cardiomiopatia'],racao:'Ração semilongo.'},
-{id:'british',nome:'British Shorthair',esp:'gato',porte:'Médio/Grande',emoji:'🐈',peso:'4–8 kg',altura:'22–25 cm',vida:'14–20 anos',origem:'Reino Unido',temp:['Calmo','Independente'],resumo:'Urso de pelúcia.',cuidados:['Escovação semanal'],saude:['Obesidade'],racao:'Ração light.'},
-{id:'noruegues',nome:'Norueguês da Floresta',esp:'gato',porte:'Grande',emoji:'🐈',peso:'5–9 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'Noruega',temp:['Tranquilo','Ágil'],resumo:'Grande e robusto.',cuidados:['Escovação 3x/sem'],saude:['Cardiomiopatia'],racao:'Ração gatos grandes.'}
+{id:'british',nome:'British Shorthair',esp:'gato',porte:'Médio/Grande',emoji:'🐈',peso:'4–8 kg',altura:'22–25 cm',vida:'14–20 anos',origem:'Reino Unido',temp:['Calmo','Independente'],resumo:'Urso de pelúcia.',cuidados:['Escovação semanal'],saude:['Obesidade'],racao:'Ração light.'}
 ];
 
 const DOENCAS = {
   cao: [
-    {id:'cinomose',nome:'Cinomose',risco:'muito_alto',mortalidade:'90%',tipo:'Viral',contagio:'Secreções, urina, fezes',emoji:'🦠',descricao:'Viral grave que ataca sistemas digestivo, respiratório e nervoso.',sintomas:['Febre alta','Secreção nasal','Vômitos','Convulsões'],prevencao:['Vacinação (V8/V10)','Reforço anual'],tratamento:'Suporte com fluidoterapia e antibióticos.',fonte:'Zoetis'},
-    {id:'parvovirose',nome:'Parvovirose',risco:'muito_alto',mortalidade:'Até 90% em filhotes',tipo:'Viral',contagio:'Fezes contaminadas',emoji:'🦠',descricao:'Viral que destrói células intestinais.',sintomas:['Vômitos','Diarreia com sangue','Apatia'],prevencao:['Vacinação (V8/V10)','Higiene rigorosa'],tratamento:'Internação com fluidoterapia.',fonte:'Petlove'},
-    {id:'leishmaniose',nome:'Leishmaniose',risco:'muito_alto',mortalidade:'Até 90%',tipo:'Parasitária',contagio:'Mosquito-palha',emoji:'🦟',descricao:'Zoonose grave.',sintomas:['Emagrecimento','Feridas na pele'],prevencao:['Coleira com deltametrina','Teste anual'],tratamento:'Miltefosina e anfotericina B.',fonte:'Ministério da Saúde'},
-    {id:'raiva',nome:'Raiva',risco:'muito_alto',mortalidade:'~100%',tipo:'Viral',contagio:'Mordedura',emoji:'🧟',descricao:'Zoonose fatal do sistema nervoso.',sintomas:['Alterações comportamentais','Salivação excessiva'],prevencao:['Vacinação anual obrigatória'],tratamento:'Não existe. Fatal.',fonte:'CRMV'},
-    {id:'leptospirose',nome:'Leptospirose',risco:'alto',mortalidade:'10-50%',tipo:'Bacteriana',contagio:'Urina de ratos',emoji:'💧',descricao:'Bactéria transmitida por urina de ratos.',sintomas:['Febre','Urina escura','Icterícia'],prevencao:['Vacinação (V10)','Controle de roedores'],tratamento:'Antibióticos e fluidoterapia.',fonte:'Zoetis'},
-    {id:'hepatite',nome:'Hepatite Canina',risco:'alto',mortalidade:'Até 30%',tipo:'Viral',contagio:'Secreções',emoji:'🦠',descricao:'Adenovírus canino tipo 1.',sintomas:['Icterícia','Apatia','Vômitos'],prevencao:['Vacinação (V8/V10)'],tratamento:'Suporte intensivo.',fonte:'Royal Canin'},
-    {id:'erliquiose',nome:'Erliquiose',risco:'alto',mortalidade:'Moderada a alta',tipo:'Bacteriana',contagio:'Carrapato',emoji:'🕷️',descricao:'Ehrlichia canis.',sintomas:['Febre','Anemia','Sangramentos'],prevencao:['Controle de carrapatos'],tratamento:'Doxiciclina 28 dias.',fonte:'Petlove'},
-    {id:'babesiose',nome:'Babesiose',risco:'alto',mortalidade:'Moderada',tipo:'Protozoária',contagio:'Carrapato',emoji:'🕷️',descricao:'Protozoário Babesia.',sintomas:['Palidez','Urina escura'],prevencao:['Controle de carrapatos'],tratamento:'Imidocarb e transfusão.',fonte:'Petlove'},
-    {id:'tosse_canis',nome:'Tosse dos Canis',risco:'moderado',mortalidade:'Baixa',tipo:'Viral/Bacteriana',contagio:'Tosse, espirros',emoji:'🤧',descricao:'Complexo respiratório.',sintomas:['Tosse seca','Espirros'],prevencao:['Vacinação (V10 e KC)'],tratamento:'Antibióticos.',fonte:'Zoetis'},
-    {id:'giardiase',nome:'Giardíase',risco:'moderado',mortalidade:'Baixa',tipo:'Parasitária',contagio:'Água contaminada',emoji:'🦠',descricao:'Protozoário Giardia.',sintomas:['Diarreia pastosa','Perda de peso'],prevencao:['Água filtrada'],tratamento:'Metronidazol.',fonte:'Zoetis'},
-    {id:'endocardiose',nome:'Endocardiose',risco:'moderado',mortalidade:'Variável',tipo:'Cardíaca',contagio:'Não contagiosa',emoji:'❤️',descricao:'Doença valvar degenerativa.',sintomas:['Tosse noturna','Cansaço'],prevencao:['Check-up após 5 anos'],tratamento:'Pimobendan, IECA.',fonte:'Cães e Gatos'},
-    {id:'drc_cao',nome:'Doença Renal Crônica',risco:'moderado',mortalidade:'Progressiva',tipo:'Renal',contagio:'Não contagiosa',emoji:'🫘',descricao:'Perda da função renal.',sintomas:['Sede excessiva','Perda de peso'],prevencao:['Água fresca','Check-up anual'],tratamento:'Dieta renal, fluidoterapia.',fonte:'IRIS'},
-    {id:'displasia',nome:'Displasia Coxofemoral',risco:'moderado',mortalidade:'Não fatal',tipo:'Ortopédica',contagio:'Hereditária',emoji:'🦴',descricao:'Má formação do quadril.',sintomas:['Dificuldade para levantar','Mancar'],prevencao:['Controle de peso'],tratamento:'Condroprotetores, cirurgia.',fonte:'Ortopedia'}
+    {id:'cinomose',nome:'Cinomose',risco:'muito_alto',mortalidade:'90%',tipo:'Viral',contagio:'Secreções, urina, fezes',emoji:'🦠',descricao:'Viral grave que ataca sistemas digestivo, respiratório e nervoso.',sintomas:['Febre alta','Secreção nasal','Vômitos','Convulsões'],prevencao:['Vacinação (V8/V10)','Reforço anual'],tratamento:'Suporte com fluidoterapia.',fonte:'Zoetis'},
+    {id:'parvovirose',nome:'Parvovirose',risco:'muito_alto',mortalidade:'Até 90%',tipo:'Viral',contagio:'Fezes',emoji:'🦠',descricao:'Viral que destrói intestino.',sintomas:['Vômitos','Diarreia com sangue'],prevencao:['Vacinação'],tratamento:'Internação.',fonte:'Petlove'},
+    {id:'leishmaniose',nome:'Leishmaniose',risco:'muito_alto',mortalidade:'Até 90%',tipo:'Parasitária',contagio:'Mosquito-palha',emoji:'🦟',descricao:'Zoonose grave.',sintomas:['Emagrecimento','Feridas'],prevencao:['Coleira deltametrina'],tratamento:'Miltefosina.',fonte:'Min. Saúde'},
+    {id:'raiva',nome:'Raiva',risco:'muito_alto',mortalidade:'~100%',tipo:'Viral',contagio:'Mordedura',emoji:'🧟',descricao:'Fatal.',sintomas:['Alterações','Salivação'],prevencao:['Vacinação anual'],tratamento:'Não existe.',fonte:'CRMV'},
+    {id:'leptospirose',nome:'Leptospirose',risco:'alto',mortalidade:'10-50%',tipo:'Bacteriana',contagio:'Urina de ratos',emoji:'💧',descricao:'Bactéria.',sintomas:['Febre','Icterícia'],prevencao:['Vacinação'],tratamento:'Antibióticos.',fonte:'Zoetis'},
+    {id:'erliquiose',nome:'Erliquiose',risco:'alto',mortalidade:'Moderada',tipo:'Bacteriana',contagio:'Carrapato',emoji:'🕷️',descricao:'Ehrlichia canis.',sintomas:['Febre','Anemia'],prevencao:['Antipulgas'],tratamento:'Doxiciclina.',fonte:'Petlove'},
+    {id:'tosse_canis',nome:'Tosse dos Canis',risco:'moderado',mortalidade:'Baixa',tipo:'Viral',contagio:'Tosse',emoji:'🤧',descricao:'Respiratório.',sintomas:['Tosse seca'],prevencao:['Vacinação'],tratamento:'Antibióticos.',fonte:'Zoetis'},
+    {id:'endocardiose',nome:'Endocardiose',risco:'moderado',mortalidade:'Variável',tipo:'Cardíaca',contagio:'Não contagiosa',emoji:'❤️',descricao:'Doença valvar.',sintomas:['Tosse noturna','Cansaço'],prevencao:['Check-up'],tratamento:'Pimobendan.',fonte:'Cães e Gatos'},
+    {id:'drc_cao',nome:'Doença Renal Crônica',risco:'moderado',mortalidade:'Progressiva',tipo:'Renal',contagio:'Não contagiosa',emoji:'🫘',descricao:'Perda renal.',sintomas:['Sede excessiva'],prevencao:['Água fresca'],tratamento:'Dieta renal.',fonte:'IRIS'}
   ],
   gato: [
-    {id:'felv',nome:'FeLV (Leucemia Felina)',risco:'muito_alto',mortalidade:'Muito alta',tipo:'Viral',contagio:'Saliva, fezes',emoji:'🦠',descricao:'Retrovírus incurável.',sintomas:['Febre','Apatia','Anemia'],prevencao:['Vacinação (V5)','Testar novos gatos'],tratamento:'Suporte.',fonte:'Whiskas'},
-    {id:'fiv',nome:'FIV (AIDS Felina)',risco:'muito_alto',mortalidade:'Alta',tipo:'Viral',contagio:'Mordidas',emoji:'🦠',descricao:'Imunodeficiência felina.',sintomas:['Perda de peso','Infecções'],prevencao:['Ambiente interno','Testar novos gatos'],tratamento:'Antirretrovirais.',fonte:'Petlove'},
-    {id:'pif',nome:'PIF (Peritonite)',risco:'muito_alto',mortalidade:'Quase 100%',tipo:'Viral',contagio:'Mutação coronavírus',emoji:'🦠',descricao:'Mutação do coronavírus felino.',sintomas:['Febre persistente','Aumento abdominal'],prevencao:['Reduzir estresse'],tratamento:'Antivirais (GS-441524).',fonte:'Cobasi'},
-    {id:'raiva_gato',nome:'Raiva',risco:'muito_alto',mortalidade:'~100%',tipo:'Viral',contagio:'Mordedura',emoji:'🧟',descricao:'Zoonose fatal.',sintomas:['Agressividade','Salivação'],prevencao:['Vacinação anual'],tratamento:'Não existe.',fonte:'CRMV'},
-    {id:'panleucopenia',nome:'Panleucopenia',risco:'alto',mortalidade:'Até 90%',tipo:'Viral',contagio:'Fezes, urina',emoji:'🦠',descricao:'Parvovirose dos gatos.',sintomas:['Vômitos','Diarreia','Febre'],prevencao:['Vacinação (V3/V4/V5)'],tratamento:'Fluidoterapia, antibióticos.',fonte:'Zoetis'},
-    {id:'rinotraqueite',nome:'Rinotraqueíte',risco:'alto',mortalidade:'Baixa',tipo:'Viral',contagio:'Secreções',emoji:'🤧',descricao:'Herpesvírus felino.',sintomas:['Espirros','Conjuntivite'],prevencao:['Vacinação (V3/V4/V5)'],tratamento:'Lisina, antibióticos.',fonte:'Zoetis'},
-    {id:'calicivirose',nome:'Calicivirose',risco:'alto',mortalidade:'Baixa',tipo:'Viral',contagio:'Secreções orais',emoji:'🤧',descricao:'Calicivírus felino.',sintomas:['Úlceras na boca','Salivação'],prevencao:['Vacinação (V3/V4/V5)'],tratamento:'Antibióticos, dieta pastosa.',fonte:'Zoetis'},
-    {id:'clamidiose',nome:'Clamidiose',risco:'alto',mortalidade:'Baixa',tipo:'Bacteriana',contagio:'Secreções oculares',emoji:'👁️',descricao:'Bactéria ocular.',sintomas:['Conjuntivite','Secreção'],prevencao:['Vacinação (V4/V5)'],tratamento:'Antibióticos 3-4 semanas.',fonte:'Zoetis'},
-    {id:'toxoplasmose',nome:'Toxoplasmose',risco:'alto',mortalidade:'Baixa em gatos',tipo:'Parasitária',contagio:'Carne crua',emoji:'🦠',descricao:'Toxoplasma gondii.',sintomas:['Febre','Apatia'],prevencao:['Não oferecer carne crua'],tratamento:'Clindamicina.',fonte:'Whiskas'},
-    {id:'esporotricose',nome:'Esporotricose',risco:'alto',mortalidade:'Moderada',tipo:'Fúngica',contagio:'Feridas, arranhões',emoji:'🍄',descricao:'Zoonose fúngica.',sintomas:['Feridas que não cicatrizam'],prevencao:['Uso de luvas'],tratamento:'Itraconazol 3-6 meses.',fonte:'Whiskas'},
-    {id:'drc_gato',nome:'Doença Renal Crônica',risco:'alto',mortalidade:'Progressiva',tipo:'Renal',contagio:'Não contagiosa',emoji:'🫘',descricao:'Principal causa de morte em idosos.',sintomas:['Sede excessiva','Perda de peso'],prevencao:['Água','Dieta úmida'],tratamento:'Dieta renal, fluidoterapia.',fonte:'IRIS'},
-    {id:'cardiomiopatia',nome:'Cardiomiopatia Hipertrófica',risco:'alto',mortalidade:'Variável',tipo:'Cardíaca',contagio:'Hereditária',emoji:'❤️',descricao:'Doença cardíaca comum em gatos.',sintomas:['Dificuldade para respirar','Desmaios'],prevencao:['Ecocardiograma'],tratamento:'Beta-bloqueadores.',fonte:'Cães e Gatos'},
-    {id:'obesidade',nome:'Obesidade Felina',risco:'moderado',mortalidade:'Não fatal',tipo:'Metabólica',contagio:'Não contagiosa',emoji:'⚖️',descricao:'Excesso de peso.',sintomas:['Ganho de peso','Letargia'],prevencao:['Medir ração','Brincadeiras'],tratamento:'Dieta com controle calórico.',fonte:'Whiskas'}
+    {id:'felv',nome:'FeLV (Leucemia Felina)',risco:'muito_alto',mortalidade:'Muito alta',tipo:'Viral',contagio:'Saliva',emoji:'🦠',descricao:'Retrovírus incurável.',sintomas:['Febre','Apatia'],prevencao:['Vacinação (V5)'],tratamento:'Suporte.',fonte:'Whiskas'},
+    {id:'fiv',nome:'FIV (AIDS Felina)',risco:'muito_alto',mortalidade:'Alta',tipo:'Viral',contagio:'Mordidas',emoji:'🦠',descricao:'Imunodeficiência.',sintomas:['Perda de peso'],prevencao:['Ambiente interno'],tratamento:'Antirretrovirais.',fonte:'Petlove'},
+    {id:'pif',nome:'PIF',risco:'muito_alto',mortalidade:'~100%',tipo:'Viral',contagio:'Mutação',emoji:'🦠',descricao:'Peritonite.',sintomas:['Febre','Aumento abdominal'],prevencao:['Reduzir estresse'],tratamento:'Antivirais.',fonte:'Cobasi'},
+    {id:'raiva_gato',nome:'Raiva',risco:'muito_alto',mortalidade:'~100%',tipo:'Viral',contagio:'Mordedura',emoji:'🧟',descricao:'Fatal.',sintomas:['Agressividade'],prevencao:['Vacinação'],tratamento:'Não existe.',fonte:'CRMV'},
+    {id:'panleucopenia',nome:'Panleucopenia',risco:'alto',mortalidade:'Até 90%',tipo:'Viral',contagio:'Fezes',emoji:'🦠',descricao:'Parvovirose dos gatos.',sintomas:['Vômitos','Diarreia'],prevencao:['Vacinação'],tratamento:'Fluidoterapia.',fonte:'Zoetis'},
+    {id:'rinotraqueite',nome:'Rinotraqueíte',risco:'alto',mortalidade:'Baixa',tipo:'Viral',contagio:'Secreções',emoji:'🤧',descricao:'Herpesvírus.',sintomas:['Espirros'],prevencao:['Vacinação'],tratamento:'Lisina.',fonte:'Zoetis'},
+    {id:'drc_gato',nome:'Doença Renal Crônica',risco:'alto',mortalidade:'Progressiva',tipo:'Renal',contagio:'Não contagiosa',emoji:'🫘',descricao:'Comum em idosos.',sintomas:['Sede excessiva'],prevencao:['Água'],tratamento:'Dieta renal.',fonte:'IRIS'},
+    {id:'cardiomiopatia',nome:'Cardiomiopatia Hipertrófica',risco:'alto',mortalidade:'Variável',tipo:'Cardíaca',contagio:'Hereditária',emoji:'❤️',descricao:'Doença cardíaca.',sintomas:['Dificuldade respirar'],prevencao:['Ecocardiograma'],tratamento:'Beta-bloqueadores.',fonte:'Cães e Gatos'},
+    {id:'obesidade',nome:'Obesidade Felina',risco:'moderado',mortalidade:'Não fatal',tipo:'Metabólica',contagio:'Não contagiosa',emoji:'⚖️',descricao:'Excesso de peso.',sintomas:['Ganho','Letargia'],prevencao:['Medir ração'],tratamento:'Dieta.',fonte:'Whiskas'}
   ]
 };
 
 const RISCO_INFO = {
   muito_alto: {label:'Muito alto', cor:'#EF476F', bg:'#FFE9EF', icone:'🚨', ordem:1},
-  alto:       {label:'Alto',       cor:'#FF7A45', bg:'#FFF0E8', icone:'⚠️', ordem:2},
-  moderado:   {label:'Moderado',   cor:'#FFB020', bg:'#FFF6E2', icone:'📋', ordem:3}
+  alto: {label:'Alto', cor:'#FF7A45', bg:'#FFF0E8', icone:'⚠️', ordem:2},
+  moderado: {label:'Moderado', cor:'#FFB020', bg:'#FFF6E2', icone:'📋', ordem:3}
 };
 
 const PRIMEIROS_SOCORROS = [
-  {id:'engasgo',emoji:'😰',titulo:'Engasgo',oque:'Obstrução das vias aéreas.',fazer:['Procure o objeto na boca','Manobra de Heimlich adaptada','Gatos/pequenos: cabeça para baixo'],nao:['Não enfie o dedo sem ver','Não force líquidos'],aviso:'Se desmaiar, inicie RCP.'},
-  {id:'intoxicacao',emoji:'☠️',titulo:'Intoxicação',oque:'Ingestão de tóxicos.',fazer:['Identifique a substância','Ligue para o veterinário','Leve ao atendimento'],nao:['NUNCA induza vômito','Não use receitas caseiras'],aviso:'Centro Toxicológico 24h: 0800 722 6001.'},
-  {id:'sangramento',emoji:'🩸',titulo:'Sangramento',oque:'Cortes ou hemorragias.',fazer:['Pressione com gaze 3-5 min','Eleve o membro','Leve ao vet'],nao:['Não remova objetos cravados','Não use álcool'],aviso:'Sangramentos que não param em 5 min exigem atendimento.'},
-  {id:'convulsao',emoji:'⚡',titulo:'Convulsão',oque:'Crises epilépticas.',fazer:['Afaste móveis','Desligue TVs','Cronometre a duração'],nao:['NUNCA coloque a mão na boca','Não jogue água'],aviso:'Crises com mais de 5 min são emergência.'},
-  {id:'queimadura',emoji:'🔥',titulo:'Queimadura',oque:'Fogo, líquidos quentes.',fazer:['Resfrie com água 10-15 min','Cubra com gaze limpa','Leve ao vet'],nao:['Não aplique gelo, pasta ou manteiga'],aviso:'Queimaduras em 10%+ do corpo são emergência.'},
-  {id:'golpe_calor',emoji:'🌡️',titulo:'Golpe de calor',oque:'Temperatura acima de 40 °C.',fazer:['Mova para local ventilado','Molhe com água ambiente','Panos úmidos no pescoço'],nao:['NUNCA use água gelada'],aviso:'Braquicefálicos são mais suscetíveis.'}
+  {id:'engasgo',emoji:'😰',titulo:'Engasgo',oque:'Obstrução das vias aéreas.',fazer:['Procure o objeto na boca','Heimlich adaptada'],nao:['Não enfie dedo sem ver'],aviso:'Se desmaiar, inicie RCP.'},
+  {id:'intoxicacao',emoji:'☠️',titulo:'Intoxicação',oque:'Ingestão de tóxicos.',fazer:['Identifique a substância','Ligue para veterinário'],nao:['Não induza vômito'],aviso:'Toxicológico 24h: 0800 722 6001.'},
+  {id:'sangramento',emoji:'🩸',titulo:'Sangramento',oque:'Cortes.',fazer:['Pressione 3-5 min','Leve ao vet'],nao:['Não remova objetos cravados'],aviso:'Se não para em 5 min, emergência.'},
+  {id:'convulsao',emoji:'⚡',titulo:'Convulsão',oque:'Crises.',fazer:['Afaste móveis','Cronometre'],nao:['Não coloque mão na boca'],aviso:'>5 min = emergência.'},
+  {id:'golpe_calor',emoji:'🌡️',titulo:'Golpe de calor',oque:'>40 °C.',fazer:['Mova para local ventilado','Molhe com água ambiente'],nao:['Nunca água gelada'],aviso:'Braquicefálicos são suscetíveis.'}
 ];
 
 const ALIMENTOS = [
-  {cat:'permitido',emoji:'🍗',nome:'Frango cozido sem osso',nota:'Sem sal, tempero ou pele.'},
-  {cat:'permitido',emoji:'🥕',nome:'Cenoura cozida',nota:'Rica em vitamina A e fibras.'},
-  {cat:'permitido',emoji:'🍚',nome:'Arroz integral cozido',nota:'Bem tolerado.'},
-  {cat:'permitido',emoji:'🍠',nome:'Batata-doce cozida',nota:'Rica em fibras.'},
+  {cat:'permitido',emoji:'🍗',nome:'Frango cozido',nota:'Sem sal ou tempero.'},
+  {cat:'permitido',emoji:'🥕',nome:'Cenoura cozida',nota:'Vitamina A e fibras.'},
+  {cat:'permitido',emoji:'🍚',nome:'Arroz integral',nota:'Bem tolerado.'},
   {cat:'permitido',emoji:'🥚',nome:'Ovo cozido',nota:'Proteína completa.'},
   {cat:'perigoso',emoji:'🥛',nome:'Leite de vaca',nota:'Causa diarreia.'},
   {cat:'perigoso',emoji:'🥩',nome:'Carne crua',nota:'Risco de salmonela.'},
-  {cat:'perigoso',emoji:'🧂',nome:'Sal em excesso',nota:'Intoxicação por sódio.'},
   {cat:'toxico',emoji:'🍫',nome:'Chocolate',nota:'Teobromina é tóxica.'},
   {cat:'toxico',emoji:'🧅',nome:'Cebola e alho',nota:'Destroem hemácias.'},
   {cat:'toxico',emoji:'🍇',nome:'Uva e uva-passa',nota:'Falência renal.'},
   {cat:'toxico',emoji:'🥑',nome:'Abacate',nota:'Contém persina.'},
   {cat:'toxico',emoji:'🍬',nome:'Xilitol',nota:'Hipoglicemia grave.'},
-  {cat:'toxico',emoji:'☕',nome:'Cafeína',nota:'Tóxico para pets.'},
-  {cat:'toxico',emoji:'🍺',nome:'Álcool',nota:'Pode causar coma.'},
-  {cat:'toxico',emoji:'🦴',nome:'Ossos cozidos',nota:'Fragmentam e perfuram intestino.'},
-  {cat:'toxico',emoji:'🥜',nome:'Macadâmia',nota:'Tóxica para cães.'},
-  {cat:'toxico',emoji:'🍄',nome:'Cogumelos silvestres',nota:'Muitos são tóxicos.'}
+  {cat:'toxico',emoji:'☕',nome:'Cafeína',nota:'Tóxico.'},
+  {cat:'toxico',emoji:'🦴',nome:'Ossos cozidos',nota:'Fragmentam.'},
+  {cat:'toxico',emoji:'🥜',nome:'Macadâmia',nota:'Tóxica.'}
 ];
 
 const SAZONAL = [
-  {estacao:'☀️ Verão',cor:'#FFB020',periodo:'Dez-Mar',cuidados:['Água fresca à vontade','Evite passeios 10h-16h','Nunca deixe em carro fechado'],atencao:['Braquicefálicos sofrem mais']},
-  {estacao:'🍂 Outono',cor:'#E89B5C',periodo:'Abr-Jun',cuidados:['Troca de pelo — escove','Atenção às alergias','Vacinação antirrábica'],atencao:['Tosse frequente pede avaliação']},
-  {estacao:'❄️ Inverno',cor:'#4A7DFF',periodo:'Jul-Set',cuidados:['Agasalhe pets de pelo curto','Banhos menos frequentes'],atencao:['Idosos sentem mais dores']},
-  {estacao:'🌸 Primavera',cor:'#25C2B0',periodo:'Out-Dez',cuidados:['Atenção a pulgas','Cuidado com plantas tóxicas'],atencao:['Alergias sazonais']}
+  {estacao:'☀️ Verão',cor:'#FFB020',periodo:'Dez-Mar',cuidados:['Água fresca','Evite 10h-16h','Nunca carro fechado'],atencao:['Braquicefálicos sofrem']},
+  {estacao:'🍂 Outono',cor:'#E89B5C',periodo:'Abr-Jun',cuidados:['Troca de pelo','Alergias'],atencao:['Tosse pede avaliação']},
+  {estacao:'❄️ Inverno',cor:'#4A7DFF',periodo:'Jul-Set',cuidados:['Agasalhe pets','Banhos menos frequentes'],atencao:['Idosos sentem dores']},
+  {estacao:'🌸 Primavera',cor:'#25C2B0',periodo:'Out-Dez',cuidados:['Pulgas e carrapatos','Plantas tóxicas'],atencao:['Alergias sazonais']}
 ];
 
 const ADESTRAMENTO = [
   {nivel:'🌱 Iniciante',cor:'#25C2B0',comandos:[
-    {nome:'Senta',como:'Petisco acima da cabeça, mova para trás. Diga "senta".'},
-    {nome:'Vem',como:'Ajoelhe-se, chame "vem". Recompense.'},
+    {nome:'Senta',como:'Petisco acima da cabeça, mova para trás.'},
+    {nome:'Vem',como:'Chame "vem". Recompense.'},
     {nome:'Fica',como:'Diga "senta", mão aberta, "fica".'}
   ]},
   {nivel:'🌿 Intermediário',cor:'#4A7DFF',comandos:[
     {nome:'Deita',como:'Do "senta", petisco ao chão.'},
     {nome:'Junto',como:'Ande com o pet ao lado.'},
-    {nome:'Espera',como:'Antes de comer, peça "espera".'}
+    {nome:'Espera',como:'Antes de comer.'}
   ]},
   {nivel:'🌳 Avançado',cor:'#9B5DE5',comandos:[
     {nome:'Rola',como:'Do "deita", movimento circular.'},
     {nome:'Busca',como:'Esconda brinquedo, diga "busca".'},
-    {nome:'Dá a pata',como:'Toque a pata enquanto diz.'}
+    {nome:'Dá a pata',como:'Toque a pata.'}
   ]}
 ];
 
 function racoesRecomendadas(pet){
-  const esp = pet.especie;
   const faixa = faixaEtaria(pet.nascimento);
   const porte = porteDoPet(pet);
-  if(esp === 'cao'){
+  if(pet.especie === 'cao'){
     const nomes = {pequeno:'Pequeno', medio:'Médio', grande:'Grande'};
     const mapa = {
-      filhote:{titulo:'Filhote (até 12m)',desc:'Crescimento saudável.',itens:['Proteína mín. 28%','Cálcio/fósforo para ' + (nomes[porte]||'porte'),'3-4 refeições'],marcas:['Premier Filhotes','Royal Canin','Golden']},
-      junior:{titulo:'Júnior (1-2a)',desc:'Transição para adulta.',itens:['Proteína 24-28%','2 refeições'],marcas:['Premier','Royal Canin']},
+      filhote:{titulo:'Filhote (até 12m)',desc:'Crescimento.',itens:['Proteína mín. 28%','Cálcio para ' + (nomes[porte]||'porte'),'3-4 refeições'],marcas:['Premier Filhotes','Royal Canin','Golden']},
+      junior:{titulo:'Júnior (1-2a)',desc:'Transição.',itens:['Proteína 24-28%','2 refeições'],marcas:['Premier','Royal Canin']},
       adulto:{titulo:'Adulto (2-7a)',desc:'Manutenção.',itens:['Proteína 22-26%','Controle de petiscos'],marcas:['Premier','Pro Plan','Royal Canin']},
-      senior:{titulo:'Sênior (7+)',desc:'Suporte articular.',itens:['Condroprotetores','Menor fósforo'],marcas:['Premier Sênior','Royal Canin']}
+      senior:{titulo:'Sênior (7+)',desc:'Suporte.',itens:['Condroprotetores','Menor fósforo'],marcas:['Premier Sênior','Royal Canin']}
     };
     return [mapa[faixa]];
   } else {
@@ -1510,224 +1453,44 @@ function porteDoPet(pet){
 }
 
 /* ============================================================
-   🧠 IA VETERINÁRIA — MOTOR DE CONHECIMENTO
+   🧠 IA — BASE DE CONHECIMENTO LOCAL
 ============================================================ */
-
-/* Base de conhecimento com padrões de perguntas e respostas */
 const IA_KB = [
-  /* ===== SINTOMAS — emergências e alertas ===== */
-  {tipo:'emergencia', peso:10,
-   palavras:['sangrando','sangramento','sangue','hemorragia','cortou','corte profundo'],
-   resposta:'🩸 **Sangramento** é uma emergência! O que fazer agora:\n\n1. **Pressione** o local com gaze ou pano limpo por **3-5 minutos** sem parar\n2. Se possível, **eleve o membro** acima do nível do coração\n3. **Não remova** objetos cravados (facas, vidros, espinhos)\n4. Leve **imediatamente** ao veterinário\n\n⚠️ Se não parar em 5 minutos, é emergência grave.'},
-
-  {tipo:'emergencia', peso:10,
-   palavras:['engasgou','engasgo','asfixia','sufocando','objeto na garganta'],
-   resposta:'😰 **Engasgo é uma emergência!** Aja rápido:\n\n1. Abra a boca **com cuidado** e procure o objeto\n2. Se **visível e alcançável**, remova com pinça\n3. **Manobra de Heimlich adaptada:**\n   • Cães pequenos/gatos: segure de cabeça para baixo e dê tapinhas\n   • Cães grandes: abrace por trás e comprima o abdômen\n4. Leve imediatamente ao veterinário\n\n⚠️ **NUNCA** enfie o dedo sem ver o objeto.'},
-
-  {tipo:'emergencia', peso:10,
-   palavras:['convulsão','convulsionando','tremendo muito','ataque','epilepsia'],
-   resposta:'⚡ **Convulsão** — mantenha a calma:\n\n1. **Afaste móveis** e objetos ao redor\n2. **Desligue TVs** e reduza sons\n3. **Cronometre** a duração\n4. Após a crise, mantenha o pet aquecido e em local tranquilo\n5. **Anote tudo** para relatar ao veterinário\n\n🚫 NUNCA coloque a mão na boca\n🚫 Não tente segurar os movimentos\n\n⚠️ Crises com mais de **5 minutos** ou repetidas são emergência.'},
-
-  {tipo:'emergencia', peso:10,
-   palavras:['intoxicado','intoxicação','envenenado','comeu veneno','comeu chocolate','comeu cebola','comeu uva'],
-   resposta:'☠️ **Intoxicação** é emergência! Siga:\n\n1. **Identifique** a substância e quantidade\n2. **Guarde a embalagem** para mostrar ao vet\n3. **Ligue imediatamente** para o veterinário\n4. Leve ao atendimento de urgência\n\n🚫 **NUNCA** induza vômito sem orientação\n🚫 Não ofereça leite ou água em excesso\n\n📞 Centro Toxicológico 24h: **0800 722 6001**'},
-
-  {tipo:'emergencia', peso:9,
-   palavras:['vomitando muito','vômito frequente','vomitou várias vezes','vômitos consecutivos'],
-   resposta:'🤢 **Vômitos frequentes** podem indicar:\n\n• Gastrite ou indisposição\n• Intoxicação (se comeu algo errado)\n• Parasitas\n• Pancreatite\n• Obstrução intestinal\n• Cinomose ou parvovirose (filhotes)\n\n**O que fazer:**\n• Jejum de **6-12h** (para adultos)\n• Água em pequenas quantidades\n• Se persistir **mais de 24h** → veterinário **URGENTE**\n\n⚠️ Em filhotes, procure o vet imediatamente.'},
-
-  {tipo:'emergencia', peso:9,
-   palavras:['diarreia com sangue','fezes com sangue','sangue nas fezes'],
-   resposta:'🩸 **Diarreia com sangue** é sinal grave!\n\nPode indicar:\n• Parvovirose (filhotes não vacinados) — **emergência**\n• Parasitas intestinais graves\n• Hemorragia digestiva\n• Intoxicação\n\n**Procure o veterinário IMEDIATAMENTE.**\n\nMantenha o pet hidratado com **soro caseiro** ou água fresca em pequenas quantidades. Não ofereça comida pesada.'},
-
-  {tipo:'alerta', peso:7,
-   palavras:['tosse','tossindo','tosse seca','tosse persistente'],
-   resposta:'🤧 **Tosse persistente** pode ser:\n\n• **Tosse dos Canis** (KC) — muito comum\n• Colapso traqueal (raças pequenas)\n• Problemas cardíacos (cães idosos)\n• Alergias respiratórias\n• Corpo estranho\n\n**Quando procurar o vet:**\n• Tosse com mais de 3 dias\n• Tosse à noite\n• Cansaço fácil\n• Secreção nasal\n\n💡 Cães idosos com tosse noturna frequente merecem avaliação cardíaca.'},
-
-  {tipo:'alerta', peso:6,
-   palavras:['apatia','triste','não come','sem apetite','letargia','prostrado','desanimado'],
-   resposta:'😔 **Apatia e falta de apetite** são sinais inespecíficos:\n\n**Investigue:**\n• Mudou a ração recentemente?\n• Houve mudança de ambiente?\n• Está com febre?\n• Está bebendo água normalmente?\n• Está urinando/defecando normal?\n\n**Procure o veterinário se durar mais de:**\n• **2 dias** sem comer\n• **1 dia** em filhotes\n\n💡 Ofereça petiscos favoritos para testar. Se aceitar, pode ser estresse. Se recusar tudo, é médico.'},
-
-  {tipo:'alerta', peso:6,
-   palavras:['coceira','coçando','se coçando muito','alergia','queda de pelo','feridas'],
-   resposta:'🐕 **Coceira e queda de pelo** indicam:\n\n• **Pulgas e carrapatos** (mais comum)\n• **Alergia alimentar** ou de contato\n• **Dermatite** (bacteriana ou fúngica)\n• **Sarna**\n\n**Primeiros passos:**\n1. Verifique se há pulgas/carrapatos\n2. Aplique antipulgas mensal\n3. Banho com shampoo hipoalergênico\n4. Se persistir, examine com vet\n\n💡 Coceira intensa que não passa com antipulgas precisa de consulta.'},
-
-  /* ===== ALIMENTAÇÃO ===== */
-  {tipo:'info', peso:7,
-   palavras:['ração','alimentar','alimento','o que dar','comida','alimento certo'],
-   resposta:'🍖 **Alimentação adequada** por fase da vida:\n\n**Filhotes:**\n• Ração específica para filhotes\n• 3-4 refeições ao dia\n• Proteína mín. 28% (cães) / 34% (gatos)\n\n**Adultos:**\n• Ração premium balanceada\n• 2 refeições ao dia\n• Proteína 22-26% (cães) / 30-34% (gatos)\n\n**Sêniores (7+):**\n• Ração sênior com condroprotetores\n• Menor fósforo e sódio\n\n⚠️ Sempre ofereça água fresca!'},
-
-  {tipo:'info', peso:6,
-   palavras:['chocolate','posso dar chocolate','uva','abacate','cebola','alho'],
-   resposta:'🚫 **Alimentos TÓXICOS** — nunca ofereça:\n\n• 🍫 **Chocolate** (teobromina)\n• 🧅 **Cebola, alho e alho-poró**\n• 🍇 **Uva e uva-passa**\n• 🥑 **Abacate**\n• 🍬 **Xilitol** (adoçante)\n• ☕ **Cafeína**\n• 🍺 **Álcool**\n• 🦴 **Ossos cozidos**\n• 🥜 **Macadâmia**\n• 🍄 **Cogumelos silvestres**\n\nSe seu pet comeu algum desses, ligue **imediatamente** para o veterinário ou **0800 722 6001**.'},
-
-  {tipo:'info', peso:6,
-   palavras:['quantidade','quanto dar','porção','gramas','ração por dia'],
-   resposta:'📏 **Quantidade diária estimada:**\n\nA regra geral é cerca de **2% do peso corporal** por dia de ração seca (adultos).\n\n**Exemplos:**\n• Cão 5 kg → ~100g/dia (2 refeições de 50g)\n• Cão 15 kg → ~330g/dia (2 refeições de 165g)\n• Cão 30 kg → ~600g/dia (2 refeições de 300g)\n• Gato 4 kg → ~60-80g/dia\n\n💡 Meça com copo medidor!\n💡 A quantidade varia conforme nível de atividade, metabolismo e marca da ração. Sempre confira a tabela do fabricante.'},
-
-  /* ===== SAÚDE PREVENTIVA ===== */
-  {tipo:'info', peso:7,
-   palavras:['vacina','vacinação','protocolo vacinal','quais vacinas','v10','v8','v3','v4','v5'],
-   resposta:'💉 **Protocolo vacinal essencial:**\n\n**CÃES:**\n• **V8/V10/V11** (Polivalente) — 3 doses a partir de 6 semanas + reforço anual\n• **Antirrábica** — 1 dose aos 3 meses + reforço anual obrigatório\n• **Gripe Canina (KC)** — opcional mas recomendada\n\n**GATOS:**\n• **V3/V4/V5** — 3 doses a partir de 6-8 semanas + reforço anual\n• **Antirrábica** — 1 dose aos 3 meses + reforço anual\n• **FeLV** — para gatos com acesso à rua\n\n📋 Acesse a aba **Vacinas** para ver o cronograma personalizado do seu pet!'},
-
-  {tipo:'info', peso:6,
-   palavras:['vermífugo','vermifugação','verme','desparasitar'],
-   resposta:'🪱 **Protocolo de vermifugação:**\n\n**Filhotes:**\n• Início aos **15 dias** de vida\n• Repetir a cada **15 dias** até os 3 meses\n\n**Jovens e adultos:**\n• A cada **3 meses** até 1 ano\n• A cada **4-6 meses** após 1 ano\n\n**Sempre:**\n• Pese o animal antes de calcular a dose\n• Escolha produto específico para espécie/porte\n\n💡 Mesmo em pets indoor, a vermifugação é essencial!'},
-
-  {tipo:'info', peso:6,
-   palavras:['antipulgas','carrapato','pulga','bravecto','simparic','nexgard'],
-   resposta:'💊 **Controle de pulgas e carrapatos:**\n\n**Produtos comuns:**\n• **Bravecto** — comprimido, 12 semanas\n• **Simparic** — comprimido, 5 semanas\n• **NexGard** — comprimido, 4 semanas\n• **Frontline** — pipeta, 4 semanas\n• **Revolution** — pipeta, 4 semanas\n\n**Dicas:**\n• Aplique mensalmente (ou conforme o produto)\n• Também é essencial em pets indoor\n• Ambientes com outros animais: trate todos\n• Carrapatos transmitem erliquiose e babesiose'},
-
-  {tipo:'info', peso:5,
-   palavras:['castração','castrar','esterilização','cio'],
-   resposta:'✂️ **Castração — aspectos importantes:**\n\n**Quando:**\n• A partir dos **6 meses** (cães e gatos)\n• Antes do primeiro cio reduz riscos\n\n**Benefícios:**\n• Previne ninhadas indesejadas\n• Reduz risco de tumores (mama, próstata, útero)\n• Diminui fugas e brigas\n• Reduz marcação de território\n• Em fêmeas: previne piometra (infecção uterina grave)\n\n**Pós-operatório:**\n• Repouso por 7-10 dias\n• Colar elizabetano obrigatório\n• Retirada de pontos em ~10 dias'},
-
-  /* ===== COMPORTAMENTO ===== */
-  {tipo:'dica', peso:7,
-   palavras:['mordendo','mordida','destruindo','roendo móveis','destrutivo'],
-   resposta:'🐕 **Comportamento destrutivo** — como resolver:\n\n**Causas comuns:**\n• Tédio e falta de exercício\n• Ansiedade de separação\n• Dentinhos (filhotes em troca de dentes)\n• Falta de brinquedos adequados\n\n**Soluções:**\n1. **Aumente o exercício** — cães cansados não destroem\n2. **Brinquedos interativos** (Kong, bolinhas com petiscos)\n3. **Rotina de passeios** 2-3x ao dia\n4. **Adestramento** com reforço positivo\n5. **Não** castigue fisicamente — piora a ansiedade\n\n💡 Se for filhote, é fase. Ofereça mordedores adequados.'},
-
-  {tipo:'dica', peso:6,
-   palavras:['ansiedade','chorando','latindo muito','uivando','quando sai'],
-   resposta:'😢 **Ansiedade de separação** — o que fazer:\n\n**Sinais:**\n• Chora/late muito quando você sai\n• Destrói objetos\n• Faz xixi mesmo educado\n• Fica agitado antes de você sair\n\n**Estratégias:**\n1. **Saídas graduais** — comece com 5 min, aumente\n2. **Não faça festa** ao sair nem ao voltar\n3. **Brinquedos recheados** deixados antes de sair\n4. **Deixe TV/rádio ligado** em volume baixo\n5. **Câmera** para monitorar\n6. **Adestramento** de "fica"\n\n⚠️ Casos graves se beneficiam de ajuda veterinária.'},
-
-  {tipo:'dica', peso:5,
-   palavras:['xixi','faz xixi no lugar errado','não aprende','tapete higiênico'],
-   resposta:'🚽 **Educação sanitária** — passo a passo:\n\n1. **Defina o local** e leve o pet lá:\n   • Após acordar\n   • Após comer\n   • Após brincar\n   • A cada 2h (filhotes)\n\n2. **Elogie muito** quando acertar\n3. **Se errar:** limpe sem deixar cheiro (use enzimático)\n4. **Nunca** esfregue o focinho no erro\n5. **Rotina constante** — todos devem seguir\n\n💡 Filhotes aguentam ~1h por mês de idade. Um filhote de 3 meses aguenta ~3h.'},
-
-  /* ===== HIGIENE ===== */
-  {tipo:'dica', peso:5,
-   palavras:['banho','dar banho','com que frequência','shampoo'],
-   resposta:'🚿 **Banhos — frequência ideal:**\n\n• **Cães de pelo curto:** a cada 15-30 dias\n• **Cães de pelo longo:** a cada 7-15 dias\n• **Gatos:** geralmente **não precisam** (se limpam sozinhos)\n\n**Dicas:**\n• Use shampoo específico para pets (nunca humano)\n• Água morna (não quente)\n• Seque bem, especialmente em dias frios\n• Evite banhos após vacinação (48h)\n\n⚠️ **Filhotes:** só podem tomar banho após a 2ª dose de vacina.'},
-
-  {tipo:'dica', peso:5,
-   palavras:['escovação dental','dente','tártaro','mau hálito','halitose'],
-   resposta:'🦷 **Saúde dental** — fundamental!\n\n**Problemas comuns:**\n• Tártaro e gengivite (80% dos cães após 3 anos)\n• Doença periodontal\n• Perda de dentes\n\n**Cuidados em casa:**\n1. **Escovação 3-4x por semana** (ideal: diária)\n2. Use pasta específica para pets (nunca humana)\n3. **Ossos e brinquedos dentais** ajudam\n4. **Petiscos dentais** aprovados\n\n**Profissional:**\n• Limpeza com veterinário 1x ao ano (após 3 anos)\n\n💡 Mau hálito persistente é sinal de doença.'},
-
-  /* ===== RAÇAS ESPECÍFICAS ===== */
-  {tipo:'info', peso:5,
-   palavras:['pug','bulldog','shih tzu','braquicefálico','focinho achatado'],
-   resposta:'🐶 **Raças braquicefálicas** (Pug, Bulldog, Shih Tzu):\n\n**Cuidados especiais:**\n• 🚫 **Nunca** em ambientes quentes\n• 🚫 **Nunca** exercício intenso\n• ✈️ Viagens de avião: risco elevado\n• 🌡️ Evite passeios 10h-16h no verão\n• ❄️ Agasalhar no frio\n• 😴 Roncam e têm apneia do sono\n\n**Sinais de alerta:**\n• Respiração ruidosa\n• Cianose (língua azulada)\n• Desmaios\n• Intolerância ao exercício\n\nProcure o vet se notar dificuldade respiratória.'},
-
-  {tipo:'info', peso:5,
-   palavras:['salsicha','dachshund','coluna','hérnia de disco'],
-   resposta:'🌭 **Dachshund (Salsicha)** — cuidado com a coluna:\n\n**Riscos:**\n• Hérnia de disco (IVDD) — muito comum\n• Obesidade agrava o problema\n\n**Prevenção:**\n1. **Controle rigoroso de peso**\n2. **Evite saltos** de sofás e camas\n3. **Rampas** em vez de escadas\n4. **Não deixe pular** de alturas\n5. **Carregue** apoiando o corpo todo\n6. **Exercício moderado** regular\n\n**Sinais de alerta:**\n• Dor nas costas\n• Dificuldade para andar\n• Perda de sensibilidade nas patas\n\n🚨 Procure o vet imediatamente se notar esses sinais.'},
-
-  /* ===== IDADE ===== */
-  {tipo:'info', peso:6,
-   palavras:['filhote','cuidados filhote','puppy','kitten','recém-nascido'],
-   resposta:'🐶 **Cuidados com filhotes:**\n\n**0-4 semanas:**\n• Aleitamento materno exclusivo\n• Ambiente aquecido (26-28 °C)\n• Estímulo para urinar/defecar\n\n**4-8 semanas:**\n• Início do desmame (ração úmida)\n• Primeira vermifugação\n• Socialização leve\n\n**8-16 semanas:**\n• Protocolo vacinal\n• Socialização intensa (janela crítica)\n• Início do adestramento básico\n\n**4-6 meses:**\n• Troca de dentes (ofereça mordedores)\n• Castração pode ser agendada\n\n💡 Filhotes precisam comer 3-4x ao dia.'},
-
-  {tipo:'info', peso:5,
-   palavras:['sênior','idoso','velho','idoso','terceira idade'],
-   resposta:'👴 **Cuidados com pets sêniores (7+ anos):**\n\n**Consultas:**\n• A cada **6 meses** (não anual)\n• Exames de sangue e urina\n\n**Atenção especial a:**\n• Artrose e dores articulares\n• Problemas renais\n• Cardiopatias\n• Problemas dentários\n• Câncer\n\n**Adaptações em casa:**\n• Cama ortopédica\n• Rampas em vez de escadas\n• Tapetes antiderrapantes\n• Local aquecido\n\n**Alimentação:**\n• Ração sênior\n• Menor fósforo/sódio\n• Condroprotetores'},
-
-  /* ===== DOENÇAS ESPECÍFICAS ===== */
-  {tipo:'alerta', peso:8,
-   palavras:['cinomose','parvovirose','parvo'],
-   resposta:'🦠 **Cinomose e Parvovirose** — doenças graves:\n\n**Cinomose:**\n• Viral, ataca sistema nervoso\n• Sintomas: febre, secreção, convulsões\n• Prevenção: vacinação V10\n\n**Parvovirose:**\n• Viral, destrói intestino\n• Sintomas: vômitos, diarreia com sangue\n• Mais comum em filhotes\n• Prevenção: vacinação V10\n\n🚨 **Ambas são emergências.** Procure o vet imediatamente se notar os sintomas.\n\n💉 **Vacinação é a única prevenção eficaz!**'},
-
-  {tipo:'alerta', peso:8,
-   palavras:['erliquiose','babesiose','doença do carrapato','carrapato doente'],
-   resposta:'🕷️ **Doenças do carrapato** (Erliquiose e Babesiose):\n\n**Como acontece:**\n• Transmitidas pela picada do carrapato marrom\n• Carrapato precisa ficar 24-48h fixado\n\n**Sintomas:**\n• Febre\n• Apatia\n• Falta de apetite\n• Sangramentos (nariz, gengiva)\n• Urina escura\n• Palidez das mucosas\n\n**Prevenção:**\n• Antipulgas/carrapaticida **MENSAL**\n• Revise o pelo após passeios\n• Banhos regulares\n\n**Tratamento:** Doxiciclina por 28+ dias.'},
-
-  /* ===== EMERGÊNCIAS GERAIS ===== */
-  {tipo:'emergencia', peso:9,
-   palavras:['emergência','socorro','urgente','vet urgente','atendimento 24h'],
-   resposta:'🚑 **EMERGÊNCIA VETERINÁRIA** — ligue imediatamente:\n\n📞 **Contatos úteis:**\n• Centro Toxicológico: **0800 722 6001**\n• Seu veterinário (tenha salvo!)\n• Plantão 24h mais próximo\n\n**Sinais que exigem emergência:**\n• Sangramento que não para\n• Dificuldade para respirar\n• Convulsões\n• Engasgo\n• Suspeita de intoxicação\n• Trauma/atropelamento\n• Dificuldade para urinar (especialmente gatos machos)\n• Parto complicado\n• Apatia extrema\n\n🚨 **Não espere — cada minuto importa!**'},
-
-  {tipo:'emergencia', peso:9,
-   palavras:['não consegue urinar','urina presa','não urina','dificuldade urinar'],
-   resposta:'🚨 **Dificuldade para urinar** é EMERGÊNCIA!\n\nEspecialmente em **gatos machos** — risco de obstrução uretral.\n\n**Sinais:**\n• Vai na caixa de areia várias vezes sem urinar\n• Chora ao tentar urinar\n• Língua roxa / prostração\n• Não urina há mais de 12h\n\n**Por que é grave:**\n• Retenção urinária pode levar à **falência renal em 24-48h**\n• Acúmulo de toxinas pode ser **fatal**\n\n🚨 **Vá ao veterinário IMEDIATAMENTE.** Não espere.'},
-
-  /* ===== SUGESTÕES GERAIS ===== */
-  {tipo:'info', peso:4,
-   palavras:['check-up','consulta','quando levar','veterinário','rotina'],
-   resposta:'🩺 **Check-up veterinário — frequência ideal:**\n\n**Filhotes (0-12 meses):**\n• Mensalmente durante vacinação\n• Depois a cada 3 meses\n\n**Adultos (1-7 anos):**\n• **1x ao ano** com exames básicos\n\n**Sêniores (7+):**\n• **2x ao ano**\n• Exames de sangue e urina a cada 6 meses\n\n**O que avaliar:**\n• Peso e escore corporal\n• Dentes\n• Olhos e ouvidos\n• Pele e pelagem\n• Coração e pulmões\n• Linfonodos\n\n💡 Prevenção é sempre mais barata que tratamento.'},
-
-  {tipo:'dica', peso:5,
-   palavras:['calor','verão','golpe de calor','insolação','temperatura'],
-   resposta:'🌡️ **Cuidados no calor:**\n\n**Riscos:**\n• Golpe de calor (temperatura >40 °C)\n• Desidratação\n• Queimaduras nas patas\n• Pulgas e carrapatos\n\n**Prevenção:**\n• 💧 Água fresca **sempre** disponível\n• 🚫 Evite passeios 10h-16h\n• 🚗 **Nunca** deixe em carro fechado\n• 🧊 Tapete gelado para deitar\n• 🌳 Sombra em áreas externas\n\n**Sinais de alerta:**\n• Ofegação intensa\n• Salivação excessiva\n• Fraqueza\n• Língua arroxeada\n\n🚨 Golpe de calor é emergência — molhe com água ambiente e leve ao vet.'},
-
-  {tipo:'dica', peso:5,
-   palavras:['frio','inverno','agasalho','roupinha','baixa temperatura'],
-   resposta:'❄️ **Cuidados no frio:**\n\n**Raças mais sensíveis:**\n• Pelo curto (Pinscher, Chihuahua)\n• Braquicefálicos\n• Filhotes e idosos\n• Doentes\n\n**Cuidados:**\n• 🧥 Agasalhe em dias frios\n• 🛏️ Cama protegida de correntes de ar\n• 🚿 Banhos menos frequentes\n• 🍲 Aumente calórico se ao ar livre\n• 💧 Água fresca sempre\n\n**Atenção especial:**\n• Idosos sentem mais dores articulares\n• Braquicefálicos podem piorar respiração\n\n💡 Nunca deixe o pet no frio sem abrigo adequado.'},
-
-  {tipo:'info', peso:4,
-   palavras:['peso','obesidade','acima do peso','gordo','magro'],
-   resposta:'⚖️ **Controle de peso:**\n\n**Como avaliar (Escore Corporal):**\n• **Ideal:** costelas palpáveis sem excesso de gordura, cintura visível\n• **Sobrepeso:** costelas difíceis de palpar\n• **Obeso:** sem cintura, depósitos de gordura\n\n**Riscos do sobrepeso:**\n• Diabetes\n• Problemas articulares\n• Doenças cardíacas\n• Dificuldade respiratória\n• Menor expectativa de vida\n\n**Como emagrecer com saúde:**\n• Ração com controle calórico\n• Meça a porção com copo medidor\n• Petiscos máximo 10% das calorias\n• Exercício regular\n• **Nunca** deixe sem comer\n\n💡 Acesse a aba **Saúde** para registrar o peso do seu pet.'}
+  {tipo:'emergencia', peso:10, palavras:['sangrando','sangramento','sangue','hemorragia'], resposta:'🩸 **Sangramento** é emergência!\n\n1. **Pressione** o local com gaze 3-5 min\n2. **Eleve** o membro acima do coração\n3. **Não remova** objetos cravados\n4. Leve **imediatamente** ao veterinário\n\n⚠️ Se não parar em 5 min, é grave.'},
+  {tipo:'emergencia', peso:10, palavras:['engasgou','engasgo','sufocando'], resposta:'😰 **Engasgo é emergência!**\n\n1. Abra a boca com cuidado\n2. Se visível, remova com pinça\n3. **Heimlich adaptada:**\n   • Pequenos/gatos: cabeça para baixo + tapinhas\n   • Grandes: abrace e comprima abdômen\n\n⚠️ **NUNCA** enfie o dedo sem ver.'},
+  {tipo:'emergencia', peso:10, palavras:['convulsão','convulsionando','tremendo muito','epilepsia'], resposta:'⚡ **Convulsão** — mantenha a calma:\n\n1. **Afaste móveis**\n2. **Desligue TVs**\n3. **Cronometre** a duração\n4. Após crise, mantenha aquecido\n\n🚫 NUNCA coloque a mão na boca\n🚫 Não segure os movimentos\n\n⚠️ Crises com **mais de 5 min** são emergência.'},
+  {tipo:'emergencia', peso:10, palavras:['intoxicado','envenenado','comeu chocolate','comeu veneno'], resposta:'☠️ **Intoxicação** é emergência!\n\n1. **Identifique** a substância\n2. **Guarde a embalagem**\n3. **Ligue imediatamente** ao veterinário\n4. Leve ao atendimento de urgência\n\n🚫 **NUNCA** induza vômito sem orientação\n\n📞 Centro Toxicológico 24h: **0800 722 6001**'},
+  {tipo:'emergencia', peso:9, palavras:['vomitando muito','vômito frequente','vomitou várias vezes'], resposta:'🤢 **Vômitos frequentes** podem indicar:\n\n• Gastrite\n• Intoxicação\n• Parasitas\n• Pancreatite\n• Obstrução\n• Cinomose/Parvovirose (filhotes)\n\n**O que fazer:**\n• Jejum de 6-12h (adultos)\n• Água em pequenas quantidades\n• Se persistir >24h → vet **URGENTE**\n\n⚠️ Em filhotes, procure o vet imediatamente.'},
+  {tipo:'emergencia', peso:9, palavras:['diarreia com sangue','fezes com sangue'], resposta:'🩸 **Diarreia com sangue** é grave!\n\nPode indicar:\n• Parvovirose (filhotes não vacinados)\n• Parasitas graves\n• Hemorragia digestiva\n• Intoxicação\n\n🚨 **Procure o veterinário IMEDIATAMENTE.**'},
+  {tipo:'emergencia', peso:9, palavras:['não consegue urinar','não urina','dificuldade urinar'], resposta:'🚨 **Dificuldade para urinar** é EMERGÊNCIA!\n\nEspecialmente em **gatos machos** — risco de obstrução uretral.\n\nSinais:\n• Vai na caixa várias vezes sem urinar\n• Chora ao tentar\n• Não urina há mais de 12h\n\n🚨 **Retenção urinária pode ser fatal em 24-48h.** Vá imediatamente ao vet.'},
+  {tipo:'alerta', peso:7, palavras:['tosse','tossindo','tosse seca'], resposta:'🤧 **Tosse persistente** pode ser:\n\n• **Tosse dos Canis** (KC)\n• Colapso traqueal (pequenos)\n• Problemas cardíacos (idosos)\n• Alergias\n• Corpo estranho\n\n**Procure o vet se:**\n• Mais de 3 dias\n• Tosse noturna\n• Cansaço fácil\n\n💡 Idosos com tosse noturna merecem avaliação cardíaca.'},
+  {tipo:'alerta', peso:6, palavras:['apatia','não come','sem apetite','letargia','prostrado'], resposta:'😔 **Apatia e falta de apetite**:\n\n**Investigue:**\n• Mudou a ração?\n• Mudança de ambiente?\n• Está com febre?\n• Bebe água normal?\n\n**Procure o vet se durar:**\n• 2 dias sem comer (adultos)\n• 1 dia em filhotes\n\n💡 Ofereça petiscos favoritos para testar.'},
+  {tipo:'alerta', peso:6, palavras:['coceira','coçando','alergia','queda de pelo','feridas'], resposta:'🐕 **Coceira e queda de pelo**:\n\n• **Pulgas e carrapatos**\n• **Alergia** alimentar/contato\n• **Dermatite**\n• **Sarna**\n\n**Primeiros passos:**\n1. Verifique pulgas/carrapatos\n2. Aplique antipulgas mensal\n3. Banho hipoalergênico\n4. Se persistir, vet'},
+  {tipo:'info', peso:7, palavras:['ração','alimentar','o que dar','comida'], resposta:'🍖 **Alimentação adequada:**\n\n**Filhotes:**\n• Ração específica\n• 3-4 refeições\n• Proteína mín. 28% (cães) / 34% (gatos)\n\n**Adultos:**\n• Ração premium\n• 2 refeições\n• Proteína 22-26% (cães) / 30-34% (gatos)\n\n**Sêniores (7+):**\n• Ração sênior\n• Menor fósforo\n\n⚠️ Água fresca sempre!'},
+  {tipo:'info', peso:6, palavras:['chocolate','posso dar','uva','abacate','cebola','alho'], resposta:'🚫 **Alimentos TÓXICOS:**\n\n• 🍫 Chocolate\n• 🧅 Cebola, alho\n• 🍇 Uva e uva-passa\n• 🥑 Abacate\n• 🍬 Xilitol\n• ☕ Cafeína\n• 🍺 Álcool\n• 🦴 Ossos cozidos\n• 🥜 Macadâmia\n\nSe comeu, ligue **imediatamente**: 0800 722 6001.'},
+  {tipo:'info', peso:7, palavras:['vacina','vacinação','v10','v8','v3','v4','v5','quais vacinas'], resposta:'💉 **Protocolo vacinal:**\n\n**CÃES:**\n• V8/V10/V11 — 3 doses + reforço anual\n• Antirrábica — aos 3 meses + reforço anual\n• Gripe Canina (KC) — recomendada\n\n**GATOS:**\n• V3/V4/V5 — 3 doses + reforço anual\n• Antirrábica — aos 3 meses + reforço anual\n• FeLV — gatos com acesso à rua\n\n📋 Veja o cronograma personalizado na aba **Vacinas**!'},
+  {tipo:'info', peso:6, palavras:['vermífugo','vermifugação','verme'], resposta:'🪱 **Vermifugação:**\n\n**Filhotes:**\n• Início aos 15 dias\n• A cada 15 dias até 3 meses\n\n**Adultos:**\n• A cada 3-4 meses\n• Pese antes de calcular dose\n\n💡 Mesmo em pets indoor é essencial!'},
+  {tipo:'info', peso:6, palavras:['antipulgas','carrapato','pulga','bravecto','simparic'], resposta:'💊 **Antipulgas e carrapaticidas:**\n\n• Bravecto — 12 semanas\n• Simparic — 5 semanas\n• NexGard — 4 semanas\n• Frontline — 4 semanas\n• Revolution — 4 semanas\n\n**Dicas:**\n• Mensal (ou conforme produto)\n• Essencial mesmo indoor\n• Carrapatos transmitem erliquiose'},
+  {tipo:'info', peso:5, palavras:['castração','castrar','cio'], resposta:'✂️ **Castração:**\n\n**Quando:**\n• A partir dos 6 meses\n\n**Benefícios:**\n• Previne ninhadas\n• Reduz tumores\n• Diminui fugas/brigas\n• Previne piometra\n\n**Pós-operatório:**\n• Repouso 7-10 dias\n• Colar elizabetano'},
+  {tipo:'dica', peso:7, palavras:['mordendo','destruindo','roendo móveis'], resposta:'🐕 **Comportamento destrutivo:**\n\n**Causas:**\n• Tédio\n• Ansiedade\n• Dentinhos (filhotes)\n\n**Soluções:**\n1. Aumente o exercício\n2. Brinquedos interativos (Kong)\n3. Rotina de passeios\n4. Adestramento positivo\n5. **Não** castigue fisicamente'},
+  {tipo:'dica', peso:6, palavras:['ansiedade','chorando','latindo muito','quando sai'], resposta:'😢 **Ansiedade de separação:**\n\n**Sinais:**\n• Chora/late quando você sai\n• Destrói objetos\n• Faz xixi\n\n**Estratégias:**\n1. Saídas graduais (5 min → mais)\n2. Não faça festa ao sair/voltar\n3. Brinquedos recheados\n4. Deixe TV/rádio ligado\n5. Câmera para monitorar\n\n⚠️ Casos graves precisam de ajuda veterinária.'},
+  {tipo:'dica', peso:5, palavras:['banho','com que frequência','shampoo'], resposta:'🚿 **Banhos:**\n\n• Cães pelo curto: 15-30 dias\n• Cães pelo longo: 7-15 dias\n• Gatos: geralmente **não precisam**\n\n**Dicas:**\n• Shampoo específico para pets\n• Água morna\n• Seque bem\n• Evite após vacinação (48h)\n\n⚠️ **Filhotes:** só após 2ª dose de vacina.'},
+  {tipo:'dica', peso:5, palavras:['escovação dental','dente','tártaro','mau hálito'], resposta:'🦷 **Saúde dental:**\n\n**Problemas:**\n• Tártaro e gengivite (80% dos cães após 3 anos)\n• Doença periodontal\n\n**Cuidados:**\n1. Escovação 3-4x por semana\n2. Pasta específica para pets\n3. Brinquedos dentais\n4. Limpeza com vet 1x/ano\n\n💡 Mau hálito persistente = doença.'},
+  {tipo:'info', peso:5, palavras:['pug','bulldog','shih tzu','braquicefálico'], resposta:'🐶 **Raças braquicefálicas:**\n\n**Cuidados:**\n• 🚫 Nunca em ambiente quente\n• 🚫 Nunca exercício intenso\n• ✈️ Viagens aéreas: risco\n• 🌡️ Evite 10h-16h\n• ❄️ Agasalhar no frio\n• 😴 Roncam e têm apneia\n\n**Alerta:**\n• Respiração ruidosa\n• Cianose (língua azulada)\n• Desmaios\n\nProcure o vet se notar dificuldade respiratória.'},
+  {tipo:'info', peso:5, palavras:['salsicha','dachshund','coluna','hérnia'], resposta:'🌭 **Dachshund (Salsicha):**\n\n**Riscos:**\n• Hérnia de disco (IVDD)\n• Obesidade agrava\n\n**Prevenção:**\n1. Controle de peso\n2. Evite saltos\n3. Rampas em vez de escadas\n4. Carregue apoiando o corpo\n\n**Sinais de alerta:**\n• Dor nas costas\n• Dificuldade para andar\n🚨 Procure o vet imediatamente.'},
+  {tipo:'info', peso:6, palavras:['filhote','cuidados filhote','recém-nascido','puppy','kitten'], resposta:'🐶 **Cuidados com filhotes:**\n\n**0-4 semanas:**\n• Aleitamento exclusivo\n• Ambiente 26-28 °C\n\n**4-8 semanas:**\n• Desmame gradual\n• 1ª vermifugação\n\n**8-16 semanas:**\n• Protocolo vacinal\n• Socialização intensa\n\n**4-6 meses:**\n• Troca de dentes\n• Castração\n\n💡 Filhotes comem 3-4x ao dia.'},
+  {tipo:'info', peso:5, palavras:['sênior','idoso','velho','terceira idade'], resposta:'👴 **Pets sêniores (7+):**\n\n**Consultas:**\n• A cada 6 meses\n• Exames de sangue e urina\n\n**Atenção a:**\n• Artrose\n• Problemas renais\n• Cardiopatias\n• Câncer\n\n**Adaptações:**\n• Cama ortopédica\n• Rampas\n• Tapetes antiderrapantes\n\n**Alimentação:**\n• Ração sênior\n• Menor fósforo/sódio'},
+  {tipo:'alerta', peso:8, palavras:['cinomose','parvovirose','parvo'], resposta:'🦠 **Cinomose e Parvovirose:**\n\n**Cinomose:**\n• Ataca sistema nervoso\n• Febre, secreção, convulsões\n\n**Parvovirose:**\n• Destrói intestino\n• Vômitos, diarreia com sangue\n\n🚨 **Ambas são emergências.**\n\n💉 **Vacinação é a única prevenção eficaz!**'},
+  {tipo:'alerta', peso:8, palavras:['erliquiose','babesiose','carrapato doente'], resposta:'🕷️ **Doenças do carrapato:**\n\n**Sintomas:**\n• Febre\n• Apatia\n• Sangramentos\n• Urina escura\n• Palidez\n\n**Prevenção:**\n• Antipulgas **MENSAL**\n• Revise o pelo após passeios\n\n**Tratamento:** Doxiciclina 28+ dias.'},
+  {tipo:'emergencia', peso:9, palavras:['emergência','socorro','urgente'], resposta:'🚑 **EMERGÊNCIA VETERINÁRIA:**\n\n📞 **Contatos:**\n• Centro Toxicológico: **0800 722 6001**\n• Seu veterinário\n• Plantão 24h mais próximo\n\n**Sinais que exigem emergência:**\n• Sangramento que não para\n• Dificuldade para respirar\n• Convulsões\n• Engasgo\n• Suspeita de intoxicação\n• Atropelamento\n• Dificuldade para urinar\n\n🚨 **Não espere — cada minuto importa!**'},
+  {tipo:'info', peso:4, palavras:['check-up','consulta','quando levar'], resposta:'🩺 **Check-up veterinário:**\n\n**Filhotes (0-12m):**\n• Mensal durante vacinação\n\n**Adultos (1-7a):**\n• 1x ao ano\n\n**Sêniores (7+):**\n• 2x ao ano\n• Exames a cada 6 meses\n\n**Avaliar:**\n• Peso e escore\n• Dentes\n• Olhos e ouvidos\n• Pele e pelagem\n• Coração e pulmões\n\n💡 Prevenção é mais barata que tratamento.'},
+  {tipo:'dica', peso:5, palavras:['calor','verão','golpe de calor'], resposta:'🌡️ **Cuidados no calor:**\n\n**Riscos:**\n• Golpe de calor (>40 °C)\n• Desidratação\n• Queimaduras nas patas\n\n**Prevenção:**\n• 💧 Água fresca sempre\n• 🚫 Evite 10h-16h\n• 🚗 Nunca carro fechado\n• 🧊 Tapete gelado\n\n**Sinais:**\n• Ofegação intensa\n• Salivação\n• Língua arroxeada\n\n🚨 Emergência — molhe com água ambiente e leve ao vet.'},
+  {tipo:'dica', peso:5, palavras:['frio','inverno','agasalho'], resposta:'❄️ **Cuidados no frio:**\n\n**Sensíveis:**\n• Pelo curto\n• Braquicefálicos\n• Filhotes e idosos\n\n**Cuidados:**\n• 🧥 Agasalhe\n• 🛏️ Cama protegida\n• 🚿 Banhos menos frequentes\n• 🍲 Aumente calórico se ao ar livre\n\n💡 Idosos sentem mais dores articulares.'},
+  {tipo:'info', peso:4, palavras:['peso','obesidade','gordo','magro'], resposta:'⚖️ **Controle de peso:**\n\n**Escore corporal:**\n• Ideal: costelas palpáveis, cintura visível\n• Sobrepeso: costelas difíceis\n• Obeso: sem cintura\n\n**Riscos:**\n• Diabetes\n• Problemas articulares\n• Cardíacos\n\n**Emagrecer com saúde:**\n• Ração com controle calórico\n• Meça a porção\n• Petiscos máx. 10%\n• Exercício regular'}
 ];
 
-/* Detecta se a pergunta é sobre emergência */
-function temEmergencia(texto){
-  const pal = ['emergência','emergencia','socorro','urgente','morrendo','febre alta','atropelado','convulsionando','intoxicado','envenenado','sangrando muito','não respira','engasgado','sufocando'];
-  const t = texto.toLowerCase();
-  return pal.some(p => t.includes(p));
-}
-
-/* Motor principal de resposta */
-function processarPerguntaLocal(pergunta, petCtx){
-  const t = (pergunta || '').toLowerCase().trim();
-  if(!t) return null;
-  const tokens = t.split(/\s+/);
-  let melhor = null;
-  let melhorScore = 0;
-
-  IA_KB.forEach(item=>{
-    let score = 0;
-    item.palavras.forEach(p=>{
-      const pl = p.toLowerCase();
-      if(t.includes(pl)) score += (pl.split(' ').length > 1 ? 2 : 1) * (item.peso || 1);
-      else {
-        // match parcial
-        tokens.forEach(tk=>{
-          if(tk.length > 3 && pl.includes(tk)) score += 0.5 * (item.peso || 1);
-        });
-      }
-    });
-    if(score > melhorScore){ melhorScore = score; melhor = item; }
-  });
-
-  if(!melhor || melhorScore < 1){
-    return gerarRespostaGenerica(pergunta, petCtx);
-  }
-  return {texto: melhor.resposta, tipo: melhor.tipo};
-}
-
-/* Resposta quando não encontra match específico */
-function gerarRespostaGenerica(pergunta, petCtx){
-  const q = pergunta.toLowerCase();
-  let ctx = '';
-  if(petCtx){
-    ctx = `\n\n💡 **Considerando o seu pet ${petCtx.nome}** (${petCtx.raca || 'SRD'}, ${petCtx.idade}):\n`;
-  }
-  if(/feliz|comportad|educad|obediente/.test(q)){
-    return {texto:'😊 Que bom saber! Continue o trabalho de socialização e reforço positivo. Elogios e petiscos sempre que ele acertar.' + ctx + '\n\nPosso ajudar com mais alguma coisa?'};
-  }
-  if(/brinca|brincadeira|jogo/.test(q)){
-    return {texto:'🎾 **Ideias de brincadeiras:**\n• Cabo de guerra\n• Buscar bolinha\n• Jogos de olfato (esconder petiscos)\n• Brinquedos interativos\n• Passeios em locais novos\n\n15-30 min de brincadeira 2x ao dia já fazem maravilhas!' + ctx};
-  }
-  if(/eu te amo|gosto de você|obrigad/.test(q)){
-    return {texto:'🐾 Fico feliz em ajudar! Estou sempre aqui para cuidar dos seus pets. 💜'};
-  }
-
-  const sugestoes = [
-    'Vacinação e protocolos',
-    'Alimentação adequada',
-    'Comportamento e adestramento',
-    'Emergências e primeiros socorros',
-    'Cuidados com filhotes',
-    'Saúde preventiva'
-  ];
-  const sug = sugestoes[Math.floor(Math.random()*sugestoes.length)];
-
-  return {
-    texto: `🤔 Boa pergunta! Não tenho uma resposta específica pronta, mas posso ajudar com:\n\n• 💉 ${sugestoes[0]}\n• 🍖 ${sugestoes[1]}\n• 🐕 ${sugestoes[2]}\n• 🚑 ${sugestoes[3]}\n• 🐶 ${sugestoes[4]}\n• 🩺 ${sugestoes[5]}\n\nTente me perguntar de forma mais específica. Por exemplo:\n*"Quais vacinas meu cão precisa?"*\n*"Meu gato está vomitando, o que fazer?"*\n*"Com que frequência devo dar banho?"*` + ctx
-  };
-}
-
 /* ============================================================
-   IA REAL (OpenAI / Gemini / Anthropic) — opcional
+   IA REAL — GEMINI / OPENAI / ANTHROPIC
 ============================================================ */
 async function chamarIAReal(pergunta, petCtx){
   const cfg = iaConfig;
@@ -1738,7 +1501,7 @@ Regras:
 - Responda SEMPRE em português do Brasil
 - Seja empático, claro e direto
 - Use formatação simples com **negrito** e listas quando útil
-- SEMPRE inclua um aviso de que suas respostas não substituem a consulta veterinária
+- SEMPRE inclua um aviso breve de que não substitui consulta veterinária
 - Se for emergência, oriente a procurar atendimento imediatamente
 - Não prescreva medicamentos específicos (doses, marcas)
 - Seja conciso: máximo 250 palavras
@@ -1763,7 +1526,7 @@ ${petCtx ? `\nContexto do pet do tutor:\n- Nome: ${petCtx.nome}\n- Espécie: ${p
       };
     } else if(cfg.provider === 'gemini'){
       const model = cfg.model || 'gemini-1.5-flash';
-      url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${cfg.apiKey}`;
+      url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(cfg.apiKey)}`;
       body = {
         contents: [{parts: [{text: sysPrompt + '\n\nPergunta: ' + pergunta}]}],
         generationConfig: {maxOutputTokens: 700, temperature: 0.7}
@@ -1783,8 +1546,8 @@ ${petCtx ? `\nContexto do pet do tutor:\n- Nome: ${petCtx.nome}\n- Espécie: ${p
 
     const res = await fetch(url, {method:'POST', headers, body: JSON.stringify(body)});
     if(!res.ok){
-      const err = await res.text();
-      console.error('IA erro:', err);
+      const errTxt = await res.text();
+      console.warn('IA erro HTTP:', res.status, errTxt);
       return null;
     }
     const data = await res.json();
@@ -1800,9 +1563,46 @@ ${petCtx ? `\nContexto do pet do tutor:\n- Nome: ${petCtx.nome}\n- Espécie: ${p
     if(!texto) return null;
     return {texto, tipo:'info', real:true};
   }catch(e){
-    console.error('IA erro:', e);
+    console.warn('IA fetch erro:', e);
     return null;
   }
+}
+
+/* Motor local */
+function processarPerguntaLocal(pergunta, petCtx){
+  const t = (pergunta || '').toLowerCase().trim();
+  if(!t) return null;
+  const tokens = t.split(/\s+/);
+  let melhor = null, melhorScore = 0;
+
+  IA_KB.forEach(item=>{
+    let score = 0;
+    item.palavras.forEach(p=>{
+      const pl = p.toLowerCase();
+      if(t.includes(pl)) score += (pl.split(' ').length > 1 ? 2 : 1) * (item.peso || 1);
+      else {
+        tokens.forEach(tk=>{
+          if(tk.length > 3 && pl.includes(tk)) score += 0.5 * (item.peso || 1);
+        });
+      }
+    });
+    if(score > melhorScore){ melhorScore = score; melhor = item; }
+  });
+
+  if(!melhor || melhorScore < 1) return gerarRespostaGenerica(pergunta, petCtx);
+  return {texto: melhor.resposta, tipo: melhor.tipo};
+}
+function gerarRespostaGenerica(pergunta, petCtx){
+  const q = pergunta.toLowerCase();
+  let ctx = petCtx ? `\n\n💡 **Considerando ${petCtx.nome}** (${petCtx.raca || 'SRD'}, ${petCtx.idade}):\n` : '';
+  if(/feliz|comportad|educad/.test(q)) return {texto:'😊 Que bom! Continue o reforço positivo.' + ctx};
+  if(/brinca|jogo/.test(q)) return {texto:'🎾 **Ideias:**\n• Cabo de guerra\n• Buscar bolinha\n• Esconder petiscos\n• Brinquedos interativos\n\n15-30 min 2x ao dia!' + ctx};
+  if(/obrigad|valeu/.test(q)) return {texto:'🐾 Fico feliz em ajudar! Estou aqui sempre que precisar. 💜'};
+
+  const sug = ['vacinação','alimentação','comportamento','emergências','cuidados com filhotes','saúde preventiva'];
+  return {
+    texto: `🤔 Não tenho uma resposta específica pronta, mas posso ajudar com:\n\n• 💉 Vacinas e protocolos\n• 🍖 Alimentação adequada\n• 🐕 Comportamento e adestramento\n• 🚑 Emergências\n• 🐶 Cuidados com filhotes\n• 🩺 Saúde preventiva\n\nTente perguntar de forma mais específica:\n*"Quais vacinas meu cão precisa?"*\n*"Meu gato está vomitando, o que fazer?"*\n*"Com que frequência dar banho?"*` + ctx
+  };
 }
 
 /* ============================================================
@@ -1817,9 +1617,18 @@ function renderChat(){
   const body = $('#chatBody');
   if(!body) return;
   const sug = $('#chatSuggestions');
-
-  // Atualiza contexto do pet
   const ctxEl = $('#chatPetContext');
+  const statusRow = $('#iaStatusRow');
+
+  /* Status */
+  const usandoIA = iaConfig.provider !== 'local' && iaConfig.apiKey;
+  if(statusRow){
+    statusRow.innerHTML = usandoIA
+      ? `<span class="ia-dot-online"></span> <span>IA ${iaConfig.provider === 'gemini' ? 'Gemini' : iaConfig.provider === 'openai' ? 'OpenAI' : 'Claude'} online</span>`
+      : `<span class="ia-dot-offline"></span> <span>Modo offline (base local)</span>`;
+  }
+
+  /* Contexto pet */
   const pet = state.pets.find(p => p.id === state.petSelecionado) || state.pets[0];
   if(pet){
     ctxEl.innerHTML = `<span class="pc-chip">🐾 ${esc(pet.nome)}</span>
@@ -1827,70 +1636,65 @@ function renderChat(){
       ${pet.raca ? `<span class="pc-chip">${esc(pet.raca)}</span>` : ''}
       <span class="pc-chip">${calcIdade(pet.nascimento)}</span>`;
   } else {
-    ctxEl.innerHTML = `<span class="pc-chip">💡 Nenhum pet cadastrado — as respostas serão genéricas</span>`;
+    ctxEl.innerHTML = `<span class="pc-chip">💡 Cadastre um pet para respostas personalizadas</span>`;
   }
 
-  // Atualiza status conforme provider
-  const status = $('#iaStatus');
-  if(status){
-    if(iaConfig.provider === 'local') status.textContent = 'IA local especializada';
-    else status.textContent = 'IA conectada (' + iaConfig.provider + ')';
-  }
-
-  // Sugestões
+  /* Sugestões */
   const sugestoes = [
     'Quais vacinas meu pet precisa?',
     'Meu pet está vomitando, o que fazer?',
-    'Com que frequência devo dar banho?',
-    'O que posso dar de comer?',
-    'Como educar para fazer as necessidades no lugar certo?',
+    'Com que frequência dar banho?',
+    'Alimentos que não posso dar',
     'Sinais de emergência veterinária',
-    'Cuidados com filhotes',
-    'Meu cão está com tosse'
+    'Como adestrar meu pet?'
   ];
   if(sug){
     sug.innerHTML = `<div class="sug-row">${sugestoes.map(s=>`<button class="sug-chip" onclick="enviarSugestao('${esc(s).replace(/'/g,"\\'")}')">${esc(s)}</button>`).join('')}</div>`;
   }
 
-  // Corpo do chat
+  /* Corpo do chat */
   if(state.chat.length === 0){
     body.innerHTML = `
       <div class="chat-welcome">
         <div class="cw-hero">🐾</div>
         <h2>Olá! Sou o Dr. Pet IA</h2>
-        <p>Seu assistente veterinário inteligente. Posso responder dúvidas sobre saúde, comportamento, alimentação e cuidados do seu pet.</p>
+        <p>Seu assistente veterinário inteligente. Respondo dúvidas sobre saúde, comportamento, alimentação e cuidados do seu pet.</p>
         <div class="cw-cat">
           <button class="cw-cat-btn" onclick="enviarSugestao('Quais vacinas meu pet precisa?')">
             <div class="cw-cat-ic" style="background:#EAF0FF;color:#3157C9">💉</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Vacinas e prevenção</div><div class="cw-cat-desc">Protocolos, reforços e calendário</div></div>
+            <div class="cw-cat-body"><div class="cw-cat-titulo">Vacinas e prevenção</div><div class="cw-cat-desc">Protocolos e calendário</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
           <button class="cw-cat-btn" onclick="enviarSugestao('Meu pet está com sintomas estranhos')">
             <div class="cw-cat-ic" style="background:#FFE9EF;color:#C42B50">🚑</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Sintomas e emergências</div><div class="cw-cat-desc">O que fazer e quando procurar o vet</div></div>
+            <div class="cw-cat-body"><div class="cw-cat-titulo">Sintomas e emergências</div><div class="cw-cat-desc">O que fazer agora</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
           <button class="cw-cat-btn" onclick="enviarSugestao('Como alimentar meu pet corretamente?')">
             <div class="cw-cat-ic" style="background:#FFF6E2;color:#B47800">🍖</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Alimentação</div><div class="cw-cat-desc">Ração, quantidades e alimentos tóxicos</div></div>
+            <div class="cw-cat-body"><div class="cw-cat-titulo">Alimentação</div><div class="cw-cat-desc">Ração, quantidades e tóxicos</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
           <button class="cw-cat-btn" onclick="enviarSugestao('Como adestrar meu pet?')">
             <div class="cw-cat-ic" style="background:#F3EAFE;color:#6B31B8">🎓</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Comportamento</div><div class="cw-cat-desc">Adestramento, ansiedade e educação</div></div>
+            <div class="cw-cat-body"><div class="cw-cat-titulo">Comportamento</div><div class="cw-cat-desc">Adestramento e educação</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
         </div>
-        ${iaConfig.provider === 'local' ? `
+        ${usandoIA ? `
+        <div class="chat-config-warn ok" style="text-align:left;margin-top:20px">
+          <span class="cw-ic">✅</span>
+          <div><strong>IA conectada!</strong> Estou usando <strong>${iaConfig.provider === 'gemini' ? 'Google Gemini' : iaConfig.provider === 'openai' ? 'OpenAI' : 'Anthropic Claude'}</strong> para respostas personalizadas e avançadas.</div>
+        </div>` : `
         <div class="chat-config-warn" style="text-align:left;margin-top:20px">
           <span class="cw-ic">💡</span>
-          <div>Estou usando uma <strong>base de conhecimento veterinário offline</strong>. Para respostas ainda mais personalizadas com IA generativa, toque no ícone de engrenagem para conectar uma IA real (OpenAI, Gemini ou Claude).</div>
-        </div>` : ''}
+          <div>Usando <strong>base local offline</strong>. Para IA generativa avançada, toque na engrenagem <strong>⚙️</strong> para conectar.</div>
+        </div>`}
       </div>`;
     return;
   }
 
-  body.innerHTML = state.chat.map((m,i)=>`
+  body.innerHTML = state.chat.map(m=>`
     <div class="msg-row ${m.role}">
       <div class="msg-avatar">${m.role === 'ia' ? '🐾' : '👤'}</div>
       <div>
@@ -1898,68 +1702,51 @@ function renderChat(){
           ${m.tipo ? `<span class="msg-tag ${m.tipo}">${rotuloTipo(m.tipo)}</span><br>` : ''}
           ${formatarMensagem(m.texto)}
         </div>
-        <div class="msg-time">${m.hora || ''}</div>
+        <div class="msg-time">${m.hora || ''}${m.real ? ' · IA' : ''}</div>
       </div>
     </div>
   `).join('') + (state.chatTyping ? `
     <div class="msg-row ia">
       <div class="msg-avatar">🐾</div>
-      <div class="msg-bubble typing">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="msg-bubble typing"><span></span><span></span><span></span></div>
     </div>` : '');
 
   setTimeout(()=> body.scrollTop = body.scrollHeight, 60);
 }
-
 function rotuloTipo(t){
   const m = {info:'Informativo', alerta:'Atenção', dica:'Dica', emergencia:'Emergência'};
   return m[t] || 'Info';
 }
-
-/* Formatação simples de markdown → HTML */
 function formatarMensagem(texto){
   let t = esc(texto);
-  // Negrito
   t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  // Itálico
   t = t.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-  // Quebras de linha
   t = t.replace(/\n/g, '<br>');
-  // Listas numeradas simples
   t = t.replace(/(\d+)\.\s/g, '<br>$1. ');
-  // Bullets com • ou -
   t = t.replace(/[•·]\s/g, '<br>• ');
-  // Limpar <br> duplicados no início
   t = t.replace(/^(<br>)+/, '');
   return t;
 }
-
 function autoResizeChat(el){
   el.style.height = 'auto';
   el.style.height = Math.min(el.scrollHeight, 100) + 'px';
 }
-
 function enviarSugestao(texto){
   $('#chatInput').value = texto;
   enviarMensagem();
 }
-
 async function enviarMensagem(){
   const inp = $('#chatInput');
   const txt = (inp.value || '').trim();
   if(!txt || state.chatTyping) return;
-
   inp.value = '';
   autoResizeChat(inp);
 
-  // Adiciona mensagem do usuário
   state.chat.push({role:'user', texto: txt, hora: agoraHHMM()});
   state.chatTyping = true;
   renderChat();
   saveChatHistory();
 
-  // Contexto do pet selecionado
   const pet = state.pets.find(p => p.id === state.petSelecionado) || state.pets[0];
   const petCtx = pet ? {
     nome: pet.nome,
@@ -1971,30 +1758,30 @@ async function enviarMensagem(){
 
   try{
     let resposta = null;
-
-    // Se tiver IA real configurada, tenta primeiro
     if(iaConfig.provider !== 'local' && iaConfig.apiKey){
       resposta = await chamarIAReal(txt, petCtx);
     }
-
-    // Se não teve resposta da IA real, usa o motor local
     if(!resposta){
-      // pequeno delay para simular "pensando"
-      await new Promise(r => setTimeout(r, 400 + Math.random() * 500));
+      await new Promise(r => setTimeout(r, 350 + Math.random() * 400));
       resposta = processarPerguntaLocal(txt, petCtx);
+      /* Se a IA real falhou mas estávamos tentando usar, avisa uma vez */
+      if(iaConfig.provider !== 'local' && iaConfig.apiKey && !state._iaAvisoFalha){
+        state._iaAvisoFalha = true;
+        resposta.texto = `⚠️ *Não consegui conectar com a IA ${iaConfig.provider}. Usando base local.*\n\n---\n\n` + resposta.texto;
+      }
     }
-
     state.chat.push({
       role: 'ia',
       texto: resposta.texto,
       tipo: resposta.tipo,
-      hora: agoraHHMM()
+      hora: agoraHHMM(),
+      real: resposta.real || false
     });
   }catch(e){
     console.error(e);
     state.chat.push({
       role: 'ia',
-      texto: '❌ Ops! Tive um problema ao processar sua pergunta. Tente novamente ou fale de outra forma.',
+      texto: '❌ Ops! Tive um problema ao processar sua pergunta. Tente novamente.',
       tipo: 'alerta',
       hora: agoraHHMM()
     });
@@ -2004,19 +1791,16 @@ async function enviarMensagem(){
     saveChatHistory();
   }
 }
-
 function limparChat(){
   if(state.chat.length === 0){ toast('A conversa já está vazia'); return; }
-  openModal(
-    headPadrao('Limpar conversa', 'Esta ação não pode ser desfeita'),
+  openModal(headPadrao('Limpar conversa', 'Esta ação não pode ser desfeita'),
     `<div style="text-align:center;padding:16px 0">
       <div style="font-size:46px;margin-bottom:12px">🗑️</div>
       <div style="font-size:15px;font-weight:800;margin-bottom:8px">Limpar todo o histórico?</div>
       <p style="font-size:12.5px;color:var(--muted);line-height:1.6;margin:0">Todas as mensagens com o Dr. Pet IA serão removidas.</p>
     </div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
-     <button class="btn btn-danger" onclick="confirmarLimparChat()">Limpar</button>`
-  );
+     <button class="btn btn-danger" onclick="confirmarLimparChat()">Limpar</button>`);
 }
 function confirmarLimparChat(){
   state.chat = [];
@@ -2031,37 +1815,40 @@ function confirmarLimparChat(){
 ============================================================ */
 function abrirModalConfigIA(){
   const providerAtual = iaConfig.provider || 'local';
+  const temChavePadrao = iaConfig.apiKey === DEFAULT_IA_CONFIG.apiKey && iaConfig.provider === 'gemini';
+
   openModal(
     headPadrao('Configurar IA', 'Escolha a inteligência do Dr. Pet IA'),
     `
-    <div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
-      <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">🤖</span>Como funciona</h4>
-      <p>O Dr. Pet IA vem com uma <strong>base de conhecimento veterinário offline</strong> pronta para uso, sem precisar de internet ou chave. Para respostas ainda mais personalizadas, você pode conectar uma IA generativa de sua escolha usando sua própria chave de API.</p>
+    ${temChavePadrao ? `
+    <div class="blk" style="background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border-color:#C7E8E2">
+      <h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">✅</span>IA Gemini pré-configurada</h4>
+      <p>Sua API key do Google Gemini já está configurada automaticamente. Você pode começar a usar o Dr. Pet IA imediatamente!</p>
+    </div>` : ''}
+
+    <div class="blk warn">
+      <h4><span class="b-ic">🔒</span>Aviso de segurança</h4>
+      <p>Esta chave de API foi compartilhada em um ambiente público. <strong>Recomenda-se revogá-la e gerar uma nova</strong> no painel do provedor (Google AI Studio, OpenAI ou Anthropic) para evitar uso indevido. Chaves vazadas podem gerar custos e bloqueios.</p>
     </div>
 
     <div class="field">
       <label>PROVEDOR DE IA</label>
       <select class="select" id="iaProvider" onchange="atualizarConfigIA()">
         <option value="local" ${providerAtual === 'local' ? 'selected' : ''}>💡 Base local (offline, grátis)</option>
-        <option value="openai" ${providerAtual === 'openai' ? 'selected' : ''}>🟢 OpenAI (GPT-4o, GPT-4o-mini)</option>
-        <option value="gemini" ${providerAtual === 'gemini' ? 'selected' : ''}>🔵 Google Gemini (1.5 Flash, Pro)</option>
-        <option value="anthropic" ${providerAtual === 'anthropic' ? 'selected' : ''}>🟣 Anthropic Claude (Sonnet, Haiku)</option>
+        <option value="gemini" ${providerAtual === 'gemini' ? 'selected' : ''}>🔵 Google Gemini (recomendado)</option>
+        <option value="openai" ${providerAtual === 'openai' ? 'selected' : ''}>🟢 OpenAI (GPT-4o, mini)</option>
+        <option value="anthropic" ${providerAtual === 'anthropic' ? 'selected' : ''}>🟣 Anthropic Claude</option>
       </select>
     </div>
 
     <div id="iaConfigCampos"></div>
 
-    <div class="blk warn">
-      <h4><span class="b-ic">🔒</span>Sobre privacidade</h4>
-      <p>Sua chave de API fica salva <strong>apenas no seu dispositivo</strong> (localStorage). Nenhum dado é enviado para nossos servidores — as chamadas vão direto para o provedor escolhido.</p>
-    </div>
-
     <div class="blk">
       <h4><span class="b-ic">💡</span>Sugestões de modelos</h4>
       <ul>
-        <li><strong>OpenAI:</strong> gpt-4o-mini (rápido e barato) ou gpt-4o (mais preciso)</li>
-        <li><strong>Gemini:</strong> gemini-1.5-flash (rápido) ou gemini-1.5-pro (avançado)</li>
-        <li><strong>Claude:</strong> claude-3-5-sonnet-20241022 ou claude-3-5-haiku-20241022</li>
+        <li><strong>Gemini:</strong> gemini-1.5-flash (rápido) ou gemini-1.5-pro</li>
+        <li><strong>OpenAI:</strong> gpt-4o-mini ou gpt-4o</li>
+        <li><strong>Claude:</strong> claude-3-5-sonnet-20241022</li>
       </ul>
     </div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
@@ -2069,26 +1856,23 @@ function abrirModalConfigIA(){
   );
   setTimeout(()=> renderCamposConfigIA(), 50);
 }
-
 function renderCamposConfigIA(){
   const el = $('#iaConfigCampos');
   const prov = $('#iaProvider') ? $('#iaProvider').value : 'local';
   if(prov === 'local'){
     el.innerHTML = `
       <div class="blk" style="background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border-color:#C7E8E2">
-        <h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">✅</span>Pronto para uso!</h4>
-        <p>A base local tem mais de <strong>30 tópicos especializados</strong> sobre saúde, alimentação, comportamento e emergências. Nenhuma configuração necessária.</p>
+        <h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">✅</span>Base local</h4>
+        <p>Mais de <strong>30 tópicos especializados</strong> offline. Nenhuma configuração necessária.</p>
       </div>`;
     return;
   }
-
   const placeholders = {
     openai: {key:'sk-...', model:'gpt-4o-mini'},
-    gemini: {key:'AIza...', model:'gemini-1.5-flash'},
+    gemini: {key:'AIza... ou AQ...', model:'gemini-1.5-flash'},
     anthropic: {key:'sk-ant-...', model:'claude-3-5-sonnet-20241022'}
   };
   const ph = placeholders[prov];
-
   el.innerHTML = `
     <div class="field">
       <label>CHAVE DE API *</label>
@@ -2101,9 +1885,7 @@ function renderCamposConfigIA(){
       <div class="hint">Deixe em branco para usar o padrão.</div>
     </div>`;
 }
-
 function atualizarConfigIA(){ renderCamposConfigIA(); }
-
 function salvarConfigIA(){
   const prov = $('#iaProvider').value;
   if(prov === 'local'){
@@ -2125,7 +1907,7 @@ function salvarConfigIA(){
 }
 
 /* ============================================================
-   NAVEGAÇÃO E PÁGINAS
+   NAVEGAÇÃO
 ============================================================ */
 function goTo(i){
   if(i < 0 || i > 7) return;
@@ -2155,7 +1937,6 @@ function renderPage(i){
   let x0=0, y0=0, ativo=false;
   sw.addEventListener('touchstart', e=>{
     if(e.touches.length !== 1) return;
-    // Não interfere no chat
     if(e.target.closest('.chat-body') || e.target.closest('.chat-suggestions') || e.target.closest('.chat-input')) return;
     x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; ativo = true;
   }, {passive:true});
@@ -2246,7 +2027,7 @@ function resumoVacinas(pet){
 }
 
 /* ============================================================
-   PAGE 0 — INÍCIO
+   PÁGINAS — RENDER
 ============================================================ */
 function renderHome(){
   const el = $('#homeContent');
@@ -2275,12 +2056,11 @@ function renderHome(){
   }
   const proximo = calcularProximoEvento();
   let html = '';
-  if(proximo){
-    const alerta = proximo.status === 'atrasada';
-    html += `<div class="next-card anim ${alerta?'alerta':''}" onclick="goTo(3)">
-      <div class="next-icon">${alerta?'⚠️':'💉'}</div>
+  if(proximo && proximo.status === 'atrasada'){
+    html += `<div class="next-card alerta anim" onclick="goTo(3)">
+      <div class="next-icon">⚠️</div>
       <div class="next-body">
-        <div class="next-label">${alerta?'Vacina atrasada':'Próximo cuidado'}</div>
+        <div class="next-label">Vacina atrasada</div>
         <div class="next-title">${esc(proximo.titulo)}</div>
         <div class="next-desc">${esc(proximo.petNome)} · ${esc(proximo.obs)}</div>
         <div class="next-date">${proximo.dataTxt}</div>
@@ -2290,9 +2070,9 @@ function renderHome(){
     html += `<div class="next-card anim" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5" onclick="goTo(7)">
       <div class="next-icon" style="background:rgba(155,93,229,.20)">🤖</div>
       <div class="next-body">
-        <div class="next-label" style="color:#6B31B8">Assistente IA</div>
+        <div class="next-label" style="color:#6B31B8">Dr. Pet IA</div>
         <div class="next-title">Alguma dúvida sobre seu pet?</div>
-        <div class="next-desc">O Dr. Pet IA está pronto para responder sobre saúde, comportamento e cuidados.</div>
+        <div class="next-desc">Seu assistente veterinário está online para ajudar.</div>
         <div class="next-date" style="color:#6B31B8">Toque para conversar →</div>
       </div>
     </div>`;
@@ -2324,9 +2104,9 @@ function quickItem(emoji, cor, label, fn){
 }
 function blocoDica(){
   const dicas = [
-    {tag:'Dr. Pet IA', t:'Dúvidas? Pergunte!', p:'O Dr. Pet IA responde sobre saúde, alimentação, comportamento e emergências. Acesse pelo menu "Dr. Pet".'},
+    {tag:'Dr. Pet IA', t:'Dúvidas? Pergunte!', p:'O Dr. Pet IA responde sobre saúde, alimentação, comportamento e emergências.'},
     {tag:'Saúde preventiva', t:'Vacinas em dia salvam vidas', p:'Manter o protocolo vacinal atualizado é a forma mais barata e eficaz de proteger seu pet.'},
-    {tag:'Backup', t:'Proteja os dados do seu pet', p:'Faça backup periódico dos dados. Exporte o arquivo JSON e guarde na nuvem.'}
+    {tag:'Backup', t:'Proteja os dados', p:'Exporte periodicamente um backup em JSON e guarde na nuvem.'}
   ];
   const d = dicas[Math.floor(Math.random()*dicas.length)];
   return `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Dica do dia</div></div>
@@ -2377,14 +2157,10 @@ function petCardHTML(p, i){
     <div class="pet-chevron"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
   </div>`;
 }
-
-/* ============================================================
-   PAGE 1 — PETS
-============================================================ */
 function renderPets(){
   const el = $('#petsList');
   if(state.pets.length === 0){
-    el.innerHTML = `<div class="empty"><span class="e-ic">🐾</span><h4>Nenhum pet cadastrado</h4><p>Toque no botão <strong>+</strong> para adicionar seu primeiro companheiro.</p></div>
+    el.innerHTML = `<div class="empty"><span class="e-ic">🐾</span><h4>Nenhum pet cadastrado</h4><p>Toque no botão <strong>+</strong> para adicionar.</p></div>
       <button class="btn btn-primary" style="margin-top:14px" onclick="abrirModalPet()">Cadastrar pet</button>`;
     return;
   }
@@ -2394,10 +2170,6 @@ function renderPets(){
       Adicionar outro pet
     </button>`;
 }
-
-/* ============================================================
-   PAGE 2 — RAÇAS
-============================================================ */
 function setEspecie(esp){ state.especieRaca = esp; state.porteFiltro = 'todos'; $$('#segEspecie button').forEach(b=> b.classList.toggle('active', b.dataset.esp === esp)); renderRacas(); }
 function buscarRaca(v){ state.buscaRaca = v.toLowerCase().trim(); renderRacasGrid(); }
 function setPorte(p){ state.porteFiltro = p; renderRacas(); }
@@ -2434,16 +2206,12 @@ function renderRacasGrid(){
       </div>
     </button>`).join('');
 }
-
-/* ============================================================
-   PAGE 3 — VACINAS
-============================================================ */
 function renderVacinas(){
   const picker = $('#vacinasPetPicker');
   const cont = $('#vacinasContent');
   if(state.pets.length === 0){
     picker.innerHTML = '';
-    cont.innerHTML = `<div class="empty"><span class="e-ic">💉</span><h4>Nenhum pet cadastrado</h4><p>Cadastre um pet para gerar o cronograma.</p></div>
+    cont.innerHTML = `<div class="empty"><span class="e-ic">💉</span><h4>Nenhum pet cadastrado</h4></div>
       <button class="btn btn-primary" style="margin-top:14px" onclick="abrirModalPet()">Cadastrar pet</button>`;
     return;
   }
@@ -2457,12 +2225,10 @@ function renderVacinas(){
   const pet = state.pets.find(p=>p.id === state.petSelecionado);
   const lista = PROTOCOLO[pet.especie] || [];
   const res = resumoVacinas(pet);
-
   let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirCarteiraVacina('${pet.id}')">
     <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-8 12H6v-2h6v2zm6-4H6v-2h12v2zm0-4H6V6h12v2z"/></svg>
     Abrir Carteira de Vacinação
   </button>`;
-
   html += `<div class="card anim" style="margin-bottom:16px;padding:14px">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
       <div class="pet-avatar ${pet.especie==='gato'?'cat':''}" style="width:46px;height:46px;font-size:23px;border-radius:14px">${pet.foto?`<img src="${pet.foto}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">`:(pet.emoji||'🐾')}</div>
@@ -2486,7 +2252,6 @@ function renderVacinas(){
       </div>
     </div>
   </div>`;
-
   const ordem = {atrasada:0, proxima:1, futura:2, ok:3};
   const itens = lista.map(v => ({v, st: statusVacina(pet, v)}))
     .sort((a,b)=>{
@@ -2503,7 +2268,6 @@ function renderVacinas(){
     else if(st.status === 'atrasada') dateTxt = '⚠️ Atrasada há ' + st.dias + ' dias';
     else if(st.status === 'proxima') dateTxt = '🔔 Em ' + st.dias + ' dias';
     else dateTxt = '📅 ' + fmtData(st.due.toISOString().slice(0,10));
-
     const rec = recomendarMarcas(pet, v.tipo);
     let recHtml = '';
     if(st.status !== 'ok' && rec.recomendada){
@@ -2530,12 +2294,10 @@ function renderVacinas(){
       </div>
     </div>`;
   }).join('') + '</div>';
-
   cont.innerHTML = html;
   atualizarHeader();
 }
 function selecionarPet(id){ state.petSelecionado = id; renderVacinas(); }
-
 function abrirModalAplicarVacina(petId, vacId){
   const pet = state.pets.find(p=>p.id === petId);
   if(!pet) return;
@@ -2543,11 +2305,9 @@ function abrirModalAplicarVacina(petId, vacId){
   if(!vac) return;
   const rec = recomendarMarcas(pet, vac.tipo);
   state.marcaVacinaSel = rec.recomendada || '';
-
-  openModal(
-    headPadrao('Aplicar vacina', vac.nome),
+  openModal(headPadrao('Aplicar vacina', vac.nome),
     `<div class="recomendacao-card">
-      <div class="rc-head"><span class="rc-emoji">🐾</span><span class="rc-titulo">Recomendação</span></div>
+      <div class="rc-head"><span>🐾</span><span class="rc-titulo">Recomendação</span></div>
       <p>${rec.recomendada ? 'Para a raça ' + esc(pet.raca||'SRD') + ', a marca indicada é ' + esc(rec.recomendada) + '.' : 'Selecione uma das marcas mais usadas.'}</p>
     </div>
     <div class="field"><label>DATA *</label><input class="input" type="date" id="vData" value="${hojeISO()}" max="${hojeISO()}"></div>
@@ -2560,12 +2320,9 @@ function abrirModalAplicarVacina(petId, vacId){
     <div class="row-2">
       <div class="field"><label>LOTE</label><input class="input" id="vLote"></div>
       <div class="field"><label>VET</label><input class="input" id="vVet"></div>
-    </div>
-    <div class="field"><label>CLÍNICA</label><input class="input" id="vClinica"></div>
-    <div class="field"><label>OBSERVAÇÕES</label><textarea class="textarea" id="vObs"></textarea></div>`,
+    </div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
-     <button class="btn btn-primary" onclick="salvarAplicacaoVacina('${petId}','${vacId}')">Salvar</button>`
-  );
+     <button class="btn btn-primary" onclick="salvarAplicacaoVacina('${petId}','${vacId}')">Salvar</button>`);
 }
 function selMarca(marca){
   state.marcaVacinaSel = marca;
@@ -2583,28 +2340,20 @@ function salvarAplicacaoVacina(petId, vacId){
   const marcaInput = ($('#vMarcaOutro').value || '').trim();
   const marca = marcaInput || state.marcaVacinaSel || '';
   if(!pet.vacinas) pet.vacinas = {};
-  pet.vacinas[vacId] = {
-    data, marca,
-    lote: $('#vLote').value.trim(),
-    vet: $('#vVet').value.trim(),
-    clinica: $('#vClinica').value.trim(),
-    obs: $('#vObs').value.trim()
-  };
+  pet.vacinas[vacId] = {data, marca, lote: $('#vLote').value.trim(), vet: $('#vVet').value.trim()};
   saveDB(); closeModal(); toast('Vacina registrada! 🎉');
   renderVacinas();
 }
 function desmarcarVacina(petId, vacId){
   const pet = state.pets.find(p=>p.id === petId);
   if(!pet) return;
-  openModal(
-    headPadrao('Remover aplicação', 'Confirme'),
+  openModal(headPadrao('Remover aplicação', 'Confirme'),
     `<div style="text-align:center;padding:12px 0">
       <div style="font-size:42px;margin-bottom:10px">⚠️</div>
       <div style="font-size:14px;font-weight:800;margin-bottom:8px">Remover aplicação?</div>
     </div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
-     <button class="btn btn-danger" onclick="confirmarDesmarcar('${petId}','${vacId}')">Remover</button>`
-  );
+     <button class="btn btn-danger" onclick="confirmarDesmarcar('${petId}','${vacId}')">Remover</button>`);
 }
 function confirmarDesmarcar(petId, vacId){
   const pet = state.pets.find(p=>p.id === petId);
@@ -2613,10 +2362,6 @@ function confirmarDesmarcar(petId, vacId){
   saveDB(); closeModal(); toast('Aplicação removida');
   renderVacinas();
 }
-
-/* ============================================================
-   CARTEIRA
-============================================================ */
 function abrirCarteiraVacina(petId){
   const pet = state.pets.find(x=>x.id === petId);
   if(!pet) return;
@@ -2648,7 +2393,7 @@ function abrirCarteiraVacina(petId){
       <div class="cv-num">${String(numSeq).padStart(2,'0')}</div>
       <div class="cv-body">
         <div class="cv-nome">${esc(v.nome)}</div>
-        <div class="cv-data">${dataTxt} <span class="cv-dot"></span> ${v.sem} sem.</div>
+        <div class="cv-data">${dataTxt}</div>
         ${marcaHtml}
       </div>
       <div class="cv-status">${statusTxt}</div>
@@ -2681,51 +2426,41 @@ function abrirCarteiraVacina(petId){
         <div class="ci-item"><div class="ci-label">Emitida em</div><div class="ci-valor">${fmtData(hojeISO())}</div></div>
       </div>
       <div class="carteira-secao">
-        <div class="cs-titulo">📊 Resumo <span class="cs-count">${totalOk}/${total} aplicadas</span></div>
+        <div class="cs-titulo">📊 Resumo <span class="cs-count">${totalOk}/${total}</span></div>
         <div style="height:8px;background:#F1F4F9;border-radius:6px;overflow:hidden;margin-bottom:8px">
           <div style="height:100%;width:${progresso}%;background:linear-gradient(90deg,#25C2B0,#4AD4C3);border-radius:6px"></div>
         </div>
         <div style="font-size:11px;color:var(--muted);font-weight:600;text-align:center">${progresso}% completo</div>
       </div>`;
   if(aplicadas.length > 0) html += `<div class="carteira-secao"><div class="cs-titulo">✅ Aplicadas <span class="cs-count">${aplicadas.length}</span></div>${aplicadas.map(a => renderVacItem(a, 'aplicada')).join('')}</div>`;
-  if(atrasadas.length > 0) html += `<div class="carteira-secao"><div class="cs-titulo" style="color:var(--danger)">⚠️ Em atraso <span class="cs-count" style="background:var(--danger-soft);color:#C42B50">${atrasadas.length}</span></div>${atrasadas.map(a => renderVacItem(a, 'atrasada')).join('')}</div>`;
+  if(atrasadas.length > 0) html += `<div class="carteira-secao"><div class="cs-titulo" style="color:var(--danger)">⚠️ Atraso <span class="cs-count" style="background:var(--danger-soft);color:#C42B50">${atrasadas.length}</span></div>${atrasadas.map(a => renderVacItem(a, 'atrasada')).join('')}</div>`;
   if(pendentes.length > 0) html += `<div class="carteira-secao"><div class="cs-titulo" style="color:#B47800">⏳ Pendentes <span class="cs-count" style="background:var(--accent-soft);color:#B47800">${pendentes.length}</span></div>${pendentes.map(p => renderVacItem(p, 'pendente')).join('')}</div>`;
   html += `
       <div class="carteira-assinatura">
-        <div class="ca-campo"><div class="ca-txt">Assinatura do Médico Veterinário</div><div class="ca-trace">CRMV</div></div>
-        <div class="ca-campo"><div class="ca-txt">Assinatura do Tutor</div><div class="ca-trace">Nome</div></div>
+        <div><div class="ca-txt">Assinatura do Médico Veterinário</div><div class="ca-trace">CRMV</div></div>
+        <div><div class="ca-txt">Assinatura do Tutor</div><div class="ca-trace">Nome</div></div>
       </div>
       <div class="carteira-rodape">
         <div class="cr-app"><div class="cr-logo">🐾</div><span>PetVida</span></div>
-        <div>Documento digital · ${fmtData(hojeISO())}</div>
+        <div>Documento · ${fmtData(hojeISO())}</div>
       </div>
     </div>
     <div class="carteira-alerta">
-      <div class="ca-emoji">ℹ️</div>
-      <div>Esta carteira digital <strong>não substitui</strong> a carteira oficial do médico-veterinário.</div>
+      <div>ℹ️</div>
+      <div>Esta carteira digital <strong>não substitui</strong> a oficial do veterinário.</div>
     </div>`;
-  openModal(
-    headPadrao('Carteira de Vacinação', 'Registro de ' + pet.nome),
-    html,
+  openModal(headPadrao('Carteira de Vacinação', pet.nome), html,
     `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
-     <button class="btn btn-primary" onclick="closeModal();goTo(3)">Gerenciar</button>`
-  );
+     <button class="btn btn-primary" onclick="closeModal();goTo(3)">Gerenciar</button>`);
 }
-
-/* ============================================================
-   IDADE REAL
-============================================================ */
 function abrirModalIdadeReal(petId){
-  const id = petId || state.petSelecionado;
-  const pet = state.pets.find(p=>p.id === id);
+  const pet = state.pets.find(p=>p.id === (petId || state.petSelecionado));
   if(!pet){ toast('Pet não encontrado'); return; }
-  state.petSelecionado = id;
   const info = idadeDetalhada(pet);
   if(!info){ toast('Data de nascimento não informada'); return; }
   const faixa = info.faixa;
   const recs = RECOMENDACOES_IDADE[pet.especie][faixa];
   const faixaLabel = {filhote:'Filhote', junior:'Júnior', adulto:'Adulto', senior:'Sênior'}[faixa];
-
   let html = `
     <div class="idade-hero">
       <span class="ih-tag">${pet.especie==='gato'?'Felino':'Canino'}</span>
@@ -2733,9 +2468,7 @@ function abrirModalIdadeReal(petId){
       <div class="ih-animal">${esc(info.animalTxt)}</div>
       <div class="ih-humano">equivale a <strong>${info.humano}</strong> em humanos</div>
       <span class="ih-faixa">${faixaLabel}</span>
-    </div>
-    <div class="sec-head" style="margin-top:4px"><div class="sec-title"><span class="dot"></span>Recomendações</div></div>
-    <p style="font-size:12px;color:var(--muted);font-weight:600;margin:0 2px 14px">Cuidados específicos para ${esc(pet.nome)} nesta fase:</p>`;
+    </div>`;
   recs.categorias.forEach(cat=>{
     html += `<div class="rec-idade">
       <div class="re-head">
@@ -2745,13 +2478,11 @@ function abrirModalIdadeReal(petId){
       <ul>${cat.itens.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>
     </div>`;
   });
-  openModal(headPadrao('Idade Real', 'Traduzindo a idade de ' + pet.nome), html,
+  openModal(headPadrao('Idade Real', pet.nome), html,
     `<button class="btn btn-primary" onclick="closeModal()">Entendi</button>`);
 }
 
-/* ============================================================
-   PAGE 4 — SAÚDE
-============================================================ */
+/* SAÚDE */
 const SAUDE_SUBS = [
   {id:'visao', label:'📋 Visão'},
   {id:'historico', label:'🏥 Histórico'},
@@ -2767,7 +2498,7 @@ function renderSaude(){
   const el = $('#saudeContent');
   if(state.pets.length === 0){
     subnav.innerHTML = '';
-    el.innerHTML = `<div class="empty"><span class="e-ic">❤️</span><h4>Nenhum pet cadastrado</h4><p>Cadastre um pet para acompanhar peso e histórico.</p></div>
+    el.innerHTML = `<div class="empty"><span class="e-ic">❤️</span><h4>Nenhum pet cadastrado</h4></div>
       <button class="btn btn-primary" style="margin-top:14px" onclick="abrirModalPet()">Cadastrar pet</button>`;
     return;
   }
@@ -2775,7 +2506,6 @@ function renderSaude(){
   subnav.innerHTML = `<div class="subnav">${SAUDE_SUBS.map(s=>
     `<button class="subnav-btn ${state.saudeSub===s.id?'active':''}" onclick="setSaudeSub('${s.id}')">${s.label}</button>`
   ).join('')}</div>`;
-
   const pet = state.pets.find(p=>p.id === state.petSelecionado);
   let petPicker = '';
   if(state.pets.length > 1){
@@ -2798,16 +2528,6 @@ function renderSaude(){
 }
 function renderSaudeVisao(pet){
   let html = '';
-  const res = resumoVacinas(pet);
-  if(res.atrasada > 0){
-    html += `<div class="next-card alerta anim" style="margin-bottom:16px" onclick="goTo(3)">
-      <div class="next-icon">⚠️</div>
-      <div class="next-body">
-        <div class="next-label">Atenção</div>
-        <div class="next-title">${res.atrasada} vacina${res.atrasada>1?'s':''} em atraso</div>
-      </div>
-    </div>`;
-  }
   const avatar = pet.foto ? `<img src="${pet.foto}" style="width:100%;height:100%;object-fit:cover">` : (pet.emoji||'🐾');
   html += `<div class="card anim" style="margin-bottom:16px">
     <div style="display:flex;align-items:center;gap:12px">
@@ -2818,46 +2538,18 @@ function renderSaudeVisao(pet){
       </div>
     </div>
     <div class="spec-grid" style="margin-top:14px;margin-bottom:0">
-      <div class="spec"><div class="spec-l">Peso atual</div><div class="spec-v">${pet.peso? esc(pet.peso)+' kg':'—'}</div></div>
+      <div class="spec"><div class="spec-l">Peso</div><div class="spec-v">${pet.peso? esc(pet.peso)+' kg':'—'}</div></div>
       <div class="spec"><div class="spec-l">Idade humana</div><div class="spec-v">${idadeHumana(pet)}</div></div>
       <div class="spec"><div class="spec-l">Nascimento</div><div class="spec-v">${fmtData(pet.nascimento)}</div></div>
       <div class="spec"><div class="spec-l">Sexo</div><div class="spec-v">${pet.sexo==='femea'?'Fêmea':'Macho'}</div></div>
     </div>
   </div>`;
   html += `<div class="quick-grid" style="margin-bottom:16px">
-    ${quickItem('🎂','#9B5DE5','Idade Real',`abrirModalIdadeReal('${pet.id}')`)}
-    ${quickItem('📷','#4A7DFF','Foto',`abrirModalFoto('${pet.id}')`)}
-    ${quickItem('🆔','#25C2B0','ID Digital',`abrirModalIDDigital('${pet.id}')`)}
-    ${quickItem('⚖️','#FFB020','Escore',`abrirModalEscore('${pet.id}')`)}
+    ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
+    ${quickItem('🎂','#FF7A45','Idade Real',`abrirModalIdadeReal('${pet.id}')`)}
+    ${quickItem('⚖️','#FFB020','Peso','abrirModalPeso()')}
+    ${quickItem('🆔','#4A7DFF','ID Digital',`abrirModalIDDigital('${pet.id}')`)}
   </div>`;
-  html += `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Controle de peso</div>
-    <button class="sec-link" onclick="abrirModalPeso()">+ Registrar</button></div>`;
-  const pesos = (pet.pesos || []).slice().sort((a,b)=> new Date(a.data) - new Date(b.data));
-  if(pesos.length === 0){
-    html += `<div class="card" style="text-align:center;padding:22px">
-      <div style="font-size:30px;margin-bottom:8px">⚖️</div>
-      <div style="font-size:13px;font-weight:800;margin-bottom:14px">Nenhuma pesagem registrada</div>
-      <button class="btn btn-ghost btn-sm" style="width:100%" onclick="abrirModalPeso()">Registrar</button>
-    </div>`;
-  } else {
-    const max = Math.max(...pesos.map(p=>parseFloat(p.valor)));
-    const min = Math.min(...pesos.map(p=>parseFloat(p.valor)));
-    const range = Math.max(0.5, max - min);
-    html += `<div class="card anim" style="margin-bottom:12px">
-      <div class="bar-chart">
-        ${pesos.slice(-6).map(p=>{
-          const v = parseFloat(p.valor);
-          const h = 20 + ((v - min) / range) * 70;
-          const dt = new Date(p.data + 'T12:00:00');
-          return `<div class="bar-col">
-            <div class="bar-val">${v}</div>
-            <div class="bar" style="height:${h}%"></div>
-            <div class="bar-lbl">${dt.getDate()}/${dt.getMonth()+1}</div>
-          </div>`;
-        }).join('')}
-      </div>
-    </div>`;
-  }
   html += `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Primeiros cuidados</div>
     <span style="font-size:10.5px;font-weight:800;color:var(--muted)">${(pet.cuidados||[]).length}/${PRIMEIROS_CUIDADOS[pet.especie].length}</span></div>`;
   html += PRIMEIROS_CUIDADOS[pet.especie].map(c=>{
@@ -2874,7 +2566,7 @@ function renderSaudeHistorico(pet){
   let html = '';
   if(h.alergias.length > 0){
     html += `<div class="blk warn anim" style="margin-bottom:14px">
-      <h4><span class="b-ic">⚠️</span>Alergias conhecidas</h4>
+      <h4><span class="b-ic">⚠️</span>Alergias</h4>
       <ul>${h.alergias.map(a=>`<li><strong>${esc(a.tipo)}</strong></li>`).join('')}</ul>
     </div>`;
   }
@@ -2889,9 +2581,6 @@ function renderSaudeHistorico(pet){
   html += secHist('Medicamentos', h.medicamentos, 'tipo-medicamento', '💊', m=>({title:m.nome,sub:(m.dose||''),del:`delHistorico('${pet.id}','medicamentos','${m.id}')`}));
   html += secHist('Cirurgias', h.cirurgias, 'tipo-cirurgia', '🏥', c=>({title:c.nome,sub:fmtData(c.data),del:`delHistorico('${pet.id}','cirurgias','${c.id}')`}));
   html += secHist('Alergias', h.alergias, 'tipo-alergia', '⚠️', a=>({title:a.tipo,sub:a.descricao||'',del:`delHistorico('${pet.id}','alergias','${a.id}')`}), '+ Adicionar', 'abrirModalAlergia()');
-  if(h.consultas.length===0 && h.exames.length===0 && h.medicamentos.length===0 && h.cirurgias.length===0 && h.alergias.length===0){
-    html += `<div class="empty"><span class="e-ic">🏥</span><h4>Nenhum registro</h4></div>`;
-  }
   return html;
 }
 function secHist(titulo, lista, classe, icon, mapper, btnAdd, fnAdd){
@@ -2920,10 +2609,7 @@ function secHist(titulo, lista, classe, icon, mapper, btnAdd, fnAdd){
 }
 function renderSaudePrevencao(pet){
   const lista = (pet.antipulgas || []).slice().sort((a,b)=> new Date(b.data) - new Date(a.data));
-  let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirModalAntipulgas()">
-    <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-    Registrar aplicação
-  </button>`;
+  let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirModalAntipulgas()">Registrar aplicação</button>`;
   if(lista.length === 0){
     html += `<div class="empty"><span class="e-ic">💊</span><h4>Nenhuma aplicação</h4></div>`;
   } else {
@@ -2944,10 +2630,7 @@ function renderSaudePrevencao(pet){
 function renderSaudeDiario(pet){
   const lista = (pet.diario || []).slice().sort((a,b)=> new Date(b.data) - new Date(a.data));
   const humores = {feliz:{emoji:'😊',label:'Feliz'},calmo:{emoji:'😌',label:'Calmo'},agitado:{emoji:'😰',label:'Agitado'},triste:{emoji:'😢',label:'Triste'},doente:{emoji:'🤒',label:'Doente'}};
-  let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirModalDiario()">
-    <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-    Registrar humor do dia
-  </button>`;
+  let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirModalDiario()">Registrar humor do dia</button>`;
   if(lista.length === 0){
     html += `<div class="empty"><span class="e-ic">📔</span><h4>Diário vazio</h4></div>`;
   } else {
@@ -2992,6 +2675,9 @@ function renderSaudeEmergencia(){
         <div class="next-desc">Em qualquer emergência, ligue imediatamente para o veterinário.</div>
       </div>
     </div>
+    <button class="btn btn-purple" style="margin-bottom:16px" onclick="goTo(7)">
+      🤖 Perguntar ao Dr. Pet IA
+    </button>
     <div class="ps-list">
       ${PRIMEIROS_SOCORROS.map(p=>`
         <div class="ps-item" onclick="this.classList.toggle('open')">
@@ -3034,9 +2720,9 @@ function renderGuiaAlimentos(){
   let html = `<div class="search-wrap"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 10-.7.7l.3.3v.8l5 5 1.5-1.5-5-5z"/></svg>
     <input class="search-input" placeholder="Buscar alimento..." value="${esc(state.saudeBusca||'')}" oninput="state.saudeBusca=this.value;renderSaude()">
   </div>`;
-  if(por.permitido.length) html += `<div class="alim-cat"><h4>✅ Permitidos</h4>${por.permitido.map(a=>`<div class="alim-item permitido"><div class="ai-icon">${a.emoji}</div><div class="ai-body"><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
-  if(por.perigoso.length) html += `<div class="alim-cat"><h4>⚠️ Perigosos</h4>${por.perigoso.map(a=>`<div class="alim-item perigoso"><div class="ai-icon">${a.emoji}</div><div class="ai-body"><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
-  if(por.toxico.length) html += `<div class="alim-cat"><h4>☠️ Tóxicos</h4>${por.toxico.map(a=>`<div class="alim-item toxico"><div class="ai-icon">${a.emoji}</div><div class="ai-body"><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
+  if(por.permitido.length) html += `<div class="alim-cat"><h4>✅ Permitidos</h4>${por.permitido.map(a=>`<div class="alim-item permitido"><div class="ai-icon">${a.emoji}</div><div><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
+  if(por.perigoso.length) html += `<div class="alim-cat"><h4>⚠️ Perigosos</h4>${por.perigoso.map(a=>`<div class="alim-item perigoso"><div class="ai-icon">${a.emoji}</div><div><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
+  if(por.toxico.length) html += `<div class="alim-cat"><h4>☠️ Tóxicos</h4>${por.toxico.map(a=>`<div class="alim-item toxico"><div class="ai-icon">${a.emoji}</div><div><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
   return html;
 }
 function renderGuiaSazonal(){
@@ -3080,26 +2766,10 @@ function delAntipulgas(petId, id){
   pet.antipulgas = (pet.antipulgas||[]).filter(x=>x.id !== id);
   saveDB(); renderSaude(); toast('Registro removido');
 }
-function delDiario(petId, id){
-  const pet = state.pets.find(p=>p.id === petId);
-  if(!pet) return;
-  pet.diario = (pet.diario||[]).filter(x=>x.id !== id);
-  saveDB(); renderSaude(); toast('Registro removido');
-}
-function delTutor(petId, id){
-  const pet = state.pets.find(p=>p.id === petId);
-  if(!pet) return;
-  pet.tutores = (pet.tutores||[]).filter(x=>x.id !== id);
-  saveDB(); renderSaude(); toast('Tutor removido');
-}
-
-/* ============================================================
-   PAGE 5 — RAÇÕES
-============================================================ */
 function renderRacoes(){
   const el = $('#racoesContent');
   if(state.pets.length === 0){
-    el.innerHTML = `<div class="empty"><span class="e-ic">🍖</span><h4>Nenhum pet cadastrado</h4><p>Cadastre um pet para receber recomendações.</p></div>
+    el.innerHTML = `<div class="empty"><span class="e-ic">🍖</span><h4>Nenhum pet cadastrado</h4></div>
       <button class="btn btn-primary" style="margin-top:14px" onclick="abrirModalPet()">Cadastrar pet</button>`;
     return;
   }
@@ -3130,24 +2800,18 @@ function renderRacoes(){
       <div class="food-head"><div class="food-ic">🥣</div><div><h4>${esc(r.titulo)}</h4><p>${esc(r.desc)}</p></div></div>
       <ul class="food-list">${r.itens.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>
       <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line)">
-        <div style="font-size:10.5px;font-weight:800;color:var(--muted);letter-spacing:.4px;margin-bottom:7px">MARCAS</div>
+        <div style="font-size:10.5px;font-weight:800;color:var(--muted);margin-bottom:7px">MARCAS</div>
         <div>${r.marcas.map(m=>`<span class="food-brand">${esc(m)}</span>`).join('')}</div>
       </div>
     </div>`;
   });
-  html += `<button class="btn btn-ghost" onclick="state.saudeSub='guias';state.guiaSub='alimentos';goTo(4)">
-    📚 Ver guia completo de alimentos
-  </button>`;
-  html += `<button class="btn btn-purple" style="margin-top:10px" onclick="goTo(7)">
+  html += `<button class="btn btn-purple" style="margin-top:8px" onclick="goTo(7)">
     🤖 Perguntar ao Dr. Pet IA
   </button>`;
   el.innerHTML = html;
 }
 function selecionarPetRacao(id){ state.petSelecionado = id; renderRacoes(); }
 
-/* ============================================================
-   PAGE 6 — DOENÇAS
-============================================================ */
 function setDoencaEspecie(esp){
   state.doencaEspecie = esp;
   state.doencaRiscoFiltro = 'todos';
@@ -3199,7 +2863,7 @@ function renderDoencas(){
       </div>
       <div class="doenca-body">
         <div class="doenca-desc">${esc(d.descricao.substring(0, 130))}${d.descricao.length > 130 ? '...' : ''}</div>
-        <div class="doenca-mortalidade"><span class="dm-label">Mortalidade:</span><span class="dm-valor" style="color:${risco.cor}">${esc(d.mortalidade)}</span></div>
+        <div class="doenca-mortalidade"><span class="dm-label">Mortalidade:</span><span class="dm-value" style="color:${risco.cor}">${esc(d.mortalidade)}</span></div>
       </div>
     </div>`;
   });
@@ -3216,22 +2880,19 @@ function abrirDetalheDoenca(esp, id){
       <h2>${esc(d.nome)}</h2>
       <div class="doenca-hero-tipo">${esc(d.tipo)}</div>
       <div class="doenca-hero-badges">
-        <span class="dh-badge" style="background:${risco.bg}; color:${risco.cor}">${risco.icone} Risco ${risco.label}</span>
+        <span class="dh-badge" style="background:${risco.bg}; color:${risco.cor}">${risco.icone} ${risco.label}</span>
         <span class="dh-badge" style="background:#F1F4F9; color:#66738A">💀 ${esc(d.mortalidade)}</span>
       </div>
     </div>
     <div class="blk"><h4><span class="b-ic">📖</span>Sobre</h4><p>${esc(d.descricao)}</p></div>
     <div class="blk"><h4><span class="b-ic">🔄</span>Contágio</h4><p>${esc(d.contagio)}</p></div>
-    <div class="blk" style="border-left:4px solid ${risco.cor}"><h4><span class="b-ic" style="background:${risco.bg}; color:${risco.cor}">⚠️</span>Sintomas</h4><ul>${d.sintomas.map(s => `<li>${esc(s)}</li>`).join('')}</ul></div>
-    <div class="blk" style="background:linear-gradient(140deg, #F6FDFB, #E4F8F5); border-color:#C7E8E2"><h4><span class="b-ic" style="background:var(--secondary-soft); color:#12897A">🛡️</span>Prevenção</h4><ul>${d.prevencao.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>
-    <div class="blk" style="background:linear-gradient(140deg, #FFF6F0, #FFF0E8); border-color:#FFE3D4"><h4><span class="b-ic" style="background:var(--primary-soft); color:var(--primary-d)">💊</span>Tratamento</h4><p>${esc(d.tratamento)}</p></div>
+    <div class="blk" style="border-left:4px solid ${risco.cor}"><h4><span class="b-ic" style="background:${risco.bg};color:${risco.cor}">⚠️</span>Sintomas</h4><ul>${d.sintomas.map(s => `<li>${esc(s)}</li>`).join('')}</ul></div>
+    <div class="blk" style="background:linear-gradient(140deg, #F6FDFB, #E4F8F5); border-color:#C7E8E2"><h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">🛡️</span>Prevenção</h4><ul>${d.prevencao.map(p => `<li>${esc(p)}</li>`).join('')}</ul></div>
+    <div class="blk" style="background:linear-gradient(140deg, #FFF6F0, #FFF0E8); border-color:#FFE3D4"><h4><span class="b-ic" style="background:var(--primary-soft);color:var(--primary-d)">💊</span>Tratamento</h4><p>${esc(d.tratamento)}</p></div>
     <div class="doenca-fonte">Fonte: ${esc(d.fonte)}</div>`;
-  openModal(
-    headPadrao(d.nome, risco.icone + ' Risco ' + risco.label + ' · Mortalidade ' + d.mortalidade),
-    body,
+  openModal(headPadrao(d.nome, risco.icone + ' ' + risco.label + ' · 💀 ' + d.mortalidade), body,
     `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
-     <button class="btn btn-purple" onclick="closeModal();goTo(7)">🤖 Perguntar à IA</button>`
-  );
+     <button class="btn btn-purple" onclick="closeModal();goTo(7)">🤖 IA</button>`);
 }
 
 /* ============================================================
@@ -3259,7 +2920,7 @@ function headPadrao(titulo, sub){
 }
 
 /* ============================================================
-   MODAIS AUXILIARES (compactados)
+   MODAIS AUXILIARES
 ============================================================ */
 let formPet = { id:null, nome:'', especie:'cao', raca:'', nascimento:'', sexo:'macho', peso:'', emoji:'🐕', foto:null };
 function abrirModalPet(petId){
@@ -3271,12 +2932,10 @@ function abrirModalPet(petId){
   } else {
     formPet = {id:null, nome:'', especie:'cao', raca:'', nascimento:'', sexo:'macho', peso:'', emoji:'🐕', foto:null};
   }
-  openModal(
-    headPadrao(editando?'Editar pet':'Novo pet', editando?'Atualize':'Preencha os dados'),
+  openModal(headPadrao(editando?'Editar pet':'Novo pet', editando?'Atualize':'Preencha os dados'),
     formPetHTML(),
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
-     <button class="btn btn-primary" onclick="salvarPet()">${editando?'Salvar':'Cadastrar'}</button>`
-  );
+     <button class="btn btn-primary" onclick="salvarPet()">${editando?'Salvar':'Cadastrar'}</button>`);
 }
 function formPetHTML(){
   const emojis = formPet.especie === 'gato' ? ['🐈','🐱','😺','😸','😻'] : ['🐕','🐶','🦮','🐩','🐺'];
@@ -3391,15 +3050,12 @@ function abrirDetalhePet(id){
       <div class="spec"><div class="spec-l">Vacinas</div><div class="spec-v">${res.ok} de ${res.total}</div></div>
       <div class="spec"><div class="spec-l">Tutores</div><div class="spec-v">${(p.tutores||[]).length}</div></div>
     </div>`;
-  openModal(
-    headPadrao('Ficha do pet', 'Informações completas'),
-    body,
+  openModal(headPadrao('Ficha do pet', 'Informações completas'), body,
     `<button class="btn btn-soft" onclick="confirmarExcluir('${p.id}')" style="flex:0 0 52px;padding:13px">
        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:var(--danger)"><path d="M6 19a2 2 0 002 2h8a2 2 0 002-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
      </button>
      <button class="btn btn-soft" onclick="abrirModalPet('${p.id}')">Editar</button>
-     <button class="btn btn-primary" onclick="closeModal();goTo(4)">Ver saúde</button>`
-  );
+     <button class="btn btn-primary" onclick="closeModal();goTo(4)">Ver saúde</button>`);
 }
 function confirmarExcluir(id){
   const p = state.pets.find(x=>x.id === id);
@@ -3429,8 +3085,8 @@ function abrirDetalheRaca(id){
     marcaBlk = `<div class="blk purple">
       <h4><span class="b-ic">💉</span>Vacinas recomendadas</h4>
       <ul>
-        <li><strong>V10/V3:</strong> ${esc(marcaRec.v10 || 'Consultar vet')}</li>
-        <li><strong>Antirrábica:</strong> ${esc(marcaRec.rabica || 'Consultar vet')}</li>
+        <li><strong>V10/V3:</strong> ${esc(marcaRec.v10 || 'Consultar')}</li>
+        <li><strong>Antirrábica:</strong> ${esc(marcaRec.rabica || 'Consultar')}</li>
       </ul>
     </div>`;
   }
@@ -3454,18 +3110,14 @@ function abrirDetalheRaca(id){
     <div class="blk warn"><h4><span class="b-ic">🩺</span>Saúde</h4><ul>${r.saude.map(s=>`<li>${esc(s)}</li>`).join('')}</ul></div>
     <div class="blk"><h4><span class="b-ic">🍖</span>Alimentação</h4><p>${esc(r.racao)}</p></div>
     ${marcaBlk}`;
-  openModal(
-    headPadrao(r.nome, (isCat?'Gato':'Cão') + ' · ' + r.porte),
-    body,
+  openModal(headPadrao(r.nome, (isCat?'Gato':'Cão') + ' · ' + r.porte), body,
     `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
-     <button class="btn btn-primary" onclick="closeModal();abrirModalPet()">Cadastrar pet</button>`
-  );
+     <button class="btn btn-primary" onclick="closeModal();abrirModalPet()">Cadastrar pet</button>`);
 }
 function abrirModalPeso(){
   if(state.pets.length === 0){ toast('Cadastre um pet primeiro'); return; }
   if(!state.petSelecionado) state.petSelecionado = state.pets[0].id;
-  openModal(
-    headPadrao('Registrar peso', 'Acompanhe o crescimento'),
+  openModal(headPadrao('Registrar peso', 'Acompanhe o crescimento'),
     `<div class="field"><label>PET</label>
       <select class="select" id="pesoPet">
         ${state.pets.map(p=>`<option value="${p.id}" ${p.id===state.petSelecionado?'selected':''}>${esc(p.nome)}</option>`).join('')}
@@ -3478,8 +3130,7 @@ function abrirModalPeso(){
       <input class="input" id="pesoData" type="date" value="${hojeISO()}" max="${hojeISO()}">
     </div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
-     <button class="btn btn-primary" onclick="salvarPeso()">Salvar</button>`
-  );
+     <button class="btn btn-primary" onclick="salvarPeso()">Salvar</button>`);
 }
 function salvarPeso(){
   const petId = $('#pesoPet').value;
@@ -3542,10 +3193,6 @@ function abrirModalMedicamento(){
     <div class="row-2">
       <div class="field"><label>DOSE</label><input class="input" id="hmDose"></div>
       <div class="field"><label>FREQUÊNCIA</label><input class="input" id="hmFreq"></div>
-    </div>
-    <div class="row-2">
-      <div class="field"><label>INÍCIO</label><input class="input" type="date" id="hmInicio" value="${hojeISO()}"></div>
-      <div class="field"><label>FIM</label><input class="input" type="date" id="hmFim"></div>
     </div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarMedicamento()">Salvar</button>`);
@@ -3555,17 +3202,14 @@ function salvarMedicamento(){
   if(!pet) return;
   const nome = $('#hmNome').value.trim();
   if(!nome){ toast('Informe o nome'); return; }
-  pet.historico.medicamentos.push({id:uid(), nome, dose:$('#hmDose').value.trim(), frequencia:$('#hmFreq').value.trim(), inicio:$('#hmInicio').value||hojeISO(), fim:$('#hmFim').value||''});
+  pet.historico.medicamentos.push({id:uid(), nome, dose:$('#hmDose').value.trim(), frequencia:$('#hmFreq').value.trim(), inicio:hojeISO()});
   saveDB(); closeModal(); toast('Medicamento registrado! 💊'); renderSaude();
 }
 function abrirModalCirurgia(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
   openModal(headPadrao('Nova cirurgia', 'Registre procedimento'),
     `<div class="field"><label>PROCEDIMENTO *</label><input class="input" id="hcirNome"></div>
-    <div class="row-2">
-      <div class="field"><label>DATA</label><input class="input" type="date" id="hcirData" value="${hojeISO()}"></div>
-      <div class="field"><label>VET</label><input class="input" id="hcirVet"></div>
-    </div>`,
+    <div class="field"><label>DATA</label><input class="input" type="date" id="hcirData" value="${hojeISO()}"></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarCirurgia()">Salvar</button>`);
 }
@@ -3574,7 +3218,7 @@ function salvarCirurgia(){
   if(!pet) return;
   const nome = $('#hcirNome').value.trim();
   if(!nome){ toast('Informe o procedimento'); return; }
-  pet.historico.cirurgias.push({id:uid(), nome, data:$('#hcirData').value||hojeISO(), veterinario:$('#hcirVet').value.trim()});
+  pet.historico.cirurgias.push({id:uid(), nome, data:$('#hcirData').value||hojeISO()});
   saveDB(); closeModal(); toast('Cirurgia registrada! 🏥'); renderSaude();
 }
 function abrirModalAlergia(){
@@ -3639,7 +3283,7 @@ function salvarDiario(){
 }
 function abrirModalTutor(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
-  const parentescos = ['Tutor principal','Cônjuge','Filho(a)','Veterinário(a)','Cuidador(a)','Outro'];
+  const parentescos = ['Tutor principal','Cônjuge','Filho(a)','Veterinário(a)','Outro'];
   openModal(headPadrao('Novo tutor', 'Adicione um tutor'),
     `<div class="field"><label>NOME *</label><input class="input" id="htNome"></div>
     <div class="field"><label>PAPEL</label>
@@ -3658,41 +3302,6 @@ function salvarTutor(){
   pet.tutores.push({id:uid(), nome, parentesco:$('#htParentesco').value, telefone:$('#htTel').value.trim()});
   saveDB(); closeModal(); toast('Tutor adicionado! 👥'); renderSaude();
 }
-function abrirModalFoto(petId){
-  const id = petId || state.petSelecionado;
-  const pet = state.pets.find(p=>p.id === id);
-  if(!pet){ toast('Pet não encontrado'); return; }
-  state.petSelecionado = id;
-  const avatarAtual = pet.foto
-    ? `<div class="foto-upload"><img src="${pet.foto}"></div>`
-    : `<div class="foto-upload">${pet.emoji||'🐾'}</div>`;
-  openModal(headPadrao('Foto do pet', 'Escolha uma foto'),
-    `<input type="file" id="fileFotoModal" accept="image/*" style="display:none" onchange="processarFotoModal(this)">
-    ${avatarAtual}
-    <p style="text-align:center;font-size:12px;color:var(--muted);font-weight:600;margin:0 0 16px">Personalize o perfil do seu pet.</p>
-    <button class="btn btn-primary" onclick="$('#fileFotoModal').click()">${pet.foto?'Trocar foto':'Escolher foto'}</button>
-    ${pet.foto?`<button class="btn btn-danger" style="margin-top:10px" onclick="removerFoto()">Remover</button>`:''}`,
-    `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>`);
-}
-function processarFotoModal(input){
-  const file = input.files && input.files[0];
-  if(!file) return;
-  if(file.size > 2 * 1024 * 1024){ toast('Foto muito grande'); return; }
-  const reader = new FileReader();
-  reader.onload = e => {
-    const pet = state.pets.find(p=>p.id === state.petSelecionado);
-    if(!pet) return;
-    pet.foto = e.target.result;
-    saveDB(); closeModal(); toast('Foto atualizada! 📷'); renderPage(state.currentPage);
-  };
-  reader.readAsDataURL(file);
-}
-function removerFoto(){
-  const pet = state.pets.find(p=>p.id === state.petSelecionado);
-  if(!pet) return;
-  pet.foto = null;
-  saveDB(); closeModal(); toast('Foto removida'); renderPage(state.currentPage);
-}
 function abrirModalIDDigital(petId){
   const id = petId || state.petSelecionado;
   const pet = state.pets.find(p=>p.id === id);
@@ -3702,7 +3311,7 @@ function abrirModalIDDigital(petId){
   const tutor = (pet.tutores||[])[0];
   const contato = tutor ? (tutor.telefone || '—') : '—';
   const alergias = (pet.historico && pet.historico.alergias || []).map(a=>a.tipo).join(', ') || 'Nenhuma';
-  openModal(headPadrao('ID Digital', 'Identificação de ' + pet.nome),
+  openModal(headPadrao('ID Digital', pet.nome),
     `<div class="id-digital">
       <div class="idd-top">
         <div>
@@ -3735,66 +3344,20 @@ function compartilharID(petId){
   const pet = state.pets.find(p=>p.id === petId);
   if(!pet) return;
   const codigo = gerarIdPet(pet);
-  const texto = `🐾 ID DIGITAL - ${pet.nome}\n\nCódigo: ${codigo}\nIdade: ${calcIdade(pet.nascimento)}\nPeso: ${pet.peso?pet.peso+' kg':'—'}\nGerado pelo PetVida em ${fmtData(hojeISO())}`;
+  const texto = `🐾 ID DIGITAL - ${pet.nome}\n\nCódigo: ${codigo}\nIdade: ${calcIdade(pet.nascimento)}\nGerado pelo PetVida em ${fmtData(hojeISO())}`;
   if(navigator.share) navigator.share({title:'ID Digital - ' + pet.nome, text: texto}).catch(()=>{});
   else if(navigator.clipboard) navigator.clipboard.writeText(texto).then(()=> toast('ID copiado! 📋')).catch(()=> toast('Não foi possível copiar'));
   else toast('Compartilhamento não disponível');
-}
-const ESCORES = [
-  {n:1, emoji:'🦴', label:'Muito magro', desc:'Costelas muito visíveis.'},
-  {n:2, emoji:'🐕', label:'Magro', desc:'Costelas visíveis sem gordura.'},
-  {n:3, emoji:'✅', label:'Ideal', desc:'Costelas palpáveis, cintura visível.'},
-  {n:4, emoji:'⚠️', label:'Sobrepeso', desc:'Costelas difíceis de palpar.'},
-  {n:5, emoji:'🚨', label:'Obeso', desc:'Costelas não palpáveis.'}
-];
-let escoreSelecionado = 3;
-function abrirModalEscore(petId){
-  const id = petId || state.petSelecionado;
-  const pet = state.pets.find(p=>p.id === id);
-  if(!pet){ toast('Pet não encontrado'); return; }
-  state.petSelecionado = id;
-  const atual = pet.escore || 3;
-  escoreSelecionado = atual;
-  openModal(headPadrao('Escore corporal', 'Avalie a condição física'),
-    `<div class="escore-scale">
-      ${ESCORES.map(e=>`<div class="escore-opt ${e.n===atual?'active':''}" data-n="${e.n}" onclick="selEscore(${e.n})"><span class="eo-emoji">${e.emoji}</span><span class="eo-num">${e.n}</span></div>`).join('')}
-    </div>
-    <div id="escoreInfo"></div>`,
-    `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
-     <button class="btn btn-primary" onclick="salvarEscore()">Salvar</button>`);
-  setTimeout(()=> atualizarEscoreInfo(atual), 50);
-}
-function selEscore(n){ escoreSelecionado = n; $$('.escore-opt').forEach(o => o.classList.toggle('active', +o.dataset.n === n)); atualizarEscoreInfo(n); }
-function atualizarEscoreInfo(n){
-  const e = ESCORES.find(x=>x.n === n);
-  if(!e) return;
-  const info = $('#escoreInfo');
-  if(info){
-    info.innerHTML = `<div class="blk" style="border-left:4px solid ${n<=3?(n<3?'#FFB020':'#25C2B0'):(n===4?'#FFB020':'#EF476F')}">
-      <h4 style="margin-bottom:6px">${e.emoji} ${e.label}</h4><p>${esc(e.desc)}</p>
-    </div>`;
-  }
-}
-function salvarEscore(){
-  const pet = state.pets.find(p=>p.id === state.petSelecionado);
-  if(!pet) return;
-  pet.escore = escoreSelecionado;
-  saveDB(); closeModal(); toast('Escore salvo! ⚖️'); renderSaude();
-}
-function abrirModalPrimeirosSocorros(){
-  state.saudeSub = 'emergencia';
-  if(state.currentPage !== 4){ goTo(4); }
-  else renderSaude();
 }
 function abrirModalAjuda(){
   openModal(headPadrao('Como usar o PetVida', 'Guia rápido'),
     `<div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
       <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">🤖</span>Dr. Pet IA</h4>
-      <p>Seu assistente veterinário inteligente! Responda dúvidas sobre saúde, alimentação, comportamento e emergências. Funciona offline com base especializada, e você pode conectar IA real (OpenAI, Gemini ou Claude) para respostas ainda mais avançadas.</p>
+      <p>Seu assistente veterinário inteligente! Já vem com uma <strong>base de conhecimento offline especializada</strong> e, se você configurar uma chave de API, conecta com <strong>Google Gemini</strong>, <strong>OpenAI</strong> ou <strong>Claude</strong> para respostas ainda mais avançadas.</p>
     </div>
     <div class="blk"><h4><span class="b-ic">👆</span>Navegação</h4><p>Deslize o dedo para trocar de página ou use a barra inferior.</p></div>
     <div class="blk"><h4><span class="b-ic">💾</span>Backup</h4><p>Use o botão de backup no topo para salvar, exportar ou restaurar os dados.</p></div>
-    <div class="blk"><h4><span class="b-ic">💉</span>Vacinas</h4><p>Registre a marca, lote e veterinário em cada aplicação.</p></div>
+    <div class="blk"><h4><span class="b-ic">💉</span>Vacinas</h4><p>Registre marca, lote e veterinário em cada aplicação.</p></div>
     <div class="blk"><h4><span class="b-ic">🩺</span>Doenças</h4><p>Guia completo com classificação de risco, sintomas, prevenção e tratamento.</p></div>
     <div class="blk warn"><h4><span class="b-ic">⚕️</span>Aviso importante</h4><p>Este aplicativo é uma ferramenta de apoio ao tutor e <strong>não substitui a consulta veterinária</strong>. Em emergências, procure atendimento profissional imediatamente.</p></div>`,
     `<button class="btn btn-primary" onclick="closeModal()">Entendi</button>`);
