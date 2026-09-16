@@ -34,7 +34,8 @@ ul{margin:0;padding:0;list-style:none}
 .hdr-brand{display:flex;align-items:center;gap:10px}
 .hdr-logo{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.22);display:grid;place-items:center;backdrop-filter:blur(6px)}
 .hdr-logo svg{width:22px;height:22px;fill:#fff}
-.hdr-title{font-size:17px;font-weight:800;letter-spacing:-.3px;line-height:1.1}
+.hdr-title{font-size:17px;font-weight:800;letter-spacing:-.3px;line-height:1.1;display:flex;align-items:center;gap:6px}
+.hdr-version{font-size:9.5px;font-weight:800;background:rgba(255,255,255,.25);padding:2.5px 6px;border-radius:6px;letter-spacing:.3px}
 .hdr-sub{font-size:11.5px;opacity:.85;font-weight:500}
 .hdr-actions{display:flex;gap:8px}
 .icon-btn{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.20);display:grid;place-items:center;backdrop-filter:blur(6px);transition:transform .15s ease;position:relative;cursor:pointer}
@@ -82,6 +83,7 @@ ul{margin:0;padding:0;list-style:none}
 .btn-success{background:linear-gradient(135deg,#25C2B0,#4AD4C3);color:#fff;box-shadow:0 8px 20px rgba(37,194,176,.30)}
 .btn-sm{padding:10px 15px;font-size:12.5px;width:auto;border-radius:12px}
 .btn svg{width:17px;height:17px;fill:currentColor}
+.btn:disabled{opacity:.5;cursor:not-allowed}
 .pet-card{display:flex;align-items:center;gap:13px;background:var(--card);border-radius:var(--radius);padding:13px;box-shadow:var(--shadow);margin-bottom:11px;border:1px solid rgba(234,238,246,.9);transition:transform .14s ease;position:relative;overflow:hidden;cursor:pointer}
 .pet-card:active{transform:scale(.985)}
 .pet-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--primary),var(--accent))}
@@ -290,10 +292,36 @@ ul{margin:0;padding:0;list-style:none}
 .carteira-rodape .cr-app{display:flex;align-items:center;gap:6px}
 .carteira-rodape .cr-logo{width:16px;height:16px;border-radius:5px;background:linear-gradient(135deg,#FF7A45,#F0521B);display:grid;place-items:center;font-size:9px}
 .carteira-alerta{background:linear-gradient(140deg,#FFF6F0,#FFF0E8);border:1.5px solid #FFE3D4;border-radius:14px;padding:11px 13px;font-size:11px;line-height:1.55;color:#8A6A55;font-weight:600;margin-bottom:14px;display:flex;gap:9px}
-.foto-upload{position:relative;width:110px;height:110px;margin:0 auto 14px;border-radius:36px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);display:grid;place-items:center;font-size:54px;border:3px solid #fff;box-shadow:0 8px 20px rgba(240,90,30,.18);cursor:pointer;overflow:hidden}
-.foto-upload img{width:100%;height:100%;object-fit:cover}
-.foto-upload .foto-edit{position:absolute;bottom:-2px;right:-2px;width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,#FF8A5B,#F0521B);display:grid;place-items:center;border:3px solid #fff}
-.foto-upload .foto-edit svg{width:15px;height:15px;fill:#fff}
+/* ===== FOTO UPLOAD (corrigido) ===== */
+.foto-upload-wrap{position:relative;width:130px;margin:0 auto 14px}
+.foto-upload{position:relative;display:grid;place-items:center;width:130px;height:130px;border-radius:36px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);font-size:60px;border:3px solid #fff;box-shadow:0 8px 20px rgba(240,90,30,.18);cursor:pointer;overflow:hidden;transition:transform .15s ease}
+.foto-upload:active{transform:scale(.96)}
+.foto-upload img{width:100%;height:100%;object-fit:cover;display:block}
+.foto-upload .foto-edit{position:absolute;bottom:-2px;right:-2px;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#FF8A5B,#F0521B);display:grid;place-items:center;border:3px solid #fff;pointer-events:none;box-shadow:0 4px 12px rgba(240,90,30,.35)}
+.foto-upload .foto-edit svg{width:16px;height:16px;fill:#fff}
+.foto-hint{text-align:center;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:-8px;margin-bottom:14px}
+/* ===== ÁLBUM ===== */
+.album-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.album-item{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#F1F4F9;cursor:pointer;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);transition:transform .15s ease}
+.album-item:active{transform:scale(.95)}
+.album-item img{width:100%;height:100%;object-fit:cover;display:block}
+.album-info{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;padding:18px 6px 5px}
+.album-titulo{font-size:9.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.album-data{font-size:8.5px;opacity:.85;font-weight:600;margin-top:1px}
+.album-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
+.album-stat{background:#fff;border-radius:14px;padding:12px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);text-align:center}
+.album-stat-n{font-size:20px;font-weight:800;color:var(--primary-d);line-height:1}
+.album-stat-l{font-size:9.5px;color:var(--muted);font-weight:800;text-transform:uppercase;margin-top:4px;letter-spacing:.4px}
+.album-upload-empty{text-align:center;padding:26px 18px}
+.album-preview{position:relative;border-radius:18px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);background:#1B2434}
+.album-preview img{width:100%;display:block;max-height:340px;object-fit:contain;margin:0 auto}
+.album-timeline{display:flex;flex-direction:column;gap:14px}
+.album-tl-group{position:relative;padding-left:26px}
+.album-tl-group::before{content:"";position:absolute;left:8px;top:8px;bottom:-8px;width:2px;background:linear-gradient(180deg,#FFD3BC,#E9EDF5)}
+.album-tl-dot{position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#FF8A5B,#F0521B);border:3px solid #fff;box-shadow:0 2px 8px rgba(240,90,30,.30)}
+.album-tl-label{font-size:11px;font-weight:800;color:var(--primary-d);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.album-tl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.album-tl-grid .album-item{border-radius:11px}
 .id-digital{background:linear-gradient(160deg,#1F2A3D,#2B3A52);border-radius:22px;padding:20px;color:#fff;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(19,25,38,.30);margin-bottom:16px}
 .id-digital .idd-top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2;margin-bottom:14px}
 .id-digital .idd-titulo{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.60)}
@@ -514,7 +542,7 @@ ul{margin:0;padding:0;list-style:none}
           <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4 5 7c0 1.6 1 3 2.5 3.8C5.6 12 4 14 4 16.5 4 19.5 7.5 22 12 22s8-2.5 8-5.5c0-2.5-1.6-4.5-3.5-5.7C18 10 19 8.6 19 7c0-3-3-5-7-5z"/></svg>
         </div>
         <div>
-          <div class="hdr-title">PetVida</div>
+          <div class="hdr-title">PetVida <span class="hdr-version" id="hdrVersion">v9.1</span></div>
           <div class="hdr-sub" id="hdrSub">Cuide bem do seu melhor amigo</div>
         </div>
       </div>
@@ -666,11 +694,17 @@ ul{margin:0;padding:0;list-style:none}
 </div>
 <div class="toast" id="toast"></div>
 <input type="file" id="inputImport" accept="application/json,.json" style="display:none" onchange="processarImport(this)">
+<!-- Inputs globais para álbum (fora dos modais para persistir entre aberturas) -->
+<input type="file" id="inputAlbumCamera" accept="image/*" capture="environment" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" onchange="processarFotoAlbum(this)">
+<input type="file" id="inputAlbumGaleria" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" onchange="processarFotoAlbum(this)">
 
 <script>
 /* ============================================================
    CONFIGURAÇÃO — IA GEMINI (USO PESSOAL, SEM RESTRIÇÕES)
 ============================================================ */
+const APP_VERSION = 'v9.1';
+const APP_VERSION_DATE = '2025-01-15';
+
 const IA_CONFIG_KEY = 'petvida_ia_config_v5';
 const DB_KEY = 'petvida_v9';
 const BACKUP_KEY = 'petvida_backups';
@@ -683,7 +717,7 @@ const GEMINI_API_KEY_PADRAO = 'AQ.Ab8RN6KvN127QdAWcwXuH2i32b0n1OMUoDjPwsM3dHufUN
 let iaConfig = {
   provider: 'gemini',
   apiKey: GEMINI_API_KEY_PADRAO,
-  model: '',  // Vazio = autodetecção
+  model: '',
   status: 'desconhecido'
 };
 
@@ -703,7 +737,23 @@ function saveDB(){
     state.ultimaAtualizacao = new Date().toISOString();
     localStorage.setItem(DB_KEY, JSON.stringify({pets: state.pets, ultimaAtualizacao: state.ultimaAtualizacao}));
     atualizarBadgeBackup();
-  }catch(e){ console.error('Erro ao salvar:', e); }
+  }catch(e){
+    console.error('Erro ao salvar:', e);
+    if(String(e).indexOf('QuotaExceeded') !== -1){
+      toast('⚠️ Armazenamento cheio. Remova fotos antigas.');
+    }
+  }
+}
+function normalizarPet(p){
+  if(!p.historico) p.historico = {consultas:[],exames:[],medicamentos:[],cirurgias:[],alergias:[]};
+  if(!p.antipulgas) p.antipulgas = [];
+  if(!p.diario) p.diario = [];
+  if(!p.tutores) p.tutores = [];
+  if(!p.vacinas) p.vacinas = {};
+  if(!p.pesos) p.pesos = [];
+  if(!p.cuidados) p.cuidados = [];
+  if(!p.album) p.album = [];
+  return p;
 }
 function loadDB(){
   try{
@@ -714,13 +764,7 @@ function loadDB(){
       if(d.ultimaAtualizacao) state.ultimaAtualizacao = d.ultimaAtualizacao;
     }
   }catch(e){ state.pets = []; }
-  state.pets.forEach(p=>{
-    if(!p.historico) p.historico = {consultas:[],exames:[],medicamentos:[],cirurgias:[],alergias:[]};
-    if(!p.antipulgas) p.antipulgas = [];
-    if(!p.diario) p.diario = [];
-    if(!p.tutores) p.tutores = [];
-    if(!p.vacinas) p.vacinas = {};
-  });
+  state.pets.forEach(normalizarPet);
 }
 function saveIAConfig(){ try{ localStorage.setItem(IA_CONFIG_KEY, JSON.stringify(iaConfig)); }catch(e){} }
 function loadIAConfig(){
@@ -844,13 +888,14 @@ function abrirModalBackup(){
         </button>
       </div>`).join('');
   }
+  html += `<div style="text-align:center;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:16px">PetVida ${APP_VERSION} · ${APP_VERSION_DATE}</div>`;
   openModal(headPadrao('Backup e Restauração', 'Proteja os dados'), html,
     `<button class="btn btn-primary" onclick="closeModal()">Fechar</button>`);
 }
 function salvarAgora(){ saveDB(); toast('Dados salvos! ✅'); setTimeout(()=> abrirModalBackup(), 400); }
 function exportarBackup(){
   try{
-    const dados = {app:'PetVida', versao:'v9.0', exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
+    const dados = {app:'PetVida', versao:APP_VERSION, exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
     const json = JSON.stringify(dados, null, 2);
     const blob = new Blob([json], {type: 'application/json;charset=utf-8'});
     const url = URL.createObjectURL(blob);
@@ -900,16 +945,7 @@ function previewImport(dados, nomeArq){
 function confirmarImport(dadosJson){
   try{
     const dados = JSON.parse(dadosJson);
-    state.pets = dados.pets;
-    state.pets.forEach(p=>{
-      if(!p.historico) p.historico = {consultas:[],exames:[],medicamentos:[],cirurgias:[],alergias:[]};
-      if(!p.antipulgas) p.antipulgas = [];
-      if(!p.diario) p.diario = [];
-      if(!p.tutores) p.tutores = [];
-      if(!p.vacinas) p.vacinas = {};
-      if(!p.pesos) p.pesos = [];
-      if(!p.cuidados) p.cuidados = [];
-    });
+    state.pets = dados.pets.map(normalizarPet);
     state.petSelecionado = state.pets[0] ? state.pets[0].id : null;
     saveDB(); closeModal(); toast('Backup restaurado! 🎉'); goTo(0); atualizarHeader();
   }catch(e){ toast('Erro ao restaurar'); }
@@ -934,16 +970,7 @@ function confirmarRestauracaoBackup(id){
   const b = backups.find(x=>x.id === id);
   if(!b){ toast('Backup não encontrado'); return; }
   fazerBackupAutomatico('Pré-restauração');
-  state.pets = JSON.parse(JSON.stringify(b.dados));
-  state.pets.forEach(p=>{
-    if(!p.historico) p.historico = {consultas:[],exames:[],medicamentos:[],cirurgias:[],alergias:[]};
-    if(!p.antipulgas) p.antipulgas = [];
-    if(!p.diario) p.diario = [];
-    if(!p.tutores) p.tutores = [];
-    if(!p.vacinas) p.vacinas = {};
-    if(!p.pesos) p.pesos = [];
-    if(!p.cuidados) p.cuidados = [];
-  });
+  state.pets = JSON.parse(JSON.stringify(b.dados)).map(normalizarPet);
   state.petSelecionado = state.pets[0] ? state.pets[0].id : null;
   saveDB(); closeModal(); toast('Backup restaurado! 🎉'); goTo(0); atualizarHeader();
 }
@@ -1046,6 +1073,24 @@ function idadeDetalhada(pet){
   }
   return { meses, anos, mesesRestantes, animalTxt, humano: idadeHumana(pet), faixa: faixaEtaria(pet.nascimento) };
 }
+function calcularIdadeNaData(nascimento, dataFoto){
+  if(!nascimento || !dataFoto) return '';
+  const nasc = new Date(nascimento + 'T12:00:00');
+  const data = new Date(dataFoto + 'T12:00:00');
+  if(isNaN(nasc) || isNaN(data)) return '';
+  let meses = (data.getFullYear()-nasc.getFullYear())*12 + (data.getMonth()-nasc.getMonth());
+  if(data.getDate() < nasc.getDate()) meses--;
+  if(meses < 0) return '';
+  const anos = Math.floor(meses/12);
+  const m = meses % 12;
+  if(meses < 1){
+    const dias = Math.max(0, Math.round((data-nasc)/86400000));
+    return dias + (dias === 1 ? ' dia' : ' dias');
+  }
+  if(anos === 0) return m + (m===1?' mês':' meses');
+  if(m === 0) return anos + (anos===1?' ano':' anos');
+  return anos + 'a ' + m + 'm';
+}
 function toast(msg){
   const t = $('#toast');
   t.textContent = msg;
@@ -1075,6 +1120,31 @@ function padraoQr(pet, size){
     }
   }
   return `<svg viewBox="0 0 ${s} ${s}" width="${s}" height="${s}" xmlns="http://www.w3.org/2000/svg" style="background:#fff;border-radius:4px">${cells}</svg>`;
+}
+
+/* ============================================================
+   COMPRESSÃO DE IMAGEM
+============================================================ */
+function redimensionarImagem(dataUrl, maxSize, qualidade, cb){
+  const img = new Image();
+  img.onload = () => {
+    let w = img.width, h = img.height;
+    if(w > maxSize || h > maxSize){
+      if(w > h){ h = Math.round(h * maxSize / w); w = maxSize; }
+      else { w = Math.round(w * maxSize / h); h = maxSize; }
+    }
+    try{
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(0, 0, w, h);
+      ctx.drawImage(img, 0, 0, w, h);
+      cb(canvas.toDataURL('image/jpeg', qualidade));
+    }catch(e){ cb(dataUrl); }
+  };
+  img.onerror = () => cb(dataUrl);
+  img.src = dataUrl;
 }
 
 /* ============================================================
@@ -1426,8 +1496,6 @@ function porteDoPet(pet){
 /* ============================================================
    🧠 IA — GEMINI COM AUTODETECÇÃO DE MODELOS
 ============================================================ */
-
-/* Base local fallback */
 const IA_KB = [
   {tipo:'emergencia',peso:10,palavras:['sangrando','sangramento','hemorragia','cortou'],resposta:'🩸 **Sangramento** é emergência!\n\n1. **Pressione** com gaze por 3-5 min\n2. **Eleve o membro**\n3. Leve ao veterinário\n\n⚠️ Não parar em 5 min = grave.'},
   {tipo:'emergencia',peso:10,palavras:['engasgou','engasgo','asfixia','sufocando'],resposta:'😰 **Engasgo!**\n\n1. Abra a boca com cuidado\n2. Se visível, remova com pinça\n3. Manobra de Heimlich\n4. Leve ao vet'},
@@ -1470,9 +1538,6 @@ function gerarRespostaGenerica(pergunta, petCtx){
   };
 }
 
-/* ============================================================
-   AUTODETECÇÃO DE MODELOS GEMINI
-============================================================ */
 let modelosDisponiveisCache = null;
 let cacheTimestamp = 0;
 const CACHE_DURACAO = 10 * 60 * 1000;
@@ -1482,31 +1547,19 @@ async function descobrirModelosDisponiveis(chaveLimpa){
   if(modelosDisponiveisCache && (agora - cacheTimestamp) < CACHE_DURACAO){
     return modelosDisponiveisCache;
   }
-
   try{
     console.log('🔍 Listando modelos disponíveis...');
     const url = 'https://generativelanguage.googleapis.com/v1beta/models';
-    const res = await fetch(url, {
-      method: 'GET',
-      headers: {'x-goog-api-key': chaveLimpa}
-    });
-
+    const res = await fetch(url, {method:'GET', headers:{'x-goog-api-key': chaveLimpa}});
     if(!res.ok){
       console.warn('⚠️ Não foi possível listar modelos:', res.status);
       return null;
     }
-
     const data = await res.json();
     if(!data.models || !Array.isArray(data.models)) return null;
-
     const modelos = data.models
       .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent'))
-      .map(m => ({
-        nome: m.name.replace('models/', ''),
-        displayName: m.displayName || m.name,
-        descricao: m.description || ''
-      }));
-
+      .map(m => ({nome: m.name.replace('models/', ''), displayName: m.displayName || m.name, descricao: m.description || ''}));
     console.log('✅ Modelos encontrados:', modelos.map(m => m.nome).join(', '));
     modelosDisponiveisCache = modelos;
     cacheTimestamp = agora;
@@ -1519,7 +1572,6 @@ async function descobrirModelosDisponiveis(chaveLimpa){
 
 function ordenarModelosPorPreferencia(modelos){
   if(!modelos) return [];
-
   const prioridades = [
     {match: /^gemini-3\.6-flash$/i, peso: 100},
     {match: /^gemini-3\.5-flash$/i, peso: 95},
@@ -1538,7 +1590,6 @@ function ordenarModelosPorPreferencia(modelos){
     {match: /lite/i, peso: 20},
     {match: /gemini/i, peso: 10}
   ];
-
   return modelos.slice().sort((a, b) => {
     const pesoA = prioridades.reduce((max, p) => p.match.test(a.nome) ? Math.max(max, p.peso) : max, 0);
     const pesoB = prioridades.reduce((max, p) => p.match.test(b.nome) ? Math.max(max, p.peso) : max, 0);
@@ -1546,13 +1597,9 @@ function ordenarModelosPorPreferencia(modelos){
   });
 }
 
-/* ============================================================
-   CHAMADA DA IA REAL
-============================================================ */
 async function chamarIAReal(pergunta, petCtx){
   const cfg = iaConfig;
   if(!cfg.apiKey || cfg.provider === 'local') return null;
-
   const chaveLimpa = (cfg.apiKey || '').trim();
   if(!chaveLimpa) return null;
 
@@ -1566,116 +1613,74 @@ Regras:
 - Sempre termine com aviso curto sobre não substituir consulta veterinária
 ${petCtx ? `\nContexto do pet:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.especie}\n- Raça: ${petCtx.raca || 'SRD'}\n- Idade: ${petCtx.idade}\n- Peso: ${petCtx.peso || 'não informado'}` : ''}`;
 
-  /* OpenAI e Anthropic */
   if(cfg.provider === 'openai' || cfg.provider === 'anthropic'){
     return chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa);
   }
 
-  /* ========== GEMINI COM AUTODETECÇÃO ========== */
   let modelosParaTentar = [];
-
-  if(cfg.model && cfg.model.trim()){
-    modelosParaTentar.push(cfg.model.trim());
-  }
-
+  if(cfg.model && cfg.model.trim()) modelosParaTentar.push(cfg.model.trim());
   const disponiveis = await descobrirModelosDisponiveis(chaveLimpa);
   if(disponiveis && disponiveis.length > 0){
     const ordenados = ordenarModelosPorPreferencia(disponiveis);
-    ordenados.forEach(m => {
-      if(!modelosParaTentar.includes(m.nome)) modelosParaTentar.push(m.nome);
-    });
+    ordenados.forEach(m => { if(!modelosParaTentar.includes(m.nome)) modelosParaTentar.push(m.nome); });
   }
-
   const fallbackEmergencia = [
     'gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite',
     'gemini-3.1-pro', 'gemini-3.0-flash', 'gemini-2.5-flash',
     'gemini-2.0-flash', 'gemini-2.0-flash-lite',
     'gemini-1.5-flash-latest', 'gemini-1.5-pro-latest'
   ];
-  fallbackEmergencia.forEach(m => {
-    if(!modelosParaTentar.includes(m)) modelosParaTentar.push(m);
-  });
+  fallbackEmergencia.forEach(m => { if(!modelosParaTentar.includes(m)) modelosParaTentar.push(m); });
 
   console.log('🎯 Modelos a tentar:', modelosParaTentar.slice(0, 10).join(' → '));
-
   let ultimoErro = null;
 
   for(const modelo of modelosParaTentar){
     try{
       console.log(`🌐 Tentando: ${modelo}`);
-
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`;
       const res = await fetch(url, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-goog-api-key': chaveLimpa
-        },
+        headers: {'Content-Type': 'application/json', 'x-goog-api-key': chaveLimpa},
         body: JSON.stringify({
           contents: [{role:'user', parts:[{text: sysPrompt + '\n\n---\n\nPERGUNTA:\n' + pergunta}]}],
           generationConfig: {maxOutputTokens: 800, temperature: 0.75}
         })
       });
-
       if(res.status === 404){
         console.warn(`   ⚠️ ${modelo} não disponível`);
         ultimoErro = {erro: true, motivo: 'Nenhum modelo compatível encontrado', statusCode: 404};
         continue;
       }
-
-      if(res.status === 429){
-        return {erro: true, motivo: 'Cota excedida. Aguarde alguns minutos', statusCode: 429};
-      }
-
-      if(res.status === 401 || res.status === 403){
-        return {erro: true, motivo: 'Chave de API inválida ou sem permissão', statusCode: res.status};
-      }
-
+      if(res.status === 429) return {erro: true, motivo: 'Cota excedida. Aguarde alguns minutos', statusCode: 429};
+      if(res.status === 401 || res.status === 403) return {erro: true, motivo: 'Chave de API inválida ou sem permissão', statusCode: res.status};
       if(!res.ok){
         const errText = await res.text();
         console.error(`   ❌ HTTP ${res.status}:`, errText.slice(0, 200));
         ultimoErro = {erro: true, motivo: 'Erro HTTP ' + res.status, statusCode: res.status};
         continue;
       }
-
       const data = await res.json();
       let texto = '';
-
       if(data.candidates && data.candidates[0]){
         const cand = data.candidates[0];
-        if(cand.content && cand.content.parts && cand.content.parts[0]){
-          texto = cand.content.parts[0].text || '';
-        }
+        if(cand.content && cand.content.parts && cand.content.parts[0]) texto = cand.content.parts[0].text || '';
       }
-
       if(!texto){
         console.warn(`   ⚠️ Resposta vazia de ${modelo}`);
         ultimoErro = {erro: true, motivo: 'Resposta vazia', statusCode: 200};
         continue;
       }
-
       console.log(`   ✅ Sucesso com ${modelo}!`);
-      if(iaConfig.model !== modelo){
-        iaConfig.model = modelo;
-        saveIAConfig();
-      }
-
+      if(iaConfig.model !== modelo){ iaConfig.model = modelo; saveIAConfig(); }
       const emg = temEmergencia(pergunta);
-      return {
-        texto: texto.trim(),
-        tipo: emg ? 'emergencia' : 'ia-real',
-        real: true,
-        fonte: 'ia-real',
-        modelo: modelo
-      };
-
+      return {texto: texto.trim(), tipo: emg ? 'emergencia' : 'ia-real', real: true, fonte: 'ia-real', modelo: modelo};
     }catch(e){
       console.error(`   ❌ Erro rede ${modelo}:`, e.message);
       ultimoErro = {erro: true, motivo: 'Falha de rede: ' + e.message, statusCode: 0};
       continue;
     }
   }
-
   return ultimoErro || {erro: true, motivo: 'Nenhum modelo disponível', statusCode: 404};
 }
 
@@ -1683,7 +1688,6 @@ async function chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa){
   const cfg = iaConfig;
   try{
     let url = '', headers = {'Content-Type':'application/json'}, body = {};
-
     if(cfg.provider === 'openai'){
       url = 'https://api.openai.com/v1/chat/completions';
       headers['Authorization'] = `Bearer ${chaveLimpa}`;
@@ -1695,20 +1699,16 @@ async function chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa){
       headers['anthropic-dangerous-direct-browser-access'] = 'true';
       body = {model: cfg.model || 'claude-3-5-sonnet-20241022', max_tokens: 800, system: sysPrompt, messages: [{role:'user', content: pergunta}]};
     }
-
     const res = await fetch(url, {method:'POST', headers, body: JSON.stringify(body)});
     if(!res.ok){
       let motivo = res.status === 401 || res.status === 403 ? 'Chave inválida' : res.status === 429 ? 'Cota excedida' : 'Erro HTTP ' + res.status;
       return {erro: true, motivo, statusCode: res.status};
     }
-
     const data = await res.json();
     let texto = cfg.provider === 'openai'
       ? (data.choices?.[0]?.message?.content || '')
       : (data.content?.[0]?.text || '');
-
     if(!texto) return {erro: true, motivo: 'Resposta vazia', statusCode: 200};
-
     const emg = temEmergencia(pergunta);
     return {texto: texto.trim(), tipo: emg ? 'emergencia' : 'ia-real', real: true, fonte: 'ia-real'};
   }catch(e){
@@ -1889,7 +1889,6 @@ async function enviarMensagem(){
 
   try{
     let resposta = null;
-
     if(iaConfig.provider !== 'local' && iaConfig.apiKey){
       const resultado = await chamarIAReal(txt, petCtx);
       if(resultado && resultado.erro){
@@ -1902,14 +1901,12 @@ async function enviarMensagem(){
         resposta = resultado;
       }
     }
-
     if(!resposta){
       await new Promise(r => setTimeout(r, 300));
       resposta = processarPerguntaLocal(txt, petCtx);
       if(resposta && !resposta.tipo) resposta.tipo = 'info';
       if(resposta && !resposta.fonte) resposta.fonte = 'local';
     }
-
     state.chat.push({
       role: 'ia',
       texto: resposta.texto,
@@ -1919,12 +1916,7 @@ async function enviarMensagem(){
     });
   }catch(e){
     console.error(e);
-    state.chat.push({
-      role: 'ia',
-      texto: '❌ Erro ao processar. Tente novamente.',
-      tipo: 'alerta',
-      hora: agoraHHMM()
-    });
+    state.chat.push({role: 'ia', texto: '❌ Erro ao processar. Tente novamente.', tipo: 'alerta', hora: agoraHHMM()});
   } finally {
     state.chatTyping = false;
     renderChat();
@@ -1958,14 +1950,9 @@ async function testarConexaoIA(){
   const key = ($('#iaApiKey') ? $('#iaApiKey').value : '').trim();
   const model = ($('#iaModel') ? $('#iaModel').value : '').trim();
 
-  if(!key){
-    mostrarResultadoTeste(false, 'Informe a chave de API');
-    return;
-  }
+  if(!key){ mostrarResultadoTeste(false, 'Informe a chave de API'); return; }
 
   mostrarResultadoTeste(null, 'Testando conexão...');
-
-  // Limpa cache de modelos para forçar nova listagem
   modelosDisponiveisCache = null;
   cacheTimestamp = 0;
 
@@ -2011,7 +1998,7 @@ function mostrarResultadoTeste(sucesso, msg){
 }
 
 /* ============================================================
-   MODAL CONFIG IA — GEAR BUTTON CORRIGIDO
+   MODAL CONFIG IA
 ============================================================ */
 function abrirModalConfigIA(){
   console.log('⚙️ Abrindo configurações IA...');
@@ -2068,10 +2055,8 @@ function abrirModalConfigIA(){
           <li><strong>gemini-2.5-flash</strong> — versão anterior</li>
           <li><strong>gemini-2.0-flash</strong> — compatibilidade</li>
         </ul>
-        <p style="margin-top:8px;font-size:11px;color:var(--muted);line-height:1.5">
-          💡 O app testa cada modelo em ordem até um funcionar.
-        </p>
       </div>
+      <div style="text-align:center;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:14px">PetVida ${APP_VERSION} · ${APP_VERSION_DATE}</div>
     `;
 
     openModal(
@@ -2119,10 +2104,7 @@ function renderCamposConfigIA(){
     </div>`;
 }
 
-function atualizarConfigIA(){
-  console.log('🔄 Atualizando provedor');
-  renderCamposConfigIA();
-}
+function atualizarConfigIA(){ renderCamposConfigIA(); }
 
 function salvarConfigIA(){
   const prov = $('#iaProvider').value;
@@ -2324,7 +2306,7 @@ function renderHome(){
   html += `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Ações rápidas</div></div>
     <div class="quick-grid">
       ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
-      ${quickItem('💳','#25C2B0','Carteira','abrirCarteiraSelecionada()')}
+      ${quickItem('📸','#FF7A45','Álbum','abrirAlbumSelecionado()')}
       ${quickItem('💾','#4A7DFF','Backup','abrirModalBackup()')}
       ${quickItem('🩺','#EF476F','Doenças','goTo(6)')}
     </div>`;
@@ -2332,9 +2314,12 @@ function renderHome(){
   el.innerHTML = html;
   atualizarHeader();
 }
-function abrirCarteiraSelecionada(){
+function abrirAlbumSelecionado(){
   if(state.pets.length === 0){ toast('Cadastre um pet primeiro'); return; }
-  abrirCarteiraVacina(state.petSelecionado || state.pets[0].id);
+  const id = state.petSelecionado || state.pets[0].id;
+  state.petSelecionado = id;
+  state.saudeSub = 'album';
+  goTo(4);
 }
 function quickItem(emoji, cor, label, fn){
   const click = fn ? `onclick="${fn}"` : '';
@@ -2346,8 +2331,8 @@ function quickItem(emoji, cor, label, fn){
 function blocoDica(){
   const dicas = [
     {tag:'Dr. Pet IA', t:'Pergunte qualquer coisa!', p:'O Dr. Pet IA usa Gemini para responder sobre saúde, alimentação e comportamento.'},
-    {tag:'Backup', t:'Proteja os dados', p:'Exporte o arquivo JSON periodicamente.'},
-    {tag:'Saúde preventiva', t:'Vacinas em dia salvam vidas', p:'Mantenha o protocolo atualizado.'}
+    {tag:'Álbum', t:'Registre a evolução', p:'Salve fotos do seu pet em Saúde → 📸 Álbum e veja como ele cresceu.'},
+    {tag:'Backup', t:'Proteja os dados', p:'Exporte o arquivo JSON periodicamente.'}
   ];
   const d = dicas[Math.floor(Math.random()*dicas.length)];
   return `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Dica do dia</div></div>
@@ -2382,6 +2367,7 @@ function petCardHTML(p, i){
   else badge = `<span class="badge badge-ok">Em dia</span>`;
   const esp = p.especie === 'gato' ? 'Gato' : 'Cão';
   const avatar = p.foto ? `<img src="${p.foto}" alt="${esc(p.nome)}">` : (p.emoji || (p.especie==='gato'?'🐈':'🐕'));
+  const albumCount = (p.album || []).length;
   return `<div class="pet-card anim d${Math.min(i+1,4)}" onclick="abrirDetalhePet('${p.id}')">
     <div class="pet-avatar ${p.especie==='gato'?'cat':''}">${avatar}</div>
     <div class="pet-info">
@@ -2389,7 +2375,7 @@ function petCardHTML(p, i){
       <div class="pet-meta">${esp} · ${esc(p.raca || 'SRD')} · ${calcIdade(p.nascimento)}</div>
       <div class="pet-badges">
         ${badge}
-        <span class="badge badge-purple">${idadeHumana(p)} humano</span>
+        ${albumCount > 0 ? `<span class="badge badge-info">📸 ${albumCount}</span>` : ''}
       </div>
     </div>
     <div class="pet-chevron"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
@@ -2679,7 +2665,7 @@ function abrirCarteiraVacina(petId){
         <div class="ca-campo"><div class="ca-txt">Tutor</div><div class="ca-trace">Nome</div></div>
       </div>
       <div class="carteira-rodape">
-        <div class="cr-app"><div class="cr-logo">🐾</div><span>PetVida</span></div>
+        <div class="cr-app"><div class="cr-logo">🐾</div><span>PetVida ${APP_VERSION}</span></div>
         <div>${fmtData(hojeISO())}</div>
       </div>
     </div>
@@ -2728,6 +2714,7 @@ function abrirModalIdadeReal(petId){
 ============================================================ */
 const SAUDE_SUBS = [
   {id:'visao', label:'📋 Visão'},
+  {id:'album', label:'📸 Álbum'},
   {id:'historico', label:'🏥 Histórico'},
   {id:'prevencao', label:'💊 Prevenção'},
   {id:'diario', label:'📔 Diário'},
@@ -2759,6 +2746,7 @@ function renderSaude(){
   }
   let body = petPicker;
   switch(state.saudeSub){
+    case 'album': body += renderSaudeAlbum(pet); break;
     case 'historico': body += renderSaudeHistorico(pet); break;
     case 'prevencao': body += renderSaudePrevencao(pet); break;
     case 'diario': body += renderSaudeDiario(pet); break;
@@ -2782,6 +2770,7 @@ function renderSaudeVisao(pet){
     </div>`;
   }
   const avatar = pet.foto ? `<img src="${pet.foto}" style="width:100%;height:100%;object-fit:cover">` : (pet.emoji||'🐾');
+  const albumCount = (pet.album || []).length;
   html += `<div class="card anim" style="margin-bottom:16px">
     <div style="display:flex;align-items:center;gap:12px">
       <div class="pet-avatar ${pet.especie==='gato'?'cat':''}" style="width:52px;height:52px;font-size:26px">${avatar}</div>
@@ -2794,14 +2783,14 @@ function renderSaudeVisao(pet){
       <div class="spec"><div class="spec-l">Peso</div><div class="spec-v">${pet.peso? esc(pet.peso)+' kg':'—'}</div></div>
       <div class="spec"><div class="spec-l">Idade humana</div><div class="spec-v">${idadeHumana(pet)}</div></div>
       <div class="spec"><div class="spec-l">Nascimento</div><div class="spec-v">${fmtData(pet.nascimento)}</div></div>
-      <div class="spec"><div class="spec-l">Sexo</div><div class="spec-v">${pet.sexo==='femea'?'Fêmea':'Macho'}</div></div>
+      <div class="spec"><div class="spec-l">Álbum</div><div class="spec-v">${albumCount} foto${albumCount===1?'':'s'}</div></div>
     </div>
   </div>`;
   html += `<div class="quick-grid" style="margin-bottom:16px">
     ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
-    ${quickItem('🎂','#FF7A45','Idade',`abrirModalIdadeReal('${pet.id}')`)}
-    ${quickItem('🆔','#25C2B0','ID',`abrirModalIDDigital('${pet.id}')`)}
-    ${quickItem('⚖️','#FFB020','Escore',`abrirModalEscore('${pet.id}')`)}
+    ${quickItem('📸','#FF7A45','Álbum',`setSaudeSub('album')`)}
+    ${quickItem('🎂','#25C2B0','Idade',`abrirModalIdadeReal('${pet.id}')`)}
+    ${quickItem('🆔','#4A7DFF','ID',`abrirModalIDDigital('${pet.id}')`)}
   </div>`;
   html += `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Peso</div>
     <button class="sec-link" onclick="abrirModalPeso()">+ Registrar</button></div>`;
@@ -2842,6 +2831,234 @@ function renderSaudeVisao(pet){
   }).join('');
   return html;
 }
+
+/* ============================================================
+   ÁLBUM DE FOTOS
+============================================================ */
+function renderSaudeAlbum(pet){
+  const album = (pet.album || []).slice().sort((a,b) => new Date(b.data) - new Date(a.data));
+  let html = '';
+
+  if(album.length > 0){
+    const primeira = album[album.length - 1];
+    const ultima = album[0];
+    const primeiroAno = primeira.data ? new Date(primeira.data + 'T12:00:00').getFullYear() : '—';
+    const ultimoAno = ultima.data ? new Date(ultima.data + 'T12:00:00').getFullYear() : '—';
+    html += `<div class="album-stats">
+      <div class="album-stat"><div class="album-stat-n">${album.length}</div><div class="album-stat-l">Fotos</div></div>
+      <div class="album-stat"><div class="album-stat-n">${primeiroAno === ultimoAno ? primeiroAno : primeiroAno + '–' + ultimoAno}</div><div class="album-stat-l">Período</div></div>
+    </div>`;
+  }
+
+  html += `<button class="btn btn-primary" style="margin-bottom:14px" onclick="abrirModalAddFotoAlbum('${pet.id}')" type="button">
+    <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+    Adicionar foto
+  </button>`;
+
+  if(album.length === 0){
+    html += `<div class="empty">
+      <span class="e-ic">📸</span>
+      <h4>Álbum vazio</h4>
+      <p>Registre a evolução do seu pet com fotos!</p>
+    </div>`;
+    return html;
+  }
+
+  // Agrupar por mês/ano
+  const grupos = {};
+  album.forEach(f => {
+    const d = f.data ? new Date(f.data + 'T12:00:00') : new Date();
+    const chave = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0');
+    if(!grupos[chave]) grupos[chave] = [];
+    grupos[chave].push(f);
+  });
+
+  const mesesNomes = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+  const chavesOrd = Object.keys(grupos).sort().reverse();
+
+  html += `<div class="album-timeline">`;
+  chavesOrd.forEach(chave => {
+    const [ano, mes] = chave.split('-');
+    const label = mesesNomes[parseInt(mes)-1] + ' ' + ano;
+    html += `<div class="album-tl-group">
+      <div class="album-tl-dot"></div>
+      <div class="album-tl-label">${label}</div>
+      <div class="album-tl-grid">
+        ${grupos[chave].map(f => `
+          <div class="album-item" onclick="abrirFotoAlbum('${pet.id}','${f.id}')">
+            <img src="${f.foto}" alt="" loading="lazy">
+            ${f.titulo ? `<div class="album-info"><div class="album-titulo">${esc(f.titulo)}</div></div>` : ''}
+          </div>
+        `).join('')}
+      </div>
+    </div>`;
+  });
+  html += `</div>`;
+  return html;
+}
+
+let formAlbum = {foto:null, titulo:'', nota:'', data: hojeISO(), petId: null};
+
+function abrirModalAddFotoAlbum(petId){
+  const id = petId || state.petSelecionado;
+  if(!id){ toast('Selecione um pet'); return; }
+  formAlbum = {foto:null, titulo:'', nota:'', data: hojeISO(), petId: id};
+  openModal(headPadrao('Nova foto', 'Registre a evolução'),
+    formAlbumHTML(),
+    `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
+     <button class="btn btn-primary" onclick="salvarFotoAlbum()">Salvar</button>`);
+}
+
+function formAlbumHTML(){
+  if(!formAlbum.foto){
+    return `<div class="album-upload-empty">
+      <div style="font-size:52px;margin-bottom:12px">📸</div>
+      <div style="font-size:14px;font-weight:800;margin-bottom:6px">Adicione uma foto</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.5">Tire uma foto agora ou escolha uma da galeria</div>
+      <button class="btn btn-primary" style="margin-bottom:9px" onclick="abrirCameraAlbum()" type="button">
+        <svg viewBox="0 0 24 24"><path d="M9 2L7.17 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2h-3.17L15 2H9zm3 15a5 5 0 110-10 5 5 0 010 10z"/></svg>
+        Tirar foto
+      </button>
+      <button class="btn btn-ghost" onclick="abrirGaleriaAlbum()" type="button">
+        <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
+        Escolher da galeria
+      </button>
+    </div>`;
+  }
+  return `
+    <div class="album-preview">
+      <img src="${formAlbum.foto}" alt="">
+    </div>
+    <button class="btn btn-soft btn-sm" style="width:100%;margin-bottom:14px" onclick="trocarFotoAlbum()" type="button">🔄 Trocar foto</button>
+    <div class="field"><label>TÍTULO (opcional)</label>
+      <input class="input" id="albumTitulo" placeholder="Ex: Primeiro banho, Passeio no parque..." value="${esc(formAlbum.titulo)}" oninput="formAlbum.titulo=this.value" maxlength="60">
+    </div>
+    <div class="field"><label>DATA</label>
+      <input class="input" type="date" id="albumData" value="${formAlbum.data}" max="${hojeISO()}" onchange="formAlbum.data=this.value">
+    </div>
+    <div class="field"><label>OBSERVAÇÃO (opcional)</label>
+      <textarea class="textarea" id="albumNota" placeholder="Como foi esse momento?" oninput="formAlbum.nota=this.value" maxlength="300">${esc(formAlbum.nota)}</textarea>
+    </div>`;
+}
+
+function abrirCameraAlbum(){ const el = document.getElementById('inputAlbumCamera'); if(el) el.click(); }
+function abrirGaleriaAlbum(){ const el = document.getElementById('inputAlbumGaleria'); if(el) el.click(); }
+function trocarFotoAlbum(){
+  formAlbum.foto = null;
+  $('#modalBody').innerHTML = formAlbumHTML();
+}
+
+function processarFotoAlbum(input){
+  const file = input.files && input.files[0];
+  if(!file) return;
+  if(file.size > 15 * 1024 * 1024){ toast('Foto muito grande (máx 15MB)'); input.value=''; return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    redimensionarImagem(e.target.result, 800, 0.78, (dataUrl) => {
+      formAlbum.foto = dataUrl;
+      const body = $('#modalBody');
+      if(body) body.innerHTML = formAlbumHTML();
+    });
+  };
+  reader.readAsDataURL(file);
+  input.value = '';
+}
+
+function salvarFotoAlbum(){
+  if(!formAlbum.foto){ toast('Adicione uma foto'); return; }
+  const pet = state.pets.find(p => p.id === formAlbum.petId);
+  if(!pet){ toast('Pet não encontrado'); return; }
+  if(!pet.album) pet.album = [];
+  const idadePet = calcularIdadeNaData(pet.nascimento, formAlbum.data);
+  pet.album.push({
+    id: uid(),
+    foto: formAlbum.foto,
+    titulo: (formAlbum.titulo || '').trim(),
+    nota: (formAlbum.nota || '').trim(),
+    data: formAlbum.data || hojeISO(),
+    idadePet,
+    criado: new Date().toISOString()
+  });
+  saveDB();
+  closeModal();
+  toast('Foto adicionada! 📸');
+  state.saudeSub = 'album';
+  renderSaude();
+}
+
+function abrirFotoAlbum(petId, fotoId){
+  const pet = state.pets.find(p => p.id === petId);
+  if(!pet || !pet.album) return;
+  const foto = pet.album.find(f => f.id === fotoId);
+  if(!foto) return;
+  const body = `
+    <div class="album-preview" style="background:#1B2434">
+      <img src="${foto.foto}" alt="" style="max-height:420px">
+    </div>
+    ${foto.titulo ? `<h3 style="margin:0 0 10px;font-size:17px;font-weight:800">${esc(foto.titulo)}</h3>` : ''}
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+      <span class="badge badge-info">📅 ${fmtData(foto.data)}</span>
+      ${foto.idadePet ? `<span class="badge badge-purple">🐾 ${esc(foto.idadePet)}</span>` : ''}
+    </div>
+    ${foto.nota ? `<div class="blk"><h4><span class="b-ic">📝</span>Observação</h4><p>${esc(foto.nota)}</p></div>` : ''}`;
+  openModal(headPadrao(foto.titulo || 'Foto', 'Álbum de ' + pet.nome), body,
+    `<button class="btn btn-danger" onclick="confirmarExcluirFoto('${petId}','${fotoId}')" style="flex:0 0 52px;padding:13px" type="button">
+      <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M6 19a2 2 0 002 2h8a2 2 0 002-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+     </button>
+     <button class="btn btn-soft" onclick="closeModal()">Fechar</button>
+     <button class="btn btn-primary" onclick="compartilharFoto('${petId}','${fotoId}')">Compartilhar</button>`);
+}
+
+function confirmarExcluirFoto(petId, fotoId){
+  openModal(headPadrao('Excluir foto', 'Não pode ser desfeito'),
+    `<div style="text-align:center;padding:16px 0">
+      <div style="font-size:46px;margin-bottom:12px">🗑️</div>
+      <div style="font-size:14px;font-weight:800">Excluir esta foto?</div>
+    </div>`,
+    `<button class="btn btn-soft" onclick="abrirFotoAlbum('${petId}','${fotoId}')">Cancelar</button>
+     <button class="btn btn-danger" onclick="excluirFotoAlbum('${petId}','${fotoId}')">Excluir</button>`);
+}
+
+function excluirFotoAlbum(petId, fotoId){
+  const pet = state.pets.find(p => p.id === petId);
+  if(!pet || !pet.album) return;
+  pet.album = pet.album.filter(f => f.id !== fotoId);
+  saveDB();
+  closeModal();
+  toast('Foto excluída');
+  renderSaude();
+}
+
+function compartilharFoto(petId, fotoId){
+  const pet = state.pets.find(p => p.id === petId);
+  const foto = pet && pet.album && pet.album.find(f => f.id === fotoId);
+  if(!foto){ toast('Foto não encontrada'); return; }
+  try{
+    fetch(foto.foto).then(r => r.blob()).then(blob => {
+      const file = new File([blob], 'petvida-foto.jpg', {type: 'image/jpeg'});
+      if(navigator.canShare && navigator.canShare({files: [file]})){
+        navigator.share({
+          files: [file],
+          title: foto.titulo || ('Foto de ' + pet.nome),
+          text: foto.titulo || ('Foto de ' + pet.nome)
+        }).catch(()=>{});
+      } else if(navigator.share){
+        navigator.share({
+          title: foto.titulo || ('Foto de ' + pet.nome),
+          text: foto.titulo ? (foto.titulo + (foto.nota ? '\n\n' + foto.nota : '')) : (foto.nota || '')
+        }).catch(()=>{});
+      } else {
+        toast('Compartilhamento indisponível');
+      }
+    }).catch(()=>{
+      toast('Não foi possível preparar');
+    });
+  }catch(e){ toast('Erro ao compartilhar'); }
+}
+
+/* ============================================================
+   SAÚDE — HISTÓRICO, PREVENÇÃO, DIÁRIO, TUTORES, EMERGÊNCIA, GUIAS
+============================================================ */
 function renderSaudeHistorico(pet){
   const h = pet.historico || {consultas:[],exames:[],medicamentos:[],cirurgias:[],alergias:[]};
   let html = '';
@@ -3206,9 +3423,10 @@ function headPadrao(titulo, sub){
 }
 
 /* ============================================================
-   MODAIS DE CADASTRO
+   MODAIS DE CADASTRO (FOTO DE PERFIL CORRIGIDA)
 ============================================================ */
 let formPet = { id:null, nome:'', especie:'cao', raca:'', nascimento:'', sexo:'macho', peso:'', emoji:'🐕', foto:null };
+
 function abrirModalPet(petId){
   const editando = !!petId;
   if(editando){
@@ -3222,25 +3440,39 @@ function abrirModalPet(petId){
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarPet()">${editando?'Salvar':'Cadastrar'}</button>`);
 }
+
 function formPetHTML(){
   const emojis = formPet.especie === 'gato' ? ['🐈','🐱','😺','😸','😻'] : ['🐕','🐶','🦮','🐩','🐺'];
   const racasFiltradas = RACAS.filter(r=>r.esp === formPet.especie);
-  const avatarHtml = formPet.foto
-    ? `<div class="foto-upload" onclick="abrirUploadFoto()"><img src="${formPet.foto}"><div class="foto-edit"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></div></div>`
-    : `<div class="foto-upload" onclick="abrirUploadFoto()">${formPet.emoji}<div class="foto-edit"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></div></div>`;
+
+  // === FOTO UPLOAD CORRIGIDO (label sobreposto) ===
+  const fotoInner = formPet.foto
+    ? `<img src="${formPet.foto}" alt="">`
+    : `<span>${formPet.emoji}</span>`;
+  const fotoHTML = `
+    <input type="file" id="fileFoto" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" onchange="processarFoto(this)">
+    <div class="foto-upload-wrap">
+      <label for="fileFoto" class="foto-upload">
+        ${fotoInner}
+        <div class="foto-edit">
+          <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+        </div>
+      </label>
+    </div>
+    <div class="foto-hint">📷 Toque para ${formPet.foto ? 'trocar' : 'adicionar'} foto</div>`;
+
   return `
-  <input type="file" id="fileFoto" accept="image/*" style="display:none" onchange="processarFoto(this)">
-  ${avatarHtml}
+  ${fotoHTML}
   <div class="field"><label>ESPÉCIE</label>
     <div class="species-pick">
       <button class="species-opt ${formPet.especie==='cao'?'active':''}" onclick="setFormEspecie('cao')" type="button"><span class="sp-emoji">🐶</span><span class="sp-name">Cão</span></button>
       <button class="species-opt ${formPet.especie==='gato'?'active':''}" onclick="setFormEspecie('gato')" type="button"><span class="sp-emoji">🐱</span><span class="sp-name">Gato</span></button>
     </div>
   </div>
-  <div class="field"><label>AVATAR</label>
+  ${formPet.foto ? '' : `<div class="field"><label>AVATAR (se sem foto)</label>
     <div class="avatar-pick">${emojis.map(e=>`<button class="avatar-opt ${formPet.emoji===e?'active':''}" onclick="setFormEmoji('${e}')" type="button">${e}</button>`).join('')}</div>
-  </div>
-  <div class="field"><label>NOME *</label><input class="input" id="fNome" value="${esc(formPet.nome)}" oninput="formPet.nome=this.value"></div>
+  </div>`}
+  <div class="field"><label>NOME *</label><input class="input" id="fNome" value="${esc(formPet.nome)}" oninput="formPet.nome=this.value" placeholder="Ex: Rex"></div>
   <div class="field"><label>RAÇA</label>
     <select class="select" id="fRaca" onchange="formPet.raca=this.value">
       <option value="">Selecione</option>
@@ -3257,19 +3489,38 @@ function formPetHTML(){
       </select>
     </div>
   </div>
-  <div class="field"><label>PESO (kg)</label><input class="input" type="number" step="0.1" min="0" value="${esc(formPet.peso)}" oninput="formPet.peso=this.value"></div>`;
+  <div class="field"><label>PESO (kg)</label><input class="input" type="number" step="0.1" min="0" value="${esc(formPet.peso)}" oninput="formPet.peso=this.value" placeholder="Ex: 5.5"></div>`;
 }
-function setFormEspecie(esp){ formPet.especie = esp; formPet.emoji = esp === 'gato' ? '🐈' : '🐕'; formPet.raca = ''; $('#modalBody').innerHTML = formPetHTML(); }
-function setFormEmoji(e){ formPet.emoji = e; formPet.foto = null; $('#modalBody').innerHTML = formPetHTML(); }
-function abrirUploadFoto(){ $('#fileFoto').click(); }
+
+function setFormEspecie(esp){
+  formPet.especie = esp;
+  formPet.emoji = esp === 'gato' ? '🐈' : '🐕';
+  formPet.raca = '';
+  $('#modalBody').innerHTML = formPetHTML();
+}
+function setFormEmoji(e){
+  formPet.emoji = e;
+  formPet.foto = null;
+  $('#modalBody').innerHTML = formPetHTML();
+}
+
 function processarFoto(input){
   const file = input.files && input.files[0];
   if(!file) return;
-  if(file.size > 2 * 1024 * 1024){ toast('Foto muito grande'); return; }
+  if(file.size > 10 * 1024 * 1024){ toast('Foto muito grande (máx 10MB)'); input.value=''; return; }
   const reader = new FileReader();
-  reader.onload = e => { formPet.foto = e.target.result; $('#modalBody').innerHTML = formPetHTML(); };
+  reader.onload = e => {
+    redimensionarImagem(e.target.result, 500, 0.82, (dataUrl) => {
+      formPet.foto = dataUrl;
+      const body = $('#modalBody');
+      if(body) body.innerHTML = formPetHTML();
+      toast('Foto adicionada! 📷');
+    });
+  };
   reader.readAsDataURL(file);
+  input.value = '';
 }
+
 function salvarPet(){
   const nome = ($('#fNome') ? $('#fNome').value : formPet.nome).trim();
   const nasc = $('#fNasc') ? $('#fNasc').value : formPet.nascimento;
@@ -3285,14 +3536,14 @@ function salvarPet(){
     p.nascimento = nasc; p.sexo = formPet.sexo; p.peso = pesoStr; p.emoji = formPet.emoji; p.foto = formPet.foto;
     toast('Atualizado! ✨');
   } else {
-    const pet = {
+    const pet = normalizarPet({
       id: uid(), nome, especie: formPet.especie, raca: raca || 'SRD',
       nascimento: nasc, sexo: formPet.sexo, peso: pesoStr, emoji: formPet.emoji, foto: formPet.foto,
       vacinas: {}, cuidados: [], pesos: pesoStr ? [{data: hojeISO(), valor: pesoStr}] : [],
       historico: {consultas:[],exames:[],medicamentos:[],cirurgias:[],alergias:[]},
-      antipulgas: [], cio: [], diario: [], tutores: [],
+      antipulgas: [], cio: [], diario: [], tutores: [], album: [],
       criado: new Date().toISOString()
-    };
+    });
     state.pets.push(pet);
     state.petSelecionado = pet.id;
     toast('Pet cadastrado! 🎉');
@@ -3300,12 +3551,14 @@ function salvarPet(){
   saveDB(); closeModal();
   renderPage(state.currentPage); atualizarHeader();
 }
+
 function abrirDetalhePet(id){
   const p = state.pets.find(x=>x.id === id);
   if(!p) return;
   state.petSelecionado = id;
   const res = resumoVacinas(p);
   const avatar = p.foto ? `<img src="${p.foto}" style="width:100%;height:100%;object-fit:cover">` : (p.emoji||'🐾');
+  const albumCount = (p.album || []).length;
   let body = `
     <div style="text-align:center;padding:6px 0 18px">
       <div class="pet-avatar ${p.especie==='gato'?'cat':''}" style="width:82px;height:82px;font-size:42px;margin:0 auto 12px;border-radius:26px;overflow:hidden">${avatar}</div>
@@ -3319,14 +3572,14 @@ function abrirDetalhePet(id){
     </div>
     <div class="quick-grid" style="margin-bottom:16px">
       ${quickItem('🤖','#9B5DE5','Dr. Pet IA',`closeModal();goTo(7)`)}
-      ${quickItem('🎂','#FF7A45','Idade',`closeModal();abrirModalIdadeReal('${p.id}')`)}
+      ${quickItem('📸','#FF7A45','Álbum',`closeModal();abrirAlbumSelecionado()`)}
       ${quickItem('💳','#25C2B0','Carteira',`closeModal();abrirCarteiraVacina('${p.id}')`)}
-      ${quickItem('🆔','#4A7DFF','ID',`closeModal();abrirModalIDDigital('${p.id}')`)}
+      ${quickItem('🎂','#4A7DFF','Idade',`closeModal();abrirModalIdadeReal('${p.id}')`)}
     </div>
     <div class="spec-grid">
       <div class="spec"><div class="spec-l">Nascimento</div><div class="spec-v">${fmtData(p.nascimento)}</div></div>
       <div class="spec"><div class="spec-l">Vacinas</div><div class="spec-v">${res.ok} de ${res.total}</div></div>
-      <div class="spec"><div class="spec-l">Tutores</div><div class="spec-v">${(p.tutores||[]).length}</div></div>
+      <div class="spec"><div class="spec-l">Fotos</div><div class="spec-v">${albumCount}</div></div>
       <div class="spec"><div class="spec-l">Peso</div><div class="spec-v">${p.peso? esc(p.peso)+' kg':'—'}</div></div>
     </div>`;
   openModal(headPadrao('Ficha', 'Informações'), body,
@@ -3662,9 +3915,14 @@ function abrirModalAjuda(){
       <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">🤖</span>Dr. Pet IA — Gemini</h4>
       <p>Seu assistente veterinário com <strong>autodetecção de modelos</strong>. Toque no <strong>⚙️</strong> no chat e depois em <strong>🧪 Testar</strong>. O app descobre automaticamente os modelos disponíveis (gemini-3.6-flash, 3.5-flash, 3.1-pro, etc).</p>
     </div>
+    <div class="blk" style="background:linear-gradient(140deg,#FFF0E8,#FFE3D4);border-color:#FFD3BC">
+      <h4><span class="b-ic" style="background:rgba(255,122,69,.20);color:#F05A1E">📸</span>Álbum de Fotos</h4>
+      <p>Acesse <strong>Saúde → 📸 Álbum</strong> e registre a evolução do seu pet. Cada foto salva a idade dele no momento, organizada por mês.</p>
+    </div>
     <div class="blk"><h4><span class="b-ic">👆</span>Navegação</h4><p>Deslize o dedo para trocar de página.</p></div>
     <div class="blk"><h4><span class="b-ic">💾</span>Backup</h4><p>Exporte/importe dados no ícone no topo.</p></div>
-    <div class="blk warn"><h4><span class="b-ic">⚕️</span>Aviso</h4><p>Não substitui consulta veterinária.</p></div>`,
+    <div class="blk warn"><h4><span class="b-ic">⚕️</span>Aviso</h4><p>Não substitui consulta veterinária.</p></div>
+    <div style="text-align:center;font-size:11px;color:var(--muted);font-weight:700;padding:10px 0">PetVida <strong style="color:var(--primary-d)">${APP_VERSION}</strong> · ${APP_VERSION_DATE}</div>`,
     `<button class="btn btn-primary" onclick="closeModal()">Entendi</button>`);
 }
 
@@ -3682,7 +3940,7 @@ function init(){
   atualizarHeader();
   atualizarFAB();
   atualizarBadgeBackup();
-  console.log('🐾 PetVida v9.0 iniciado');
+  console.log(`🐾 PetVida ${APP_VERSION} (${APP_VERSION_DATE}) iniciado`);
   console.log('🤖 IA:', iaConfig.provider, '· modelo:', iaConfig.model || '(autodetecção)');
   console.log('🔑 Chave:', (iaConfig.apiKey || '').slice(0, 25) + '...');
 }
@@ -3691,7 +3949,7 @@ init();
 let lastTouch = 0;
 document.addEventListener('touchend', e=>{
   const now = Date.now();
-  if(now <= lastTouch + 300 && !e.target.closest('.chat-input') && !e.target.closest('input') && !e.target.closest('textarea')) e.preventDefault();
+  if(now <= lastTouch + 300 && !e.target.closest('.chat-input') && !e.target.closest('input') && !e.target.closest('textarea') && !e.target.closest('label')) e.preventDefault();
   lastTouch = now;
 }, {passive:false});
 window.addEventListener('beforeunload', saveDB);
