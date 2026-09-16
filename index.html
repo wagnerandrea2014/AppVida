@@ -37,7 +37,7 @@ ul{margin:0;padding:0;list-style:none}
 .hdr-title{font-size:17px;font-weight:800;letter-spacing:-.3px;line-height:1.1}
 .hdr-sub{font-size:11.5px;opacity:.85;font-weight:500}
 .hdr-actions{display:flex;gap:8px}
-.icon-btn{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.20);display:grid;place-items:center;backdrop-filter:blur(6px);transition:transform .15s ease;position:relative}
+.icon-btn{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.20);display:grid;place-items:center;backdrop-filter:blur(6px);transition:transform .15s ease;position:relative;cursor:pointer}
 .icon-btn:active{transform:scale(.92);background:rgba(255,255,255,.32)}
 .icon-btn svg{width:19px;height:19px;fill:#fff}
 .icon-btn .badge-dot{position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:50%;background:#25C2B0;border:2px solid rgba(255,255,255,.9)}
@@ -52,7 +52,7 @@ ul{margin:0;padding:0;list-style:none}
 @keyframes pageSlide{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
 .page::-webkit-scrollbar{display:none}
 .tabbar{position:absolute;left:0;right:0;bottom:0;z-index:40;height:calc(var(--tab-h) + var(--safe-b));padding-bottom:var(--safe-b);display:flex;align-items:stretch;background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-top:1px solid var(--line);box-shadow:0 -6px 22px rgba(27,36,52,.06)}
-.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#9AA6B8;position:relative;transition:color .2s ease;padding-top:6px}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#9AA6B8;position:relative;transition:color .2s ease;padding-top:6px;cursor:pointer}
 .tab svg{width:18px;height:18px;fill:currentColor;transition:transform .22s cubic-bezier(.34,1.56,.64,1)}
 .tab span{font-size:8.5px;font-weight:700;letter-spacing:.1px}
 .tab.active{color:var(--primary)}
@@ -72,7 +72,7 @@ ul{margin:0;padding:0;list-style:none}
 .empty-emoji{font-size:44px;line-height:1;margin-bottom:10px;display:block}
 .empty-hero h3{margin:0 0 6px;font-size:16px;font-weight:800}
 .empty-hero p{margin:0 0 16px;font-size:13px;color:var(--muted);line-height:1.55}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:14px;font-size:14px;font-weight:800;transition:transform .13s ease;width:100%}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:14px;font-size:14px;font-weight:800;transition:transform .13s ease;width:100%;cursor:pointer}
 .btn:active{transform:scale(.97)}
 .btn-primary{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff;box-shadow:0 8px 20px rgba(240,90,30,.30)}
 .btn-ghost{background:var(--primary-soft);color:var(--primary-d)}
@@ -82,7 +82,8 @@ ul{margin:0;padding:0;list-style:none}
 .btn-success{background:linear-gradient(135deg,#25C2B0,#4AD4C3);color:#fff;box-shadow:0 8px 20px rgba(37,194,176,.30)}
 .btn-sm{padding:10px 15px;font-size:12.5px;width:auto;border-radius:12px}
 .btn svg{width:17px;height:17px;fill:currentColor}
-.pet-card{display:flex;align-items:center;gap:13px;background:var(--card);border-radius:var(--radius);padding:13px;box-shadow:var(--shadow);margin-bottom:11px;border:1px solid rgba(234,238,246,.9);position:relative;overflow:hidden}
+.pet-card{display:flex;align-items:center;gap:13px;background:var(--card);border-radius:var(--radius);padding:13px;box-shadow:var(--shadow);margin-bottom:11px;border:1px solid rgba(234,238,246,.9);transition:transform .14s ease;position:relative;overflow:hidden;cursor:pointer}
+.pet-card:active{transform:scale(.985)}
 .pet-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--primary),var(--accent))}
 .pet-avatar{width:54px;height:54px;border-radius:17px;flex-shrink:0;display:grid;place-items:center;font-size:27px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);box-shadow:inset 0 -2px 6px rgba(240,90,30,.10);overflow:hidden}
 .pet-avatar.cat{background:linear-gradient(140deg,#DDF6F2,#C6EFE9)}
@@ -99,9 +100,9 @@ ul{margin:0;padding:0;list-style:none}
 .badge-purple{background:var(--purple-soft);color:#6B31B8}
 .badge-neutro{background:#F1F4F9;color:#66738A}
 .pet-chevron{color:#C7CFDD;flex-shrink:0}
-.fab{position:fixed;right:18px;bottom:calc(var(--tab-h) + var(--safe-b) + 16px);width:56px;height:56px;border-radius:19px;z-index:35;background:linear-gradient(135deg,#FF8A5B,#F0521B);display:grid;place-items:center;box-shadow:0 12px 28px rgba(240,90,30,.42)}
+.fab{position:fixed;right:18px;bottom:calc(var(--tab-h) + var(--safe-b) + 16px);width:56px;height:56px;border-radius:19px;z-index:35;background:linear-gradient(135deg,#FF8A5B,#F0521B);display:grid;place-items:center;box-shadow:0 12px 28px rgba(240,90,30,.42);cursor:pointer}
 .fab svg{width:26px;height:26px;fill:#fff}
-.next-card{background:linear-gradient(140deg,#FFFFFF,#FFF6F0);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);border:1px solid #FFE3D4;display:flex;gap:13px;align-items:flex-start}
+.next-card{background:linear-gradient(140deg,#FFFFFF,#FFF6F0);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);border:1px solid #FFE3D4;display:flex;gap:13px;align-items:flex-start;cursor:pointer}
 .next-card.alerta{background:linear-gradient(140deg,#FFFFFF,#FFF0F4);border-color:#FFD5E0}
 .next-icon{width:46px;height:46px;border-radius:15px;flex-shrink:0;display:grid;place-items:center;background:var(--primary-soft);font-size:21px}
 .next-card.alerta .next-icon{background:var(--danger-soft)}
@@ -112,7 +113,8 @@ ul{margin:0;padding:0;list-style:none}
 .next-desc{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
 .next-date{font-size:11px;font-weight:800;margin-top:7px;color:var(--primary-d)}
 .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-.quick{background:var(--card);border-radius:var(--radius-sm);padding:13px 6px;display:flex;flex-direction:column;align-items:center;gap:7px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.quick{background:var(--card);border-radius:var(--radius-sm);padding:13px 6px;display:flex;flex-direction:column;align-items:center;gap:7px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer}
+.quick:active{transform:scale(.94)}
 .quick-ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center}
 .quick span{font-size:9.5px;font-weight:800;color:#4C5768;text-align:center;line-height:1.2}
 .tip-card{background:linear-gradient(135deg,#1F2A3D,#2B3A52);border-radius:var(--radius);padding:17px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow)}
@@ -122,19 +124,20 @@ ul{margin:0;padding:0;list-style:none}
 .search-wrap{position:relative;margin-bottom:13px}
 .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:17px;height:17px;fill:#A9B3C4}
 .search-input{width:100%;padding:13px 14px 13px 41px;border-radius:15px;background:var(--card);border:1.5px solid var(--line);font-size:13.5px;font-weight:600;box-shadow:var(--shadow)}
+.search-input:focus{border-color:var(--primary)}
 .seg{display:flex;gap:5px;background:#E9EDF5;border-radius:14px;padding:4px;margin-bottom:14px}
-.seg button{flex:1;padding:9px 8px;border-radius:11px;font-size:12.5px;font-weight:800;color:#7B879C}
+.seg button{flex:1;padding:9px 8px;border-radius:11px;font-size:12.5px;font-weight:800;color:#7B879C;cursor:pointer}
 .seg button.active{background:#fff;color:var(--primary-d);box-shadow:0 3px 10px rgba(27,36,52,.10)}
 .chips{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px;margin-bottom:13px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
-.chip{flex-shrink:0;padding:8px 14px;border-radius:11px;font-size:12px;font-weight:700;background:var(--card);border:1.5px solid var(--line);color:#66738A}
+.chip{flex-shrink:0;padding:8px 14px;border-radius:11px;font-size:12px;font-weight:700;background:var(--card);border:1.5px solid var(--line);color:#66738A;cursor:pointer}
 .chip.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 5px 14px rgba(255,122,69,.32)}
 .subnav{display:flex;gap:6px;overflow-x:auto;padding:4px 2px 10px;margin-bottom:10px;scrollbar-width:none}
 .subnav::-webkit-scrollbar{display:none}
-.subnav-btn{flex-shrink:0;padding:9px 14px;border-radius:12px;font-size:11.5px;font-weight:800;background:#fff;border:1.5px solid var(--line);color:#66738A;display:flex;align-items:center;gap:5px}
+.subnav-btn{flex-shrink:0;padding:9px 14px;border-radius:12px;font-size:11.5px;font-weight:800;background:#fff;border:1.5px solid var(--line);color:#66738A;display:flex;align-items:center;gap:5px;cursor:pointer}
 .subnav-btn.active{background:linear-gradient(135deg,#FF8A5B,#F0521B);border-color:transparent;color:#fff}
 .breed-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.breed-card{background:var(--card);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);text-align:left}
+.breed-card{background:var(--card);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);text-align:left;cursor:pointer}
 .breed-top{height:110px;display:grid;place-items:center;position:relative;overflow:hidden}
 .breed-top svg.raca-svg{width:100%;height:100%;display:block}
 .breed-top .breed-emoji-badge{position:absolute;top:8px;left:8px;font-size:14px;background:rgba(255,255,255,.92);width:26px;height:26px;border-radius:9px;display:grid;place-items:center;z-index:2}
@@ -160,11 +163,11 @@ ul{margin:0;padding:0;list-style:none}
 .vac-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:10px}
 .vac-date{font-size:11px;font-weight:800;color:#5A6478}
 .vac-marca{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:800;background:var(--purple-soft);color:#6B31B8;padding:4px 8px;border-radius:7px;margin-top:6px}
-.check-btn{width:30px;height:30px;border-radius:10px;flex-shrink:0;border:2px solid #D8DFEA;display:grid;place-items:center}
+.check-btn{width:30px;height:30px;border-radius:10px;flex-shrink:0;border:2px solid #D8DFEA;display:grid;place-items:center;cursor:pointer}
 .check-btn svg{width:15px;height:15px;fill:#fff;opacity:0}
 .check-btn.done{background:var(--secondary);border-color:var(--secondary)}
 .check-btn.done svg{opacity:1}
-.check-item{display:flex;align-items:flex-start;gap:12px;padding:13px;background:var(--card);border-radius:var(--radius-sm);margin-bottom:9px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:13px;background:var(--card);border-radius:var(--radius-sm);margin-bottom:9px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer}
 .check-item.done{background:linear-gradient(140deg,#fff,#F6FDFB);border-color:#D3F0EB}
 .check-box{width:23px;height:23px;border-radius:8px;flex-shrink:0;margin-top:1px;border:2px solid #D8DFEA;display:grid;place-items:center}
 .check-box svg{width:13px;height:13px;fill:#fff;opacity:0}
@@ -200,7 +203,7 @@ ul{margin:0;padding:0;list-style:none}
 .modal-head{padding:6px 20px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-shrink:0}
 .modal-head h3{margin:0;font-size:18px;font-weight:800}
 .modal-head p{margin:3px 0 0;font-size:12px;color:var(--muted);font-weight:600}
-.modal-close{width:34px;height:34px;border-radius:12px;background:#EAEEF6;display:grid;place-items:center;flex-shrink:0}
+.modal-close{width:34px;height:34px;border-radius:12px;background:#EAEEF6;display:grid;place-items:center;flex-shrink:0;cursor:pointer}
 .modal-close svg{width:16px;height:16px;fill:#66738A}
 .modal-body{flex:1;overflow-y:auto;padding:0 20px 20px;-webkit-overflow-scrolling:touch}
 .modal-foot{padding:13px 20px calc(20px + var(--safe-b));background:#fff;border-top:1px solid var(--line);display:flex;gap:10px;flex-shrink:0}
@@ -213,13 +216,13 @@ ul{margin:0;padding:0;list-style:none}
 .select{appearance:none;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237B879C'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;background-size:20px;padding-right:38px}
 .row-2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .species-pick{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.species-opt{border:2px solid var(--line);border-radius:16px;padding:15px 10px;display:flex;flex-direction:column;align-items:center;gap:7px;background:#fff}
+.species-opt{border:2px solid var(--line);border-radius:16px;padding:15px 10px;display:flex;flex-direction:column;align-items:center;gap:7px;background:#fff;cursor:pointer}
 .species-opt .sp-emoji{font-size:27px}
 .species-opt .sp-name{font-size:12px;font-weight:800;color:#66738A}
 .species-opt.active{border-color:var(--primary);background:var(--primary-soft)}
 .species-opt.active .sp-name{color:var(--primary-d)}
 .avatar-pick{display:flex;gap:9px;flex-wrap:wrap}
-.avatar-opt{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;font-size:23px;background:#F1F4F9;border:2px solid transparent}
+.avatar-opt{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;font-size:23px;background:#F1F4F9;border:2px solid transparent;cursor:pointer}
 .avatar-opt.active{border-color:var(--primary);background:var(--primary-soft)}
 .breed-hero{border-radius:22px;padding:22px;text-align:center;margin-bottom:16px;position:relative;overflow:hidden}
 .breed-hero-svg{width:140px;height:140px;margin:0 auto 10px;position:relative;z-index:2;border-radius:26px;overflow:hidden}
@@ -242,98 +245,18 @@ ul{margin:0;padding:0;list-style:none}
 .blk.purple h4 .b-ic{background:var(--purple-soft);color:#6B31B8}
 .toast{position:fixed;left:50%;bottom:calc(var(--tab-h) + var(--safe-b) + 24px);transform:translate(-50%,26px);z-index:200;background:#1F2A3D;color:#fff;padding:12px 20px;border-radius:14px;font-size:12.5px;font-weight:700;box-shadow:var(--shadow-lg);opacity:0;pointer-events:none;transition:all .28s cubic-bezier(.32,.72,.28,1);max-width:86vw;text-align:center;line-height:1.4}
 .toast.show{opacity:1;transform:translate(-50%,0)}
-.up{position:fixed;right:18px;bottom:calc(var(--tab-h) + var(--safe-b) + 82px);width:42px;height:42px;border-radius:14px;background:#fff;z-index:34;display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .25s ease;border:1px solid var(--line)}
+.up{position:fixed;right:18px;bottom:calc(var(--tab-h) + var(--safe-b) + 82px);width:42px;height:42px;border-radius:14px;background:#fff;z-index:34;display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .25s ease;border:1px solid var(--line);cursor:pointer}
 .up.show{opacity:1;pointer-events:auto}
 .up svg{width:17px;height:17px;fill:var(--primary)}
 .anim{animation:fadeUp .38s cubic-bezier(.32,.72,.28,1) both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.d1{animation-delay:.04s}.d2{animation-delay:.08s}.d3{animation-delay:.12s}.d4{animation-delay:.16s}
-/* CHAT */
-.chat-wrap{display:flex;flex-direction:column;height:100%;background:linear-gradient(180deg,#F8F9FD 0%,#F4F6FB 100%)}
-.chat-header{padding:14px 16px 12px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;position:relative;overflow:hidden;flex-shrink:0}
-.chat-header::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.10)}
-.chat-header-top{display:flex;align-items:center;gap:11px;position:relative;z-index:2}
-.chat-header .ia-avatar{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:22px;flex-shrink:0;backdrop-filter:blur(6px)}
-.chat-header .ia-nome{font-size:15.5px;font-weight:800}
-.chat-header .ia-status{font-size:11px;opacity:.88;font-weight:600;margin-top:2px;display:flex;align-items:center;gap:5px}
-.chat-header .ia-status .ia-dot-online{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 2px rgba(74,222,128,.3)}
-.chat-header .ia-status .ia-dot-warn{width:7px;height:7px;border-radius:50%;background:#FFB020;box-shadow:0 0 0 2px rgba(255,176,32,.3)}
-.chat-header .ia-status .ia-dot-off{width:7px;height:7px;border-radius:50%;background:#EF476F;box-shadow:0 0 0 2px rgba(239,71,111,.3)}
-.chat-header-actions{display:flex;gap:6px;margin-left:auto}
-.chat-header-actions button{width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.18);display:grid;place-items:center;transition:transform .15s ease;cursor:pointer}
-.chat-header-actions button:active{transform:scale(.9);background:rgba(255,255,255,.30)}
-.chat-header-actions button svg{width:16px;height:16px;fill:#fff;pointer-events:none}
-.chat-pet-context{padding:8px 14px 10px;background:rgba(255,255,255,.10);position:relative;z-index:2;margin:10px -16px -12px;display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.10)}
-.chat-pet-context .pc-chip{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.18);padding:4px 9px;border-radius:8px}
-.chat-body{flex:1;overflow-y:auto;padding:16px 14px;scroll-behavior:smooth;display:flex;flex-direction:column;gap:12px;-webkit-overflow-scrolling:touch}
-.chat-body::-webkit-scrollbar{width:0}
-.msg-row{display:flex;gap:9px;align-items:flex-end;animation:msgIn .28s cubic-bezier(.32,.72,.28,1) both}
-@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.msg-row.user{flex-direction:row-reverse}
-.msg-avatar{width:32px;height:32px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;font-size:16px;font-weight:800}
-.msg-row.ia .msg-avatar{background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;font-size:15px}
-.msg-row.user .msg-avatar{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff}
-.msg-bubble{max-width:78%;padding:11px 14px;border-radius:18px;font-size:13.5px;line-height:1.55;font-weight:500;box-shadow:0 2px 10px rgba(27,36,52,.05);word-wrap:break-word}
-.msg-row.ia .msg-bubble{background:#fff;border:1px solid rgba(234,238,246,.9);border-bottom-left-radius:6px;color:#1B2434}
-.msg-row.user .msg-bubble{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff;border-bottom-right-radius:6px}
-.msg-bubble strong{font-weight:800}
-.msg-time{font-size:9.5px;color:var(--muted);font-weight:700;margin-top:5px;text-align:right;opacity:.7}
-.msg-row.user .msg-time{color:rgba(255,255,255,.65)}
-.msg-tag{display:inline-block;font-size:9.5px;font-weight:800;text-transform:uppercase;padding:3px 7px;border-radius:6px;margin-bottom:6px}
-.msg-tag.info{background:#EAF0FF;color:#3157C9}
-.msg-tag.alerta{background:#FFE9EF;color:#C42B50}
-.msg-tag.dica{background:#E4F8F5;color:#12897A}
-.msg-tag.emergencia{background:linear-gradient(135deg,#EF476F,#C42B50);color:#fff}
-.msg-tag.ia-real{background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff}
-.typing{display:flex;gap:4px;align-items:center;padding:13px 16px}
-.typing span{width:7px;height:7px;border-radius:50%;background:#9B5DE5;opacity:.4;animation:typingAnim 1.4s infinite}
-.typing span:nth-child(2){animation-delay:.2s}
-.typing span:nth-child(3){animation-delay:.4s}
-@keyframes typingAnim{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
-.chat-suggestions{padding:0 14px 12px;overflow-x:auto;scrollbar-width:none;flex-shrink:0}
-.chat-suggestions::-webkit-scrollbar{display:none}
-.sug-row{display:flex;gap:7px;padding-bottom:2px}
-.sug-chip{flex-shrink:0;padding:9px 13px;border-radius:12px;background:#fff;border:1.5px solid #E9E0F8;color:#6B31B8;font-size:11.5px;font-weight:800;white-space:nowrap;cursor:pointer}
-.sug-chip:active{transform:scale(.96);background:#F3EAFE}
-.chat-input-wrap{padding:10px 14px calc(10px + var(--safe-b));background:#fff;border-top:1px solid var(--line);flex-shrink:0}
-.chat-input-row{display:flex;gap:8px;align-items:flex-end;background:#F1F4F9;border-radius:22px;padding:6px 6px 6px 16px;transition:background .2s ease}
-.chat-input-row:focus-within{background:#EDE9FB}
-.chat-input{flex:1;background:none;border:0;padding:9px 0;font-size:13.5px;font-weight:600;max-height:100px;resize:none;line-height:1.4;font-family:inherit}
-.chat-input::placeholder{color:#A9B3C4;font-weight:500}
-.chat-send{width:40px;height:40px;border-radius:15px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);display:grid;place-items:center;flex-shrink:0;cursor:pointer}
-.chat-send:active{transform:scale(.9)}
-.chat-send:disabled{opacity:.4}
-.chat-send svg{width:18px;height:18px;fill:#fff;pointer-events:none}
-.chat-welcome{padding:24px 18px;text-align:center}
-.chat-welcome .cw-hero{width:80px;height:80px;border-radius:26px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);display:grid;place-items:center;margin:0 auto 14px;font-size:40px;box-shadow:0 12px 30px rgba(155,93,229,.28)}
-.chat-welcome h2{margin:0 0 8px;font-size:19px;font-weight:800;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.chat-welcome p{margin:0 0 18px;font-size:13px;color:var(--muted);line-height:1.6;font-weight:600}
-.chat-welcome .cw-cat{margin-top:20px;display:flex;flex-direction:column;gap:8px;text-align:left}
-.chat-welcome .cw-cat-btn{display:flex;align-items:center;gap:11px;padding:12px 13px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer;width:100%}
-.chat-welcome .cw-cat-btn:active{transform:scale(.98)}
-.chat-welcome .cw-cat-ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:17px;flex-shrink:0}
-.chat-welcome .cw-cat-body{flex:1;text-align:left}
-.chat-welcome .cw-cat-titulo{font-size:13px;font-weight:800;color:#1B2434}
-.chat-welcome .cw-cat-desc{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
-.chat-welcome .cw-cat-arrow{width:16px;height:16px;fill:#C7CFDD}
-.chat-config-warn{margin:14px;padding:12px 14px;border-radius:14px;font-size:11.5px;line-height:1.55;font-weight:600;display:flex;gap:9px;align-items:flex-start;text-align:left}
-.chat-config-warn.ok{background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border:1.5px solid #C7E8E2;color:#2C7A70}
-.chat-config-warn.err{background:linear-gradient(140deg,#FFF0F4,#FFE9EF);border:1.5px solid #FFD5E0;color:#C42B50}
-.chat-config-warn.warn{background:linear-gradient(140deg,#FFF6E2,#FFEFD0);border:1.5px solid #FFE4B5;color:#8A6420}
-.chat-config-warn .cw-ic{font-size:16px;flex-shrink:0;line-height:1.2}
-.api-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:7px;text-transform:uppercase;letter-spacing:.3px}
-.api-badge.ok{background:var(--secondary-soft);color:#12897A}
-.api-badge.err{background:var(--danger-soft);color:#C42B50}
-.api-badge.warn{background:var(--accent-soft);color:#B47800}
-/* CARTEIRA */
 .carteira{background:linear-gradient(180deg,#FFFFFF 0%,#FFFCF8 100%);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(27,36,52,.10);border:2px solid #FFE3D4;margin-bottom:16px}
-.carteira-header{background:linear-gradient(135deg,#FF7A45,#F0521B);padding:18px;color:#fff;position:relative}
+.carteira-header{background:linear-gradient(135deg,#FF7A45,#F0521B);padding:18px;color:#fff;position:relative;overflow:hidden}
 .carteira-header .ch-titulo{font-size:9.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;opacity:.85;position:relative;z-index:2}
 .carteira-header h3{margin:4px 0 0;font-size:19px;font-weight:800;position:relative;z-index:2}
 .carteira-header .ch-brasil{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:16px;z-index:2}
 .carteira-pet{padding:16px 18px;display:flex;align-items:center;gap:13px;border-bottom:2px dashed #FFE3D4}
 .carteira-pet .cp-avatar{width:60px;height:60px;border-radius:18px;flex-shrink:0;display:grid;place-items:center;font-size:30px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);border:2px solid #fff;overflow:hidden}
-.carteira-pet .cp-avatar.cat{background:linear-gradient(140deg,#DDF6F2,#C6EFE9)}
 .carteira-pet .cp-avatar img{width:100%;height:100%;object-fit:cover}
 .carteira-pet .cp-info{flex:1;min-width:0}
 .carteira-pet .cp-nome{font-size:17px;font-weight:800;color:#1B2434}
@@ -342,7 +265,7 @@ ul{margin:0;padding:0;list-style:none}
 .carteira-pet .cp-chip{font-size:9px;font-weight:800;padding:3px 7px;border-radius:6px;background:#F1F4F9;color:#66738A;text-transform:uppercase}
 .carteira-info{padding:14px 18px;display:grid;grid-template-columns:1fr 1fr;gap:10px;border-bottom:2px dashed #FFE3D4}
 .carteira-info .ci-item{display:flex;flex-direction:column;gap:3px}
-.carteira-info .ci-label{font-size:8.5px;font-weight:800;color:var(--muted);text-transform:uppercase}
+.carteira-info .ci-label{font-size:8.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
 .carteira-info .ci-valor{font-size:12.5px;font-weight:800;color:#1B2434}
 .carteira-secao{padding:14px 18px 4px}
 .carteira-secao .cs-titulo{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary-d);margin-bottom:10px;display:flex;align-items:center;gap:7px}
@@ -371,7 +294,7 @@ ul{margin:0;padding:0;list-style:none}
 .foto-upload img{width:100%;height:100%;object-fit:cover}
 .foto-upload .foto-edit{position:absolute;bottom:-2px;right:-2px;width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,#FF8A5B,#F0521B);display:grid;place-items:center;border:3px solid #fff}
 .foto-upload .foto-edit svg{width:15px;height:15px;fill:#fff}
-.id-digital{background:linear-gradient(160deg,#1F2A3D,#2B3A52);border-radius:22px;padding:20px;color:#fff;position:relative;overflow:hidden;margin-bottom:16px}
+.id-digital{background:linear-gradient(160deg,#1F2A3D,#2B3A52);border-radius:22px;padding:20px;color:#fff;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(19,25,38,.30);margin-bottom:16px}
 .id-digital .idd-top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2;margin-bottom:14px}
 .id-digital .idd-titulo{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.60)}
 .id-digital .idd-logo{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#FF7A45,#F0521B);display:grid;place-items:center;font-size:16px}
@@ -391,7 +314,7 @@ ul{margin:0;padding:0;list-style:none}
 .hist-card .hc-body{flex:1;min-width:0}
 .hist-card .hc-title{font-size:13.5px;font-weight:800;line-height:1.3}
 .hist-card .hc-sub{font-size:11px;color:var(--muted);font-weight:700;margin-top:3px}
-.hist-card .hc-del{position:absolute;top:9px;right:9px;width:26px;height:26px;border-radius:9px;background:#F8FAFD;display:grid;place-items:center;color:#C7CFDD}
+.hist-card .hc-del{position:absolute;top:9px;right:9px;width:26px;height:26px;border-radius:9px;background:#F8FAFD;display:grid;place-items:center;color:#C7CFDD;cursor:pointer}
 .hist-card .hc-del svg{width:13px;height:13px;fill:currentColor}
 .hist-card.tipo-consulta .hc-icon{background:var(--blue-soft);color:#3157C9}
 .hist-card.tipo-exame .hc-icon{background:var(--purple-soft);color:#6B31B8}
@@ -421,8 +344,8 @@ ul{margin:0;padding:0;list-style:none}
 .tutor-card .tc-role{font-size:10.5px;font-weight:800;color:var(--primary-d);text-transform:uppercase;margin-top:2px}
 .tutor-card .tc-contato{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:4px}
 .ps-list{display:flex;flex-direction:column;gap:10px}
-.ps-item{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer}
-.ps-head{padding:14px;display:flex;align-items:center;gap:11px}
+.ps-item{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.ps-head{padding:14px;display:flex;align-items:center;gap:11px;cursor:pointer}
 .ps-head .ps-emoji{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:18px;background:var(--danger-soft);flex-shrink:0}
 .ps-head .ps-title{flex:1;font-size:13.5px;font-weight:800}
 .ps-head .ps-arrow{width:18px;height:18px;fill:#C7CFDD;transition:transform .25s ease}
@@ -497,10 +420,85 @@ ul{margin:0;padding:0;list-style:none}
 .backup-hist .bh-btn{padding:7px 11px;border-radius:10px;font-size:10.5px;font-weight:800;background:var(--primary-soft);color:var(--primary-d);flex-shrink:0;cursor:pointer}
 .backup-hist .bh-btn.del{background:var(--danger-soft);color:var(--danger);padding:7px 9px}
 .backup-hist .bh-btn.del svg{width:13px;height:13px;fill:currentColor}
+.chat-wrap{display:flex;flex-direction:column;height:100%;background:linear-gradient(180deg,#F8F9FD 0%,#F4F6FB 100%)}
+.chat-header{padding:14px 16px 12px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;position:relative;overflow:hidden;flex-shrink:0}
+.chat-header::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.10)}
+.chat-header-top{display:flex;align-items:center;gap:11px;position:relative;z-index:2}
+.chat-header .ia-avatar{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:22px;flex-shrink:0;backdrop-filter:blur(6px)}
+.chat-header .ia-nome{font-size:15.5px;font-weight:800;letter-spacing:-.2px}
+.chat-header .ia-status{font-size:11px;opacity:.88;font-weight:600;margin-top:2px;display:flex;align-items:center;gap:5px}
+.chat-header .ia-status .ia-dot-online{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 2px rgba(74,222,128,.3)}
+.chat-header .ia-status .ia-dot-warn{width:7px;height:7px;border-radius:50%;background:#FFB020;box-shadow:0 0 0 2px rgba(255,176,32,.3)}
+.chat-header .ia-status .ia-dot-off{width:7px;height:7px;border-radius:50%;background:#EF476F;box-shadow:0 0 0 2px rgba(239,71,111,.3)}
+.chat-header-actions{display:flex;gap:6px;margin-left:auto}
+.chat-header-actions button{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.20);display:grid;place-items:center;transition:transform .15s ease;cursor:pointer;border:1px solid rgba(255,255,255,.15)}
+.chat-header-actions button:active{transform:scale(.9);background:rgba(255,255,255,.35)}
+.chat-header-actions button svg{width:18px;height:18px;fill:#fff}
+.chat-pet-context{padding:8px 14px 10px;background:rgba(255,255,255,.10);position:relative;z-index:2;margin:10px -16px -12px;display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.10)}
+.chat-pet-context .pc-chip{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.18);padding:4px 9px;border-radius:8px}
+.chat-body{flex:1;overflow-y:auto;padding:16px 14px;scroll-behavior:smooth;display:flex;flex-direction:column;gap:12px;-webkit-overflow-scrolling:touch}
+.chat-body::-webkit-scrollbar{width:0}
+.msg-row{display:flex;gap:9px;align-items:flex-end;animation:msgIn .28s cubic-bezier(.32,.72,.28,1) both}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.msg-row.user{flex-direction:row-reverse}
+.msg-avatar{width:32px;height:32px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;font-size:16px;font-weight:800}
+.msg-row.ia .msg-avatar{background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;font-size:15px}
+.msg-row.user .msg-avatar{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff}
+.msg-bubble{max-width:78%;padding:11px 14px;border-radius:18px;font-size:13.5px;line-height:1.55;font-weight:500;box-shadow:0 2px 10px rgba(27,36,52,.05);word-wrap:break-word}
+.msg-row.ia .msg-bubble{background:#fff;border:1px solid rgba(234,238,246,.9);border-bottom-left-radius:6px;color:#1B2434}
+.msg-row.user .msg-bubble{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff;border-bottom-right-radius:6px}
+.msg-bubble strong{font-weight:800}
+.msg-time{font-size:9.5px;color:var(--muted);font-weight:700;margin-top:5px;text-align:right;opacity:.7}
+.msg-row.user .msg-time{color:rgba(255,255,255,.65)}
+.msg-tag{display:inline-block;font-size:9.5px;font-weight:800;text-transform:uppercase;padding:3px 7px;border-radius:6px;margin-bottom:6px}
+.msg-tag.info{background:#EAF0FF;color:#3157C9}
+.msg-tag.alerta{background:#FFE9EF;color:#C42B50}
+.msg-tag.dica{background:#E4F8F5;color:#12897A}
+.msg-tag.emergencia{background:linear-gradient(135deg,#EF476F,#C42B50);color:#fff}
+.msg-tag.ia-real{background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff}
+.typing{display:flex;gap:4px;align-items:center;padding:13px 16px}
+.typing span{width:7px;height:7px;border-radius:50%;background:#9B5DE5;opacity:.4;animation:typingAnim 1.4s infinite}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes typingAnim{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+.chat-suggestions{padding:0 14px 12px;overflow-x:auto;scrollbar-width:none;flex-shrink:0}
+.chat-suggestions::-webkit-scrollbar{display:none}
+.sug-row{display:flex;gap:7px;padding-bottom:2px}
+.sug-chip{flex-shrink:0;padding:9px 13px;border-radius:12px;background:#fff;border:1.5px solid #E9E0F8;color:#6B31B8;font-size:11.5px;font-weight:800;white-space:nowrap;cursor:pointer}
+.sug-chip:active{transform:scale(.96);background:#F3EAFE}
+.chat-input-wrap{padding:10px 14px calc(10px + var(--safe-b));background:#fff;border-top:1px solid var(--line);flex-shrink:0}
+.chat-input-row{display:flex;gap:8px;align-items:flex-end;background:#F1F4F9;border-radius:22px;padding:6px 6px 6px 16px;transition:background .2s ease}
+.chat-input-row:focus-within{background:#EDE9FB}
+.chat-input{flex:1;background:none;border:0;padding:9px 0;font-size:13.5px;font-weight:600;max-height:100px;resize:none;line-height:1.4;font-family:inherit}
+.chat-input::placeholder{color:#A9B3C4;font-weight:500}
+.chat-send{width:40px;height:40px;border-radius:15px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);display:grid;place-items:center;flex-shrink:0;cursor:pointer}
+.chat-send:active{transform:scale(.9)}
+.chat-send:disabled{opacity:.4}
+.chat-send svg{width:18px;height:18px;fill:#fff}
+.chat-welcome{padding:24px 18px;text-align:center}
+.chat-welcome .cw-hero{width:80px;height:80px;border-radius:26px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);display:grid;place-items:center;margin:0 auto 14px;font-size:40px;box-shadow:0 12px 30px rgba(155,93,229,.28)}
+.chat-welcome h2{margin:0 0 8px;font-size:19px;font-weight:800;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.chat-welcome p{margin:0 0 18px;font-size:13px;color:var(--muted);line-height:1.6;font-weight:600}
+.chat-welcome .cw-cat{margin-top:20px;display:flex;flex-direction:column;gap:8px;text-align:left}
+.chat-welcome .cw-cat-btn{display:flex;align-items:center;gap:11px;padding:12px 13px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer}
+.chat-welcome .cw-cat-ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:17px;flex-shrink:0}
+.chat-welcome .cw-cat-body{flex:1;text-align:left}
+.chat-welcome .cw-cat-titulo{font-size:13px;font-weight:800;color:#1B2434}
+.chat-welcome .cw-cat-desc{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
+.chat-welcome .cw-cat-arrow{width:16px;height:16px;fill:#C7CFDD}
+.chat-config-warn{margin:14px;padding:12px 14px;border-radius:14px;font-size:11.5px;line-height:1.55;font-weight:600;display:flex;gap:9px;align-items:flex-start;text-align:left}
+.chat-config-warn.ok{background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border:1.5px solid #C7E8E2;color:#2C7A70}
+.chat-config-warn.err{background:linear-gradient(140deg,#FFF0F4,#FFE9EF);border:1.5px solid #FFD5E0;color:#C42B50}
+.chat-config-warn.warn{background:linear-gradient(140deg,#FFF6E2,#FFEFD0);border:1.5px solid #FFE4B5;color:#8A6420}
+.chat-config-warn .cw-ic{font-size:16px;flex-shrink:0;line-height:1.2}
+.chat-config-warn strong{font-weight:800}
+.api-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;padding:3px 8px;border-radius:7px;text-transform:uppercase;letter-spacing:.3px}
+.api-badge.ok{background:var(--secondary-soft);color:#12897A}
+.api-badge.err{background:var(--danger-soft);color:#C42B50}
+.api-badge.warn{background:var(--accent-soft);color:#B47800}
 @media(max-width:340px){
   .quick span{font-size:8.5px}
   .tab span{font-size:8px}
-  .breed-grid{gap:8px}
   .subnav-btn{font-size:10.5px;padding:8px 11px}
   .msg-bubble{max-width:82%}
 }
@@ -590,10 +588,10 @@ ul{margin:0;padding:0;list-style:none}
               <div class="ia-status"><span id="iaStatusDot" class="ia-dot-warn"></span> <span id="iaStatus">Iniciando...</span></div>
             </div>
             <div class="chat-header-actions">
-              <button type="button" onclick="abrirModalConfigIA()" aria-label="Configurações" id="btnConfigIA">
+              <button onclick="abrirModalConfigIA()" aria-label="Configurações" id="btnConfigIA" type="button">
                 <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.48.48 0 00-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.57 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1112 8.4a3.6 3.6 0 010 7.2z"/></svg>
               </button>
-              <button type="button" onclick="limparChat()" aria-label="Limpar">
+              <button onclick="limparChat()" aria-label="Limpar" type="button">
                 <svg viewBox="0 0 24 24"><path d="M6 19a2 2 0 002 2h8a2 2 0 002-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
               </button>
             </div>
@@ -605,7 +603,7 @@ ul{margin:0;padding:0;list-style:none}
         <div class="chat-input-wrap">
           <div class="chat-input-row">
             <textarea class="chat-input" id="chatInput" placeholder="Pergunte sobre seu pet..." rows="1" oninput="autoResizeChat(this)" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();enviarMensagem()}"></textarea>
-            <button class="chat-send" id="chatSend" onclick="enviarMensagem()">
+            <button class="chat-send" id="chatSend" onclick="enviarMensagem()" type="button">
               <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
             </button>
           </div>
@@ -614,44 +612,44 @@ ul{margin:0;padding:0;list-style:none}
     </section>
   </div>
 
-  <button class="fab" id="fab" onclick="fabAction()" style="display:none">
+  <button class="fab" id="fab" onclick="fabAction()" style="display:none" type="button">
     <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
   </button>
-  <button class="up" id="upBtn" onclick="scrollTopAtual()">
+  <button class="up" id="upBtn" onclick="scrollTopAtual()" type="button">
     <svg viewBox="0 0 24 24"><path d="M12 4l8 8h-5v8h-6v-8H4z"/></svg>
   </button>
 
   <nav class="tabbar" id="tabbar">
-    <button class="tab active" data-i="0" onclick="goTo(0)">
+    <button class="tab active" data-i="0" onclick="goTo(0)" type="button">
       <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a2 2 0 01-2 2h-4v-6H9v6H5a2 2 0 01-2-2z"/></svg>
       <span>Início</span>
     </button>
-    <button class="tab" data-i="1" onclick="goTo(1)">
-      <svg viewBox="0 0 24 24"><path d="M12 12.5c-2.5 0-4.5 1.8-4.5 4S9.5 21 12 21s4.5-2.3 4.5-4.5-2-4-4.5-4zM6.5 6C5 6 4 7.3 4 8.8s1 2.7 2.5 2.7S9 10.3 9 8.8 8 6 6.5 6z"/></svg>
+    <button class="tab" data-i="1" onclick="goTo(1)" type="button">
+      <svg viewBox="0 0 24 24"><path d="M12 12.5c-2.5 0-4.5 1.8-4.5 4S9.5 21 12 21s4.5-2.3 4.5-4.5-2-4-4.5-4zM6.5 6C5 6 4 7.3 4 8.8s1 2.7 2.5 2.7S9 10.3 9 8.8 8 6 6.5 6zm11 0C16 6 15 7.3 15 8.8s1 2.7 2.5 2.7S20 10.3 20 8.8 19 6 17.5 6z"/></svg>
       <span>Pets</span>
     </button>
-    <button class="tab" data-i="2" onclick="goTo(2)">
+    <button class="tab" data-i="2" onclick="goTo(2)" type="button">
       <svg viewBox="0 0 24 24"><path d="M4 4h6a3 3 0 013 3v13a3 3 0 00-3-3H4zm16 0h-6a3 3 0 00-3 3v13a3 3 0 013-3h6z"/></svg>
       <span>Raças</span>
     </button>
-    <button class="tab" data-i="3" onclick="goTo(3)">
+    <button class="tab" data-i="3" onclick="goTo(3)" type="button">
       <svg viewBox="0 0 24 24"><path d="M12 2l8 3.5v6.2c0 5-3.4 9.3-8 10.3-4.6-1-8-5.3-8-10.3V5.5zm-1 13.5l5.5-5.5-1.4-1.4L11 12.7 8.9 10.6 7.5 12z"/></svg>
       <span>Vacinas</span>
     </button>
-    <button class="tab ia-tab" data-i="7" onclick="goTo(7)">
+    <button class="tab ia-tab" data-i="7" onclick="goTo(7)" type="button">
       <svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"/></svg>
       <span>Dr. Pet</span>
       <span class="ia-dot"></span>
     </button>
-    <button class="tab" data-i="4" onclick="goTo(4)">
+    <button class="tab" data-i="4" onclick="goTo(4)" type="button">
       <svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/></svg>
       <span>Saúde</span>
     </button>
-    <button class="tab" data-i="5" onclick="goTo(5)">
-      <svg viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 01-18 0z"/></svg>
+    <button class="tab" data-i="5" onclick="goTo(5)" type="button">
+      <svg viewBox="0 0 24 24"><path d="M3 12h18a9 9 0 01-18 0zm3.5-3.2C6.5 7 8.7 6 12 6s5.5 1 5.5 2.8c0 .4-.2.8-.5 1.2H7c-.3-.4-.5-.8-.5-1.2z"/></svg>
       <span>Rações</span>
     </button>
-    <button class="tab" data-i="6" onclick="goTo(6)">
+    <button class="tab" data-i="6" onclick="goTo(6)" type="button">
       <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
       <span>Doenças</span>
     </button>
@@ -671,20 +669,21 @@ ul{margin:0;padding:0;list-style:none}
 
 <script>
 /* ============================================================
-   CONFIGURAÇÃO E ESTADO
+   CONFIGURAÇÃO — IA GEMINI (USO PESSOAL, SEM RESTRIÇÕES)
 ============================================================ */
 const IA_CONFIG_KEY = 'petvida_ia_config_v5';
-const DB_KEY = 'petvida_v8';
+const DB_KEY = 'petvida_v9';
 const BACKUP_KEY = 'petvida_backups';
 const CHAT_HISTORY_KEY = 'petvida_chat_history';
 const MAX_AUTO_BACKUPS = 5;
 
+/* Chave Gemini — novo formato AQ. (uso pessoal) */
 const GEMINI_API_KEY_PADRAO = 'AQ.Ab8RN6KvN127QdAWcwXuH2i32b0n1OMUoDjPwsM3dHufUN45WQ';
 
 let iaConfig = {
   provider: 'gemini',
   apiKey: GEMINI_API_KEY_PADRAO,
-  model: '',
+  model: '',  // Vazio = autodetecção
   status: 'desconhecido'
 };
 
@@ -732,6 +731,7 @@ function loadIAConfig(){
       if(d.provider) iaConfig.provider = d.provider;
       if(d.apiKey) iaConfig.apiKey = d.apiKey;
       if(d.model !== undefined) iaConfig.model = d.model;
+      if(d.status) iaConfig.status = d.status;
     }
   }catch(e){}
 }
@@ -850,7 +850,7 @@ function abrirModalBackup(){
 function salvarAgora(){ saveDB(); toast('Dados salvos! ✅'); setTimeout(()=> abrirModalBackup(), 400); }
 function exportarBackup(){
   try{
-    const dados = {app:'PetVida', versao:'v8.4', exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
+    const dados = {app:'PetVida', versao:'v9.0', exportadoEm:new Date().toISOString(), qtdPets:state.pets.length, pets:state.pets};
     const json = JSON.stringify(dados, null, 2);
     const blob = new Blob([json], {type: 'application/json;charset=utf-8'});
     const url = URL.createObjectURL(blob);
@@ -1078,7 +1078,7 @@ function padraoQr(pet, size){
 }
 
 /* ============================================================
-   DADOS ESTÁTICOS
+   DADOS — Vacinas, Raças, Doenças, etc.
 ============================================================ */
 const PROTOCOLO = {
   cao: [
@@ -1135,7 +1135,6 @@ function recomendarMarcas(pet, tipoVacina){
   return { marcas: marcasEsp, recomendada: porRaca[tipoVacina] || null, nota: null };
 }
 
-/* VISUAL DAS RAÇAS */
 const VISUAL_RACAS = {
   'srd_c':{bg1:'#FFE9DC',bg2:'#FFD6C2',pelo:'#C28B5A',orelha:'caida',focinho:'medio',orelhaCor:'#A87244'},
   'mucucho':{bg1:'#F0E6D2',bg2:'#E0CCAA',pelo:'#8B6942',orelha:'semi',focinho:'longo',orelhaCor:'#6B4E2E'},
@@ -1186,7 +1185,7 @@ function avatarRacaSVG(idRaca, especie){
     olhos = `<ellipse cx="48" cy="68" rx="5" ry="6" fill="#1B2434"/><ellipse cx="72" cy="68" rx="5" ry="6" fill="#1B2434"/><ellipse cx="48" cy="66" rx="2" ry="2.5" fill="#FFF"/><ellipse cx="72" cy="66" rx="2" ry="2.5" fill="#FFF"/>`;
     if(v.extra === 'siames') extras = `<ellipse cx="60" cy="82" rx="16" ry="11" fill="#3A2A20" opacity=".8"/>`;
     else if(v.extra === 'tigrado') extras = `<path d="M36 58 L42 62 M32 68 L40 70" stroke="#5A4A3A" stroke-width="2" stroke-linecap="round"/><path d="M84 58 L78 62 M88 68 L80 70" stroke="#5A4A3A" stroke-width="2" stroke-linecap="round"/>`;
-    else if(v.extra === 'bengal') extras = `<circle cx="40" cy="60" r="3" fill="#5A4030" opacity=".7"/><circle cx="80" cy="60" r="3" fill="#5A4030" opacity=".7"/><circle cx="34" cy="72" r="2.5" fill="#5A4030" opacity=".7"/><circle cx="86" cy="72" r="2.5" fill="#5A4030" opacity=".7"/>`;
+    else if(v.extra === 'bengal') extras = `<circle cx="40" cy="60" r="3" fill="#5A4030" opacity=".7"/><circle cx="80" cy="60" r="3" fill="#5A4030" opacity=".7"/>`;
   } else {
     cabeca = `<ellipse cx="60" cy="72" rx="34" ry="32" fill="${v.pelo}"/>`;
     if(v.orelha === 'caida') orelhas = `<ellipse cx="28" cy="76" rx="11" ry="20" fill="${v.orelhaCor}" transform="rotate(-15 28 76)"/><ellipse cx="92" cy="76" rx="11" ry="20" fill="${v.orelhaCor}" transform="rotate(15 92 76)"/>`;
@@ -1425,10 +1424,10 @@ function porteDoPet(pet){
 }
 
 /* ============================================================
-   🧠 IA — GEMINI 3.x COM AUTODETECÇÃO DE MODELOS
+   🧠 IA — GEMINI COM AUTODETECÇÃO DE MODELOS
 ============================================================ */
 
-/* Base local de fallback */
+/* Base local fallback */
 const IA_KB = [
   {tipo:'emergencia',peso:10,palavras:['sangrando','sangramento','hemorragia','cortou'],resposta:'🩸 **Sangramento** é emergência!\n\n1. **Pressione** com gaze por 3-5 min\n2. **Eleve o membro**\n3. Leve ao veterinário\n\n⚠️ Não parar em 5 min = grave.'},
   {tipo:'emergencia',peso:10,palavras:['engasgou','engasgo','asfixia','sufocando'],resposta:'😰 **Engasgo!**\n\n1. Abra a boca com cuidado\n2. Se visível, remova com pinça\n3. Manobra de Heimlich\n4. Leve ao vet'},
@@ -1441,7 +1440,7 @@ const IA_KB = [
   {tipo:'dica',peso:7,palavras:['mordendo','destruindo','roendo'],resposta:'🐕 **Destrutivo:**\n\n• Aumente exercício\n• Brinquedos interativos\n• Rotina de passeios'},
   {tipo:'dica',peso:6,palavras:['banho','com que frequência'],resposta:'🚿 **Banhos:**\n\n• Pelo curto: 15-30 dias\n• Pelo longo: 7-15 dias\n• Gatos: não precisam'},
   {tipo:'info',peso:6,palavras:['vermífugo','vermifugação'],resposta:'🪱 **Vermifugação:**\n\n• Filhotes: 15/15 dias\n• Jovens: 3 meses\n• Adultos: 4-6 meses'},
-  {tipo:'info',peso:7,palavras:['tamanho','porte','pinscher filhote'],resposta:'📏 **Tamanho do Pinscher:**\n\n• **Miniatura**: 3-5 kg · 25-30 cm\n• **Anão**: 4-7 kg · 25-32 cm\n• **Médio**: 7-14 kg · 35-45 cm\n• **Alemão**: 14-20 kg · 45-50 cm\n\n**Filhotes:** observe os pais, pese mensalmente e compare a curva de crescimento.'}
+  {tipo:'info',peso:7,palavras:['tamanho','porte','pinscher filhote'],resposta:'📏 **Tamanho do Pinscher:**\n\n• **Miniatura**: 3-5 kg · 25-30 cm\n• **Anão**: 4-7 kg · 25-32 cm\n• **Médio**: 7-14 kg · 35-45 cm\n• **Alemão (Standard)**: 14-20 kg · 45-50 cm\n\n**Filhotes:** observe os pais, pese mensalmente e compare a curva de crescimento.'}
 ];
 
 function processarPerguntaLocal(pergunta, petCtx){
@@ -1465,13 +1464,15 @@ function gerarRespostaGenerica(pergunta, petCtx){
   let ctx = '';
   if(petCtx) ctx = `\n\n💡 **Sobre ${petCtx.nome}** (${petCtx.raca || 'SRD'}, ${petCtx.idade}):`;
   return {
-    texto: `🤔 Não encontrei resposta específica. Toque em **⚙️** para verificar a IA.\n\nPosso ajudar com:\n• 💉 Vacinação\n• 🍖 Alimentação\n• 🚑 Emergências\n• 🐕 Comportamento\n• 🩺 Saúde preventiva` + ctx,
+    texto: `🤔 Não encontrei resposta específica. Tente conectar uma IA real (⚙️).\n\nPosso ajudar com:\n• 💉 Vacinação\n• 🍖 Alimentação\n• 🚑 Emergências\n• 🐕 Comportamento\n• 🩺 Saúde preventiva` + ctx,
     tipo: 'info',
     fonte: 'local'
   };
 }
 
-/* Cache de modelos descobertos */
+/* ============================================================
+   AUTODETECÇÃO DE MODELOS GEMINI
+============================================================ */
 let modelosDisponiveisCache = null;
 let cacheTimestamp = 0;
 const CACHE_DURACAO = 10 * 60 * 1000;
@@ -1481,20 +1482,20 @@ async function descobrirModelosDisponiveis(chaveLimpa){
   if(modelosDisponiveisCache && (agora - cacheTimestamp) < CACHE_DURACAO){
     return modelosDisponiveisCache;
   }
+
   try{
-    console.log('🔍 Descobrindo modelos disponíveis...');
+    console.log('🔍 Listando modelos disponíveis...');
     const url = 'https://generativelanguage.googleapis.com/v1beta/models';
     const res = await fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-goog-api-key': chaveLimpa
-      }
+      headers: {'x-goog-api-key': chaveLimpa}
     });
+
     if(!res.ok){
       console.warn('⚠️ Não foi possível listar modelos:', res.status);
       return null;
     }
+
     const data = await res.json();
     if(!data.models || !Array.isArray(data.models)) return null;
 
@@ -1502,9 +1503,11 @@ async function descobrirModelosDisponiveis(chaveLimpa){
       .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent'))
       .map(m => ({
         nome: m.name.replace('models/', ''),
-        displayName: m.displayName || m.name
+        displayName: m.displayName || m.name,
+        descricao: m.description || ''
       }));
-    console.log('✅ Modelos disponíveis:', modelos.map(m => m.nome).join(', '));
+
+    console.log('✅ Modelos encontrados:', modelos.map(m => m.nome).join(', '));
     modelosDisponiveisCache = modelos;
     cacheTimestamp = agora;
     return modelos;
@@ -1515,7 +1518,8 @@ async function descobrirModelosDisponiveis(chaveLimpa){
 }
 
 function ordenarModelosPorPreferencia(modelos){
-  if(!modelos || !modelos.length) return [];
+  if(!modelos) return [];
+
   const prioridades = [
     {match: /^gemini-3\.6-flash$/i, peso: 100},
     {match: /^gemini-3\.5-flash$/i, peso: 95},
@@ -1534,6 +1538,7 @@ function ordenarModelosPorPreferencia(modelos){
     {match: /lite/i, peso: 20},
     {match: /gemini/i, peso: 10}
   ];
+
   return modelos.slice().sort((a, b) => {
     const pesoA = prioridades.reduce((max, p) => p.match.test(a.nome) ? Math.max(max, p.peso) : max, 0);
     const pesoB = prioridades.reduce((max, p) => p.match.test(b.nome) ? Math.max(max, p.peso) : max, 0);
@@ -1541,6 +1546,9 @@ function ordenarModelosPorPreferencia(modelos){
   });
 }
 
+/* ============================================================
+   CHAMADA DA IA REAL
+============================================================ */
 async function chamarIAReal(pergunta, petCtx){
   const cfg = iaConfig;
   if(!cfg.apiKey || cfg.provider === 'local') return null;
@@ -1558,11 +1566,12 @@ Regras:
 - Sempre termine com aviso curto sobre não substituir consulta veterinária
 ${petCtx ? `\nContexto do pet:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.especie}\n- Raça: ${petCtx.raca || 'SRD'}\n- Idade: ${petCtx.idade}\n- Peso: ${petCtx.peso || 'não informado'}` : ''}`;
 
+  /* OpenAI e Anthropic */
   if(cfg.provider === 'openai' || cfg.provider === 'anthropic'){
     return chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa);
   }
 
-  /* GEMINI */
+  /* ========== GEMINI COM AUTODETECÇÃO ========== */
   let modelosParaTentar = [];
 
   if(cfg.model && cfg.model.trim()){
@@ -1578,23 +1587,22 @@ ${petCtx ? `\nContexto do pet:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.esp
   }
 
   const fallbackEmergencia = [
-    'gemini-3.6-flash','gemini-3.5-flash','gemini-3.5-flash-lite','gemini-3.1-pro',
-    'gemini-3.0-flash','gemini-2.5-flash','gemini-2.0-flash','gemini-2.0-flash-lite',
-    'gemini-1.5-flash-latest','gemini-1.5-pro-latest'
+    'gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite',
+    'gemini-3.1-pro', 'gemini-3.0-flash', 'gemini-2.5-flash',
+    'gemini-2.0-flash', 'gemini-2.0-flash-lite',
+    'gemini-1.5-flash-latest', 'gemini-1.5-pro-latest'
   ];
   fallbackEmergencia.forEach(m => {
     if(!modelosParaTentar.includes(m)) modelosParaTentar.push(m);
   });
 
-  console.log('🎯 Modelos a tentar:', modelosParaTentar.slice(0, 8).join(' → '), modelosParaTentar.length > 8 ? '...' : '');
+  console.log('🎯 Modelos a tentar:', modelosParaTentar.slice(0, 10).join(' → '));
 
   let ultimoErro = null;
-  let modelosTestados = 0;
 
   for(const modelo of modelosParaTentar){
     try{
-      modelosTestados++;
-      console.log(`🌐 [${modelosTestados}/${modelosParaTentar.length}] Testando: ${modelo}`);
+      console.log(`🌐 Tentando: ${modelo}`);
 
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`;
       const res = await fetch(url, {
@@ -1611,17 +1619,18 @@ ${petCtx ? `\nContexto do pet:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.esp
 
       if(res.status === 404){
         console.warn(`   ⚠️ ${modelo} não disponível`);
-        ultimoErro = {erro: true, motivo: 'Nenhum modelo compatível', statusCode: 404};
+        ultimoErro = {erro: true, motivo: 'Nenhum modelo compatível encontrado', statusCode: 404};
         continue;
       }
+
       if(res.status === 429){
-        console.warn('   ⚠️ Cota excedida');
         return {erro: true, motivo: 'Cota excedida. Aguarde alguns minutos', statusCode: 429};
       }
+
       if(res.status === 401 || res.status === 403){
-        console.warn('   ⚠️ Chave inválida');
         return {erro: true, motivo: 'Chave de API inválida ou sem permissão', statusCode: res.status};
       }
+
       if(!res.ok){
         const errText = await res.text();
         console.error(`   ❌ HTTP ${res.status}:`, errText.slice(0, 200));
@@ -1631,14 +1640,16 @@ ${petCtx ? `\nContexto do pet:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.esp
 
       const data = await res.json();
       let texto = '';
+
       if(data.candidates && data.candidates[0]){
         const cand = data.candidates[0];
         if(cand.content && cand.content.parts && cand.content.parts[0]){
           texto = cand.content.parts[0].text || '';
         }
       }
+
       if(!texto){
-        console.warn(`   ⚠️ Resposta vazia`);
+        console.warn(`   ⚠️ Resposta vazia de ${modelo}`);
         ultimoErro = {erro: true, motivo: 'Resposta vazia', statusCode: 200};
         continue;
       }
@@ -1657,6 +1668,7 @@ ${petCtx ? `\nContexto do pet:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.esp
         fonte: 'ia-real',
         modelo: modelo
       };
+
     }catch(e){
       console.error(`   ❌ Erro rede ${modelo}:`, e.message);
       ultimoErro = {erro: true, motivo: 'Falha de rede: ' + e.message, statusCode: 0};
@@ -1664,14 +1676,14 @@ ${petCtx ? `\nContexto do pet:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.esp
     }
   }
 
-  console.error('❌ Todos os modelos falharam');
-  return ultimoErro || {erro: true, motivo: 'Nenhum modelo compatível', statusCode: 404};
+  return ultimoErro || {erro: true, motivo: 'Nenhum modelo disponível', statusCode: 404};
 }
 
 async function chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa){
   const cfg = iaConfig;
   try{
     let url = '', headers = {'Content-Type':'application/json'}, body = {};
+
     if(cfg.provider === 'openai'){
       url = 'https://api.openai.com/v1/chat/completions';
       headers['Authorization'] = `Bearer ${chaveLimpa}`;
@@ -1683,13 +1695,20 @@ async function chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa){
       headers['anthropic-dangerous-direct-browser-access'] = 'true';
       body = {model: cfg.model || 'claude-3-5-sonnet-20241022', max_tokens: 800, system: sysPrompt, messages: [{role:'user', content: pergunta}]};
     }
+
     const res = await fetch(url, {method:'POST', headers, body: JSON.stringify(body)});
     if(!res.ok){
-      return {erro: true, motivo: res.status === 401 ? 'Chave inválida' : res.status === 429 ? 'Cota excedida' : 'Erro HTTP ' + res.status, statusCode: res.status};
+      let motivo = res.status === 401 || res.status === 403 ? 'Chave inválida' : res.status === 429 ? 'Cota excedida' : 'Erro HTTP ' + res.status;
+      return {erro: true, motivo, statusCode: res.status};
     }
+
     const data = await res.json();
-    let texto = cfg.provider === 'openai' ? (data.choices?.[0]?.message?.content || '') : (data.content?.[0]?.text || '');
+    let texto = cfg.provider === 'openai'
+      ? (data.choices?.[0]?.message?.content || '')
+      : (data.content?.[0]?.text || '');
+
     if(!texto) return {erro: true, motivo: 'Resposta vazia', statusCode: 200};
+
     const emg = temEmergencia(pergunta);
     return {texto: texto.trim(), tipo: emg ? 'emergencia' : 'ia-real', real: true, fonte: 'ia-real'};
   }catch(e){
@@ -1713,14 +1732,13 @@ function agoraHHMM(){
 
 function getStatusIA(){
   if(iaConfig.provider === 'local') return {cor:'warn', txt:'Base local (offline)'};
-  if(!iaConfig.apiKey) return {cor:'off', txt:'Sem chave'};
+  if(!iaConfig.apiKey) return {cor:'off', txt:'Sem chave configurada'};
   if(iaConfig.status === 'ok') {
     const nome = iaConfig.provider === 'gemini' ? 'Gemini' : iaConfig.provider === 'openai' ? 'OpenAI' : 'Claude';
-    const modelo = iaConfig.model || 'padrão';
-    return {cor:'online', txt:nome + ' · ' + modelo};
+    return {cor:'online', txt:nome + ' conectado' + (iaConfig.model ? ' · ' + iaConfig.model : '')};
   }
   if(iaConfig.status === 'erro') return {cor:'off', txt:'Erro na IA · usando base local'};
-  return {cor:'warn', txt:(iaConfig.provider === 'gemini' ? 'Gemini' : 'IA') + ' pronto · toque em ⚙️ para testar'};
+  return {cor:'warn', txt:'IA pronta · toque em ⚙️ para testar'};
 }
 
 function renderChat(){
@@ -1736,7 +1754,7 @@ function renderChat(){
       ${pet.raca ? `<span class="pc-chip">${esc(pet.raca)}</span>` : ''}
       <span class="pc-chip">${calcIdade(pet.nascimento)}</span>`;
   } else {
-    ctxEl.innerHTML = `<span class="pc-chip">💡 Cadastre um pet</span>`;
+    ctxEl.innerHTML = `<span class="pc-chip">💡 Cadastre um pet para respostas personalizadas</span>`;
   }
 
   const st = getStatusIA();
@@ -1756,39 +1774,39 @@ function renderChat(){
     'Sinais de emergência veterinária'
   ];
   if(sug){
-    sug.innerHTML = `<div class="sug-row">${sugestoes.map(s=>`<button class="sug-chip" type="button" onclick="enviarSugestao('${esc(s).replace(/'/g,"\\'")}')">${esc(s)}</button>`).join('')}</div>`;
+    sug.innerHTML = `<div class="sug-row">${sugestoes.map(s=>`<button class="sug-chip" onclick="enviarSugestao('${esc(s).replace(/'/g,"\\'")}')">${esc(s)}</button>`).join('')}</div>`;
   }
 
   if(state.chat.length === 0){
     const statusInfo = st.cor === 'online' ? 'ok' : st.cor === 'warn' ? 'warn' : 'err';
     const aviso = statusInfo === 'ok'
-      ? `<div class="chat-config-warn ok"><span class="cw-ic">✨</span><div>Conectado à <strong>IA Gemini real</strong>. Pergunte em linguagem natural para respostas personalizadas.</div></div>`
+      ? `<div class="chat-config-warn ok"><span class="cw-ic">✨</span><div>Conectado à <strong>IA Gemini real</strong>. Pergunte em linguagem natural.</div></div>`
       : statusInfo === 'warn'
-      ? `<div class="chat-config-warn warn"><span class="cw-ic">⚠️</span><div>Toque no <strong>⚙️</strong> e depois em <strong>🧪 Testar</strong> para validar a chave. Enquanto isso, uso a base local especializada.</div></div>`
-      : `<div class="chat-config-warn err"><span class="cw-ic">❌</span><div>IA retornou erro. Toque no <strong>⚙️</strong> para verificar a chave.</div></div>`;
+      ? `<div class="chat-config-warn warn"><span class="cw-ic">⚠️</span><div>Toque no <strong>⚙️</strong> e em <strong>🧪 Testar</strong> para validar. Enquanto isso, uso a base local.</div></div>`
+      : `<div class="chat-config-warn err"><span class="cw-ic">❌</span><div>IA retornou erro. Toque no <strong>⚙️</strong> para verificar.</div></div>`;
 
     body.innerHTML = `
       <div class="chat-welcome">
         <div class="cw-hero">🐾</div>
         <h2>Olá! Sou o Dr. Pet IA</h2>
-        <p>Seu assistente veterinário inteligente. Posso responder dúvidas sobre saúde, comportamento, alimentação e cuidados do seu pet.</p>
+        <p>Seu assistente veterinário inteligente. Posso responder dúvidas sobre saúde, comportamento, alimentação e cuidados.</p>
         <div class="cw-cat">
-          <button class="cw-cat-btn" type="button" onclick="enviarSugestao('Quais vacinas meu pet precisa?')">
+          <button class="cw-cat-btn" onclick="enviarSugestao('Quais vacinas meu pet precisa?')">
             <div class="cw-cat-ic" style="background:#EAF0FF;color:#3157C9">💉</div>
             <div class="cw-cat-body"><div class="cw-cat-titulo">Vacinas e prevenção</div><div class="cw-cat-desc">Protocolos, reforços e calendário</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
-          <button class="cw-cat-btn" type="button" onclick="enviarSugestao('Meu pet está com sintomas estranhos')">
+          <button class="cw-cat-btn" onclick="enviarSugestao('Meu pet está com sintomas estranhos')">
             <div class="cw-cat-ic" style="background:#FFE9EF;color:#C42B50">🚑</div>
             <div class="cw-cat-body"><div class="cw-cat-titulo">Sintomas e emergências</div><div class="cw-cat-desc">O que fazer e quando procurar o vet</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
-          <button class="cw-cat-btn" type="button" onclick="enviarSugestao('Como alimentar meu pet corretamente?')">
+          <button class="cw-cat-btn" onclick="enviarSugestao('Como alimentar meu pet corretamente?')">
             <div class="cw-cat-ic" style="background:#FFF6E2;color:#B47800">🍖</div>
             <div class="cw-cat-body"><div class="cw-cat-titulo">Alimentação</div><div class="cw-cat-desc">Ração, quantidades e tóxicos</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
-          <button class="cw-cat-btn" type="button" onclick="enviarSugestao('Como adestrar meu pet?')">
+          <button class="cw-cat-btn" onclick="enviarSugestao('Como adestrar meu pet?')">
             <div class="cw-cat-ic" style="background:#F3EAFE;color:#6B31B8">🎓</div>
             <div class="cw-cat-body"><div class="cw-cat-titulo">Comportamento</div><div class="cw-cat-desc">Adestramento e educação</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
@@ -1877,9 +1895,7 @@ async function enviarMensagem(){
       if(resultado && resultado.erro){
         iaConfig.status = 'erro';
         saveIAConfig();
-        console.warn('⚠️ IA falhou:', resultado.motivo);
         toast('⚠️ IA: ' + resultado.motivo);
-        resposta = null;
       } else if(resultado){
         iaConfig.status = 'ok';
         saveIAConfig();
@@ -1947,7 +1963,11 @@ async function testarConexaoIA(){
     return;
   }
 
-  mostrarResultadoTeste(null, 'Testando...');
+  mostrarResultadoTeste(null, 'Testando conexão...');
+
+  // Limpa cache de modelos para forçar nova listagem
+  modelosDisponiveisCache = null;
+  cacheTimestamp = 0;
 
   const backup = {...iaConfig};
   iaConfig.provider = prov;
@@ -1961,8 +1981,8 @@ async function testarConexaoIA(){
       iaConfig = backup;
       saveIAConfig();
     } else if(res && res.texto){
-      const modeloUsado = res.modelo ? ` (modelo: ${res.modelo})` : '';
-      mostrarResultadoTeste(true, 'Conexão OK!' + modeloUsado);
+      const modeloUsado = res.modelo || iaConfig.model || 'modelo detectado';
+      mostrarResultadoTeste(true, 'Conexão OK! Modelo: ' + modeloUsado + ' · Resposta: "' + res.texto.slice(0, 50) + '..."');
       iaConfig.status = 'ok';
       saveIAConfig();
       renderChat();
@@ -1991,17 +2011,17 @@ function mostrarResultadoTeste(sucesso, msg){
 }
 
 /* ============================================================
-   MODAL CONFIG IA — CORRIGIDO
+   MODAL CONFIG IA — GEAR BUTTON CORRIGIDO
 ============================================================ */
 function abrirModalConfigIA(){
-  console.log('⚙️ Abrindo configurações IA');
+  console.log('⚙️ Abrindo configurações IA...');
   try{
     const providerAtual = iaConfig.provider || 'gemini';
     const statusBadge = iaConfig.status === 'ok'
       ? `<span class="api-badge ok">✅ Conectada</span>`
       : iaConfig.status === 'erro'
       ? `<span class="api-badge err">❌ Erro</span>`
-      : `<span class="api-badge warn">⏳ Toque em testar</span>`;
+      : `<span class="api-badge warn">⏳ Não testada</span>`;
 
     const html = `
       <div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
@@ -2034,13 +2054,12 @@ function abrirModalConfigIA(){
       <div id="iaTesteResult"></div>
 
       <div class="blk" style="background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border-color:#C7E8E2;margin-top:14px">
-        <h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">✅</span>Autodetecção de modelos</h4>
-        <p>O app consulta automaticamente os modelos disponíveis para sua chave e escolhe o melhor. Se um falhar, tenta o próximo.</p>
-        <p style="margin-top:8px">Suporta modelos <strong>3.x</strong> (3.5, 3.6 Flash, 3.1 Pro), 2.x e 1.5.</p>
+        <h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">🚀</span>Autodetecção ativada</h4>
+        <p>Deixe o campo <strong>MODELO</strong> em branco. O app consulta a API do Google, descobre quais modelos sua chave tem acesso e escolhe o melhor automaticamente (gemini-3.6-flash, 3.5-flash, 3.1-pro, etc).</p>
       </div>
 
       <div class="blk">
-        <h4><span class="b-ic">📌</span>Modelos Gemini (2025)</h4>
+        <h4><span class="b-ic">📌</span>Modelos Gemini suportados</h4>
         <ul>
           <li><strong>gemini-3.6-flash</strong> — mais novo ⭐</li>
           <li><strong>gemini-3.5-flash</strong> — rápido</li>
@@ -2050,7 +2069,7 @@ function abrirModalConfigIA(){
           <li><strong>gemini-2.0-flash</strong> — compatibilidade</li>
         </ul>
         <p style="margin-top:8px;font-size:11px;color:var(--muted);line-height:1.5">
-          💡 Deixe o campo MODELO em branco para autodetecção total.
+          💡 O app testa cada modelo em ordem até um funcionar.
         </p>
       </div>
     `;
@@ -2058,14 +2077,14 @@ function abrirModalConfigIA(){
     openModal(
       headPadrao('Configurar IA', 'Escolha o provedor do Dr. Pet IA'),
       html,
-      `<button class="btn btn-soft" type="button" onclick="closeModal()">Fechar</button>
-       <button class="btn btn-success" type="button" onclick="testarConexaoIA()" style="flex:1">🧪 Testar</button>
-       <button class="btn btn-purple" type="button" onclick="salvarConfigIA()">Salvar</button>`
+      `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
+       <button class="btn btn-success" onclick="testarConexaoIA()" style="flex:1">🧪 Testar</button>
+       <button class="btn btn-purple" onclick="salvarConfigIA()">Salvar</button>`
     );
 
     setTimeout(()=> renderCamposConfigIA(), 60);
   }catch(e){
-    console.error('Erro ao abrir config:', e);
+    console.error('Erro ao abrir config IA:', e);
     toast('Erro ao abrir configurações');
   }
 }
@@ -2082,7 +2101,7 @@ function renderCamposConfigIA(){
     return;
   }
   const placeholders = {
-    gemini: {key:'AQ.Ab8... ou AIzaSy...', model:'(vazio para autodetecção)'},
+    gemini: {key:'AQ.Ab8... ou AIzaSy...', model:'(deixe vazio p/ autodetecção)'},
     openai: {key:'sk-...', model:'gpt-4o-mini'},
     anthropic: {key:'sk-ant-...', model:'claude-3-5-sonnet-20241022'}
   };
@@ -2096,11 +2115,14 @@ function renderCamposConfigIA(){
     <div class="field">
       <label>MODELO</label>
       <input class="input" id="iaModel" placeholder="${ph.model}" value="${esc(iaConfig.model || '')}">
-      <div class="hint">${prov === 'gemini' ? 'Deixe vazio para autodetecção.' : 'Deixe vazio para padrão.'}</div>
+      <div class="hint">${prov === 'gemini' ? 'Vazio = autodetecção (recomendado)' : 'Deixe em branco para usar o padrão.'}</div>
     </div>`;
 }
 
-function atualizarConfigIA(){ renderCamposConfigIA(); }
+function atualizarConfigIA(){
+  console.log('🔄 Atualizando provedor');
+  renderCamposConfigIA();
+}
 
 function salvarConfigIA(){
   const prov = $('#iaProvider').value;
@@ -2116,6 +2138,8 @@ function salvarConfigIA(){
   const model = ($('#iaModel').value || '').trim();
   if(!key){ toast('Informe a chave de API'); return; }
   iaConfig = {provider: prov, apiKey: key, model: model, status: 'desconhecido'};
+  modelosDisponiveisCache = null;
+  cacheTimestamp = 0;
   saveIAConfig();
   closeModal();
   toast('Configuração salva! Toque em 🧪 para testar.');
@@ -2184,7 +2208,7 @@ const HEADER_INFO = [
   {t:'Saúde', s:'Histórico, prevenção e guias'},
   {t:'Alimentação', s:'Rações e nutrição'},
   {t:'Doenças', s:'Guia de prevenção e tratamento'},
-  {t:'Dr. Pet IA', s:'Assistente veterinário Gemini 3.x'}
+  {t:'Dr. Pet IA', s:'Assistente veterinário Gemini'}
 ];
 function atualizarHeader(){
   const info = HEADER_INFO[state.currentPage];
@@ -2314,14 +2338,14 @@ function abrirCarteiraSelecionada(){
 }
 function quickItem(emoji, cor, label, fn){
   const click = fn ? `onclick="${fn}"` : '';
-  return `<button class="quick" type="button" ${click}>
+  return `<button class="quick" ${click} type="button">
     <div class="quick-ic" style="background:${cor}"><span style="font-size:18px">${emoji}</span></div>
     <span>${label}</span>
   </button>`;
 }
 function blocoDica(){
   const dicas = [
-    {tag:'Dr. Pet IA', t:'Pergunte qualquer coisa!', p:'O Dr. Pet IA usa Gemini 3.x para responder sobre saúde, alimentação e comportamento.'},
+    {tag:'Dr. Pet IA', t:'Pergunte qualquer coisa!', p:'O Dr. Pet IA usa Gemini para responder sobre saúde, alimentação e comportamento.'},
     {tag:'Backup', t:'Proteja os dados', p:'Exporte o arquivo JSON periodicamente.'},
     {tag:'Saúde preventiva', t:'Vacinas em dia salvam vidas', p:'Mantenha o protocolo atualizado.'}
   ];
@@ -2399,7 +2423,7 @@ function renderRacas(){
   const esp = state.especieRaca;
   const portes = esp === 'cao' ? ['todos','Pequeno','Médio','Grande','Variável'] : ['todos','Médio','Grande'];
   $('#chipsPorte').innerHTML = portes.map(p=>
-    `<button class="chip ${state.porteFiltro===p?'active':''}" onclick="setPorte('${p}')">${p==='todos'?'Todos':p}</button>`
+    `<button class="chip ${state.porteFiltro===p?'active':''}" onclick="setPorte('${p}')" type="button">${p==='todos'?'Todos':p}</button>`
   ).join('');
   renderRacasGrid();
 }
@@ -2414,7 +2438,7 @@ function renderRacasGrid(){
     return;
   }
   grid.innerHTML = lista.map((r,i)=>`
-    <button class="breed-card anim d${Math.min(i%4+1,4)}" onclick="abrirDetalheRaca('${r.id}')">
+    <button class="breed-card anim d${Math.min(i%4+1,4)}" onclick="abrirDetalheRaca('${r.id}')" type="button">
       <div class="breed-top">
         ${avatarRacaSVG(r.id, r.esp)}
         <span class="breed-emoji-badge">${r.emoji}</span>
@@ -2443,14 +2467,14 @@ function renderVacinas(){
   if(state.pets.length > 1){
     picker.innerHTML = `<div class="chips" style="margin-bottom:14px">
       ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}"
-        onclick="selecionarPet('${p.id}')">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
+        onclick="selecionarPet('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
     </div>`;
   } else picker.innerHTML = '';
   const pet = state.pets.find(p=>p.id === state.petSelecionado);
   const lista = PROTOCOLO[pet.especie] || [];
   const res = resumoVacinas(pet);
 
-  let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirCarteiraVacina('${pet.id}')">
+  let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirCarteiraVacina('${pet.id}')" type="button">
     <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-8 12H6v-2h6v2zm6-4H6v-2h12v2zm0-4H6V6h12v2z"/></svg>
     Abrir Carteira
   </button>`;
@@ -2501,7 +2525,7 @@ function renderVacinas(){
             <div class="vac-obs">${esc(v.obs)}</div>
             ${marcaHtml}
           </div>
-          <button class="check-btn ${st.status==='ok'?'done':''}" onclick="${st.status==='ok'?`desmarcarVacina('${pet.id}','${v.id}')`:`abrirModalAplicarVacina('${pet.id}','${v.id}')`}">
+          <button class="check-btn ${st.status==='ok'?'done':''}" onclick="${st.status==='ok'?`desmarcarVacina('${pet.id}','${v.id}')`:`abrirModalAplicarVacina('${pet.id}','${v.id}')`}" type="button">
             <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
           </button>
         </div>
@@ -2723,14 +2747,14 @@ function renderSaude(){
   }
   if(!state.petSelecionado || !state.pets.find(p=>p.id===state.petSelecionado)) state.petSelecionado = state.pets[0].id;
   subnav.innerHTML = `<div class="subnav">${SAUDE_SUBS.map(s=>
-    `<button class="subnav-btn ${state.saudeSub===s.id?'active':''}" onclick="setSaudeSub('${s.id}')">${s.label}</button>`
+    `<button class="subnav-btn ${state.saudeSub===s.id?'active':''}" onclick="setSaudeSub('${s.id}')" type="button">${s.label}</button>`
   ).join('')}</div>`;
   const pet = state.pets.find(p=>p.id === state.petSelecionado);
   let petPicker = '';
   if(state.pets.length > 1){
     petPicker = `<div class="chips" style="margin-bottom:14px">
       ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}"
-        onclick="selecionarPetSaude('${p.id}')">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
+        onclick="selecionarPetSaude('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
     </div>`;
   }
   let body = petPicker;
@@ -2857,7 +2881,7 @@ function secHist(titulo, lista, classe, icon, mapper, btnAdd, fnAdd){
         <div class="hc-title">${esc(d.title)}</div>
         ${d.sub?`<div class="hc-sub">${esc(d.sub)}</div>`:''}
       </div>
-      <button class="hc-del" onclick="${d.del}">
+      <button class="hc-del" onclick="${d.del}" type="button">
         <svg viewBox="0 0 24 24"><path d="M6 19a2 2 0 002 2h8a2 2 0 002-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
       </button>
     </div>`;
@@ -2877,7 +2901,7 @@ function renderSaudePrevencao(pet){
           <div class="hc-title">${esc(a.produto)}</div>
           <div class="hc-sub">📅 ${fmtData(a.data)}</div>
         </div>
-        <button class="hc-del" onclick="delAntipulgas('${pet.id}','${a.id}')">
+        <button class="hc-del" onclick="delAntipulgas('${pet.id}','${a.id}')" type="button">
           <svg viewBox="0 0 24 24"><path d="M6 19a2 2 0 002 2h8a2 2 0 002-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
         </button>
       </div>`).join('');
@@ -2958,7 +2982,7 @@ const GUIAS_SUBS = [
 ];
 function renderSaudeGuias(){
   if(!state.guiaSub) state.guiaSub = 'alimentos';
-  let html = `<div class="subnav">${GUIAS_SUBS.map(s=>`<button class="subnav-btn ${state.guiaSub===s.id?'active':''}" onclick="setGuiaSub('${s.id}')">${s.label}</button>`).join('')}</div>`;
+  let html = `<div class="subnav">${GUIAS_SUBS.map(s=>`<button class="subnav-btn ${state.guiaSub===s.id?'active':''}" onclick="setGuiaSub('${s.id}')" type="button">${s.label}</button>`).join('')}</div>`;
   if(state.guiaSub === 'alimentos') html += renderGuiaAlimentos();
   else if(state.guiaSub === 'sazonal') html += renderGuiaSazonal();
   else if(state.guiaSub === 'adestramento') html += renderGuiaAdestramento();
@@ -3052,7 +3076,7 @@ function renderRacoes(){
   if(state.pets.length > 1){
     html += `<div class="chips" style="margin-bottom:14px">
       ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}"
-        onclick="selecionarPetRacao('${p.id}')">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
+        onclick="selecionarPetRacao('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
     </div>`;
   }
   html += `<div class="card anim" style="margin-bottom:16px;background:linear-gradient(140deg,#fff,#FFF9EC);border-color:#FFE9BF">
@@ -3101,9 +3125,9 @@ function renderDoencas(){
   if(chipsEl){
     const riscosUnicos = ['todos', ...new Set(lista.map(d => d.risco))];
     chipsEl.innerHTML = riscosUnicos.map(r => {
-      if(r === 'todos') return `<button class="chip ${state.doencaRiscoFiltro === 'todos' ? 'active' : ''}" onclick="setDoencaRisco('todos')">Todas</button>`;
+      if(r === 'todos') return `<button class="chip ${state.doencaRiscoFiltro === 'todos' ? 'active' : ''}" onclick="setDoencaRisco('todos')" type="button">Todas</button>`;
       const info = RISCO_INFO[r];
-      return `<button class="chip ${state.doencaRiscoFiltro === r ? 'active' : ''}" onclick="setDoencaRisco('${r}')">${info.icone} ${info.label}</button>`;
+      return `<button class="chip ${state.doencaRiscoFiltro === r ? 'active' : ''}" onclick="setDoencaRisco('${r}')" type="button">${info.icone} ${info.label}</button>`;
     }).join('');
   }
   if(filtrada.length === 0){
@@ -3182,7 +3206,7 @@ function headPadrao(titulo, sub){
 }
 
 /* ============================================================
-   MODAIS AUXILIARES
+   MODAIS DE CADASTRO
 ============================================================ */
 let formPet = { id:null, nome:'', especie:'cao', raca:'', nascimento:'', sexo:'macho', peso:'', emoji:'🐕', foto:null };
 function abrirModalPet(petId){
@@ -3209,12 +3233,12 @@ function formPetHTML(){
   ${avatarHtml}
   <div class="field"><label>ESPÉCIE</label>
     <div class="species-pick">
-      <button class="species-opt ${formPet.especie==='cao'?'active':''}" onclick="setFormEspecie('cao')"><span class="sp-emoji">🐶</span><span class="sp-name">Cão</span></button>
-      <button class="species-opt ${formPet.especie==='gato'?'active':''}" onclick="setFormEspecie('gato')"><span class="sp-emoji">🐱</span><span class="sp-name">Gato</span></button>
+      <button class="species-opt ${formPet.especie==='cao'?'active':''}" onclick="setFormEspecie('cao')" type="button"><span class="sp-emoji">🐶</span><span class="sp-name">Cão</span></button>
+      <button class="species-opt ${formPet.especie==='gato'?'active':''}" onclick="setFormEspecie('gato')" type="button"><span class="sp-emoji">🐱</span><span class="sp-name">Gato</span></button>
     </div>
   </div>
   <div class="field"><label>AVATAR</label>
-    <div class="avatar-pick">${emojis.map(e=>`<button class="avatar-opt ${formPet.emoji===e?'active':''}" onclick="setFormEmoji('${e}')">${e}</button>`).join('')}</div>
+    <div class="avatar-pick">${emojis.map(e=>`<button class="avatar-opt ${formPet.emoji===e?'active':''}" onclick="setFormEmoji('${e}')" type="button">${e}</button>`).join('')}</div>
   </div>
   <div class="field"><label>NOME *</label><input class="input" id="fNome" value="${esc(formPet.nome)}" oninput="formPet.nome=this.value"></div>
   <div class="field"><label>RAÇA</label>
@@ -3306,7 +3330,7 @@ function abrirDetalhePet(id){
       <div class="spec"><div class="spec-l">Peso</div><div class="spec-v">${p.peso? esc(p.peso)+' kg':'—'}</div></div>
     </div>`;
   openModal(headPadrao('Ficha', 'Informações'), body,
-    `<button class="btn btn-soft" onclick="confirmarExcluir('${p.id}')" style="flex:0 0 52px;padding:13px">
+    `<button class="btn btn-soft" onclick="confirmarExcluir('${p.id}')" style="flex:0 0 52px;padding:13px" type="button">
        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:var(--danger)"><path d="M6 19a2 2 0 002 2h8a2 2 0 002-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
      </button>
      <button class="btn btn-soft" onclick="abrirModalPet('${p.id}')">Editar</button>
@@ -3635,9 +3659,8 @@ function salvarEscore(){
 function abrirModalAjuda(){
   openModal(headPadrao('Como usar o PetVida', 'Guia rápido'),
     `<div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
-      <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">🤖</span>Dr. Pet IA — Gemini 3.x</h4>
-      <p>Sua chave do novo formato <strong>AQ...</strong> está configurada. Toque em <strong>⚙️</strong> no chat e depois em <strong>🧪 Testar</strong> para validar.</p>
-      <p style="margin-top:8px">O app faz <strong>autodetecção</strong> dos modelos disponíveis e escolhe o melhor automaticamente.</p>
+      <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">🤖</span>Dr. Pet IA — Gemini</h4>
+      <p>Seu assistente veterinário com <strong>autodetecção de modelos</strong>. Toque no <strong>⚙️</strong> no chat e depois em <strong>🧪 Testar</strong>. O app descobre automaticamente os modelos disponíveis (gemini-3.6-flash, 3.5-flash, 3.1-pro, etc).</p>
     </div>
     <div class="blk"><h4><span class="b-ic">👆</span>Navegação</h4><p>Deslize o dedo para trocar de página.</p></div>
     <div class="blk"><h4><span class="b-ic">💾</span>Backup</h4><p>Exporte/importe dados no ícone no topo.</p></div>
@@ -3659,11 +3682,9 @@ function init(){
   atualizarHeader();
   atualizarFAB();
   atualizarBadgeBackup();
-  console.log('🐾 PetVida v8.4 iniciado');
-  console.log('🤖 Provedor:', iaConfig.provider);
-  console.log('📦 Modelo:', iaConfig.model || '(autodetecção)');
+  console.log('🐾 PetVida v9.0 iniciado');
+  console.log('🤖 IA:', iaConfig.provider, '· modelo:', iaConfig.model || '(autodetecção)');
   console.log('🔑 Chave:', (iaConfig.apiKey || '').slice(0, 25) + '...');
-  console.log('✨ Suporta modelos Gemini 3.x (3.5, 3.6 Flash, 3.1 Pro)');
 }
 init();
 
