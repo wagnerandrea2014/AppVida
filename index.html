@@ -42,6 +42,10 @@ ul{margin:0;padding:0;list-style:none}
 .icon-btn:active{transform:scale(.92);background:rgba(255,255,255,.32)}
 .icon-btn svg{width:19px;height:19px;fill:#fff}
 .icon-btn .badge-dot{position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:50%;background:#25C2B0;border:2px solid rgba(255,255,255,.9)}
+.icon-btn.cloud-on{background:rgba(74,222,128,.30)}
+.icon-btn.cloud-off{background:rgba(255,255,255,.20)}
+.icon-btn.cloud-sync{background:rgba(255,176,32,.35);animation:pulseCloud 1.4s infinite}
+@keyframes pulseCloud{0%,100%{opacity:1}50%{opacity:.6}}
 .hdr-stats{display:flex;gap:9px;margin-top:14px;position:relative;z-index:2}
 .stat{flex:1;background:rgba(255,255,255,.17);border-radius:14px;padding:9px 10px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.16)}
 .stat-n{font-size:17px;font-weight:800;line-height:1}
@@ -81,6 +85,7 @@ ul{margin:0;padding:0;list-style:none}
 .btn-danger{background:var(--danger-soft);color:var(--danger)}
 .btn-purple{background:linear-gradient(135deg,#9B5DE5,#B585F0);color:#fff;box-shadow:0 8px 20px rgba(155,93,229,.30)}
 .btn-success{background:linear-gradient(135deg,#25C2B0,#4AD4C3);color:#fff;box-shadow:0 8px 20px rgba(37,194,176,.30)}
+.btn-blue{background:linear-gradient(135deg,#4A7DFF,#6B9BFF);color:#fff;box-shadow:0 8px 20px rgba(74,125,255,.30)}
 .btn-sm{padding:10px 15px;font-size:12.5px;width:auto;border-radius:12px}
 .btn svg{width:17px;height:17px;fill:currentColor}
 .btn:disabled{opacity:.5;cursor:not-allowed}
@@ -252,46 +257,6 @@ ul{margin:0;padding:0;list-style:none}
 .up svg{width:17px;height:17px;fill:var(--primary)}
 .anim{animation:fadeUp .38s cubic-bezier(.32,.72,.28,1) both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.carteira{background:linear-gradient(180deg,#FFFFFF 0%,#FFFCF8 100%);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(27,36,52,.10);border:2px solid #FFE3D4;margin-bottom:16px}
-.carteira-header{background:linear-gradient(135deg,#FF7A45,#F0521B);padding:18px;color:#fff;position:relative;overflow:hidden}
-.carteira-header .ch-titulo{font-size:9.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;opacity:.85;position:relative;z-index:2}
-.carteira-header h3{margin:4px 0 0;font-size:19px;font-weight:800;position:relative;z-index:2}
-.carteira-header .ch-brasil{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:16px;z-index:2}
-.carteira-pet{padding:16px 18px;display:flex;align-items:center;gap:13px;border-bottom:2px dashed #FFE3D4}
-.carteira-pet .cp-avatar{width:60px;height:60px;border-radius:18px;flex-shrink:0;display:grid;place-items:center;font-size:30px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);border:2px solid #fff;overflow:hidden}
-.carteira-pet .cp-avatar img{width:100%;height:100%;object-fit:cover}
-.carteira-pet .cp-info{flex:1;min-width:0}
-.carteira-pet .cp-nome{font-size:17px;font-weight:800;color:#1B2434}
-.carteira-pet .cp-sub{font-size:11px;font-weight:700;color:var(--muted);margin-top:3px}
-.carteira-pet .cp-linha{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-.carteira-pet .cp-chip{font-size:9px;font-weight:800;padding:3px 7px;border-radius:6px;background:#F1F4F9;color:#66738A;text-transform:uppercase}
-.carteira-info{padding:14px 18px;display:grid;grid-template-columns:1fr 1fr;gap:10px;border-bottom:2px dashed #FFE3D4}
-.carteira-info .ci-item{display:flex;flex-direction:column;gap:3px}
-.carteira-info .ci-label{font-size:8.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
-.carteira-info .ci-valor{font-size:12.5px;font-weight:800;color:#1B2434}
-.carteira-secao{padding:14px 18px 4px}
-.carteira-secao .cs-titulo{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary-d);margin-bottom:10px;display:flex;align-items:center;gap:7px}
-.carteira-secao .cs-count{font-size:9px;background:var(--primary-soft);color:var(--primary-d);padding:3px 7px;border-radius:6px}
-.carteira-vac{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid #F4F6FB}
-.carteira-vac .cv-num{width:26px;height:26px;border-radius:9px;flex-shrink:0;display:grid;place-items:center;font-size:10px;font-weight:800;background:#F1F4F9;color:#66738A;margin-top:1px}
-.carteira-vac.aplicada .cv-num{background:var(--secondary);color:#fff}
-.carteira-vac.pendente .cv-num{background:var(--accent);color:#fff}
-.carteira-vac.atrasada .cv-num{background:var(--danger);color:#fff}
-.carteira-vac .cv-body{flex:1;min-width:0}
-.carteira-vac .cv-nome{font-size:12.5px;font-weight:800;color:#1B2434}
-.carteira-vac .cv-data{font-size:10.5px;font-weight:700;color:var(--muted);margin-top:3px}
-.carteira-vac .cv-marca{font-size:9.5px;font-weight:800;background:var(--purple-soft);color:#6B31B8;padding:3px 7px;border-radius:6px;margin-top:5px;display:inline-block}
-.carteira-vac .cv-status{font-size:8.5px;font-weight:800;padding:3px 7px;border-radius:6px;text-transform:uppercase;flex-shrink:0}
-.carteira-vac.aplicada .cv-status{background:var(--secondary-soft);color:#12897A}
-.carteira-vac.pendente .cv-status{background:var(--accent-soft);color:#B47800}
-.carteira-vac.atrasada .cv-status{background:var(--danger-soft);color:#C42B50}
-.carteira-assinatura{padding:16px 18px;background:#FBFCFE;display:flex;flex-direction:column;gap:14px}
-.carteira-assinatura .ca-txt{font-size:8.5px;font-weight:800;color:var(--muted);text-transform:uppercase;margin-bottom:22px}
-.carteira-assinatura .ca-trace{border-bottom:1.5px dashed #C7CFDD;padding-bottom:4px;font-size:9px;color:#A9B3C4;text-align:center}
-.carteira-rodape{padding:11px 18px;background:linear-gradient(135deg,#FFF6F0,#FFF0E8);border-top:1px solid #FFE3D4;display:flex;align-items:center;justify-content:space-between;font-size:9px;font-weight:800;color:var(--primary-d);text-transform:uppercase}
-.carteira-rodape .cr-app{display:flex;align-items:center;gap:6px}
-.carteira-rodape .cr-logo{width:16px;height:16px;border-radius:5px;background:linear-gradient(135deg,#FF7A45,#F0521B);display:grid;place-items:center;font-size:9px}
-.carteira-alerta{background:linear-gradient(140deg,#FFF6F0,#FFF0E8);border:1.5px solid #FFE3D4;border-radius:14px;padding:11px 13px;font-size:11px;line-height:1.55;color:#8A6A55;font-weight:600;margin-bottom:14px;display:flex;gap:9px}
 .foto-upload-wrap{position:relative;width:130px;margin:0 auto 14px}
 .foto-upload{position:relative;display:grid;place-items:center;width:130px;height:130px;border-radius:36px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);font-size:60px;border:3px solid #fff;box-shadow:0 8px 20px rgba(240,90,30,.18);cursor:pointer;overflow:hidden;transition:transform .15s ease}
 .foto-upload:active{transform:scale(.96)}
@@ -320,21 +285,6 @@ ul{margin:0;padding:0;list-style:none}
 .album-tl-label{font-size:11px;font-weight:800;color:var(--primary-d);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
 .album-tl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .album-tl-grid .album-item{border-radius:11px}
-.id-digital{background:linear-gradient(160deg,#1F2A3D,#2B3A52);border-radius:22px;padding:20px;color:#fff;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(19,25,38,.30);margin-bottom:16px}
-.id-digital .idd-top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2;margin-bottom:14px}
-.id-digital .idd-titulo{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.60)}
-.id-digital .idd-logo{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#FF7A45,#F0521B);display:grid;place-items:center;font-size:16px}
-.id-digital .idd-nome{font-size:22px;font-weight:800;color:#fff;position:relative;z-index:2;margin-bottom:4px}
-.id-digital .idd-sub{font-size:11.5px;color:rgba(255,255,255,.65);font-weight:600;position:relative;z-index:2;margin-bottom:16px}
-.id-digital .idd-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:2;margin-bottom:16px}
-.id-digital .idd-item{background:rgba(255,255,255,.07);border-radius:12px;padding:10px 12px}
-.id-digital .idd-item-l{font-size:8.5px;font-weight:800;text-transform:uppercase;color:rgba(255,255,255,.50)}
-.id-digital .idd-item-v{font-size:13px;font-weight:800;margin-top:3px;color:#fff}
-.id-digital .idd-qr{position:relative;z-index:2;background:#fff;padding:12px;border-radius:14px;display:flex;align-items:center;gap:12px;color:#1B2434}
-.id-digital .idd-qr-pattern{width:74px;height:74px;flex-shrink:0;border-radius:8px;background:#1B2434;display:grid;place-items:center;padding:4px}
-.id-digital .idd-qr-code{font-size:14px;font-weight:800;color:#1B2434;font-family:'Courier New',monospace}
-.id-digital .idd-qr-txt{font-size:9.5px;color:#66738A;font-weight:600;margin-top:3px}
-.id-digital .idd-footer{position:relative;z-index:2;margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.15);font-size:9.5px;color:rgba(255,255,255,.55);font-weight:600;display:flex;justify-content:space-between}
 .hist-card{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;position:relative;display:flex;gap:11px}
 .hist-card .hc-icon{width:38px;height:38px;border-radius:12px;flex-shrink:0;display:grid;place-items:center;font-size:17px}
 .hist-card .hc-body{flex:1;min-width:0}
@@ -348,104 +298,6 @@ ul{margin:0;padding:0;list-style:none}
 .hist-card.tipo-cirurgia .hc-icon{background:var(--danger-soft);color:#C42B50}
 .hist-card.tipo-alergia .hc-icon{background:var(--secondary-soft);color:#12897A}
 .hist-card.tipo-antipulgas .hc-icon{background:#FFE9DC;color:#F05A1E}
-.escore-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:14px 0}
-.escore-opt{padding:9px 4px;border-radius:12px;text-align:center;background:#F1F4F9;border:2px solid transparent;cursor:pointer}
-.escore-opt.active{border-color:var(--primary);background:var(--primary-soft)}
-.escore-opt .eo-emoji{font-size:22px;display:block;margin-bottom:4px}
-.escore-opt .eo-num{font-size:10px;font-weight:800;color:#66738A}
-.diario-item{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px}
-.diario-item .di-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
-.diario-item .di-humor{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#1B2434}
-.diario-item .di-humor .di-emoji{font-size:20px}
-.diario-item .di-data{font-size:10.5px;font-weight:800;color:var(--muted)}
-.diario-item .di-nota{font-size:12.5px;color:#4C5768;line-height:1.55;margin:0}
-.humor-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-bottom:14px}
-.humor-opt{padding:11px 4px;border-radius:14px;text-align:center;background:#F1F4F9;border:2px solid transparent;cursor:pointer}
-.humor-opt.active{border-color:var(--primary);background:var(--primary-soft)}
-.humor-opt .ho-emoji{font-size:22px;display:block;margin-bottom:4px}
-.humor-opt .ho-lbl{font-size:9px;font-weight:800;color:#66738A;text-transform:uppercase}
-.tutor-card{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;display:flex;align-items:center;gap:12px}
-.tutor-card .tc-avatar{width:46px;height:46px;border-radius:15px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);display:grid;place-items:center;font-size:22px;flex-shrink:0}
-.tutor-card .tc-nome{font-size:14px;font-weight:800}
-.tutor-card .tc-role{font-size:10.5px;font-weight:800;color:var(--primary-d);text-transform:uppercase;margin-top:2px}
-.tutor-card .tc-contato{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:4px}
-.ps-list{display:flex;flex-direction:column;gap:10px}
-.ps-item{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
-.ps-head{padding:14px;display:flex;align-items:center;gap:11px;cursor:pointer}
-.ps-head .ps-emoji{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:18px;background:var(--danger-soft);flex-shrink:0}
-.ps-head .ps-title{flex:1;font-size:13.5px;font-weight:800}
-.ps-head .ps-arrow{width:18px;height:18px;fill:#C7CFDD;transition:transform .25s ease}
-.ps-item.open .ps-arrow{transform:rotate(180deg)}
-.ps-body{padding:0 14px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
-.ps-item.open .ps-body{max-height:1400px;padding:0 14px 16px}
-.ps-body h5{font-size:11.5px;font-weight:800;color:var(--primary-d);text-transform:uppercase;margin:12px 0 6px}
-.ps-body ul li{font-size:12.5px;color:#4C5768;padding:4px 0 4px 16px;position:relative;line-height:1.5}
-.ps-body ul li::before{content:"•";position:absolute;left:4px;color:var(--primary);font-weight:800}
-.ps-body .ps-warn{background:var(--danger-soft);border-radius:10px;padding:10px 12px;font-size:11.5px;font-weight:700;color:#C42B50;line-height:1.5;margin-top:10px}
-.alim-cat{margin-bottom:16px}
-.alim-cat h4{font-size:12.5px;font-weight:800;text-transform:uppercase;color:var(--primary-d);margin:0 0 9px}
-.alim-item{background:#fff;border-radius:12px;padding:11px 13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:7px;display:flex;gap:10px}
-.alim-item .ai-icon{font-size:18px;flex-shrink:0}
-.alim-item .ai-nome{font-size:12.5px;font-weight:800;color:#1B2434}
-.alim-item .ai-nota{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
-.alim-item.permitido{border-left:3px solid var(--secondary)}
-.alim-item.perigoso{border-left:3px solid var(--accent)}
-.alim-item.toxico{border-left:3px solid var(--danger)}
-.marca-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
-.marca-chip{padding:7px 12px;border-radius:10px;font-size:11.5px;font-weight:800;background:#F1F4F9;color:#5A6478;border:2px solid transparent;cursor:pointer}
-.marca-chip.active{background:var(--purple-soft);border-color:var(--purple);color:#6B31B8}
-.recomendacao-card{background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border:1.5px solid #C7E8E2;border-radius:14px;padding:12px;margin-bottom:14px}
-.recomendacao-card .rc-head{display:flex;align-items:center;gap:8px;margin-bottom:7px}
-.recomendacao-card .rc-titulo{font-size:11.5px;font-weight:800;color:#12897A;text-transform:uppercase}
-.recomendacao-card p{margin:0;font-size:11.5px;color:#2C7A70;line-height:1.55;font-weight:600}
-.idade-hero{background:linear-gradient(160deg,#FF8A5B,#F0521B);border-radius:22px;padding:22px;color:#fff;text-align:center;margin-bottom:16px;position:relative;overflow:hidden}
-.idade-hero .ih-tag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,.20);padding:5px 11px;border-radius:9px;margin-bottom:12px;position:relative;z-index:2}
-.idade-hero .ih-emoji{font-size:42px;display:block;margin-bottom:8px;position:relative;z-index:2}
-.idade-hero .ih-animal{font-size:28px;font-weight:800;position:relative;z-index:2;margin-bottom:4px}
-.idade-hero .ih-humano{font-size:14px;font-weight:700;color:rgba(255,255,255,.88);position:relative;z-index:2}
-.idade-hero .ih-humano strong{font-size:18px;font-weight:800;color:#fff}
-.idade-hero .ih-faixa{display:inline-block;font-size:10.5px;font-weight:800;text-transform:uppercase;background:rgba(255,255,255,.22);padding:5px 12px;border-radius:9px;margin-top:14px;position:relative;z-index:2}
-.rec-idade{margin-bottom:12px;background:#fff;border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
-.rec-idade .re-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}
-.rec-idade .re-ic{width:32px;height:32px;border-radius:11px;display:grid;place-items:center;font-size:15px;flex-shrink:0}
-.rec-idade .re-titulo{font-size:13px;font-weight:800}
-.rec-idade ul li{display:flex;gap:8px;padding:5px 0;font-size:12px;color:#4C5768;line-height:1.5}
-.rec-idade ul li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:7px}
-.doenca-card{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:11px;cursor:pointer}
-.doenca-top{padding:14px;display:flex;align-items:center;gap:11px}
-.doenca-emoji{font-size:28px;flex-shrink:0;width:40px;text-align:center}
-.doenca-info{flex:1;min-width:0}
-.doenca-nome{font-size:14.5px;font-weight:800;line-height:1.25}
-.doenca-tipo{font-size:11px;color:var(--muted);font-weight:700;margin-top:3px}
-.doenca-risco-badge{font-size:9.5px;font-weight:800;padding:5px 10px;border-radius:9px;text-transform:uppercase;flex-shrink:0;white-space:nowrap}
-.doenca-body{padding:0 14px 14px}
-.doenca-desc{font-size:12px;color:#4C5768;line-height:1.55;margin-bottom:9px}
-.doenca-mortalidade{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;padding-top:9px;border-top:1px solid var(--line)}
-.dm-label{color:var(--muted)}
-.doenca-hero{border-radius:20px;padding:22px;text-align:center;margin-bottom:16px}
-.doenca-hero-emoji{font-size:48px;margin-bottom:10px}
-.doenca-hero h2{margin:0 0 6px;font-size:20px;font-weight:800}
-.doenca-hero-tipo{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px}
-.doenca-hero-badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.dh-badge{font-size:10.5px;font-weight:800;padding:6px 13px;border-radius:10px;text-transform:uppercase}
-.doenca-fonte{text-align:center;font-size:10px;font-weight:700;color:var(--muted);padding:8px 0;margin-bottom:8px}
-.backup-status{background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border:1.5px solid #C7E8E2;border-radius:16px;padding:14px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
-.backup-status .bs-ic{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#25C2B0,#4AD4C3);display:grid;place-items:center;font-size:20px;flex-shrink:0;color:#fff}
-.backup-status .bs-titulo{font-size:12px;font-weight:800;color:#12897A;text-transform:uppercase}
-.backup-status .bs-info{font-size:11.5px;color:#2C7A70;font-weight:700;margin-top:4px;line-height:1.4}
-.backup-opt{display:flex;align-items:center;gap:12px;padding:14px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;cursor:pointer;text-align:left;width:100%}
-.backup-opt .bo-ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
-.backup-opt .bo-titulo{font-size:13.5px;font-weight:800}
-.backup-opt .bo-desc{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:3px}
-.backup-opt .bo-arrow{color:#C7CFDD}
-.backup-opt .bo-arrow svg{width:18px;height:18px;fill:currentColor}
-.backup-hist{background:#fff;border-radius:var(--radius-sm);padding:12px 13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;display:flex;align-items:center;gap:12px}
-.backup-hist .bh-ic{width:38px;height:38px;border-radius:12px;background:var(--primary-soft);display:grid;place-items:center;font-size:16px;flex-shrink:0}
-.backup-hist .bh-data{font-size:12.5px;font-weight:800}
-.backup-hist .bh-info{font-size:10.5px;color:var(--muted);font-weight:600;margin-top:3px}
-.backup-hist .bh-btn{padding:7px 11px;border-radius:10px;font-size:10.5px;font-weight:800;background:var(--primary-soft);color:var(--primary-d);flex-shrink:0;cursor:pointer}
-.backup-hist .bh-btn.del{background:var(--danger-soft);color:var(--danger);padding:7px 9px}
-.backup-hist .bh-btn.del svg{width:13px;height:13px;fill:currentColor}
 .chat-wrap{display:flex;flex-direction:column;height:100%;background:linear-gradient(180deg,#F8F9FD 0%,#F4F6FB 100%)}
 .chat-header{padding:14px 16px 12px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;position:relative;overflow:hidden;flex-shrink:0}
 .chat-header::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.10)}
@@ -523,6 +375,25 @@ ul{margin:0;padding:0;list-style:none}
 .api-badge.ok{background:var(--secondary-soft);color:#12897A}
 .api-badge.err{background:var(--danger-soft);color:#C42B50}
 .api-badge.warn{background:var(--accent-soft);color:#B47800}
+/* Firebase sync modal */
+.sync-status-card{background:linear-gradient(140deg,#EAF0FF,#DCE6FF);border:1.5px solid #C4D5FF;border-radius:16px;padding:14px;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.sync-status-card.on{background:linear-gradient(140deg,#E4F8F5,#D0F2EB);border-color:#A8E4D8}
+.sync-status-card.off{background:linear-gradient(140deg,#FFF6E2,#FFEFD0);border-color:#FFE4B5}
+.sync-status-card .ss-ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:20px;flex-shrink:0;color:#fff}
+.sync-status-card.on .ss-ic{background:linear-gradient(135deg,#25C2B0,#4AD4C3)}
+.sync-status-card.off .ss-ic{background:linear-gradient(135deg,#FFB020,#FFC94A)}
+.sync-status-card .ss-titulo{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
+.sync-status-card.on .ss-titulo{color:#12897A}
+.sync-status-card.off .ss-titulo{color:#B47800}
+.sync-status-card .ss-info{font-size:11.5px;font-weight:700;margin-top:4px;line-height:1.4}
+.sync-status-card.on .ss-info{color:#2C7A70}
+.sync-status-card.off .ss-info{color:#8A6420}
+.auth-tabs{display:flex;gap:5px;background:#E9EDF5;border-radius:14px;padding:4px;margin-bottom:14px}
+.auth-tabs button{flex:1;padding:9px 8px;border-radius:11px;font-size:12px;font-weight:800;color:#7B879C;cursor:pointer}
+.auth-tabs button.active{background:#fff;color:var(--primary-d);box-shadow:0 3px 10px rgba(27,36,52,.10)}
+.auth-msg{padding:11px 13px;border-radius:12px;font-size:12px;font-weight:700;margin-top:10px;line-height:1.5}
+.auth-msg.err{background:var(--danger-soft);color:#C42B50}
+.auth-msg.ok{background:var(--secondary-soft);color:#12897A}
 @media(max-width:340px){
   .quick span{font-size:8.5px}
   .tab span{font-size:8px}
@@ -541,14 +412,17 @@ ul{margin:0;padding:0;list-style:none}
           <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4 5 7c0 1.6 1 3 2.5 3.8C5.6 12 4 14 4 16.5 4 19.5 7.5 22 12 22s8-2.5 8-5.5c0-2.5-1.6-4.5-3.5-5.7C18 10 19 8.6 19 7c0-3-3-5-7-5z"/></svg>
         </div>
         <div>
-          <div class="hdr-title">PetVida <span class="hdr-version" id="hdrVersion">v9.2</span></div>
+          <div class="hdr-title">PetVida <span class="hdr-version" id="hdrVersion">v9.3</span></div>
           <div class="hdr-sub" id="hdrSub">Cuide bem do seu melhor amigo</div>
         </div>
       </div>
       <div class="hdr-actions">
+        <button class="icon-btn" onclick="abrirModalSync()" aria-label="Nuvem" id="btnCloud">
+          <svg viewBox="0 0 24 24"><path d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+          <span class="badge-dot" id="badgeCloud" style="display:none"></span>
+        </button>
         <button class="icon-btn" onclick="abrirModalBackup()" aria-label="Backup" id="btnBackup">
           <svg viewBox="0 0 24 24"><path d="M19 12v7H5v-7H3v7a2 2 0 002 2h14a2 2 0 002-2v-7h-2zm-6 .67l2.59-2.58L17 11.5l-5 5-5-5 1.41-1.41L11 12.67V3h2z"/></svg>
-          <span class="badge-dot" id="badgeBackup" style="display:none"></span>
         </button>
         <button class="icon-btn" onclick="abrirModalAjuda()" aria-label="Ajuda">
           <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm1.8-7.1l-.9.9c-.7.7-1 1.2-1 2.2h-2v-.5c0-1 .4-1.9 1.1-2.6l1.2-1.3c.4-.3.6-.8.6-1.3a2 2 0 10-4 0H8a4 4 0 118 0c0 .8-.3 1.5-.9 2.1z"/></svg>
@@ -615,7 +489,7 @@ ul{margin:0;padding:0;list-style:none}
               <div class="ia-status"><span id="iaStatusDot" class="ia-dot-warn"></span> <span id="iaStatus">Iniciando...</span></div>
             </div>
             <div class="chat-header-actions">
-              <button onclick="abrirModalConfigIA()" aria-label="Configurações" id="btnConfigIA" type="button">
+              <button onclick="abrirModalConfigIA()" aria-label="Configurações" type="button">
                 <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.48.48 0 00-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.57 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1112 8.4a3.6 3.6 0 010 7.2z"/></svg>
               </button>
               <button onclick="limparChat()" aria-label="Limpar" type="button">
@@ -698,15 +572,27 @@ ul{margin:0;padding:0;list-style:none}
 
 <script>
 /* ============================================================
-   CONFIGURAÇÃO — IA GEMINI (USO PESSOAL, SEM RESTRIÇÕES)
+   CONFIGURAÇÃO GLOBAL
 ============================================================ */
-const APP_VERSION = 'v9.2';
-const APP_VERSION_DATE = '2025-01-16';
+const APP_VERSION = 'v9.3';
+const APP_VERSION_DATE = '2025-01-17';
+
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyASdpnMWSeVFPGkzGZoSmk0Kxq6JI9gsqM",
+  authDomain: "petvida-3f314.firebaseapp.com",
+  projectId: "petvida-3f314",
+  storageBucket: "petvida-3f314.firebasestorage.app",
+  messagingSenderId: "417546126495",
+  appId: "1:417546126495:web:81dc230ea812e035a24eaa",
+  measurementId: "G-3PZV05WK9X"
+};
 
 const IA_CONFIG_KEY = 'petvida_ia_config_v5';
 const DB_KEY = 'petvida_v9';
 const BACKUP_KEY = 'petvida_backups';
 const CHAT_HISTORY_KEY = 'petvida_chat_history';
+const FB_AUTH_KEY = 'petvida_fb_auth';
+const FB_SYNC_KEY = 'petvida_fb_sync';
 const MAX_AUTO_BACKUPS = 5;
 
 const GEMINI_API_KEY_PADRAO = 'AQ.Ab8RN6KvN127QdAWcwXuH2i32b0n1OMUoDjPwsM3dHufUN45WQ';
@@ -718,6 +604,21 @@ let iaConfig = {
   status: 'desconhecido'
 };
 
+let fbAuth = {
+  uid: null,
+  idToken: null,
+  email: null,
+  refreshToken: null,
+  expiresAt: 0,
+  isAnonymous: true
+};
+
+let fbSync = {
+  ultimoUpload: null,
+  ultimoDownload: null,
+  autoSync: true
+};
+
 let state = {
   pets: [], currentPage: 0, especieRaca: 'cao', buscaRaca: '', porteFiltro: 'todos',
   petSelecionado: null, saudeSub: 'visao', saudeBusca: '', guiaSub: 'alimentos',
@@ -726,14 +627,21 @@ let state = {
   chat: [], chatTyping: false
 };
 
+let autoSyncTimer = null;
+
 /* ============================================================
-   PERSISTÊNCIA
+   PERSISTÊNCIA LOCAL
 ============================================================ */
 function saveDB(){
   try{
     state.ultimaAtualizacao = new Date().toISOString();
     localStorage.setItem(DB_KEY, JSON.stringify({pets: state.pets, ultimaAtualizacao: state.ultimaAtualizacao}));
     atualizarBadgeBackup();
+    // Auto-upload para nuvem (debounce 20s)
+    if(fbSync.autoSync && fbAuth.uid){
+      clearTimeout(autoSyncTimer);
+      autoSyncTimer = setTimeout(()=> { enviarParaNuvem(true); }, 20000);
+    }
   }catch(e){
     console.error('Erro ao salvar:', e);
     if(String(e).indexOf('QuotaExceeded') !== -1){
@@ -787,7 +695,622 @@ function loadChatHistory(){
 }
 
 /* ============================================================
-   BACKUP
+   🔥 FIREBASE AUTH (REST API)
+============================================================ */
+function loadFbAuth(){
+  try{
+    const raw = localStorage.getItem(FB_AUTH_KEY);
+    if(raw) fbAuth = {...fbAuth, ...JSON.parse(raw)};
+  }catch(e){}
+}
+function saveFbAuth(){
+  try{
+    if(fbAuth.uid) localStorage.setItem(FB_AUTH_KEY, JSON.stringify(fbAuth));
+    else localStorage.removeItem(FB_AUTH_KEY);
+  }catch(e){}
+}
+function loadFbSync(){
+  try{
+    const raw = localStorage.getItem(FB_SYNC_KEY);
+    if(raw) fbSync = {...fbSync, ...JSON.parse(raw)};
+  }catch(e){}
+}
+function saveFbSync(){
+  try{ localStorage.setItem(FB_SYNC_KEY, JSON.stringify(fbSync)); }catch(e){}
+}
+
+function traduzErroAuth(msg){
+  const m = {
+    'EMAIL_EXISTS': 'Este e-mail já está cadastrado',
+    'EMAIL_NOT_FOUND': 'E-mail não encontrado',
+    'INVALID_PASSWORD': 'Senha incorreta',
+    'INVALID_EMAIL': 'E-mail inválido',
+    'WEAK_PASSWORD': 'Senha muito fraca (mínimo 6 caracteres)',
+    'INVALID_LOGIN_CREDENTIALS': 'E-mail ou senha incorretos',
+    'TOO_MANY_ATTEMPTS_TRY_LATER': 'Muitas tentativas. Aguarde alguns minutos',
+    'USER_DISABLED': 'Conta desativada'
+  };
+  return m[msg] || msg || 'Erro ao autenticar';
+}
+
+async function fbLoginAnonimo(){
+  const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FIREBASE_CONFIG.apiKey}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({returnSecureToken: true})
+  });
+  if(!res.ok){
+    const err = await res.json();
+    throw new Error(traduzErroAuth(err.error?.message || 'Erro no login anônimo'));
+  }
+  const data = await res.json();
+  fbAuth = {
+    uid: data.localId,
+    idToken: data.idToken,
+    email: null,
+    refreshToken: data.refreshToken,
+    expiresAt: Date.now() + (parseInt(data.expiresIn) - 60) * 1000,
+    isAnonymous: true
+  };
+  saveFbAuth();
+  return fbAuth;
+}
+
+async function fbCriarConta(email, senha){
+  const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${FIREBASE_CONFIG.apiKey}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email, password: senha, returnSecureToken: true})
+  });
+  if(!res.ok){
+    const err = await res.json();
+    throw new Error(traduzErroAuth(err.error?.message || 'Erro ao criar conta'));
+  }
+  const data = await res.json();
+  fbAuth = {
+    uid: data.localId,
+    idToken: data.idToken,
+    email: email,
+    refreshToken: data.refreshToken,
+    expiresAt: Date.now() + (parseInt(data.expiresIn) - 60) * 1000,
+    isAnonymous: false
+  };
+  saveFbAuth();
+  return fbAuth;
+}
+
+async function fbEntrar(email, senha){
+  const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_CONFIG.apiKey}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email, password: senha, returnSecureToken: true})
+  });
+  if(!res.ok){
+    const err = await res.json();
+    throw new Error(traduzErroAuth(err.error?.message || 'Erro ao entrar'));
+  }
+  const data = await res.json();
+  fbAuth = {
+    uid: data.localId,
+    idToken: data.idToken,
+    email: email,
+    refreshToken: data.refreshToken,
+    expiresAt: Date.now() + (parseInt(data.expiresIn) - 60) * 1000,
+    isAnonymous: false
+  };
+  saveFbAuth();
+  return fbAuth;
+}
+
+async function fbRefreshToken(){
+  if(!fbAuth.refreshToken) return false;
+  try{
+    const url = `https://securetoken.googleapis.com/v1/token?key=${FIREBASE_CONFIG.apiKey}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: `grant_type=refresh_token&refresh_token=${encodeURIComponent(fbAuth.refreshToken)}`
+    });
+    if(!res.ok) return false;
+    const data = await res.json();
+    fbAuth.idToken = data.id_token;
+    fbAuth.refreshToken = data.refresh_token;
+    fbAuth.expiresAt = Date.now() + (parseInt(data.expires_in) - 60) * 1000;
+    saveFbAuth();
+    return true;
+  }catch(e){ return false; }
+}
+
+function fbSair(){
+  fbAuth = {uid:null, idToken:null, email:null, refreshToken:null, expiresAt:0, isAnonymous:true};
+  saveFbAuth();
+  toast('Desconectado da nuvem');
+}
+
+async function fbGarantirToken(){
+  if(!fbAuth.uid) return false;
+  if(Date.now() > fbAuth.expiresAt - 30000){
+    const ok = await fbRefreshToken();
+    if(!ok){ fbSair(); return false; }
+  }
+  return !!fbAuth.idToken;
+}
+
+/* ============================================================
+   🔥 FIRESTORE REST
+============================================================ */
+function paraFirestore(valor){
+  if(valor === null || valor === undefined) return {nullValue: null};
+  if(typeof valor === 'string') return {stringValue: valor};
+  if(typeof valor === 'number'){
+    if(Number.isInteger(valor)) return {integerValue: String(valor)};
+    return {doubleValue: valor};
+  }
+  if(typeof valor === 'boolean') return {booleanValue: valor};
+  if(Array.isArray(valor)) return {arrayValue: {values: valor.map(paraFirestore)}};
+  if(typeof valor === 'object'){
+    const fields = {};
+    for(const k in valor){
+      if(valor[k] !== undefined) fields[k] = paraFirestore(valor[k]);
+    }
+    return {mapValue: {fields}};
+  }
+  return {nullValue: null};
+}
+function deFirestore(valor){
+  if(!valor) return null;
+  if('nullValue' in valor) return null;
+  if('stringValue' in valor) return valor.stringValue;
+  if('integerValue' in valor) return parseInt(valor.integerValue);
+  if('doubleValue' in valor) return valor.doubleValue;
+  if('booleanValue' in valor) return valor.booleanValue;
+  if('timestampValue' in valor) return valor.timestampValue;
+  if('arrayValue' in valor){
+    const values = valor.arrayValue.values || [];
+    return values.map(deFirestore);
+  }
+  if('mapValue' in valor){
+    const obj = {};
+    const fields = valor.mapValue.fields || {};
+    for(const k in fields) obj[k] = deFirestore(fields[k]);
+    return obj;
+  }
+  return null;
+}
+function objetoParaFirestore(obj){
+  const fields = {};
+  for(const k in obj){
+    if(obj[k] !== undefined) fields[k] = paraFirestore(obj[k]);
+  }
+  return {fields};
+}
+function firestoreParaObjeto(doc){
+  if(!doc || !doc.fields) return null;
+  const obj = {};
+  for(const k in doc.fields) obj[k] = deFirestore(doc.fields[k]);
+  return obj;
+}
+function firestoreBaseUrl(){
+  return `https://firestore.googleapis.com/v1/projects/${FIREBASE_CONFIG.projectId}/databases/(default)/documents`;
+}
+
+async function fsSet(colecao, docId, data){
+  if(!await fbGarantirToken()) throw new Error('Sessão expirada');
+  const url = `${firestoreBaseUrl()}/${colecao}/${docId}`;
+  const res = await fetch(url, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + fbAuth.idToken
+    },
+    body: JSON.stringify(objetoParaFirestore(data))
+  });
+  if(!res.ok){
+    const t = await res.text();
+    console.error('fsSet erro:', res.status, t);
+    if(res.status === 401 || res.status === 403) throw new Error('Sem permissão (regras do Firestore)');
+    throw new Error('Erro ' + res.status);
+  }
+  return await res.json();
+}
+
+async function fsGet(colecao, docId){
+  if(!await fbGarantirToken()) throw new Error('Sessão expirada');
+  const url = `${firestoreBaseUrl()}/${colecao}/${docId}`;
+  const res = await fetch(url, {headers: {'Authorization': 'Bearer ' + fbAuth.idToken}});
+  if(res.status === 404) return null;
+  if(!res.ok) throw new Error('Erro ' + res.status);
+  const data = await res.json();
+  return firestoreParaObjeto(data);
+}
+
+async function fsList(colecao){
+  if(!await fbGarantirToken()) throw new Error('Sessão expirada');
+  const url = `${firestoreBaseUrl()}/${colecao}?pageSize=300`;
+  const res = await fetch(url, {headers: {'Authorization': 'Bearer ' + fbAuth.idToken}});
+  if(!res.ok) throw new Error('Erro ' + res.status);
+  const data = await res.json();
+  if(!data.documents) return [];
+  return data.documents.map(d => ({
+    id: d.name.split('/').pop(),
+    ...firestoreParaObjeto(d)
+  }));
+}
+
+async function fsDelete(colecao, docId){
+  if(!await fbGarantirToken()) return false;
+  const url = `${firestoreBaseUrl()}/${colecao}/${docId}`;
+  const res = await fetch(url, {
+    method: 'DELETE',
+    headers: {'Authorization': 'Bearer ' + fbAuth.idToken}
+  });
+  return res.ok;
+}
+
+/* ============================================================
+   ☁️ SINCRONIZAÇÃO — HÍBRIDO INTELIGENTE
+============================================================ */
+function atualizarBadgeCloud(){
+  const btn = $('#btnCloud');
+  if(!btn) return;
+  btn.classList.remove('cloud-on','cloud-off','cloud-sync');
+  if(!fbAuth.uid){
+    btn.classList.add('cloud-off');
+    $('#badgeCloud').style.display = 'none';
+    return;
+  }
+  if(fbAuth.isAnonymous){
+    btn.classList.add('cloud-on');
+    $('#badgeCloud').style.display = 'none';
+  } else {
+    btn.classList.add('cloud-on');
+    $('#badgeCloud').style.display = 'none';
+  }
+}
+
+async function enviarParaNuvem(silencioso){
+  if(!fbAuth.uid){ if(!silencioso) toast('Conecte-se à nuvem primeiro'); return; }
+  if(!navigator.onLine){ if(!silencioso) toast('Sem internet'); return; }
+  const uid = fbAuth.uid;
+  if(!silencioso) toast('☁️ Enviando...');
+  $('#btnCloud').classList.add('cloud-sync');
+  try{
+    // 1. Envia cada pet (sem álbum - fica em coleção separada)
+    const petsSemAlbum = state.pets.map(p => {
+      const copia = {...p};
+      delete copia.album;
+      return copia;
+    });
+    await fsSet(`users/${uid}/data`, 'pets', {pets: petsSemAlbum});
+
+    // 2. Envia álbum completo em um único doc (para simplificar)
+    const albuns = {};
+    state.pets.forEach(p => {
+      if(p.album && p.album.length > 0) albuns[p.id] = p.album;
+    });
+    await fsSet(`users/${uid}/data`, 'album', {albuns});
+
+    // 3. Metadata
+    await fsSet(`users/${uid}/data`, 'meta', {
+      versao: APP_VERSION,
+      ultimaAtualizacao: new Date().toISOString(),
+      qtdPets: state.pets.length,
+      email: fbAuth.email || 'anônimo'
+    });
+
+    fbSync.ultimoUpload = new Date().toISOString();
+    saveFbSync();
+    atualizarBadgeCloud();
+    if(!silencioso) toast('✅ Enviado para nuvem!');
+  }catch(e){
+    console.error('Erro upload:', e);
+    if(!silencioso) toast('❌ ' + e.message);
+  }finally{
+    $('#btnCloud').classList.remove('cloud-sync');
+  }
+}
+
+async function baixarDaNuvem(silencioso){
+  if(!fbAuth.uid){ if(!silencioso) toast('Conecte-se à nuvem primeiro'); return; }
+  if(!navigator.onLine){ if(!silencioso) toast('Sem internet'); return; }
+  const uid = fbAuth.uid;
+  if(!silencioso) toast('☁️ Baixando...');
+  $('#btnCloud').classList.add('cloud-sync');
+  try{
+    const petsDoc = await fsGet(`users/${uid}/data`, 'pets');
+    const albumDoc = await fsGet(`users/${uid}/data`, 'album');
+
+    if(!petsDoc || !petsDoc.pets || petsDoc.pets.length === 0){
+      if(!silencioso) toast('Nuvem vazia');
+      return false;
+    }
+
+    if(!silencioso){
+      const ok = await confirmarAcao('Baixar da nuvem', 'Os dados locais serão substituídos pelos da nuvem. Continuar?');
+      if(!ok) return false;
+    }
+
+    fazerBackupAutomatico('Pré-download');
+
+    const albuns = (albumDoc && albumDoc.albuns) || {};
+    const pets = petsDoc.pets.map(p => {
+      p.album = albuns[p.id] || [];
+      return normalizarPet(p);
+    });
+
+    state.pets = pets;
+    state.petSelecionado = state.pets[0] ? state.pets[0].id : null;
+    saveDB();
+    renderPage(state.currentPage);
+    atualizarHeader();
+    fbSync.ultimoDownload = new Date().toISOString();
+    saveFbSync();
+    atualizarBadgeCloud();
+    if(!silencioso) toast('✅ Baixado da nuvem!');
+    return true;
+  }catch(e){
+    console.error('Erro download:', e);
+    if(!silencioso) toast('❌ ' + e.message);
+    return false;
+  }finally{
+    $('#btnCloud').classList.remove('cloud-sync');
+  }
+}
+
+async function sincronizarInteligente(){
+  if(!fbAuth.uid){ toast('Conecte-se à nuvem primeiro'); return; }
+  if(!navigator.onLine){ toast('Sem internet'); return; }
+  const uid = fbAuth.uid;
+  toast('🔄 Analisando dados...');
+  try{
+    // Busca metadata dos dois lados
+    const meta = await fsGet(`users/${uid}/data`, 'meta');
+    const temNuvem = meta && meta.qtdPets > 0;
+    const temLocal = state.pets.length > 0;
+
+    if(!temLocal && !temNuvem){ toast('Sem dados para sincronizar'); return; }
+    if(temLocal && !temNuvem){ await enviarParaNuvem(false); return; }
+    if(!temLocal && temNuvem){ await baixarDaNuvem(false); return; }
+
+    // Ambos têm dados — compara timestamps
+    const tsLocal = state.ultimaAtualizacao ? new Date(state.ultimaAtualizacao).getTime() : 0;
+    const tsNuvem = meta.ultimaAtualizacao ? new Date(meta.ultimaAtualizacao).getTime() : 0;
+
+    if(Math.abs(tsLocal - tsNuvem) < 60000){
+      toast('✅ Já sincronizado');
+      return;
+    }
+
+    if(tsLocal > tsNuvem){
+      const ok = await confirmarAcao('Sync inteligente', 'O LOCAL é mais recente. Enviar para a nuvem?');
+      if(ok) await enviarParaNuvem(false);
+    } else {
+      const ok = await confirmarAcao('Sync inteligente', 'A NUVEM é mais recente. Baixar para o local?');
+      if(ok) await baixarDaNuvem(false);
+    }
+  }catch(e){
+    console.error(e);
+    toast('❌ Erro: ' + e.message);
+  }
+}
+
+/* ============================================================
+   MODAL DE SINCRONIZAÇÃO
+============================================================ */
+function abrirModalSync(){
+  let html = '';
+
+  if(fbAuth.uid){
+    const tipo = fbAuth.isAnonymous ? '🕶️ Anônimo' : '📧 ' + (fbAuth.email || 'Logado');
+    const ultimoUp = fbSync.ultimoUpload ? new Date(fbSync.ultimoUpload).toLocaleString('pt-BR') : 'Nunca';
+    const ultimoDown = fbSync.ultimoDownload ? new Date(fbSync.ultimoDownload).toLocaleString('pt-BR') : 'Nunca';
+    html += `
+      <div class="sync-status-card on">
+        <div class="ss-ic">☁️</div>
+        <div style="flex:1">
+          <div class="ss-titulo">Conectado</div>
+          <div class="ss-info">${tipo}<br>UID: ${fbAuth.uid.slice(0,12)}...</div>
+        </div>
+      </div>
+      <div class="blk" style="background:linear-gradient(140deg,#EAF0FF,#DCE6FF);border-color:#C4D5FF">
+        <h4><span class="b-ic" style="background:rgba(74,125,255,.18);color:#3157C9">🔄</span>Último sync</h4>
+        <p><strong>⬆️ Último envio:</strong> ${ultimoUp}<br><strong>⬇️ Último download:</strong> ${ultimoDown}</p>
+      </div>
+      <button class="backup-opt" onclick="fecharEMExecutar('sincronizarInteligente')">
+        <div class="bo-ic" style="background:linear-gradient(135deg,#9B5DE5,#B585F0);color:#fff">🔄</div>
+        <div class="bo-body"><div class="bo-titulo">Sync inteligente</div><div class="bo-desc">Detecta conflito e pergunta</div></div>
+        <div class="bo-arrow"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
+      </button>
+      <button class="backup-opt" onclick="fecharEMExecutar('enviarParaNuvem', false)">
+        <div class="bo-ic" style="background:linear-gradient(135deg,#25C2B0,#4AD4C3);color:#fff">⬆️</div>
+        <div class="bo-body"><div class="bo-titulo">Enviar para nuvem</div><div class="bo-desc">Backup manual</div></div>
+        <div class="bo-arrow"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
+      </button>
+      <button class="backup-opt" onclick="fecharEMExecutar('baixarDaNuvem', false)">
+        <div class="bo-ic" style="background:linear-gradient(135deg,#4A7DFF,#6B9BFF);color:#fff">⬇️</div>
+        <div class="bo-body"><div class="bo-titulo">Baixar da nuvem</div><div class="bo-desc">Substitui dados locais</div></div>
+        <div class="bo-arrow"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
+      </button>
+      <div class="blk">
+        <h4><span class="b-ic">⚙️</span>Auto-sync</h4>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px">
+          <div style="font-size:12.5px;font-weight:700;color:#4C5768">Enviar 20s após mudanças</div>
+          <button class="btn btn-sm ${fbSync.autoSync ? 'btn-success' : 'btn-soft'}" style="width:auto;padding:6px 14px" onclick="toggleAutoSync()" type="button">
+            ${fbSync.autoSync ? '✅ ATIVO' : '⏸️ DESLIGADO'}
+          </button>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:14px">
+        <button class="btn btn-soft btn-sm" style="width:auto" onclick="confirmarLogout()" type="button">🚪 Desconectar</button>
+      </div>`;
+  } else {
+    html += `
+      <div class="sync-status-card off">
+        <div class="ss-ic">☁️</div>
+        <div style="flex:1">
+          <div class="ss-titulo">Não conectado</div>
+          <div class="ss-info">Ative a sincronização em nuvem para salvar seus pets com segurança</div>
+        </div>
+      </div>
+      <div class="auth-tabs">
+        <button class="active" id="authTabAnon" onclick="setAuthTab('anon')" type="button">🕶️ Anônimo</button>
+        <button id="authTabEmail" onclick="setAuthTab('email')" type="button">📧 E-mail</button>
+      </div>
+      <div id="authFormContainer"></div>
+      <div id="authMsgContainer"></div>`;
+  }
+
+  openModal(headPadrao('Nuvem PetVida', 'Firebase — sincronização segura'), html, '');
+
+  if(!fbAuth.uid){
+    setTimeout(()=> renderAuthForm('anon'), 60);
+  }
+}
+
+let authTabAtual = 'anon';
+let authModoEmail = 'entrar';
+
+function setAuthTab(tab){
+  authTabAtual = tab;
+  $('#authTabAnon').classList.toggle('active', tab === 'anon');
+  $('#authTabEmail').classList.toggle('active', tab === 'email');
+  renderAuthForm(tab);
+}
+
+function renderAuthForm(tab){
+  const el = $('#authFormContainer');
+  if(!el) return;
+  if(tab === 'anon'){
+    el.innerHTML = `
+      <div class="blk" style="background:linear-gradient(140deg,#E4F8F5,#D0F2EB);border-color:#A8E4D8">
+        <h4><span class="b-ic" style="background:rgba(37,194,176,.18);color:#12897A">🕶️</span>Modo anônimo</h4>
+        <p>Sem cadastro. Seus dados ficam vinculados ao dispositivo. Ideal para 1 celular só.</p>
+      </div>
+      <button class="btn btn-success" onclick="executarLoginAnonimo()" type="button" style="margin-bottom:10px">
+        🚀 Ativar sincronização
+      </button>
+      <div class="blk warn" style="margin-top:10px">
+        <h4><span class="b-ic">⚠️</span>Atenção</h4>
+        <p>Se você reinstalar o app ou trocar de celular, <strong>perderá o acesso</strong> aos dados da nuvem (não há como recuperar uma conta anônima).</p>
+      </div>`;
+  } else {
+    const modoCriar = authModoEmail === 'criar';
+    el.innerHTML = `
+      <div class="auth-tabs" style="margin-top:0">
+        <button class="${!modoCriar ? 'active' : ''}" onclick="setAuthModoEmail('entrar')" type="button">Entrar</button>
+        <button class="${modoCriar ? 'active' : ''}" onclick="setAuthModoEmail('criar')" type="button">Criar conta</button>
+      </div>
+      <div class="field"><label>E-MAIL</label>
+        <input class="input" type="email" id="authEmail" placeholder="seu@email.com" autocomplete="email" autocorrect="off" autocapitalize="off" spellcheck="false">
+      </div>
+      <div class="field"><label>SENHA</label>
+        <input class="input" type="password" id="authSenha" placeholder="Mínimo 6 caracteres" autocomplete="${modoCriar ? 'new-password' : 'current-password'}">
+      </div>
+      <button class="btn btn-primary" onclick="executarLoginEmail()" type="button">
+        ${modoCriar ? '📝 Criar conta' : '🔓 Entrar'}
+      </button>`;
+  }
+}
+
+function setAuthModoEmail(modo){ authModoEmail = modo; renderAuthForm('email'); }
+
+function mostrarAuthMsg(tipo, txt){
+  const el = $('#authMsgContainer');
+  if(!el) return;
+  el.innerHTML = `<div class="auth-msg ${tipo}">${txt}</div>`;
+}
+
+async function executarLoginAnonimo(){
+  mostrarAuthMsg('ok', '⏳ Conectando...');
+  try{
+    await fbLoginAnonimo();
+    atualizarBadgeCloud();
+    closeModal();
+    toast('☁️ Conectado!');
+    setTimeout(()=> sincronizarInteligente(), 500);
+  }catch(e){
+    mostrarAuthMsg('err', '❌ ' + e.message);
+  }
+}
+
+async function executarLoginEmail(){
+  const email = ($('#authEmail').value || '').trim();
+  const senha = $('#authSenha').value || '';
+  if(!email || !email.includes('@')){ mostrarAuthMsg('err', '❌ E-mail inválido'); return; }
+  if(!senha || senha.length < 6){ mostrarAuthMsg('err', '❌ Senha muito curta'); return; }
+  mostrarAuthMsg('ok', '⏳ Conectando...');
+  try{
+    if(authModoEmail === 'criar'){
+      await fbCriarConta(email, senha);
+      toast('🎉 Conta criada!');
+    } else {
+      await fbEntrar(email, senha);
+      toast('☁️ Conectado!');
+    }
+    atualizarBadgeCloud();
+    closeModal();
+    setTimeout(()=> sincronizarInteligente(), 500);
+  }catch(e){
+    mostrarAuthMsg('err', '❌ ' + e.message);
+  }
+}
+
+function toggleAutoSync(){
+  fbSync.autoSync = !fbSync.autoSync;
+  saveFbSync();
+  closeModal();
+  toast(fbSync.autoSync ? '✅ Auto-sync ativado' : '⏸️ Auto-sync desligado');
+  setTimeout(()=> abrirModalSync(), 200);
+}
+
+function confirmarLogout(){
+  openModal(headPadrao('Desconectar', 'Você pode reconectar quando quiser'),
+    `<div style="text-align:center;padding:16px 0">
+      <div style="font-size:46px;margin-bottom:12px">🚪</div>
+      <div style="font-size:14px;font-weight:800">Sair da nuvem?</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5">Os dados locais continuam salvos no aparelho.</div>
+    </div>`,
+    `<button class="btn btn-soft" onclick="abrirModalSync()">Cancelar</button>
+     <button class="btn btn-danger" onclick="executarLogout()">Desconectar</button>`);
+}
+function executarLogout(){
+  fbSair();
+  atualizarBadgeCloud();
+  closeModal();
+  setTimeout(()=> abrirModalSync(), 200);
+}
+
+function fecharEMExecutar(fn, arg){
+  closeModal();
+  setTimeout(()=> {
+    if(fn === 'enviarParaNuvem') enviarParaNuvem(false);
+    else if(fn === 'baixarDaNuvem') baixarDaNuvem(false);
+    else if(fn === 'sincronizarInteligente') sincronizarInteligente();
+  }, 200);
+}
+
+function confirmarAcao(titulo, msg){
+  return new Promise(resolve=>{
+    openModal(headPadrao(titulo, 'Confirme'),
+      `<div style="padding:14px 0;text-align:center">
+        <div style="font-size:44px;margin-bottom:10px">❓</div>
+        <div style="font-size:13.5px;line-height:1.6;color:#4C5768">${esc(msg)}</div>
+      </div>`,
+      `<button class="btn btn-soft" onclick="resolveConfirm(false)">Cancelar</button>
+       <button class="btn btn-primary" onclick="resolveConfirm(true)">Confirmar</button>`);
+    window.__confirmResolve = resolve;
+  });
+}
+function resolveConfirm(v){
+  closeModal();
+  if(window.__confirmResolve){ window.__confirmResolve(v); window.__confirmResolve = null; }
+}
+
+/* ============================================================
+   BACKUP LOCAL
 ============================================================ */
 function getBackups(){
   try{
@@ -847,27 +1370,43 @@ function abrirModalBackup(){
   const totalPets = state.pets.length;
   const tamanho = JSON.stringify(state.pets).length;
   const ultima = state.ultimaAtualizacao;
-  let html = `
+  const cloudInfo = fbAuth.uid
+    ? `<div class="sync-status-card on" style="margin-bottom:14px" onclick="closeModal();setTimeout(abrirModalSync,200)">
+        <div class="ss-ic">☁️</div>
+        <div style="flex:1">
+          <div class="ss-titulo">Conectado à nuvem</div>
+          <div class="ss-info">${fbAuth.isAnonymous ? 'Anônimo' : fbAuth.email || 'Logado'} — toque para sincronizar</div>
+        </div>
+      </div>`
+    : `<div class="sync-status-card off" style="margin-bottom:14px" onclick="closeModal();setTimeout(abrirModalSync,200)">
+        <div class="ss-ic">☁️</div>
+        <div style="flex:1">
+          <div class="ss-titulo">Ativar nuvem</div>
+          <div class="ss-info">Backup automático no Firebase — toque para conectar</div>
+        </div>
+      </div>`;
+
+  let html = cloudInfo + `
     <div class="backup-status">
       <div class="bs-ic">💾</div>
       <div class="bs-body">
-        <div class="bs-titulo">Dados salvos</div>
+        <div class="bs-titulo">Dados locais</div>
         <div class="bs-info">${totalPets} pet${totalPets !== 1 ? 's' : ''} · ${formatarTamanho(tamanho)}<br>Última: ${tempoRelativo(ultima)}</div>
       </div>
     </div>
     <button class="backup-opt" onclick="salvarAgora()">
       <div class="bo-ic" style="background:linear-gradient(135deg,#25C2B0,#4AD4C3);color:#fff">💾</div>
-      <div class="bo-body"><div class="bo-titulo">Salvar agora</div><div class="bo-desc">Força o salvamento</div></div>
+      <div class="bo-body"><div class="bo-titulo">Salvar agora</div><div class="bo-desc">Força o salvamento local</div></div>
       <div class="bo-arrow"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
     </button>
     <button class="backup-opt" onclick="exportarBackup()">
       <div class="bo-ic" style="background:linear-gradient(135deg,#4A7DFF,#6B9BFF);color:#fff">📥</div>
-      <div class="bo-body"><div class="bo-titulo">Exportar backup</div><div class="bo-desc">Baixa arquivo JSON</div></div>
+      <div class="bo-body"><div class="bo-titulo">Exportar arquivo</div><div class="bo-desc">Baixa arquivo JSON</div></div>
       <div class="bo-arrow"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
     </button>
     <button class="backup-opt" onclick="abrirImport()">
       <div class="bo-ic" style="background:linear-gradient(135deg,#9B5DE5,#B585F0);color:#fff">📤</div>
-      <div class="bo-body"><div class="bo-titulo">Importar backup</div><div class="bo-desc">Restaura de arquivo JSON</div></div>
+      <div class="bo-body"><div class="bo-titulo">Importar arquivo</div><div class="bo-desc">Restaura de arquivo JSON</div></div>
       <div class="bo-arrow"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
     </button>`;
   if(backups.length > 0){
@@ -886,7 +1425,7 @@ function abrirModalBackup(){
       </div>`).join('');
   }
   html += `<div style="text-align:center;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:16px">PetVida ${APP_VERSION} · ${APP_VERSION_DATE}</div>`;
-  openModal(headPadrao('Backup e Restauração', 'Proteja os dados'), html,
+  openModal(headPadrao('Backup e Restauração', 'Local e nuvem'), html,
     `<button class="btn btn-primary" onclick="closeModal()">Fechar</button>`);
 }
 function salvarAgora(){ saveDB(); toast('Dados salvos! ✅'); setTimeout(()=> abrirModalBackup(), 400); }
@@ -1145,7 +1684,7 @@ function redimensionarImagem(dataUrl, maxSize, qualidade, cb){
 }
 
 /* ============================================================
-   DADOS — Vacinas, Raças, Doenças, etc.
+   DADOS — Vacinas, Raças, Doenças (mantidos da v9.2)
 ============================================================ */
 const PROTOCOLO = {
   cao: [
@@ -1344,14 +1883,6 @@ const PRIMEIROS_CUIDADOS = {
 
 const RACAS = [
 {id:'srd_c',nome:'SRD (Vira-lata)',esp:'cao',porte:'Variável',emoji:'🐕',peso:'5–40 kg',altura:'25–70 cm',vida:'12–16 anos',origem:'Brasil',temp:['Resistente'],resumo:'Cão mais comum do Brasil.',cuidados:['Escovação semanal'],saude:['Menor predisposição'],racao:'Ração conforme porte.'},
-{id:'mucucho',nome:'Mucucho',esp:'cao',porte:'Grande',emoji:'🐕',peso:'30–50 kg',altura:'56–70 cm',vida:'10–14 anos',origem:'Venezuela',temp:['Rústico'],resumo:'Trabalho.',cuidados:['Exercício intenso'],saude:['Displasia'],racao:'Ração large breed.'},
-{id:'rafeiro',nome:'Rafeiro Brasileiro',esp:'cao',porte:'Grande',emoji:'🐕',peso:'30–45 kg',altura:'55–70 cm',vida:'10–14 anos',origem:'Brasil',temp:['Guardião'],resumo:'Fazenda.',cuidados:['Exercício diário'],saude:['Displasia'],racao:'Ração premium.'},
-{id:'terrier_br',nome:'Terrier Brasileiro',esp:'cao',porte:'Pequeno/Médio',emoji:'🐕',peso:'6–10 kg',altura:'33–40 cm',vida:'12–15 anos',origem:'Brasil',temp:['Vivaz'],resumo:'Terrier brasileiro.',cuidados:['Exercício 30-45 min'],saude:['Luxação'],racao:'Ração pequeno/médio.'},
-{id:'pe_roxo',nome:'Pê-roxo',esp:'cao',porte:'Médio',emoji:'🐕',peso:'15–22 kg',altura:'45–55 cm',vida:'10–13 anos',origem:'Brasil',temp:['Trabalhador'],resumo:'Fazenda.',cuidados:['Exercício'],saude:['Displasia'],racao:'Ração large breed.'},
-{id:'pinscher_alemao',nome:'Pinscher Alemão',esp:'cao',porte:'Médio',emoji:'🐕',peso:'14–20 kg',altura:'45–50 cm',vida:'12–14 anos',origem:'Alemanha',temp:['Vigilante'],resumo:'Porte médio.',cuidados:['Exercício 45-60 min'],saude:['Displasia'],racao:'Ração médio porte.'},
-{id:'pinscher_medio',nome:'Pinscher Médio',esp:'cao',porte:'Médio',emoji:'🐕',peso:'7–14 kg',altura:'35–45 cm',vida:'12–15 anos',origem:'Alemanha',temp:['Alerta'],resumo:'Intermediário.',cuidados:['Exercício diário'],saude:['Luxação'],racao:'Ração médio porte.'},
-{id:'pinscher_anao',nome:'Pinscher Anão',esp:'cao',porte:'Pequeno',emoji:'🐕',peso:'4–7 kg',altura:'25–32 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Enérgico'],resumo:'Variação menor.',cuidados:['Exercício leve'],saude:['Luxação'],racao:'Ração pequeno porte.'},
-{id:'pinscher_miniatura',nome:'Pinscher Miniatura',esp:'cao',porte:'Pequeno',emoji:'🐕',peso:'3–5 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Corajoso'],resumo:'Alarme.',cuidados:['Exercício diário'],saude:['Luxação'],racao:'Ração pequeno porte.'},
 {id:'labrador',nome:'Labrador Retriever',esp:'cao',porte:'Grande',emoji:'🦮',peso:'25–36 kg',altura:'54–57 cm',vida:'10–12 anos',origem:'Canadá',temp:['Dócil'],resumo:'Mais popular.',cuidados:['Exercício'],saude:['Displasia'],racao:'Ração grande porte.'},
 {id:'golden',nome:'Golden Retriever',esp:'cao',porte:'Grande',emoji:'🐕‍🦺',peso:'25–34 kg',altura:'51–61 cm',vida:'10–12 anos',origem:'Escócia',temp:['Afetuoso'],resumo:'Famílias.',cuidados:['Escovação diária'],saude:['Displasia'],racao:'Ração premium.'},
 {id:'poodle',nome:'Poodle',esp:'cao',porte:'Pequeno/Médio',emoji:'🐩',peso:'4–25 kg',altura:'24–45 cm',vida:'12–17 anos',origem:'Alemanha/França',temp:['Inteligente'],resumo:'Inteligente.',cuidados:['Tosa mensal'],saude:['Catarata'],racao:'Ração por porte.'},
@@ -1367,6 +1898,7 @@ const RACAS = [
 {id:'husky',nome:'Siberian Husky',esp:'cao',porte:'Médio/Grande',emoji:'🐺',peso:'16–27 kg',altura:'50–60 cm',vida:'12–14 anos',origem:'Sibéria',temp:['Brincalhão'],resumo:'Energia.',cuidados:['Exercício'],saude:['Displasia'],racao:'Ração médio/grande.'},
 {id:'maltes',nome:'Maltês',esp:'cao',porte:'Pequeno',emoji:'🐶',peso:'2–4 kg',altura:'20–25 cm',vida:'12–15 anos',origem:'Malta',temp:['Doce'],resumo:'Elegante.',cuidados:['Escovação'],saude:['Luxação'],racao:'Ração mini.'},
 {id:'spitz',nome:'Spitz Alemão',esp:'cao',porte:'Pequeno',emoji:'🐶',peso:'1,8–3,5 kg',altura:'18–24 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Vivaz'],resumo:'Bolinha.',cuidados:['Escovação 3x/sem'],saude:['Luxação'],racao:'Ração mini.'},
+{id:'pinscher_miniatura',nome:'Pinscher Miniatura',esp:'cao',porte:'Pequeno',emoji:'🐕',peso:'3–5 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'Alemanha',temp:['Corajoso'],resumo:'Alarme.',cuidados:['Exercício diário'],saude:['Luxação'],racao:'Ração pequeno porte.'},
 {id:'fila',nome:'Fila Brasileiro',esp:'cao',porte:'Grande',emoji:'🐕',peso:'40–70 kg',altura:'60–75 cm',vida:'9–12 anos',origem:'Brasil',temp:['Protetor'],resumo:'Brasileira.',cuidados:['Adestramento'],saude:['Displasia'],racao:'Ração large breed.'},
 {id:'srd_g',nome:'SRD (Gato)',esp:'gato',porte:'Médio',emoji:'🐈',peso:'3–5 kg',altura:'23–25 cm',vida:'12–18 anos',origem:'Brasil',temp:['Resistente'],resumo:'Comum.',cuidados:['Escovação'],saude:['Menor predisposição'],racao:'Ração gatos adultos.'},
 {id:'siames',nome:'Siamês',esp:'gato',porte:'Médio',emoji:'🐈',peso:'2,5–5,5 kg',altura:'23–25 cm',vida:'15–20 anos',origem:'Tailândia',temp:['Falante'],resumo:'Comunicativo.',cuidados:['Atenção'],saude:['Amiloidose'],racao:'Ração pelo curto.'},
@@ -1375,9 +1907,7 @@ const RACAS = [
 {id:'angora',nome:'Angorá',esp:'gato',porte:'Médio',emoji:'🐈',peso:'3–5 kg',altura:'22–25 cm',vida:'12–18 anos',origem:'Turquia',temp:['Ágil'],resumo:'Sedosa.',cuidados:['Escovação'],saude:['Surdez'],racao:'Ração semilongo.'},
 {id:'sphynx',nome:'Sphynx',esp:'gato',porte:'Médio',emoji:'🐈',peso:'3–5 kg',altura:'23–25 cm',vida:'9–15 anos',origem:'Canadá',temp:['Apegado'],resumo:'Penugem.',cuidados:['Banho semanal'],saude:['Cardiomiopatia'],racao:'Ração calórica.'},
 {id:'bengal',nome:'Bengal',esp:'gato',porte:'Médio',emoji:'🐆',peso:'4–7 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'EUA',temp:['Ativo'],resumo:'Leopardo.',cuidados:['Exercício'],saude:['Cardiomiopatia'],racao:'Ração alto proteico.'},
-{id:'ragdoll',nome:'Ragdoll',esp:'gato',porte:'Grande',emoji:'🐈',peso:'4,5–9 kg',altura:'23–28 cm',vida:'12–17 anos',origem:'EUA',temp:['Dócil'],resumo:'Molhinho.',cuidados:['Escovação'],saude:['Cardiomiopatia'],racao:'Ração semilongo.'},
-{id:'british',nome:'British Shorthair',esp:'gato',porte:'Médio/Grande',emoji:'🐈',peso:'4–8 kg',altura:'22–25 cm',vida:'14–20 anos',origem:'Reino Unido',temp:['Calmo'],resumo:'Urso.',cuidados:['Escovação'],saude:['Obesidade'],racao:'Ração light.'},
-{id:'noruegues',nome:'Norueguês',esp:'gato',porte:'Grande',emoji:'🐈',peso:'5–9 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'Noruega',temp:['Tranquilo'],resumo:'Robusto.',cuidados:['Escovação'],saude:['Cardiomiopatia'],racao:'Ração gatos grandes.'}
+{id:'ragdoll',nome:'Ragdoll',esp:'gato',porte:'Grande',emoji:'🐈',peso:'4,5–9 kg',altura:'23–28 cm',vida:'12–17 anos',origem:'EUA',temp:['Dócil'],resumo:'Molhinho.',cuidados:['Escovação'],saude:['Cardiomiopatia'],racao:'Ração semilongo.'}
 ];
 
 const DOENCAS = {
@@ -1391,7 +1921,6 @@ const DOENCAS = {
     {id:'babesiose',nome:'Babesiose',risco:'alto',mortalidade:'Moderada',tipo:'Protozoária',contagio:'Carrapato',emoji:'🕷️',descricao:'Babesia.',sintomas:['Palidez','Urina escura'],prevencao:['Controle carrapatos'],tratamento:'Imidocarb.',fonte:'Petlove'},
     {id:'tosse_canis',nome:'Tosse dos Canis',risco:'moderado',mortalidade:'Baixa',tipo:'Viral',contagio:'Tosse',emoji:'🤧',descricao:'Respiratório.',sintomas:['Tosse seca'],prevencao:['Vacinação KC'],tratamento:'Antibióticos.',fonte:'Zoetis'},
     {id:'giardiase',nome:'Giardíase',risco:'moderado',mortalidade:'Baixa',tipo:'Parasitária',contagio:'Água',emoji:'🦠',descricao:'Giardia.',sintomas:['Diarreia'],prevencao:['Água filtrada'],tratamento:'Metronidazol.',fonte:'Zoetis'},
-    {id:'drc_cao',nome:'Doença Renal',risco:'moderado',mortalidade:'Progressiva',tipo:'Renal',contagio:'N/A',emoji:'🫘',descricao:'Perda renal.',sintomas:['Sede','Perda peso'],prevencao:['Água'],tratamento:'Dieta renal.',fonte:'IRIS'},
     {id:'displasia',nome:'Displasia',risco:'moderado',mortalidade:'Não fatal',tipo:'Ortopédica',contagio:'Hereditária',emoji:'🦴',descricao:'Quadril.',sintomas:['Mancar'],prevencao:['Controle peso'],tratamento:'Cirurgia.',fonte:'Ortopedia'}
   ],
   gato: [
@@ -1402,7 +1931,6 @@ const DOENCAS = {
     {id:'panleucopenia',nome:'Panleucopenia',risco:'alto',mortalidade:'90%',tipo:'Viral',contagio:'Fezes',emoji:'🦠',descricao:'Parvovirose.',sintomas:['Vômitos','Diarreia'],prevencao:['Vacinação'],tratamento:'Fluidoterapia.',fonte:'Zoetis'},
     {id:'rinotraqueite',nome:'Rinotraqueíte',risco:'alto',mortalidade:'Baixa',tipo:'Viral',contagio:'Secreções',emoji:'🤧',descricao:'Herpesvírus.',sintomas:['Espirros'],prevencao:['Vacinação'],tratamento:'Lisina.',fonte:'Zoetis'},
     {id:'calicivirose',nome:'Calicivirose',risco:'alto',mortalidade:'Baixa',tipo:'Viral',contagio:'Secreções',emoji:'🤧',descricao:'Calicivírus.',sintomas:['Úlceras'],prevencao:['Vacinação'],tratamento:'Antibióticos.',fonte:'Zoetis'},
-    {id:'drc_gato',nome:'Doença Renal',risco:'alto',mortalidade:'Progressiva',tipo:'Renal',contagio:'N/A',emoji:'🫘',descricao:'Morte em idosos.',sintomas:['Sede'],prevencao:['Água'],tratamento:'Dieta renal.',fonte:'IRIS'},
     {id:'cardiomiopatia',nome:'Cardiomiopatia',risco:'alto',mortalidade:'Variável',tipo:'Cardíaca',contagio:'Hereditária',emoji:'❤️',descricao:'Cardíaca.',sintomas:['Dispneia'],prevencao:['Ecocardiograma'],tratamento:'Beta-bloq.',fonte:'Cães&Gatos'},
     {id:'obesidade',nome:'Obesidade',risco:'moderado',mortalidade:'Não fatal',tipo:'Metabólica',contagio:'N/A',emoji:'⚖️',descricao:'Excesso peso.',sintomas:['Ganho peso'],prevencao:['Medir ração'],tratamento:'Dieta.',fonte:'Whiskas'}
   ]
@@ -1491,7 +2019,7 @@ function porteDoPet(pet){
 }
 
 /* ============================================================
-   🧠 IA — GEMINI COM AUTODETECÇÃO DE MODELOS + PESQUISA NA WEB
+   IA GEMINI
 ============================================================ */
 const IA_KB = [
   {tipo:'emergencia',peso:10,palavras:['sangrando','sangramento','hemorragia','cortou'],resposta:'🩸 **Sangramento** é emergência!\n\n1. **Pressione** com gaze por 3-5 min\n2. **Eleve o membro**\n3. Leve ao veterinário\n\n⚠️ Não parar em 5 min = grave.'},
@@ -1499,13 +2027,11 @@ const IA_KB = [
   {tipo:'emergencia',peso:10,palavras:['convulsão','convulsionando','tremendo','epilepsia'],resposta:'⚡ **Convulsão:**\n\n1. Afaste móveis\n2. Desligue TVs\n3. Cronometre\n\n🚫 NUNCA mão na boca\n\n⚠️ +5 min: emergência.'},
   {tipo:'emergencia',peso:10,palavras:['intoxicado','intoxicação','envenenado','comeu veneno'],resposta:'☠️ **Intoxicação!**\n\n1. Identifique substância\n2. Guarde embalagem\n3. Ligue para vet\n\n📞 0800 722 6001'},
   {tipo:'alerta',peso:8,palavras:['vomitando','vômito','vomitou'],resposta:'🤢 **Vômitos:**\n\n• Jejum 6-12h (adultos)\n• Água em pequenas quantidades\n• Mais de 24h → vet\n\n⚠️ Filhotes: imediato.'},
-  {tipo:'info',peso:7,palavras:['vacina','vacinação','protocolo','quais vacinas'],resposta:'💉 **Protocolo:**\n\n**CÃES:** V8/V10 (3 doses + anual) + Antirrábica anual\n**GATOS:** V3/V4/V5 + Antirrábica anual\n\n📋 Veja na aba Vacinas!'},
+  {tipo:'info',peso:7,palavras:['vacina','vacinação','protocolo'],resposta:'💉 **Protocolo:**\n\n**CÃES:** V8/V10 (3 doses + anual) + Antirrábica anual\n**GATOS:** V3/V4/V5 + Antirrábica anual\n\n📋 Veja na aba Vacinas!'},
   {tipo:'info',peso:7,palavras:['ração','alimentar','o que dar'],resposta:'🍖 **Alimentação:**\n\n• Filhotes: 3-4 refeições/dia\n• Adultos: 2 refeições\n• Sêniores: condroprotetores\n\n💧 Água sempre!'},
   {tipo:'info',peso:6,palavras:['chocolate','uva','abacate','cebola'],resposta:'🚫 **Tóxicos:**\n\nChocolate, cebola, alho, uva, abacate, xilitol, cafeína, álcool.\n\nSe comeu: **0800 722 6001**.'},
-  {tipo:'dica',peso:7,palavras:['mordendo','destruindo','roendo'],resposta:'🐕 **Destrutivo:**\n\n• Aumente exercício\n• Brinquedos interativos\n• Rotina de passeios'},
-  {tipo:'dica',peso:6,palavras:['banho','com que frequência'],resposta:'🚿 **Banhos:**\n\n• Pelo curto: 15-30 dias\n• Pelo longo: 7-15 dias\n• Gatos: não precisam'},
-  {tipo:'info',peso:6,palavras:['vermífugo','vermifugação'],resposta:'🪱 **Vermifugação:**\n\n• Filhotes: 15/15 dias\n• Jovens: 3 meses\n• Adultos: 4-6 meses'},
-  {tipo:'info',peso:7,palavras:['tamanho','porte','pinscher filhote'],resposta:'📏 **Tamanho do Pinscher:**\n\n• **Miniatura**: 3-5 kg · 25-30 cm\n• **Anão**: 4-7 kg · 25-32 cm\n• **Médio**: 7-14 kg · 35-45 cm\n• **Alemão (Standard)**: 14-20 kg · 45-50 cm\n\n**Filhotes:** observe os pais, pese mensalmente e compare a curva de crescimento.'}
+  {tipo:'dica',peso:7,palavras:['banho','frequência'],resposta:'🚿 **Banhos:**\n\n• Pelo curto: 15-30 dias\n• Pelo longo: 7-15 dias\n• Gatos: não precisam'},
+  {tipo:'info',peso:6,palavras:['vermífugo','vermifugação'],resposta:'🪱 **Vermifugação:**\n\n• Filhotes: 15/15 dias\n• Jovens: 3 meses\n• Adultos: 4-6 meses'}
 ];
 
 function processarPerguntaLocal(pergunta, petCtx){
@@ -1538,230 +2064,174 @@ function gerarRespostaGenerica(pergunta, petCtx){
 let modelosDisponiveisCache = null;
 let cacheTimestamp = 0;
 const CACHE_DURACAO = 10 * 60 * 1000;
+let cotaEstado = {excedidaEm: 0, proximaTentativa: 0, tentativas: 0, groundingDesativado: false};
+try{
+  const s = localStorage.getItem('petvida_cota');
+  if(s) cotaEstado = {...cotaEstado, ...JSON.parse(s)};
+}catch(e){}
+function saveCota(){ try{ localStorage.setItem('petvida_cota', JSON.stringify(cotaEstado)); }catch(e){} }
 
 async function descobrirModelosDisponiveis(chaveLimpa){
   const agora = Date.now();
-  if(modelosDisponiveisCache && (agora - cacheTimestamp) < CACHE_DURACAO){
-    return modelosDisponiveisCache;
-  }
+  if(modelosDisponiveisCache && (agora - cacheTimestamp) < CACHE_DURACAO) return modelosDisponiveisCache;
   try{
-    console.log('🔍 Listando modelos disponíveis...');
-    const url = 'https://generativelanguage.googleapis.com/v1beta/models';
-    const res = await fetch(url, {method:'GET', headers:{'x-goog-api-key': chaveLimpa}});
-    if(!res.ok){
-      console.warn('⚠️ Não foi possível listar modelos:', res.status);
-      return null;
-    }
+    const res = await fetch('https://generativelanguage.googleapis.com/v1beta/models', {method:'GET', headers:{'x-goog-api-key': chaveLimpa}});
+    if(!res.ok) return null;
     const data = await res.json();
-    if(!data.models || !Array.isArray(data.models)) return null;
+    if(!data.models) return null;
     const modelos = data.models
       .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent'))
-      .map(m => ({nome: m.name.replace('models/', ''), displayName: m.displayName || m.name, descricao: m.description || ''}));
-    console.log('✅ Modelos encontrados:', modelos.map(m => m.nome).join(', '));
+      .map(m => ({nome: m.name.replace('models/', '')}));
     modelosDisponiveisCache = modelos;
     cacheTimestamp = agora;
     return modelos;
-  }catch(e){
-    console.warn('⚠️ Erro ao listar modelos:', e.message);
-    return null;
-  }
+  }catch(e){ return null; }
 }
 
 function ordenarModelosPorPreferencia(modelos){
   if(!modelos) return [];
-  const prioridades = [
-    {match: /^gemini-3\.6-flash$/i, peso: 100},
-    {match: /^gemini-3\.5-flash$/i, peso: 95},
-    {match: /^gemini-3\.[0-9]+-flash$/i, peso: 90},
-    {match: /^gemini-3\.1-pro$/i, peso: 85},
-    {match: /^gemini-3\.[0-9]+-pro$/i, peso: 80},
-    {match: /^gemini-2\.5-flash$/i, peso: 75},
-    {match: /^gemini-2\.0-flash$/i, peso: 70},
-    {match: /^gemini-2\.5-pro$/i, peso: 65},
-    {match: /^gemini-2\.0-flash-lite$/i, peso: 60},
-    {match: /^gemini-3\.[0-9]+-flash-lite$/i, peso: 55},
-    {match: /^gemini-1\.5-flash-latest$/i, peso: 50},
-    {match: /^gemini-1\.5-pro-latest$/i, peso: 45},
-    {match: /flash/i, peso: 30},
-    {match: /pro/i, peso: 25},
-    {match: /lite/i, peso: 20},
-    {match: /gemini/i, peso: 10}
+  const prio = [
+    {m:/^gemini-2\.0-flash$/,p:100},
+    {m:/^gemini-2\.0-flash-lite$/,p:98},
+    {m:/^gemini-2\.5-flash$/,p:95},
+    {m:/^gemini-3\.6-flash$/,p:90},
+    {m:/^gemini-3\.5-flash$/,p:85},
+    {m:/^gemini-3\.1-pro$/,p:80},
+    {m:/flash/i,p:30},
+    {m:/pro/i,p:25},
+    {m:/gemini/i,p:10}
   ];
   return modelos.slice().sort((a, b) => {
-    const pesoA = prioridades.reduce((max, p) => p.match.test(a.nome) ? Math.max(max, p.peso) : max, 0);
-    const pesoB = prioridades.reduce((max, p) => p.match.test(b.nome) ? Math.max(max, p.peso) : max, 0);
-    return pesoB - pesoA;
+    const pa = prio.reduce((x, p) => p.m.test(a.nome) ? Math.max(x, p.p) : x, 0);
+    const pb = prio.reduce((x, p) => p.m.test(b.nome) ? Math.max(x, p.p) : x, 0);
+    return pb - pa;
   });
 }
 
-/* ============================================================
-   CHAMADA PRINCIPAL DA IA (COM GROUNDING / PESQUISA WEB)
-============================================================ */
 async function chamarIAReal(pergunta, petCtx){
   const cfg = iaConfig;
   if(!cfg.apiKey || cfg.provider === 'local') return null;
   const chaveLimpa = (cfg.apiKey || '').trim();
   if(!chaveLimpa) return null;
 
+  if(cotaEstado.proximaTentativa > Date.now()){
+    const falta = Math.ceil((cotaEstado.proximaTentativa - Date.now()) / 1000);
+    return {erro: true, motivo: `Cota excedida. Aguarde ${falta}s`, statusCode: 429};
+  }
+
   const sysPrompt = `Você é o Dr. Pet IA, assistente veterinário inteligente, amigável e completo.
-
-DIRETRIZES:
-- Responda SEMPRE em português do Brasil, com clareza, empatia e riqueza de detalhes
-- Use **negrito** para destaques, listas numeradas e bullets quando ajudar a leitura
-- Seja completo: responda até o fim sem cortar a informação
-- Você TEM acesso à pesquisa do Google — use quando precisar de dados atuais
-- Em EMERGÊNCIAS, oriente procurar veterinário IMEDIATAMENTE com destaque
-- Nunca prescreva doses exatas de medicamentos — oriente procurar o vet
-- Termine respostas médicas com um lembrete curto: "⚠️ Consulte um veterinário para avaliação presencial."
-
-${petCtx ? `CONTEXTO DO PET ATUAL:\n- Nome: ${petCtx.nome}\n- Espécie: ${petCtx.especie}\n- Raça: ${petCtx.raca || 'SRD'}\n- Idade: ${petCtx.idade}\n- Peso: ${petCtx.peso || 'não informado'}` : 'Nenhum pet cadastrado ainda.'}`;
+- Responda em português do Brasil, com clareza e empatia
+- Use **negrito** e listas quando ajudar
+- Seja completo, responda até o fim
+- ${cotaEstado.groundingDesativado ? 'Use conhecimento interno' : 'Você TEM pesquisa na internet — use quando precisar'}
+- Em emergências, oriente veterinário IMEDIATAMENTE
+- Termine com: "⚠️ Consulte um veterinário presencialmente."
+${petCtx ? `\nPET: ${petCtx.nome} | ${petCtx.especie} | ${petCtx.raca || 'SRD'} | ${petCtx.idade} | ${petCtx.peso || '?'}kg` : ''}`;
 
   if(cfg.provider === 'openai' || cfg.provider === 'anthropic'){
     return chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa);
   }
 
-  let modelosParaTentar = [];
-  if(cfg.model && cfg.model.trim()) modelosParaTentar.push(cfg.model.trim());
-  const disponiveis = await descobrirModelosDisponiveis(chaveLimpa);
-  if(disponiveis && disponiveis.length > 0){
-    const ordenados = ordenarModelosPorPreferencia(disponiveis);
-    ordenados.forEach(m => { if(!modelosParaTentar.includes(m.nome)) modelosParaTentar.push(m.nome); });
-  }
-  const fallback = [
-    'gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite',
-    'gemini-3.1-pro', 'gemini-3.0-flash', 'gemini-2.5-flash',
-    'gemini-2.0-flash', 'gemini-2.0-flash-lite',
-    'gemini-1.5-flash-latest', 'gemini-1.5-pro-latest'
-  ];
-  fallback.forEach(m => { if(!modelosParaTentar.includes(m)) modelosParaTentar.push(m); });
+  let modelos = [];
+  if(cfg.model && cfg.model.trim()) modelos.push(cfg.model.trim());
+  const disp = await descobrirModelosDisponiveis(chaveLimpa);
+  if(disp && disp.length > 0) ordenarModelosPorPreferencia(disp).forEach(m => { if(!modelos.includes(m.nome)) modelos.push(m.nome); });
+  ['gemini-2.0-flash','gemini-2.0-flash-lite','gemini-2.5-flash','gemini-3.6-flash','gemini-1.5-flash-latest'].forEach(m => { if(!modelos.includes(m)) modelos.push(m); });
 
-  console.log('🎯 Modelos:', modelosParaTentar.slice(0, 6).join(' → '));
-  let ultimoErro = null;
+  const tentarGrounding = !cotaEstado.groundingDesativado;
+  let ultimo = null, todos429 = true;
 
-  for(const modelo of modelosParaTentar){
-    console.log(`🌐 Tentando ${modelo} COM pesquisa na internet...`);
-
-    // Tenta PRIMEIRO com Google Search Grounding
-    let r = await tentarChamarModelo(modelo, chaveLimpa, sysPrompt, pergunta, true);
-
-    // Se erro 400 (modelo não aceita grounding), retry sem ele
-    if(r && r.erro && r.statusCode === 400){
-      console.log(`   🔄 ${modelo}: grounding rejeitado, tentando sem...`);
+  for(const modelo of modelos){
+    let r = await tentarChamarModelo(modelo, chaveLimpa, sysPrompt, pergunta, tentarGrounding);
+    if(r && r.erro && r.statusCode === 400 && tentarGrounding){
       r = await tentarChamarModelo(modelo, chaveLimpa, sysPrompt, pergunta, false);
     }
-
-    if(r && r.erro && (r.statusCode === 429 || r.statusCode === 401 || r.statusCode === 403)){
-      return r;
-    }
-    if(r && r.statusCode === 404){ ultimoErro = r; continue; }
-    if(r && r.erro){ ultimoErro = r; continue; }
-
+    if(r && r.erro && r.statusCode === 429){ ultimo = r; continue; }
+    if(r && r.statusCode !== 429) todos429 = false;
+    if(r && r.erro && (r.statusCode === 401 || r.statusCode === 403)) return r;
+    if(r && r.erro){ ultimo = r; continue; }
     if(r && r.texto){
-      console.log(`   ✅ Sucesso com ${modelo}${r.comGrounding ? ' + 🌐 pesquisa' : ''}!`);
       if(iaConfig.model !== modelo){ iaConfig.model = modelo; saveIAConfig(); }
+      cotaEstado.tentativas = 0;
+      cotaEstado.groundingDesativado = false;
+      saveCota();
       return r;
     }
   }
-  return ultimoErro || {erro: true, motivo: 'Nenhum modelo disponível', statusCode: 404};
+  if(todos429){
+    cotaEstado.tentativas++;
+    const backoff = Math.min(300, 15 * Math.pow(2, cotaEstado.tentativas - 1));
+    cotaEstado.proximaTentativa = Date.now() + backoff * 1000;
+    cotaEstado.groundingDesativado = true;
+    saveCota();
+    return {erro: true, motivo: `Cota excedida. Tente em ${backoff}s`, statusCode: 429};
+  }
+  return ultimo || {erro: true, motivo: 'Nenhum modelo disponível', statusCode: 404};
 }
 
 async function tentarChamarModelo(modelo, chaveLimpa, sysPrompt, pergunta, usarGrounding){
   try{
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`;
-
     const body = {
-      contents: [{role:'user', parts:[{text: sysPrompt + '\n\n---\n\nPERGUNTA DO TUTOR:\n' + pergunta}]}],
-      generationConfig: {
-        maxOutputTokens: 3000,
-        temperature: 0.9,
-        topP: 0.95,
-        topK: 40
-      },
+      contents: [{role:'user', parts:[{text: sysPrompt + '\n\n---\n\nPERGUNTA:\n' + pergunta}]}],
+      generationConfig: {maxOutputTokens: 2500, temperature: 0.9, topP: 0.95, topK: 40},
       safetySettings: [
-        {category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE'},
-        {category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE'},
-        {category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_NONE'},
-        {category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE'}
+        {category:'HARM_CATEGORY_HARASSMENT',threshold:'BLOCK_NONE'},
+        {category:'HARM_CATEGORY_HATE_SPEECH',threshold:'BLOCK_NONE'},
+        {category:'HARM_CATEGORY_SEXUALLY_EXPLICIT',threshold:'BLOCK_NONE'},
+        {category:'HARM_CATEGORY_DANGEROUS_CONTENT',threshold:'BLOCK_NONE'}
       ]
     };
+    if(usarGrounding) body.tools = [{google_search: {}}];
 
-    if(usarGrounding){
-      body.tools = [{google_search: {}}];
-    }
-
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', 'x-goog-api-key': chaveLimpa},
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-goog-api-key':chaveLimpa},
       body: JSON.stringify(body)
     });
-
-    if(res.status === 404) return {erro: true, motivo: 'Modelo não disponível', statusCode: 404};
-    if(res.status === 429) return {erro: true, motivo: 'Cota excedida', statusCode: 429};
-    if(res.status === 401 || res.status === 403) return {erro: true, motivo: 'Chave inválida', statusCode: res.status};
-    if(!res.ok){
-      const errTxt = await res.text();
-      console.warn(`   ⚠️ HTTP ${res.status}:`, errTxt.slice(0, 150));
-      return {erro: true, motivo: 'HTTP ' + res.status, statusCode: res.status};
-    }
+    if(res.status === 404) return {erro:true, motivo:'Modelo indisponível', statusCode:404};
+    if(res.status === 429) return {erro:true, motivo:'Cota excedida', statusCode:429};
+    if(res.status === 401 || res.status === 403) return {erro:true, motivo:'Chave inválida', statusCode:res.status};
+    if(!res.ok) return {erro:true, motivo:'HTTP '+res.status, statusCode:res.status};
 
     const data = await res.json();
-
-    if(data.promptFeedback && data.promptFeedback.blockReason){
-      return {erro: true, motivo: 'Pergunta bloqueada pelo filtro', statusCode: 400};
-    }
-
-    let texto = '';
-    let finishReason = '';
-    let fontes = [];
-
+    let texto = '', finishReason = '', fontes = [];
     if(data.candidates && data.candidates[0]){
-      const cand = data.candidates[0];
-      finishReason = cand.finishReason || '';
-      if(cand.content && cand.content.parts){
-        texto = cand.content.parts.map(p => p.text || '').join('');
-      }
-      if(cand.groundingMetadata && cand.groundingMetadata.groundingChunks){
-        fontes = cand.groundingMetadata.groundingChunks
-          .filter(c => c.web)
-          .map(c => ({
-            titulo: (c.web.title || 'Fonte').replace(/[\[\]]/g,''),
-            uri: c.web.uri || ''
-          }))
-          .filter(f => f.uri);
+      const c = data.candidates[0];
+      finishReason = c.finishReason || '';
+      if(c.content && c.content.parts) texto = c.content.parts.map(p => p.text || '').join('');
+      if(c.groundingMetadata && c.groundingMetadata.groundingChunks){
+        fontes = c.groundingMetadata.groundingChunks.filter(x => x.web).map(x => ({
+          titulo: (x.web.title || 'Fonte').replace(/[\[\]]/g,''),
+          uri: x.web.uri || ''
+        })).filter(f => f.uri);
       }
     }
-
-    if(!texto) return {erro: true, motivo: 'Resposta vazia', statusCode: 200};
+    if(!texto) return {erro:true, motivo:'Resposta vazia', statusCode:200};
 
     let aviso = '';
-    if(finishReason === 'MAX_TOKENS') aviso = '\n\n---\n_⚠️ Resposta longa cortada. Peça para continuar se necessário._';
-    else if(finishReason === 'SAFETY') aviso = '\n\n---\n_⚠️ Parte do conteúdo foi filtrada pelos filtros de segurança._';
-
-    const emg = temEmergencia(pergunta);
+    if(finishReason === 'MAX_TOKENS') aviso = '\n\n---\n_⚠️ Resposta longa cortada._';
+    else if(finishReason === 'SAFETY') aviso = '\n\n---\n_⚠️ Conteúdo filtrado._';
 
     let textoFinal = texto.trim() + aviso;
     if(usarGrounding && fontes.length > 0){
       const lista = fontes.slice(0, 3).map(f => {
-        let dominio = '';
-        try{ dominio = new URL(f.uri).hostname.replace('www.',''); }catch(e){}
-        return `• [${f.titulo}](${f.uri})${dominio ? ' — _' + dominio + '_' : ''}`;
+        let dom = ''; try{ dom = new URL(f.uri).hostname.replace('www.',''); }catch(e){}
+        return `• [${f.titulo}](${f.uri})${dom ? ' — _'+dom+'_' : ''}`;
       }).join('\n');
-      textoFinal += '\n\n**🔗 Fontes pesquisadas:**\n' + lista;
+      textoFinal += '\n\n**🔗 Fontes:**\n' + lista;
     }
 
+    const emg = temEmergencia(pergunta);
     return {
       texto: textoFinal,
       tipo: emg ? 'emergencia' : 'ia-real',
       real: true,
       fonte: 'ia-real',
       modelo: modelo,
-      comGrounding: usarGrounding && fontes.length > 0,
-      finishReason: finishReason
+      comGrounding: usarGrounding && fontes.length > 0
     };
-
   }catch(e){
-    console.error(`   ❌ Rede ${modelo}:`, e.message);
-    return {erro: true, motivo: 'Falha de rede: ' + e.message, statusCode: 0};
+    return {erro:true, motivo:'Rede: '+e.message, statusCode:0};
   }
 }
 
@@ -1772,28 +2242,28 @@ async function chamarIAProvedorAlternativo(pergunta, sysPrompt, chaveLimpa){
     if(cfg.provider === 'openai'){
       url = 'https://api.openai.com/v1/chat/completions';
       headers['Authorization'] = `Bearer ${chaveLimpa}`;
-      body = {model: cfg.model || 'gpt-4o-mini', messages: [{role:'system', content: sysPrompt},{role:'user', content: pergunta}], max_tokens: 3000, temperature: 0.9};
+      body = {model: cfg.model || 'gpt-4o-mini', messages: [{role:'system', content: sysPrompt},{role:'user', content: pergunta}], max_tokens: 2500, temperature: 0.9};
     } else if(cfg.provider === 'anthropic'){
       url = 'https://api.anthropic.com/v1/messages';
       headers['x-api-key'] = chaveLimpa;
       headers['anthropic-version'] = '2023-06-01';
       headers['anthropic-dangerous-direct-browser-access'] = 'true';
-      body = {model: cfg.model || 'claude-3-5-sonnet-20241022', max_tokens: 3000, system: sysPrompt, messages: [{role:'user', content: pergunta}]};
+      body = {model: cfg.model || 'claude-3-5-sonnet-20241022', max_tokens: 2500, system: sysPrompt, messages: [{role:'user', content: pergunta}]};
     }
     const res = await fetch(url, {method:'POST', headers, body: JSON.stringify(body)});
     if(!res.ok){
-      let motivo = res.status === 401 || res.status === 403 ? 'Chave inválida' : res.status === 429 ? 'Cota excedida' : 'Erro HTTP ' + res.status;
-      return {erro: true, motivo, statusCode: res.status};
+      let motivo = res.status === 401 || res.status === 403 ? 'Chave inválida' : res.status === 429 ? 'Cota excedida' : 'Erro ' + res.status;
+      return {erro:true, motivo, statusCode:res.status};
     }
     const data = await res.json();
     let texto = cfg.provider === 'openai'
       ? (data.choices?.[0]?.message?.content || '')
       : (data.content?.[0]?.text || '');
-    if(!texto) return {erro: true, motivo: 'Resposta vazia', statusCode: 200};
+    if(!texto) return {erro:true, motivo:'Vazio', statusCode:200};
     const emg = temEmergencia(pergunta);
-    return {texto: texto.trim(), tipo: emg ? 'emergencia' : 'ia-real', real: true, fonte: 'ia-real'};
+    return {texto: texto.trim(), tipo: emg ? 'emergencia' : 'ia-real', real: true, fonte:'ia-real'};
   }catch(e){
-    return {erro: true, motivo: 'Falha de rede: ' + e.message, statusCode: 0};
+    return {erro:true, motivo:'Rede: '+e.message, statusCode:0};
   }
 }
 
@@ -1810,24 +2280,21 @@ function agoraHHMM(){
   const d = new Date();
   return String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0');
 }
-
 function getStatusIA(){
-  if(iaConfig.provider === 'local') return {cor:'warn', txt:'Base local (offline)'};
-  if(!iaConfig.apiKey) return {cor:'off', txt:'Sem chave configurada'};
+  if(iaConfig.provider === 'local') return {cor:'warn', txt:'Base local'};
+  if(!iaConfig.apiKey) return {cor:'off', txt:'Sem chave'};
   if(iaConfig.status === 'ok') {
     const nome = iaConfig.provider === 'gemini' ? 'Gemini' : iaConfig.provider === 'openai' ? 'OpenAI' : 'Claude';
-    return {cor:'online', txt:nome + ' + 🌐 Web conectado' + (iaConfig.model ? ' · ' + iaConfig.model : '')};
+    return {cor:'online', txt:nome + (iaConfig.model ? ' · ' + iaConfig.model : '')};
   }
-  if(iaConfig.status === 'erro') return {cor:'off', txt:'Erro na IA · usando base local'};
-  return {cor:'warn', txt:'IA pronta · toque em ⚙️ para testar'};
+  if(iaConfig.status === 'erro') return {cor:'off', txt:'Erro · base local'};
+  return {cor:'warn', txt:'Toque em ⚙️ para testar'};
 }
-
 function renderChat(){
   const body = $('#chatBody');
   if(!body) return;
   const sug = $('#chatSuggestions');
   const ctxEl = $('#chatPetContext');
-
   const pet = state.pets.find(p => p.id === state.petSelecionado) || state.pets[0];
   if(pet){
     ctxEl.innerHTML = `<span class="pc-chip">🐾 ${esc(pet.nome)}</span>
@@ -1835,9 +2302,8 @@ function renderChat(){
       ${pet.raca ? `<span class="pc-chip">${esc(pet.raca)}</span>` : ''}
       <span class="pc-chip">${calcIdade(pet.nascimento)}</span>`;
   } else {
-    ctxEl.innerHTML = `<span class="pc-chip">💡 Cadastre um pet para respostas personalizadas</span>`;
+    ctxEl.innerHTML = `<span class="pc-chip">💡 Cadastre um pet</span>`;
   }
-
   const st = getStatusIA();
   const status = $('#iaStatus');
   const dot = $('#iaStatusDot');
@@ -1848,48 +2314,38 @@ function renderChat(){
     'Quais vacinas meu pet precisa?',
     'Meu pet está vomitando, o que fazer?',
     'Com que frequência devo dar banho?',
-    'Como identificar o tamanho do meu Pinscher?',
     'Meu cão está com tosse',
     'Como adestrar meu filhote?',
-    'Meu gato não está comendo',
     'Sinais de emergência veterinária'
   ];
-  if(sug){
-    sug.innerHTML = `<div class="sug-row">${sugestoes.map(s=>`<button class="sug-chip" onclick="enviarSugestao('${esc(s).replace(/'/g,"\\'")}')">${esc(s)}</button>`).join('')}</div>`;
-  }
+  if(sug) sug.innerHTML = `<div class="sug-row">${sugestoes.map(s=>`<button class="sug-chip" onclick="enviarSugestao('${esc(s).replace(/'/g,"\\'")}')">${esc(s)}</button>`).join('')}</div>`;
 
   if(state.chat.length === 0){
     const statusInfo = st.cor === 'online' ? 'ok' : st.cor === 'warn' ? 'warn' : 'err';
     const aviso = statusInfo === 'ok'
-      ? `<div class="chat-config-warn ok"><span class="cw-ic">✨</span><div>Conectado à <strong>IA Gemini + pesquisa na internet</strong>. Pergunte qualquer coisa — ele busca dados atualizados.</div></div>`
+      ? `<div class="chat-config-warn ok"><span class="cw-ic">✨</span><div>IA Gemini conectada. Pergunte qualquer coisa!</div></div>`
       : statusInfo === 'warn'
-      ? `<div class="chat-config-warn warn"><span class="cw-ic">⚠️</span><div>Toque no <strong>⚙️</strong> e em <strong>🧪 Testar</strong> para validar. Enquanto isso, uso a base local.</div></div>`
-      : `<div class="chat-config-warn err"><span class="cw-ic">❌</span><div>IA retornou erro. Toque no <strong>⚙️</strong> para verificar.</div></div>`;
-
+      ? `<div class="chat-config-warn warn"><span class="cw-ic">⚠️</span><div>Configure no <strong>⚙️</strong> e teste.</div></div>`
+      : `<div class="chat-config-warn err"><span class="cw-ic">❌</span><div>IA com erro. Toque no <strong>⚙️</strong>.</div></div>`;
     body.innerHTML = `
       <div class="chat-welcome">
         <div class="cw-hero">🐾</div>
         <h2>Olá! Sou o Dr. Pet IA</h2>
-        <p>Seu assistente veterinário inteligente com <strong>pesquisa na internet</strong>. Posso responder dúvidas sobre saúde, comportamento, alimentação e cuidados com dados atualizados.</p>
+        <p>Assistente veterinário inteligente.</p>
         <div class="cw-cat">
           <button class="cw-cat-btn" onclick="enviarSugestao('Quais vacinas meu pet precisa?')">
             <div class="cw-cat-ic" style="background:#EAF0FF;color:#3157C9">💉</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Vacinas e prevenção</div><div class="cw-cat-desc">Protocolos, reforços e calendário</div></div>
+            <div class="cw-cat-body"><div class="cw-cat-titulo">Vacinas</div><div class="cw-cat-desc">Protocolos</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
           <button class="cw-cat-btn" onclick="enviarSugestao('Meu pet está com sintomas estranhos')">
             <div class="cw-cat-ic" style="background:#FFE9EF;color:#C42B50">🚑</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Sintomas e emergências</div><div class="cw-cat-desc">O que fazer e quando procurar o vet</div></div>
+            <div class="cw-cat-body"><div class="cw-cat-titulo">Sintomas</div><div class="cw-cat-desc">Emergências</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
           <button class="cw-cat-btn" onclick="enviarSugestao('Como alimentar meu pet corretamente?')">
             <div class="cw-cat-ic" style="background:#FFF6E2;color:#B47800">🍖</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Alimentação</div><div class="cw-cat-desc">Ração, quantidades e tóxicos</div></div>
-            <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
-          </button>
-          <button class="cw-cat-btn" onclick="enviarSugestao('Como adestrar meu pet?')">
-            <div class="cw-cat-ic" style="background:#F3EAFE;color:#6B31B8">🎓</div>
-            <div class="cw-cat-body"><div class="cw-cat-titulo">Comportamento</div><div class="cw-cat-desc">Adestramento e educação</div></div>
+            <div class="cw-cat-body"><div class="cw-cat-titulo">Alimentação</div><div class="cw-cat-desc">Ração e tóxicos</div></div>
             <svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg>
           </button>
         </div>
@@ -1897,7 +2353,6 @@ function renderChat(){
       </div>`;
     return;
   }
-
   body.innerHTML = state.chat.map((m)=>`
     <div class="msg-row ${m.role}">
       <div class="msg-avatar">${m.role === 'ia' ? '🐾' : '👤'}</div>
@@ -1914,24 +2369,20 @@ function renderChat(){
       <div class="msg-avatar">🐾</div>
       <div class="msg-bubble typing"><span></span><span></span><span></span></div>
     </div>` : '');
-
   setTimeout(()=> body.scrollTop = body.scrollHeight, 60);
 }
-
 function rotuloTipo(t, fonte, comWeb){
-  if(t === 'ia-real') return comWeb ? '✨ IA Gemini + 🌐 Web' : '✨ IA Gemini';
-  const m = {info:'Informativo', alerta:'Atenção', dica:'Dica', emergencia:'Emergência'};
+  if(t === 'ia-real') return comWeb ? '✨ IA + 🌐 Web' : '✨ IA';
+  const m = {info:'Info', alerta:'Atenção', dica:'Dica', emergencia:'Emergência'};
   const base = m[t] || 'Info';
   if(fonte === 'local') return base + ' · Base local';
   return base;
 }
-
 function formatarMensagem(texto){
   let t = esc(texto);
   t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   t = t.replace(/\*([^*]+)\*/g, '<em>$1</em>');
   t = t.replace(/_([^_]+)_/g, '<em style="opacity:.75">$1</em>');
-  // Renderiza links markdown [texto](url)
   t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
     '<a href="$2" target="_blank" rel="noopener" style="color:#9B5DE5;text-decoration:underline;font-weight:600">$1</a>');
   t = t.replace(/`([^`]+)`/g, '<code style="background:#F1F4F9;padding:1px 5px;border-radius:4px;font-size:12px">$1</code>');
@@ -1939,51 +2390,38 @@ function formatarMensagem(texto){
   t = t.replace(/^(<br>)+/, '');
   return t;
 }
-
 function autoResizeChat(el){
   el.style.height = 'auto';
   el.style.height = Math.min(el.scrollHeight, 100) + 'px';
 }
-
-function enviarSugestao(texto){
-  $('#chatInput').value = texto;
-  enviarMensagem();
-}
-
+function enviarSugestao(texto){ $('#chatInput').value = texto; enviarMensagem(); }
 async function enviarMensagem(){
   const inp = $('#chatInput');
   const txt = (inp.value || '').trim();
   if(!txt || state.chatTyping) return;
-
   inp.value = '';
   autoResizeChat(inp);
-
   state.chat.push({role:'user', texto: txt, hora: agoraHHMM()});
   state.chatTyping = true;
   renderChat();
   saveChatHistory();
-
   const pet = state.pets.find(p => p.id === state.petSelecionado) || state.pets[0];
   const petCtx = pet ? {
-    nome: pet.nome,
-    especie: pet.especie === 'gato' ? 'Gato' : 'Cão',
-    raca: pet.raca,
-    idade: calcIdade(pet.nascimento),
-    peso: pet.peso
+    nome: pet.nome, especie: pet.especie === 'gato' ? 'Gato' : 'Cão',
+    raca: pet.raca, idade: calcIdade(pet.nascimento), peso: pet.peso
   } : null;
-
   try{
     let resposta = null;
     if(iaConfig.provider !== 'local' && iaConfig.apiKey){
-      const resultado = await chamarIAReal(txt, petCtx);
-      if(resultado && resultado.erro){
+      const r = await chamarIAReal(txt, petCtx);
+      if(r && r.erro){
         iaConfig.status = 'erro';
         saveIAConfig();
-        toast('⚠️ IA: ' + resultado.motivo);
-      } else if(resultado){
+        toast('⚠️ IA: ' + r.motivo);
+      } else if(r){
         iaConfig.status = 'ok';
         saveIAConfig();
-        resposta = resultado;
+        resposta = r;
       }
     }
     if(!resposta){
@@ -1993,23 +2431,18 @@ async function enviarMensagem(){
       if(resposta && !resposta.fonte) resposta.fonte = 'local';
     }
     state.chat.push({
-      role: 'ia',
-      texto: resposta.texto,
-      tipo: resposta.tipo,
-      fonte: resposta.fonte,
-      comGrounding: resposta.comGrounding || false,
-      hora: agoraHHMM()
+      role: 'ia', texto: resposta.texto, tipo: resposta.tipo,
+      fonte: resposta.fonte, comGrounding: resposta.comGrounding || false, hora: agoraHHMM()
     });
   }catch(e){
     console.error(e);
-    state.chat.push({role: 'ia', texto: '❌ Erro ao processar. Tente novamente.', tipo: 'alerta', hora: agoraHHMM()});
+    state.chat.push({role: 'ia', texto: '❌ Erro.', tipo: 'alerta', hora: agoraHHMM()});
   } finally {
     state.chatTyping = false;
     renderChat();
     saveChatHistory();
   }
 }
-
 function limparChat(){
   if(state.chat.length === 0){ toast('Conversa já vazia'); return; }
   openModal(headPadrao('Limpar conversa', 'Não pode ser desfeito'),
@@ -2029,188 +2462,121 @@ function confirmarLimparChat(){
 }
 
 /* ============================================================
-   TESTE DE CONEXÃO
+   MODAL CONFIG IA
 ============================================================ */
 async function testarConexaoIA(){
   const prov = $('#iaProvider') ? $('#iaProvider').value : 'gemini';
   const key = ($('#iaApiKey') ? $('#iaApiKey').value : '').trim();
   const model = ($('#iaModel') ? $('#iaModel').value : '').trim();
-
-  if(!key){ mostrarResultadoTeste(false, 'Informe a chave de API'); return; }
-
-  mostrarResultadoTeste(null, 'Testando conexão com pesquisa na web...');
-  modelosDisponiveisCache = null;
-  cacheTimestamp = 0;
-
+  if(!key){ mostrarResultadoTeste(false, 'Informe a chave'); return; }
+  mostrarResultadoTeste(null, 'Testando...');
+  modelosDisponiveisCache = null; cacheTimestamp = 0;
+  cotaEstado = {excedidaEm:0, proximaTentativa:0, tentativas:0, groundingDesativado:false};
+  saveCota();
   const backup = {...iaConfig};
   iaConfig.provider = prov;
   iaConfig.apiKey = key;
   iaConfig.model = model;
-
   try{
-    const res = await chamarIAReal('Qual é a data de hoje no Brasil? Responda em uma linha curta.', null);
-    if(res && res.erro){
-      mostrarResultadoTeste(false, res.motivo);
-      iaConfig = backup;
-      saveIAConfig();
-    } else if(res && res.texto){
-      const modeloUsado = res.modelo || iaConfig.model || 'modelo detectado';
-      const webTxt = res.comGrounding ? ' + 🌐 pesquisa na internet' : '';
-      mostrarResultadoTeste(true, 'Conexão OK! Modelo: ' + modeloUsado + webTxt + ' · Resposta: "' + res.texto.slice(0, 80) + '..."');
+    const res = await chamarIAReal('Olá, responda "ok" em uma linha.', null);
+    if(res && res.erro){ mostrarResultadoTeste(false, res.motivo); iaConfig = backup; saveIAConfig(); }
+    else if(res && res.texto){
+      const m = res.modelo || iaConfig.model || 'detectado';
+      const w = res.comGrounding ? ' + 🌐' : '';
+      mostrarResultadoTeste(true, 'OK! ' + m + w + ' · "' + res.texto.slice(0,60) + '..."');
       iaConfig.status = 'ok';
       saveIAConfig();
       renderChat();
-    } else {
-      mostrarResultadoTeste(false, 'Resposta vazia');
-      iaConfig = backup;
-      saveIAConfig();
-    }
+    } else { mostrarResultadoTeste(false, 'Vazio'); iaConfig = backup; saveIAConfig(); }
   }catch(e){
     mostrarResultadoTeste(false, 'Erro: ' + e.message);
-    iaConfig = backup;
-    saveIAConfig();
+    iaConfig = backup; saveIAConfig();
   }
 }
-
 function mostrarResultadoTeste(sucesso, msg){
   const el = $('#iaTesteResult');
   if(!el) return;
-  if(sucesso === null){
-    el.innerHTML = `<div style="padding:12px 14px;border-radius:12px;background:#F1F4F9;color:#5A6478;font-size:12px;font-weight:700;margin-top:10px">⏳ Testando conexão...</div>`;
-  } else if(sucesso){
-    el.innerHTML = `<div style="padding:12px 14px;border-radius:12px;background:var(--secondary-soft);color:#12897A;font-size:12px;font-weight:700;margin-top:10px;line-height:1.5">✅ ${esc(msg)}</div>`;
-  } else {
-    el.innerHTML = `<div style="padding:12px 14px;border-radius:12px;background:var(--danger-soft);color:#C42B50;font-size:12px;font-weight:700;margin-top:10px;line-height:1.5">❌ ${esc(msg)}</div>`;
-  }
+  if(sucesso === null) el.innerHTML = `<div style="padding:12px;border-radius:12px;background:#F1F4F9;color:#5A6478;font-size:12px;font-weight:700;margin-top:10px">⏳ ${esc(msg)}</div>`;
+  else if(sucesso) el.innerHTML = `<div style="padding:12px;border-radius:12px;background:var(--secondary-soft);color:#12897A;font-size:12px;font-weight:700;margin-top:10px;line-height:1.5">✅ ${esc(msg)}</div>`;
+  else el.innerHTML = `<div style="padding:12px;border-radius:12px;background:var(--danger-soft);color:#C42B50;font-size:12px;font-weight:700;margin-top:10px;line-height:1.5">❌ ${esc(msg)}</div>`;
 }
-
-/* ============================================================
-   MODAL CONFIG IA
-============================================================ */
 function abrirModalConfigIA(){
-  console.log('⚙️ Abrindo configurações IA...');
-  try{
-    const providerAtual = iaConfig.provider || 'gemini';
-    const statusBadge = iaConfig.status === 'ok'
-      ? `<span class="api-badge ok">✅ Conectada</span>`
-      : iaConfig.status === 'erro'
-      ? `<span class="api-badge err">❌ Erro</span>`
-      : `<span class="api-badge warn">⏳ Não testada</span>`;
-
-    const html = `
-      <div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
-        <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">✨</span>Status atual</h4>
-        <div style="margin-top:8px">
-          <div style="font-size:12px;color:#5A4C8A;margin-bottom:4px">
-            <strong>Provedor:</strong> ${providerAtual === 'gemini' ? '🟢 Google Gemini' : providerAtual === 'openai' ? '⚡ OpenAI' : providerAtual === 'anthropic' ? '🟣 Claude' : '💡 Base local'}
-          </div>
-          <div style="font-size:12px;color:#5A4C8A;margin-bottom:4px">
-            <strong>Modelo:</strong> ${iaConfig.model || '(autodetecção)'}
-          </div>
-          <div style="font-size:12px;color:#5A4C8A;margin-bottom:8px">
-            <strong>Chave:</strong> ${iaConfig.apiKey ? '🔒 ' + iaConfig.apiKey.slice(0,18) + '...' : '⚠️ Vazia'}
-          </div>
-          <div>${statusBadge}</div>
-        </div>
+  const provAtual = iaConfig.provider || 'gemini';
+  const statusBadge = iaConfig.status === 'ok' ? `<span class="api-badge ok">✅ OK</span>`
+    : iaConfig.status === 'erro' ? `<span class="api-badge err">❌ Erro</span>`
+    : `<span class="api-badge warn">⏳ Não testada</span>`;
+  const html = `
+    <div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
+      <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">✨</span>Status</h4>
+      <div style="margin-top:8px;font-size:12px;color:#5A4C8A">
+        <div style="margin-bottom:4px"><strong>Provedor:</strong> ${provAtual === 'gemini' ? '🟢 Gemini' : provAtual === 'openai' ? '⚡ OpenAI' : provAtual === 'anthropic' ? '🟣 Claude' : '💡 Local'}</div>
+        <div style="margin-bottom:4px"><strong>Modelo:</strong> ${iaConfig.model || '(auto)'}</div>
+        <div style="margin-bottom:8px"><strong>Chave:</strong> ${iaConfig.apiKey ? '🔒 ' + iaConfig.apiKey.slice(0,18) + '...' : '⚠️ Vazia'}</div>
+        <div>${statusBadge}</div>
       </div>
-
-      <div class="blk" style="background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border-color:#C7E8E2">
-        <h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">🌐</span>Pesquisa na internet ativada</h4>
-        <p>O Dr. Pet IA usa <strong>Google Search Grounding</strong> para buscar informações atualizadas na web. As respostas virão com links das fontes consultadas e o app mostra o selo <strong>✨ IA Gemini + 🌐 Web</strong>.</p>
-      </div>
-
-      <div class="field">
-        <label>PROVEDOR DE IA</label>
-        <select class="select" id="iaProvider" onchange="atualizarConfigIA()">
-          <option value="gemini" ${providerAtual === 'gemini' ? 'selected' : ''}>🟢 Google Gemini</option>
-          <option value="openai" ${providerAtual === 'openai' ? 'selected' : ''}>⚡ OpenAI (GPT-4o)</option>
-          <option value="anthropic" ${providerAtual === 'anthropic' ? 'selected' : ''}>🟣 Anthropic Claude</option>
-          <option value="local" ${providerAtual === 'local' ? 'selected' : ''}>💡 Base local (offline)</option>
-        </select>
-      </div>
-
-      <div id="iaConfigCampos"></div>
-      <div id="iaTesteResult"></div>
-
-      <div class="blk" style="background:linear-gradient(140deg,#FFF6E2,#FFEFD0);border-color:#FFE4B5">
-        <h4><span class="b-ic" style="background:var(--accent-soft);color:#B47800">⚙️</span>Configurações técnicas</h4>
-        <p>• <strong>Respostas completas</strong> — até 3000 tokens<br>
-        • <strong>Temperatura 0.9</strong> — respostas mais ricas<br>
-        • <strong>Safety bloqueado em NONE</strong> — respostas livres<br>
-        • <strong>Fallback automático</strong> — 10+ modelos testados em sequência<br>
-        • <strong>Retry inteligente</strong> — se grounding falhar, tenta sem ele</p>
-      </div>
-
-      <div style="text-align:center;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:14px">PetVida ${APP_VERSION} · ${APP_VERSION_DATE}</div>
-    `;
-
-    openModal(
-      headPadrao('Configurar IA', 'Escolha o provedor do Dr. Pet IA'),
-      html,
-      `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
-       <button class="btn btn-success" onclick="testarConexaoIA()" style="flex:1">🧪 Testar</button>
-       <button class="btn btn-purple" onclick="salvarConfigIA()">Salvar</button>`
-    );
-
-    setTimeout(()=> renderCamposConfigIA(), 60);
-  }catch(e){
-    console.error('Erro ao abrir config IA:', e);
-    toast('Erro ao abrir configurações');
-  }
+    </div>
+    <div class="field"><label>PROVEDOR</label>
+      <select class="select" id="iaProvider" onchange="atualizarConfigIA()">
+        <option value="gemini" ${provAtual === 'gemini' ? 'selected' : ''}>🟢 Google Gemini</option>
+        <option value="openai" ${provAtual === 'openai' ? 'selected' : ''}>⚡ OpenAI</option>
+        <option value="anthropic" ${provAtual === 'anthropic' ? 'selected' : ''}>🟣 Anthropic Claude</option>
+        <option value="local" ${provAtual === 'local' ? 'selected' : ''}>💡 Base local</option>
+      </select>
+    </div>
+    <div id="iaConfigCampos"></div>
+    <div id="iaTesteResult"></div>
+    <div style="margin-top:10px">
+      <button class="btn btn-soft btn-sm" style="width:100%" onclick="resetarCotaIA()" type="button">🔄 Resetar estado de cota</button>
+    </div>
+    <div style="text-align:center;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:14px">PetVida ${APP_VERSION} · ${APP_VERSION_DATE}</div>`;
+  openModal(headPadrao('Configurar IA', 'Provedor do Dr. Pet IA'), html,
+    `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
+     <button class="btn btn-success" onclick="testarConexaoIA()" style="flex:1">🧪 Testar</button>
+     <button class="btn btn-purple" onclick="salvarConfigIA()">Salvar</button>`);
+  setTimeout(()=> renderCamposConfigIA(), 60);
 }
-
+function resetarCotaIA(){
+  cotaEstado = {excedidaEm:0, proximaTentativa:0, tentativas:0, groundingDesativado:false};
+  saveCota();
+  modelosDisponiveisCache = null; cacheTimestamp = 0;
+  toast('🔄 Estado de cota resetado');
+  mostrarResultadoTeste(true, 'Estado resetado. Toque em 🧪 Testar.');
+}
 function renderCamposConfigIA(){
   const el = $('#iaConfigCampos');
   if(!el) return;
   const prov = $('#iaProvider') ? $('#iaProvider').value : 'gemini';
   if(prov === 'local'){
-    el.innerHTML = `<div class="blk" style="background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border-color:#C7E8E2">
-      <h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">✅</span>Modo offline</h4>
-      <p>Base local com 30+ tópicos veterinários. Sem internet.</p>
-    </div>`;
+    el.innerHTML = `<div class="blk" style="background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border-color:#C7E8E2"><h4><span class="b-ic" style="background:var(--secondary-soft);color:#12897A">✅</span>Modo offline</h4><p>Base local com 30+ tópicos veterinários.</p></div>`;
     return;
   }
-  const placeholders = {
-    gemini: {key:'AQ.Ab8... ou AIzaSy...', model:'(deixe vazio p/ autodetecção)'},
+  const ph = {
+    gemini: {key:'AQ.Ab8... ou AIzaSy...', model:'(vazio p/ autodetecção)'},
     openai: {key:'sk-...', model:'gpt-4o-mini'},
     anthropic: {key:'sk-ant-...', model:'claude-3-5-sonnet-20241022'}
   };
-  const ph = placeholders[prov] || placeholders.gemini;
+  const p = ph[prov] || ph.gemini;
   el.innerHTML = `
-    <div class="field">
-      <label>CHAVE DE API</label>
-      <input class="input" type="text" id="iaApiKey" placeholder="${ph.key}" value="${esc(iaConfig.apiKey || '')}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-      <div class="hint">Aceita formato AQ. (novo) e AIza (antigo).</div>
+    <div class="field"><label>CHAVE DE API</label>
+      <input class="input" type="text" id="iaApiKey" placeholder="${p.key}" value="${esc(iaConfig.apiKey || '')}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
-    <div class="field">
-      <label>MODELO</label>
-      <input class="input" id="iaModel" placeholder="${ph.model}" value="${esc(iaConfig.model || '')}">
-      <div class="hint">${prov === 'gemini' ? 'Vazio = autodetecção (recomendado)' : 'Deixe em branco para usar o padrão.'}</div>
+    <div class="field"><label>MODELO</label>
+      <input class="input" id="iaModel" placeholder="${p.model}" value="${esc(iaConfig.model || '')}">
     </div>`;
 }
-
 function atualizarConfigIA(){ renderCamposConfigIA(); }
-
 function salvarConfigIA(){
   const prov = $('#iaProvider').value;
   if(prov === 'local'){
     iaConfig = {provider:'local', apiKey:'', model:'', status:'desconhecido'};
-    saveIAConfig();
-    closeModal();
-    toast('Modo offline ativado 💡');
-    renderChat();
-    return;
+    saveIAConfig(); closeModal(); toast('Modo offline 💡'); renderChat(); return;
   }
   const key = ($('#iaApiKey').value || '').trim();
   const model = ($('#iaModel').value || '').trim();
-  if(!key){ toast('Informe a chave de API'); return; }
+  if(!key){ toast('Informe a chave'); return; }
   iaConfig = {provider: prov, apiKey: key, model: model, status: 'desconhecido'};
-  modelosDisponiveisCache = null;
-  cacheTimestamp = 0;
-  saveIAConfig();
-  closeModal();
-  toast('Configuração salva! Toque em 🧪 para testar.');
-  renderChat();
+  modelosDisponiveisCache = null; cacheTimestamp = 0;
+  saveIAConfig(); closeModal(); toast('Salvo! Toque em 🧪 para testar.'); renderChat();
 }
 
 /* ============================================================
@@ -2266,7 +2632,6 @@ document.addEventListener('scroll', e=>{
     else btn.classList.remove('show');
   }
 }, true);
-
 const HEADER_INFO = [
   {t:'PetVida', s:'Cuide bem do seu melhor amigo', stats:true},
   {t:'Meus Pets', s:'Gerencie seus companheiros'},
@@ -2275,7 +2640,7 @@ const HEADER_INFO = [
   {t:'Saúde', s:'Histórico, prevenção e guias'},
   {t:'Alimentação', s:'Rações e nutrição'},
   {t:'Doenças', s:'Guia de prevenção e tratamento'},
-  {t:'Dr. Pet IA', s:'Assistente veterinário Gemini + 🌐 Web'}
+  {t:'Dr. Pet IA', s:'Assistente veterinário Gemini'}
 ];
 function atualizarHeader(){
   const info = HEADER_INFO[state.currentPage];
@@ -2298,7 +2663,7 @@ function atualizarFAB(){
   fab.style.display = (state.currentPage === 1 || state.currentPage === 2) ? 'grid' : 'none';
 }
 function fabAction(){
-  if(state.currentPage === 2){ toast('Toque em uma raça para ver os detalhes 🐾'); return; }
+  if(state.currentPage === 2){ toast('Toque em uma raça 🐾'); return; }
   abrirModalPet();
 }
 
@@ -2344,7 +2709,7 @@ function renderHome(){
       <div class="empty-hero anim">
         <span class="empty-emoji">🐾</span>
         <h3>Bem-vindo ao PetVida!</h3>
-        <p>Cadastre seu primeiro pet e converse com o Dr. Pet IA com pesquisa na internet.</p>
+        <p>Cadastre seu primeiro pet e converse com o Dr. Pet IA.</p>
         <button class="btn btn-primary" onclick="abrirModalPet()">
           <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
           Cadastrar meu pet
@@ -2354,7 +2719,7 @@ function renderHome(){
       <div class="quick-grid">
         ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
         ${quickItem('💉','#FF7A45','Vacinas','goTo(3)')}
-        ${quickItem('📖','#25C2B0','Raças','goTo(2)')}
+        ${quickItem('☁️','#4A7DFF','Nuvem','abrirModalSync()')}
         ${quickItem('🩺','#EF476F','Doenças','goTo(6)')}
       </div>
       ${blocoDica()}`;
@@ -2378,10 +2743,10 @@ function renderHome(){
     html += `<div class="next-card anim" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5" onclick="goTo(7)">
       <div class="next-icon" style="background:rgba(155,93,229,.20)">🤖</div>
       <div class="next-body">
-        <div class="next-label" style="color:#6B31B8">Dr. Pet IA + 🌐 Web</div>
+        <div class="next-label" style="color:#6B31B8">Dr. Pet IA</div>
         <div class="next-title">Dúvidas sobre seu pet?</div>
-        <div class="next-desc">Pergunte sobre saúde, comportamento ou alimentação. Ele pesquisa na internet!</div>
-        <div class="next-date" style="color:#6B31B8">Toque para conversar →</div>
+        <div class="next-desc">Pergunte sobre saúde, comportamento ou alimentação.</div>
+        <div class="next-date" style="color:#6B31B8">Toque →</div>
       </div>
     </div>`;
   }
@@ -2392,40 +2757,34 @@ function renderHome(){
     <div class="quick-grid">
       ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
       ${quickItem('📸','#FF7A45','Álbum','abrirAlbumSelecionado()')}
-      ${quickItem('💾','#4A7DFF','Backup','abrirModalBackup()')}
-      ${quickItem('🩺','#EF476F','Doenças','goTo(6)')}
+      ${quickItem('☁️','#4A7DFF','Nuvem','abrirModalSync()')}
+      ${quickItem('💾','#25C2B0','Backup','abrirModalBackup()')}
     </div>`;
   html += blocoDica();
   el.innerHTML = html;
   atualizarHeader();
 }
 function abrirAlbumSelecionado(){
-  if(state.pets.length === 0){ toast('Cadastre um pet primeiro'); return; }
-  const id = state.petSelecionado || state.pets[0].id;
-  state.petSelecionado = id;
+  if(state.pets.length === 0){ toast('Cadastre um pet'); return; }
+  state.petSelecionado = state.petSelecionado || state.pets[0].id;
   state.saudeSub = 'album';
   goTo(4);
 }
 function quickItem(emoji, cor, label, fn){
-  const click = fn ? `onclick="${fn}"` : '';
-  return `<button class="quick" ${click} type="button">
+  return `<button class="quick" onclick="${fn}" type="button">
     <div class="quick-ic" style="background:${cor}"><span style="font-size:18px">${emoji}</span></div>
     <span>${label}</span>
   </button>`;
 }
 function blocoDica(){
   const dicas = [
-    {tag:'Dr. Pet IA + 🌐', t:'Pesquisa na internet!', p:'O Dr. Pet IA agora busca dados atualizados no Google e mostra as fontes consultadas ao final da resposta.'},
-    {tag:'Álbum', t:'Registre a evolução', p:'Salve fotos do seu pet em Saúde → 📸 Álbum e veja como ele cresceu.'},
-    {tag:'Backup', t:'Proteja os dados', p:'Exporte o arquivo JSON periodicamente.'}
+    {tag:'☁️ Nuvem', t:'Backup automático', p:'Ative a sincronização no Firebase e nunca perca seus dados.'},
+    {tag:'Dr. Pet IA', t:'Pesquisa na web', p:'O Dr. Pet IA busca dados atualizados no Google.'},
+    {tag:'Álbum', t:'Registre a evolução', p:'Salve fotos em Saúde → 📸 Álbum.'}
   ];
   const d = dicas[Math.floor(Math.random()*dicas.length)];
-  return `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Dica do dia</div></div>
-    <div class="tip-card anim">
-      <span class="tip-tag">${d.tag}</span>
-      <h4>${d.t}</h4>
-      <p>${d.p}</p>
-    </div>`;
+  return `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Dica</div></div>
+    <div class="tip-card anim"><span class="tip-tag">${d.tag}</span><h4>${d.t}</h4><p>${d.p}</p></div>`;
 }
 function calcularProximoEvento(){
   let melhor = null;
@@ -2437,7 +2796,7 @@ function calcularProximoEvento(){
       if(!melhor || peso < melhor.peso){
         let dataTxt;
         if(st.status === 'atrasada') dataTxt = 'Atrasada há ' + st.dias + ' dias';
-        else dataTxt = 'Prevista para ' + fmtData(st.due.toISOString().slice(0,10));
+        else dataTxt = 'Prevista: ' + fmtData(st.due.toISOString().slice(0,10));
         melhor = {peso, petId:p.id, petNome:p.nome, titulo:v.nome, obs:v.obs, status:st.status, dataTxt};
       }
     });
@@ -2453,7 +2812,7 @@ function petCardHTML(p, i){
   const esp = p.especie === 'gato' ? 'Gato' : 'Cão';
   const avatar = p.foto ? `<img src="${p.foto}" alt="${esc(p.nome)}">` : (p.emoji || (p.especie==='gato'?'🐈':'🐕'));
   const albumCount = (p.album || []).length;
-  return `<div class="pet-card anim d${Math.min(i+1,4)}" onclick="abrirDetalhePet('${p.id}')">
+  return `<div class="pet-card anim" onclick="abrirDetalhePet('${p.id}')">
     <div class="pet-avatar ${p.especie==='gato'?'cat':''}">${avatar}</div>
     <div class="pet-info">
       <div class="pet-name">${esc(p.nome)}</div>
@@ -2509,7 +2868,7 @@ function renderRacasGrid(){
     return;
   }
   grid.innerHTML = lista.map((r,i)=>`
-    <button class="breed-card anim d${Math.min(i%4+1,4)}" onclick="abrirDetalheRaca('${r.id}')" type="button">
+    <button class="breed-card anim" onclick="abrirDetalheRaca('${r.id}')" type="button">
       <div class="breed-top">
         ${avatarRacaSVG(r.id, r.esp)}
         <span class="breed-emoji-badge">${r.emoji}</span>
@@ -2537,14 +2896,12 @@ function renderVacinas(){
   if(!state.petSelecionado || !state.pets.find(p=>p.id===state.petSelecionado)) state.petSelecionado = state.pets[0].id;
   if(state.pets.length > 1){
     picker.innerHTML = `<div class="chips" style="margin-bottom:14px">
-      ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}"
-        onclick="selecionarPet('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
+      ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}" onclick="selecionarPet('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
     </div>`;
   } else picker.innerHTML = '';
   const pet = state.pets.find(p=>p.id === state.petSelecionado);
   const lista = PROTOCOLO[pet.especie] || [];
   const res = resumoVacinas(pet);
-
   let html = `<button class="btn btn-primary" style="margin-bottom:16px" onclick="abrirCarteiraVacina('${pet.id}')" type="button">
     <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm-8 12H6v-2h6v2zm6-4H6v-2h12v2zm0-4H6V6h12v2z"/></svg>
     Abrir Carteira
@@ -2573,18 +2930,16 @@ function renderVacinas(){
     </div>
   </div>`;
   const ordem = {atrasada:0, proxima:1, futura:2, ok:3};
-  const itens = lista.map(v => ({v, st: statusVacina(pet, v)}))
-    .sort((a,b)=>{
-      if(ordem[a.st.status] !== ordem[b.st.status]) return ordem[a.st.status]-ordem[b.st.status];
-      return a.st.due - b.st.due;
-    });
+  const itens = lista.map(v => ({v, st: statusVacina(pet, v)})).sort((a,b)=>{
+    if(ordem[a.st.status] !== ordem[b.st.status]) return ordem[a.st.status]-ordem[b.st.status];
+    return a.st.due - b.st.due;
+  });
   html += '<div class="timeline">' + itens.map(({v,st})=>{
     let dateTxt = '', marcaHtml = '';
     if(st.status === 'ok'){
       dateTxt = '✅ ' + fmtData(st.aplicada.data);
       if(st.aplicada.marca) marcaHtml = `<div class="vac-marca">💉 ${esc(st.aplicada.marca)}</div>`;
-    }
-    else if(st.status === 'atrasada') dateTxt = '⚠️ Atrasada há ' + st.dias + 'd';
+    } else if(st.status === 'atrasada') dateTxt = '⚠️ Atrasada há ' + st.dias + 'd';
     else if(st.status === 'proxima') dateTxt = '🔔 Em ' + st.dias + 'd';
     else dateTxt = '📅 ' + fmtData(st.due.toISOString().slice(0,10));
     return `<div class="tl-item ${st.status}">
@@ -2611,7 +2966,6 @@ function renderVacinas(){
   atualizarHeader();
 }
 function selecionarPet(id){ state.petSelecionado = id; renderVacinas(); }
-
 function abrirModalAplicarVacina(petId, vacId){
   const pet = state.pets.find(p=>p.id === petId);
   if(!pet) return;
@@ -2636,8 +2990,7 @@ function abrirModalAplicarVacina(petId, vacId){
 }
 function selMarca(marca){
   state.marcaVacinaSel = marca;
-  const inputOutro = $('#vMarcaOutro');
-  if(inputOutro) inputOutro.value = '';
+  const i = $('#vMarcaOutro'); if(i) i.value = '';
   atualizarChips();
 }
 function atualizarChips(){
@@ -2762,7 +3115,6 @@ function abrirCarteiraVacina(petId){
     `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
      <button class="btn btn-primary" onclick="closeModal();goTo(3)">Gerenciar</button>`);
 }
-
 function abrirModalIdadeReal(petId){
   const id = petId || state.petSelecionado;
   const pet = state.pets.find(p=>p.id === id);
@@ -2770,11 +3122,9 @@ function abrirModalIdadeReal(petId){
   state.petSelecionado = id;
   const info = idadeDetalhada(pet);
   if(!info){ toast('Data não informada'); return; }
-  const faixa = info.faixa;
-  const recs = RECOMENDACOES_IDADE[pet.especie][faixa];
-  const faixaLabel = {filhote:'Filhote', junior:'Júnior', adulto:'Adulto', senior:'Sênior'}[faixa];
-  let html = `
-    <div class="idade-hero">
+  const recs = RECOMENDACOES_IDADE[pet.especie][info.faixa];
+  const faixaLabel = {filhote:'Filhote', junior:'Júnior', adulto:'Adulto', senior:'Sênior'}[info.faixa];
+  let html = `<div class="idade-hero">
       <span class="ih-tag">${pet.especie==='gato'?'Felino':'Canino'}</span>
       <span class="ih-emoji">${recs.emoji}</span>
       <div class="ih-animal">${esc(info.animalTxt)}</div>
@@ -2825,8 +3175,7 @@ function renderSaude(){
   let petPicker = '';
   if(state.pets.length > 1){
     petPicker = `<div class="chips" style="margin-bottom:14px">
-      ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}"
-        onclick="selecionarPetSaude('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
+      ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}" onclick="selecionarPetSaude('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
     </div>`;
   }
   let body = petPicker;
@@ -2916,14 +3265,9 @@ function renderSaudeVisao(pet){
   }).join('');
   return html;
 }
-
-/* ============================================================
-   ÁLBUM DE FOTOS
-============================================================ */
 function renderSaudeAlbum(pet){
   const album = (pet.album || []).slice().sort((a,b) => new Date(b.data) - new Date(a.data));
   let html = '';
-
   if(album.length > 0){
     const primeira = album[album.length - 1];
     const ultima = album[0];
@@ -2934,21 +3278,14 @@ function renderSaudeAlbum(pet){
       <div class="album-stat"><div class="album-stat-n">${primeiroAno === ultimoAno ? primeiroAno : primeiroAno + '–' + ultimoAno}</div><div class="album-stat-l">Período</div></div>
     </div>`;
   }
-
   html += `<button class="btn btn-primary" style="margin-bottom:14px" onclick="abrirModalAddFotoAlbum('${pet.id}')" type="button">
     <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
     Adicionar foto
   </button>`;
-
   if(album.length === 0){
-    html += `<div class="empty">
-      <span class="e-ic">📸</span>
-      <h4>Álbum vazio</h4>
-      <p>Registre a evolução do seu pet com fotos!</p>
-    </div>`;
+    html += `<div class="empty"><span class="e-ic">📸</span><h4>Álbum vazio</h4><p>Registre a evolução!</p></div>`;
     return html;
   }
-
   const grupos = {};
   album.forEach(f => {
     const d = f.data ? new Date(f.data + 'T12:00:00') : new Date();
@@ -2956,10 +3293,8 @@ function renderSaudeAlbum(pet){
     if(!grupos[chave]) grupos[chave] = [];
     grupos[chave].push(f);
   });
-
   const mesesNomes = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
   const chavesOrd = Object.keys(grupos).sort().reverse();
-
   html += `<div class="album-timeline">`;
   chavesOrd.forEach(chave => {
     const [ano, mes] = chave.split('-');
@@ -2980,9 +3315,7 @@ function renderSaudeAlbum(pet){
   html += `</div>`;
   return html;
 }
-
 let formAlbum = {foto:null, titulo:'', nota:'', data: hojeISO(), petId: null};
-
 function abrirModalAddFotoAlbum(petId){
   const id = petId || state.petSelecionado;
   if(!id){ toast('Selecione um pet'); return; }
@@ -2992,62 +3325,46 @@ function abrirModalAddFotoAlbum(petId){
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarFotoAlbum()">Salvar</button>`);
 }
-
 function formAlbumHTML(){
   if(!formAlbum.foto){
     return `<div class="album-upload-empty">
       <div style="font-size:52px;margin-bottom:12px">📸</div>
       <div style="font-size:14px;font-weight:800;margin-bottom:6px">Adicione uma foto</div>
-      <div style="font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.5">Tire uma foto agora ou escolha uma da galeria</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:20px">Tire ou escolha da galeria</div>
       <button class="btn btn-primary" style="margin-bottom:9px" onclick="abrirCameraAlbum()" type="button">
         <svg viewBox="0 0 24 24"><path d="M9 2L7.17 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2h-3.17L15 2H9zm3 15a5 5 0 110-10 5 5 0 010 10z"/></svg>
         Tirar foto
       </button>
       <button class="btn btn-ghost" onclick="abrirGaleriaAlbum()" type="button">
         <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
-        Escolher da galeria
+        Galeria
       </button>
     </div>`;
   }
   return `
-    <div class="album-preview">
-      <img src="${formAlbum.foto}" alt="">
-    </div>
+    <div class="album-preview"><img src="${formAlbum.foto}" alt=""></div>
     <button class="btn btn-soft btn-sm" style="width:100%;margin-bottom:14px" onclick="trocarFotoAlbum()" type="button">🔄 Trocar foto</button>
-    <div class="field"><label>TÍTULO (opcional)</label>
-      <input class="input" id="albumTitulo" placeholder="Ex: Primeiro banho, Passeio no parque..." value="${esc(formAlbum.titulo)}" oninput="formAlbum.titulo=this.value" maxlength="60">
-    </div>
-    <div class="field"><label>DATA</label>
-      <input class="input" type="date" id="albumData" value="${formAlbum.data}" max="${hojeISO()}" onchange="formAlbum.data=this.value">
-    </div>
-    <div class="field"><label>OBSERVAÇÃO (opcional)</label>
-      <textarea class="textarea" id="albumNota" placeholder="Como foi esse momento?" oninput="formAlbum.nota=this.value" maxlength="300">${esc(formAlbum.nota)}</textarea>
-    </div>`;
+    <div class="field"><label>TÍTULO</label><input class="input" id="albumTitulo" placeholder="Ex: Primeiro banho..." value="${esc(formAlbum.titulo)}" oninput="formAlbum.titulo=this.value" maxlength="60"></div>
+    <div class="field"><label>DATA</label><input class="input" type="date" id="albumData" value="${formAlbum.data}" max="${hojeISO()}" onchange="formAlbum.data=this.value"></div>
+    <div class="field"><label>OBSERVAÇÃO</label><textarea class="textarea" id="albumNota" placeholder="Como foi esse momento?" oninput="formAlbum.nota=this.value" maxlength="300">${esc(formAlbum.nota)}</textarea></div>`;
 }
-
-function abrirCameraAlbum(){ const el = document.getElementById('inputAlbumCamera'); if(el) el.click(); }
-function abrirGaleriaAlbum(){ const el = document.getElementById('inputAlbumGaleria'); if(el) el.click(); }
-function trocarFotoAlbum(){
-  formAlbum.foto = null;
-  $('#modalBody').innerHTML = formAlbumHTML();
-}
-
+function abrirCameraAlbum(){ const e = document.getElementById('inputAlbumCamera'); if(e) e.click(); }
+function abrirGaleriaAlbum(){ const e = document.getElementById('inputAlbumGaleria'); if(e) e.click(); }
+function trocarFotoAlbum(){ formAlbum.foto = null; $('#modalBody').innerHTML = formAlbumHTML(); }
 function processarFotoAlbum(input){
   const file = input.files && input.files[0];
   if(!file) return;
-  if(file.size > 15 * 1024 * 1024){ toast('Foto muito grande (máx 15MB)'); input.value=''; return; }
+  if(file.size > 15 * 1024 * 1024){ toast('Foto muito grande'); input.value=''; return; }
   const reader = new FileReader();
   reader.onload = e => {
     redimensionarImagem(e.target.result, 800, 0.78, (dataUrl) => {
       formAlbum.foto = dataUrl;
-      const body = $('#modalBody');
-      if(body) body.innerHTML = formAlbumHTML();
+      const body = $('#modalBody'); if(body) body.innerHTML = formAlbumHTML();
     });
   };
   reader.readAsDataURL(file);
   input.value = '';
 }
-
 function salvarFotoAlbum(){
   if(!formAlbum.foto){ toast('Adicione uma foto'); return; }
   const pet = state.pets.find(p => p.id === formAlbum.petId);
@@ -3055,30 +3372,23 @@ function salvarFotoAlbum(){
   if(!pet.album) pet.album = [];
   const idadePet = calcularIdadeNaData(pet.nascimento, formAlbum.data);
   pet.album.push({
-    id: uid(),
-    foto: formAlbum.foto,
+    id: uid(), foto: formAlbum.foto,
     titulo: (formAlbum.titulo || '').trim(),
     nota: (formAlbum.nota || '').trim(),
-    data: formAlbum.data || hojeISO(),
-    idadePet,
+    data: formAlbum.data || hojeISO(), idadePet,
     criado: new Date().toISOString()
   });
-  saveDB();
-  closeModal();
-  toast('Foto adicionada! 📸');
+  saveDB(); closeModal(); toast('Foto adicionada! 📸');
   state.saudeSub = 'album';
   renderSaude();
 }
-
 function abrirFotoAlbum(petId, fotoId){
   const pet = state.pets.find(p => p.id === petId);
   if(!pet || !pet.album) return;
   const foto = pet.album.find(f => f.id === fotoId);
   if(!foto) return;
   const body = `
-    <div class="album-preview" style="background:#1B2434">
-      <img src="${foto.foto}" alt="" style="max-height:420px">
-    </div>
+    <div class="album-preview" style="background:#1B2434"><img src="${foto.foto}" alt="" style="max-height:420px"></div>
     ${foto.titulo ? `<h3 style="margin:0 0 10px;font-size:17px;font-weight:800">${esc(foto.titulo)}</h3>` : ''}
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
       <span class="badge badge-info">📅 ${fmtData(foto.data)}</span>
@@ -3092,7 +3402,6 @@ function abrirFotoAlbum(petId, fotoId){
      <button class="btn btn-soft" onclick="closeModal()">Fechar</button>
      <button class="btn btn-primary" onclick="compartilharFoto('${petId}','${fotoId}')">Compartilhar</button>`);
 }
-
 function confirmarExcluirFoto(petId, fotoId){
   openModal(headPadrao('Excluir foto', 'Não pode ser desfeito'),
     `<div style="text-align:center;padding:16px 0">
@@ -3102,17 +3411,13 @@ function confirmarExcluirFoto(petId, fotoId){
     `<button class="btn btn-soft" onclick="abrirFotoAlbum('${petId}','${fotoId}')">Cancelar</button>
      <button class="btn btn-danger" onclick="excluirFotoAlbum('${petId}','${fotoId}')">Excluir</button>`);
 }
-
 function excluirFotoAlbum(petId, fotoId){
   const pet = state.pets.find(p => p.id === petId);
   if(!pet || !pet.album) return;
   pet.album = pet.album.filter(f => f.id !== fotoId);
-  saveDB();
-  closeModal();
-  toast('Foto excluída');
+  saveDB(); closeModal(); toast('Foto excluída');
   renderSaude();
 }
-
 function compartilharFoto(petId, fotoId){
   const pet = state.pets.find(p => p.id === petId);
   const foto = pet && pet.album && pet.album.find(f => f.id === fotoId);
@@ -3121,36 +3426,18 @@ function compartilharFoto(petId, fotoId){
     fetch(foto.foto).then(r => r.blob()).then(blob => {
       const file = new File([blob], 'petvida-foto.jpg', {type: 'image/jpeg'});
       if(navigator.canShare && navigator.canShare({files: [file]})){
-        navigator.share({
-          files: [file],
-          title: foto.titulo || ('Foto de ' + pet.nome),
-          text: foto.titulo || ('Foto de ' + pet.nome)
-        }).catch(()=>{});
+        navigator.share({files: [file], title: foto.titulo || ('Foto de ' + pet.nome)}).catch(()=>{});
       } else if(navigator.share){
-        navigator.share({
-          title: foto.titulo || ('Foto de ' + pet.nome),
-          text: foto.titulo ? (foto.titulo + (foto.nota ? '\n\n' + foto.nota : '')) : (foto.nota || '')
-        }).catch(()=>{});
-      } else {
-        toast('Compartilhamento indisponível');
-      }
-    }).catch(()=>{
-      toast('Não foi possível preparar');
-    });
-  }catch(e){ toast('Erro ao compartilhar'); }
+        navigator.share({title: foto.titulo || ('Foto de ' + pet.nome)}).catch(()=>{});
+      } else toast('Compartilhamento indisponível');
+    }).catch(()=> toast('Não foi possível'));
+  }catch(e){ toast('Erro'); }
 }
-
-/* ============================================================
-   SAÚDE — HISTÓRICO, PREVENÇÃO, DIÁRIO, TUTORES, EMERGÊNCIA, GUIAS
-============================================================ */
 function renderSaudeHistorico(pet){
   const h = pet.historico || {consultas:[],exames:[],medicamentos:[],cirurgias:[],alergias:[]};
   let html = '';
   if(h.alergias.length > 0){
-    html += `<div class="blk warn anim" style="margin-bottom:14px">
-      <h4><span class="b-ic">⚠️</span>Alergias</h4>
-      <ul>${h.alergias.map(a=>`<li><strong>${esc(a.tipo)}</strong></li>`).join('')}</ul>
-    </div>`;
+    html += `<div class="blk warn anim" style="margin-bottom:14px"><h4><span class="b-ic">⚠️</span>Alergias</h4><ul>${h.alergias.map(a=>`<li><strong>${esc(a.tipo)}</strong></li>`).join('')}</ul></div>`;
   }
   html += `<div class="quick-grid" style="margin-bottom:16px">
     ${quickItem('🩺','#4A7DFF','Consulta','abrirModalConsulta()')}
@@ -3166,10 +3453,8 @@ function renderSaudeHistorico(pet){
   return html;
 }
 function secHist(titulo, lista, classe, icon, mapper, btnAdd, fnAdd){
-  let html = `<div class="sec-head" style="margin-top:16px">
-    <div class="sec-title"><span class="dot"></span>${titulo}</div>
-    ${btnAdd && fnAdd ? `<button class="sec-link" onclick="${fnAdd}">${btnAdd}</button>` : ''}
-  </div>`;
+  let html = `<div class="sec-head" style="margin-top:16px"><div class="sec-title"><span class="dot"></span>${titulo}</div>
+    ${btnAdd && fnAdd ? `<button class="sec-link" onclick="${fnAdd}">${btnAdd}</button>` : ''}</div>`;
   if(lista.length === 0){
     html += `<div class="card" style="text-align:center;padding:16px;margin-bottom:8px;color:var(--muted);font-size:11.5px;font-weight:600">Nenhum item</div>`;
     return html;
@@ -3267,10 +3552,8 @@ function renderSaudeEmergencia(){
           </div>
           <div class="ps-body">
             <p style="font-size:12px;color:var(--muted);font-weight:600;margin:0 0 4px">${esc(p.oque)}</p>
-            <h5>✅ Fazer</h5>
-            <ul>${p.fazer.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
-            <h5>🚫 NÃO fazer</h5>
-            <ul>${p.nao.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
+            <h5>✅ Fazer</h5><ul>${p.fazer.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
+            <h5>🚫 NÃO</h5><ul>${p.nao.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
             <div class="ps-warn">⚠️ ${esc(p.aviso)}</div>
           </div>
         </div>`).join('')}
@@ -3297,8 +3580,7 @@ function renderGuiaAlimentos(){
   const por = {permitido:[], perigoso:[], toxico:[]};
   lista.forEach(a=> por[a.cat].push(a));
   let html = `<div class="search-wrap"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3a6.5 6.5 0 10-.7.7l.3.3v.8l5 5 1.5-1.5-5-5z"/></svg>
-    <input class="search-input" placeholder="Buscar..." value="${esc(state.saudeBusca||'')}" oninput="state.saudeBusca=this.value;renderSaude()">
-  </div>`;
+    <input class="search-input" placeholder="Buscar..." value="${esc(state.saudeBusca||'')}" oninput="state.saudeBusca=this.value;renderSaude()"></div>`;
   if(por.permitido.length) html += `<div class="alim-cat"><h4>✅ Permitidos</h4>${por.permitido.map(a=>`<div class="alim-item permitido"><div class="ai-icon">${a.emoji}</div><div class="ai-body"><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
   if(por.perigoso.length) html += `<div class="alim-cat"><h4>⚠️ Perigosos</h4>${por.perigoso.map(a=>`<div class="alim-item perigoso"><div class="ai-icon">${a.emoji}</div><div class="ai-body"><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
   if(por.toxico.length) html += `<div class="alim-cat"><h4>☠️ Tóxicos</h4>${por.toxico.map(a=>`<div class="alim-item toxico"><div class="ai-icon">${a.emoji}</div><div class="ai-body"><div class="ai-nome">${esc(a.nome)}</div><div class="ai-nota">${esc(a.nota)}</div></div></div>`).join('')}</div>`;
@@ -3315,12 +3597,7 @@ function renderGuiaAdestramento(){
   return ADESTRAMENTO.map(n=>`
     <div class="blk" style="border-left:4px solid ${n.cor}">
       <h4><span class="b-ic" style="background:${n.cor}20;color:${n.cor}">🎓</span>${esc(n.nivel)}</h4>
-      ${n.comandos.map(c=>`
-        <div style="padding:11px 0;border-bottom:1px dashed var(--line)">
-          <div style="font-size:13px;font-weight:800;margin-bottom:5px">${esc(c.nome)}</div>
-          <div style="font-size:12px;color:#4C5768;line-height:1.55">${esc(c.como)}</div>
-        </div>
-      `).join('')}
+      ${n.comandos.map(c=>`<div style="padding:11px 0;border-bottom:1px dashed var(--line)"><div style="font-size:13px;font-weight:800;margin-bottom:5px">${esc(c.nome)}</div><div style="font-size:12px;color:#4C5768;line-height:1.55">${esc(c.como)}</div></div>`).join('')}
     </div>`).join('');
 }
 function selecionarPetSaude(id){ state.petSelecionado = id; renderSaude(); }
@@ -3376,8 +3653,7 @@ function renderRacoes(){
   let html = '';
   if(state.pets.length > 1){
     html += `<div class="chips" style="margin-bottom:14px">
-      ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}"
-        onclick="selecionarPetRacao('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
+      ${state.pets.map(p=>`<button class="chip ${p.id===state.petSelecionado?'active':''}" onclick="selecionarPetRacao('${p.id}')" type="button">${p.emoji||'🐾'} ${esc(p.nome)}</button>`).join('')}
     </div>`;
   }
   html += `<div class="card anim" style="margin-bottom:16px;background:linear-gradient(140deg,#fff,#FFF9EC);border-color:#FFE9BF">
@@ -3507,10 +3783,9 @@ function headPadrao(titulo, sub){
 }
 
 /* ============================================================
-   MODAIS DE CADASTRO (FOTO DE PERFIL CORRIGIDA)
+   MODAIS DE CADASTRO
 ============================================================ */
 let formPet = { id:null, nome:'', especie:'cao', raca:'', nascimento:'', sexo:'macho', peso:'', emoji:'🐕', foto:null };
-
 function abrirModalPet(petId){
   const editando = !!petId;
   if(editando){
@@ -3524,25 +3799,19 @@ function abrirModalPet(petId){
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarPet()">${editando?'Salvar':'Cadastrar'}</button>`);
 }
-
 function formPetHTML(){
   const emojis = formPet.especie === 'gato' ? ['🐈','🐱','😺','😸','😻'] : ['🐕','🐶','🦮','🐩','🐺'];
   const racasFiltradas = RACAS.filter(r=>r.esp === formPet.especie);
-  const fotoInner = formPet.foto
-    ? `<img src="${formPet.foto}" alt="">`
-    : `<span>${formPet.emoji}</span>`;
+  const fotoInner = formPet.foto ? `<img src="${formPet.foto}" alt="">` : `<span>${formPet.emoji}</span>`;
   const fotoHTML = `
     <input type="file" id="fileFoto" accept="image/*" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" onchange="processarFoto(this)">
     <div class="foto-upload-wrap">
       <label for="fileFoto" class="foto-upload">
         ${fotoInner}
-        <div class="foto-edit">
-          <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-        </div>
+        <div class="foto-edit"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></div>
       </label>
     </div>
     <div class="foto-hint">📷 Toque para ${formPet.foto ? 'trocar' : 'adicionar'} foto</div>`;
-
   return `
   ${fotoHTML}
   <div class="field"><label>ESPÉCIE</label>
@@ -3551,9 +3820,7 @@ function formPetHTML(){
       <button class="species-opt ${formPet.especie==='gato'?'active':''}" onclick="setFormEspecie('gato')" type="button"><span class="sp-emoji">🐱</span><span class="sp-name">Gato</span></button>
     </div>
   </div>
-  ${formPet.foto ? '' : `<div class="field"><label>AVATAR (se sem foto)</label>
-    <div class="avatar-pick">${emojis.map(e=>`<button class="avatar-opt ${formPet.emoji===e?'active':''}" onclick="setFormEmoji('${e}')" type="button">${e}</button>`).join('')}</div>
-  </div>`}
+  ${formPet.foto ? '' : `<div class="field"><label>AVATAR</label><div class="avatar-pick">${emojis.map(e=>`<button class="avatar-opt ${formPet.emoji===e?'active':''}" onclick="setFormEmoji('${e}')" type="button">${e}</button>`).join('')}</div></div>`}
   <div class="field"><label>NOME *</label><input class="input" id="fNome" value="${esc(formPet.nome)}" oninput="formPet.nome=this.value" placeholder="Ex: Rex"></div>
   <div class="field"><label>RAÇA</label>
     <select class="select" id="fRaca" onchange="formPet.raca=this.value">
@@ -3573,36 +3840,28 @@ function formPetHTML(){
   </div>
   <div class="field"><label>PESO (kg)</label><input class="input" type="number" step="0.1" min="0" value="${esc(formPet.peso)}" oninput="formPet.peso=this.value" placeholder="Ex: 5.5"></div>`;
 }
-
 function setFormEspecie(esp){
   formPet.especie = esp;
   formPet.emoji = esp === 'gato' ? '🐈' : '🐕';
   formPet.raca = '';
   $('#modalBody').innerHTML = formPetHTML();
 }
-function setFormEmoji(e){
-  formPet.emoji = e;
-  formPet.foto = null;
-  $('#modalBody').innerHTML = formPetHTML();
-}
-
+function setFormEmoji(e){ formPet.emoji = e; formPet.foto = null; $('#modalBody').innerHTML = formPetHTML(); }
 function processarFoto(input){
   const file = input.files && input.files[0];
   if(!file) return;
-  if(file.size > 10 * 1024 * 1024){ toast('Foto muito grande (máx 10MB)'); input.value=''; return; }
+  if(file.size > 10 * 1024 * 1024){ toast('Foto muito grande'); input.value=''; return; }
   const reader = new FileReader();
   reader.onload = e => {
     redimensionarImagem(e.target.result, 500, 0.82, (dataUrl) => {
       formPet.foto = dataUrl;
-      const body = $('#modalBody');
-      if(body) body.innerHTML = formPetHTML();
+      const body = $('#modalBody'); if(body) body.innerHTML = formPetHTML();
       toast('Foto adicionada! 📷');
     });
   };
   reader.readAsDataURL(file);
   input.value = '';
 }
-
 function salvarPet(){
   const nome = ($('#fNome') ? $('#fNome').value : formPet.nome).trim();
   const nasc = $('#fNasc') ? $('#fNasc').value : formPet.nascimento;
@@ -3633,7 +3892,6 @@ function salvarPet(){
   saveDB(); closeModal();
   renderPage(state.currentPage); atualizarHeader();
 }
-
 function abrirDetalhePet(id){
   const p = state.pets.find(x=>x.id === id);
   if(!p) return;
@@ -3720,11 +3978,7 @@ function abrirModalPeso(){
   if(state.pets.length === 0){ toast('Cadastre um pet'); return; }
   if(!state.petSelecionado) state.petSelecionado = state.pets[0].id;
   openModal(headPadrao('Registrar peso', 'Acompanhe o crescimento'),
-    `<div class="field"><label>PET</label>
-      <select class="select" id="pesoPet">
-        ${state.pets.map(p=>`<option value="${p.id}" ${p.id===state.petSelecionado?'selected':''}>${esc(p.nome)}</option>`).join('')}
-      </select>
-    </div>
+    `<div class="field"><label>PET</label><select class="select" id="pesoPet">${state.pets.map(p=>`<option value="${p.id}" ${p.id===state.petSelecionado?'selected':''}>${esc(p.nome)}</option>`).join('')}</select></div>
     <div class="field"><label>PESO (kg) *</label><input class="input" id="pesoVal" type="number" step="0.1" min="0" inputmode="decimal"></div>
     <div class="field"><label>DATA</label><input class="input" id="pesoData" type="date" value="${hojeISO()}" max="${hojeISO()}"></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
@@ -3748,10 +4002,8 @@ function abrirModalConsulta(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
   openModal(headPadrao('Consulta', 'Registrar'),
     `<div class="field"><label>MOTIVO *</label><input class="input" id="hcMotivo"></div>
-    <div class="row-2">
-      <div class="field"><label>DATA</label><input class="input" type="date" id="hcData" value="${hojeISO()}"></div>
-      <div class="field"><label>VET</label><input class="input" id="hcVet"></div>
-    </div>
+    <div class="row-2"><div class="field"><label>DATA</label><input class="input" type="date" id="hcData" value="${hojeISO()}"></div>
+      <div class="field"><label>VET</label><input class="input" id="hcVet"></div></div>
     <div class="field"><label>DIAGNÓSTICO</label><textarea class="textarea" id="hcDiag"></textarea></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarConsulta()">Salvar</button>`);
@@ -3762,16 +4014,14 @@ function salvarConsulta(){
   const motivo = $('#hcMotivo').value.trim();
   if(!motivo){ toast('Informe o motivo'); return; }
   pet.historico.consultas.push({id:uid(), motivo, data:$('#hcData').value||hojeISO(), veterinario:$('#hcVet').value.trim(), diagnostico:$('#hcDiag').value.trim()});
-  saveDB(); closeModal(); toast('Consulta registrada! 🩺'); renderSaude();
+  saveDB(); closeModal(); toast('Registrado! 🩺'); renderSaude();
 }
 function abrirModalExame(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
   openModal(headPadrao('Exame', 'Registrar'),
     `<div class="field"><label>NOME *</label><input class="input" id="heNome"></div>
-    <div class="row-2">
-      <div class="field"><label>DATA</label><input class="input" type="date" id="heData" value="${hojeISO()}"></div>
-      <div class="field"><label>LAB</label><input class="input" id="heLab"></div>
-    </div>
+    <div class="row-2"><div class="field"><label>DATA</label><input class="input" type="date" id="heData" value="${hojeISO()}"></div>
+      <div class="field"><label>LAB</label><input class="input" id="heLab"></div></div>
     <div class="field"><label>RESULTADO</label><textarea class="textarea" id="heResult"></textarea></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarExame()">Salvar</button>`);
@@ -3782,20 +4032,16 @@ function salvarExame(){
   const nome = $('#heNome').value.trim();
   if(!nome){ toast('Informe o nome'); return; }
   pet.historico.exames.push({id:uid(), nome, data:$('#heData').value||hojeISO(), laboratorio:$('#heLab').value.trim(), resultado:$('#heResult').value.trim()});
-  saveDB(); closeModal(); toast('Exame registrado! 🔬'); renderSaude();
+  saveDB(); closeModal(); toast('Registrado! 🔬'); renderSaude();
 }
 function abrirModalMedicamento(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
   openModal(headPadrao('Medicamento', 'Registrar'),
     `<div class="field"><label>NOME *</label><input class="input" id="hmNome"></div>
-    <div class="row-2">
-      <div class="field"><label>DOSE</label><input class="input" id="hmDose"></div>
-      <div class="field"><label>FREQUÊNCIA</label><input class="input" id="hmFreq"></div>
-    </div>
-    <div class="row-2">
-      <div class="field"><label>INÍCIO</label><input class="input" type="date" id="hmInicio" value="${hojeISO()}"></div>
-      <div class="field"><label>FIM</label><input class="input" type="date" id="hmFim"></div>
-    </div>`,
+    <div class="row-2"><div class="field"><label>DOSE</label><input class="input" id="hmDose"></div>
+      <div class="field"><label>FREQUÊNCIA</label><input class="input" id="hmFreq"></div></div>
+    <div class="row-2"><div class="field"><label>INÍCIO</label><input class="input" type="date" id="hmInicio" value="${hojeISO()}"></div>
+      <div class="field"><label>FIM</label><input class="input" type="date" id="hmFim"></div></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarMedicamento()">Salvar</button>`);
 }
@@ -3805,16 +4051,14 @@ function salvarMedicamento(){
   const nome = $('#hmNome').value.trim();
   if(!nome){ toast('Informe o nome'); return; }
   pet.historico.medicamentos.push({id:uid(), nome, dose:$('#hmDose').value.trim(), frequencia:$('#hmFreq').value.trim(), inicio:$('#hmInicio').value||hojeISO(), fim:$('#hmFim').value||''});
-  saveDB(); closeModal(); toast('Medicamento registrado! 💊'); renderSaude();
+  saveDB(); closeModal(); toast('Registrado! 💊'); renderSaude();
 }
 function abrirModalCirurgia(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
   openModal(headPadrao('Cirurgia', 'Registrar'),
     `<div class="field"><label>PROCEDIMENTO *</label><input class="input" id="hcirNome"></div>
-    <div class="row-2">
-      <div class="field"><label>DATA</label><input class="input" type="date" id="hcirData" value="${hojeISO()}"></div>
-      <div class="field"><label>VET</label><input class="input" id="hcirVet"></div>
-    </div>`,
+    <div class="row-2"><div class="field"><label>DATA</label><input class="input" type="date" id="hcirData" value="${hojeISO()}"></div>
+      <div class="field"><label>VET</label><input class="input" id="hcirVet"></div></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarCirurgia()">Salvar</button>`);
 }
@@ -3824,7 +4068,7 @@ function salvarCirurgia(){
   const nome = $('#hcirNome').value.trim();
   if(!nome){ toast('Informe o procedimento'); return; }
   pet.historico.cirurgias.push({id:uid(), nome, data:$('#hcirData').value||hojeISO(), veterinario:$('#hcirVet').value.trim()});
-  saveDB(); closeModal(); toast('Cirurgia registrada! 🏥'); renderSaude();
+  saveDB(); closeModal(); toast('Registrada! 🏥'); renderSaude();
 }
 function abrirModalAlergia(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
@@ -3840,18 +4084,13 @@ function salvarAlergia(){
   const tipo = $('#halTipo').value.trim();
   if(!tipo){ toast('Informe o tipo'); return; }
   pet.historico.alergias.push({id:uid(), tipo, descricao:$('#halDesc').value.trim()});
-  saveDB(); closeModal(); toast('Alergia registrada! ⚠️'); renderSaude();
+  saveDB(); closeModal(); toast('Registrada! ⚠️'); renderSaude();
 }
 function abrirModalAntipulgas(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
   const produtos = ['Bravecto','Simparic','NexGard','Frontline','Revolution','Outro'];
   openModal(headPadrao('Antipulgas', 'Registrar'),
-    `<div class="field"><label>PRODUTO *</label>
-      <select class="select" id="hapProduto">
-        <option value="">Selecione</option>
-        ${produtos.map(p=>`<option value="${esc(p)}">${esc(p)}</option>`).join('')}
-      </select>
-    </div>
+    `<div class="field"><label>PRODUTO *</label><select class="select" id="hapProduto"><option value="">Selecione</option>${produtos.map(p=>`<option value="${esc(p)}">${esc(p)}</option>`).join('')}</select></div>
     <div class="field"><label>DATA</label><input class="input" type="date" id="hapData" value="${hojeISO()}"></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarAntipulgas()">Salvar</button>`);
@@ -3863,7 +4102,7 @@ function salvarAntipulgas(){
   if(!produto){ toast('Selecione o produto'); return; }
   if(!pet.antipulgas) pet.antipulgas = [];
   pet.antipulgas.push({id:uid(), produto, data:$('#hapData').value||hojeISO()});
-  saveDB(); closeModal(); toast('Aplicação registrada! 💊'); renderSaude();
+  saveDB(); closeModal(); toast('Registrada! 💊'); renderSaude();
 }
 function abrirModalDiario(){
   if(!state.petSelecionado){ toast('Selecione um pet'); return; }
@@ -3891,9 +4130,7 @@ function abrirModalTutor(){
   const parentescos = ['Tutor principal','Cônjuge','Filho(a)','Veterinário(a)','Cuidador(a)','Outro'];
   openModal(headPadrao('Tutor', 'Adicionar'),
     `<div class="field"><label>NOME *</label><input class="input" id="htNome"></div>
-    <div class="field"><label>PAPEL</label>
-      <select class="select" id="htParentesco">${parentescos.map(p=>`<option value="${esc(p)}">${esc(p)}</option>`).join('')}</select>
-    </div>
+    <div class="field"><label>PAPEL</label><select class="select" id="htParentesco">${parentescos.map(p=>`<option value="${esc(p)}">${esc(p)}</option>`).join('')}</select></div>
     <div class="field"><label>TELEFONE</label><input class="input" id="htTel" type="tel"></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Cancelar</button>
      <button class="btn btn-primary" onclick="salvarTutor()">Salvar</button>`);
@@ -3905,7 +4142,7 @@ function salvarTutor(){
   if(!nome){ toast('Informe o nome'); return; }
   if(!pet.tutores) pet.tutores = [];
   pet.tutores.push({id:uid(), nome, parentesco:$('#htParentesco').value, telefone:$('#htTel').value.trim()});
-  saveDB(); closeModal(); toast('Tutor adicionado! 👥'); renderSaude();
+  saveDB(); closeModal(); toast('Adicionado! 👥'); renderSaude();
 }
 function abrirModalIDDigital(petId){
   const id = petId || state.petSelecionado;
@@ -3918,26 +4155,17 @@ function abrirModalIDDigital(petId){
   const alergias = (pet.historico && pet.historico.alergias || []).map(a=>a.tipo).join(', ') || 'Nenhuma';
   openModal(headPadrao('ID Digital', 'Identificação de ' + pet.nome),
     `<div class="id-digital">
-      <div class="idd-top">
-        <div>
-          <div class="idd-titulo">ID Digital PetVida</div>
-          <div class="idd-nome" style="margin-top:6px">${esc(pet.nome)}</div>
-          <div class="idd-sub">${pet.especie==='gato'?'Felino':'Canino'} · ${esc(pet.raca||'SRD')} · ${calcIdade(pet.nascimento)}</div>
-        </div>
-        <div class="idd-logo">🐾</div>
-      </div>
+      <div class="idd-top"><div><div class="idd-titulo">ID Digital PetVida</div><div class="idd-nome" style="margin-top:6px">${esc(pet.nome)}</div>
+      <div class="idd-sub">${pet.especie==='gato'?'Felino':'Canino'} · ${esc(pet.raca||'SRD')} · ${calcIdade(pet.nascimento)}</div></div>
+      <div class="idd-logo">🐾</div></div>
       <div class="idd-grid">
         <div class="idd-item"><div class="idd-item-l">Código</div><div class="idd-item-v" style="font-family:'Courier New',monospace">${codigo}</div></div>
         <div class="idd-item"><div class="idd-item-l">Idade humana</div><div class="idd-item-v">${idadeHumana(pet)}</div></div>
         <div class="idd-item"><div class="idd-item-l">Sexo</div><div class="idd-item-v">${pet.sexo==='femea'?'Fêmea':'Macho'}</div></div>
         <div class="idd-item"><div class="idd-item-l">Peso</div><div class="idd-item-v">${pet.peso?esc(pet.peso)+' kg':'—'}</div></div>
       </div>
-      <div class="idd-qr">
-        <div class="idd-qr-pattern">${padraoQr(pet, 74)}</div>
-        <div class="idd-qr-info">
-          <div class="idd-qr-code">${codigo}</div>
-          <div class="idd-qr-txt">Apresente em caso de perda ou emergência.</div>
-        </div>
+      <div class="idd-qr"><div class="idd-qr-pattern">${padraoQr(pet, 74)}</div>
+        <div class="idd-qr-info"><div class="idd-qr-code">${codigo}</div><div class="idd-qr-txt">Apresente em caso de perda.</div></div>
       </div>
       <div class="idd-footer"><span>📞 ${esc(contato)}</span><span>${fmtData(hojeISO())}</span></div>
     </div>
@@ -3954,33 +4182,39 @@ function compartilharID(petId){
   else if(navigator.clipboard) navigator.clipboard.writeText(texto).then(()=> toast('Copiado! 📋')).catch(()=>{});
   else toast('Indisponível');
 }
-const ESCORES = [
-  {n:1, emoji:'🦴', label:'Muito magro', desc:'Costelas muito visíveis.'},
-  {n:2, emoji:'🐕', label:'Magro', desc:'Costelas visíveis.'},
-  {n:3, emoji:'✅', label:'Ideal', desc:'Costelas palpáveis, cintura visível.'},
-  {n:4, emoji:'⚠️', label:'Sobrepeso', desc:'Costelas difíceis.'},
-  {n:5, emoji:'🚨', label:'Obeso', desc:'Costelas não palpáveis.'}
-];
-let escoreSelecionado = 3;
 function abrirModalEscore(petId){
   const id = petId || state.petSelecionado;
   const pet = state.pets.find(p=>p.id === id);
   if(!pet){ toast('Pet não encontrado'); return; }
   state.petSelecionado = id;
+  const ES = [
+    {n:1, emoji:'🦴', label:'Muito magro', desc:'Costelas muito visíveis.'},
+    {n:2, emoji:'🐕', label:'Magro', desc:'Costelas visíveis.'},
+    {n:3, emoji:'✅', label:'Ideal', desc:'Costelas palpáveis.'},
+    {n:4, emoji:'⚠️', label:'Sobrepeso', desc:'Costelas difíceis.'},
+    {n:5, emoji:'🚨', label:'Obeso', desc:'Costelas não palpáveis.'}
+  ];
   const atual = pet.escore || 3;
-  escoreSelecionado = atual;
   openModal(headPadrao('Escore corporal', 'Avalie a condição'),
-    `<div class="escore-scale">
-      ${ESCORES.map(e=>`<div class="escore-opt ${e.n===atual?'active':''}" data-n="${e.n}" onclick="selEscore(${e.n})"><span class="eo-emoji">${e.emoji}</span><span class="eo-num">${e.n}</span></div>`).join('')}
-    </div>
+    `<div class="escore-scale">${ES.map(e=>`<div class="escore-opt ${e.n===atual?'active':''}" data-n="${e.n}" onclick="selEscore(${e.n})"><span class="eo-emoji">${e.emoji}</span><span class="eo-num">${e.n}</span></div>`).join('')}</div>
     <div id="escoreInfo"></div>`,
     `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
      <button class="btn btn-primary" onclick="salvarEscore()">Salvar</button>`);
-  setTimeout(()=> atualizarEscoreInfo(atual), 50);
+  setTimeout(()=> atualizarEscoreInfo(atual, ES), 50);
 }
-function selEscore(n){ escoreSelecionado = n; $$('.escore-opt').forEach(o => o.classList.toggle('active', +o.dataset.n === n)); atualizarEscoreInfo(n); }
-function atualizarEscoreInfo(n){
-  const e = ESCORES.find(x=>x.n === n);
+function selEscore(n){
+  $$('.escore-opt').forEach(o => o.classList.toggle('active', +o.dataset.n === n));
+  const ES = [
+    {n:1, emoji:'🦴', label:'Muito magro', desc:'Costelas muito visíveis.'},
+    {n:2, emoji:'🐕', label:'Magro', desc:'Costelas visíveis.'},
+    {n:3, emoji:'✅', label:'Ideal', desc:'Costelas palpáveis.'},
+    {n:4, emoji:'⚠️', label:'Sobrepeso', desc:'Costelas difíceis.'},
+    {n:5, emoji:'🚨', label:'Obeso', desc:'Costelas não palpáveis.'}
+  ];
+  atualizarEscoreInfo(n, ES);
+}
+function atualizarEscoreInfo(n, ES){
+  const e = ES.find(x=>x.n === n);
   if(!e) return;
   const info = $('#escoreInfo');
   if(info) info.innerHTML = `<div class="blk"><h4>${e.emoji} ${e.label}</h4><p>${esc(e.desc)}</p></div>`;
@@ -3988,21 +4222,24 @@ function atualizarEscoreInfo(n){
 function salvarEscore(){
   const pet = state.pets.find(p=>p.id === state.petSelecionado);
   if(!pet) return;
-  pet.escore = escoreSelecionado;
+  const active = document.querySelector('.escore-opt.active');
+  pet.escore = active ? +active.dataset.n : 3;
   saveDB(); closeModal(); toast('Escore salvo! ⚖️'); renderSaude();
 }
 function abrirModalAjuda(){
   openModal(headPadrao('Como usar o PetVida', 'Guia rápido'),
-    `<div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
-      <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">🤖</span>Dr. Pet IA + 🌐 Web</h4>
-      <p>O Dr. Pet IA usa <strong>Gemini com pesquisa na internet</strong>. Pergunte qualquer coisa — ele busca dados atualizados e mostra as fontes consultadas. Toque em <strong>⚙️</strong> no chat para configurar.</p>
+    `<div class="blk" style="background:linear-gradient(140deg,#EAF0FF,#DCE6FF);border-color:#C4D5FF">
+      <h4><span class="b-ic" style="background:rgba(74,125,255,.18);color:#3157C9">☁️</span>Nuvem Firebase</h4>
+      <p>Toque no ícone <strong>☁️</strong> no topo e ative a sincronização. Escolha entre <strong>Anônimo</strong> (1 aparelho) ou <strong>E-mail/senha</strong> (vários aparelhos). Envio automático a cada 20s.</p>
+    </div>
+    <div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
+      <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">🤖</span>Dr. Pet IA</h4>
+      <p>Assistente com Gemini. Configure em <strong>⚙️</strong> no chat.</p>
     </div>
     <div class="blk" style="background:linear-gradient(140deg,#FFF0E8,#FFE3D4);border-color:#FFD3BC">
-      <h4><span class="b-ic" style="background:rgba(255,122,69,.20);color:#F05A1E">📸</span>Álbum de Fotos</h4>
-      <p>Acesse <strong>Saúde → 📸 Álbum</strong> e registre a evolução do seu pet. Cada foto salva a idade dele no momento, organizada por mês.</p>
+      <h4><span class="b-ic" style="background:rgba(255,122,69,.20);color:#F05A1E">📸</span>Álbum</h4>
+      <p>Acesse <strong>Saúde → 📸 Álbum</strong>.</p>
     </div>
-    <div class="blk"><h4><span class="b-ic">👆</span>Navegação</h4><p>Deslize o dedo para trocar de página.</p></div>
-    <div class="blk"><h4><span class="b-ic">💾</span>Backup</h4><p>Exporte/importe dados no ícone no topo.</p></div>
     <div class="blk warn"><h4><span class="b-ic">⚕️</span>Aviso</h4><p>Não substitui consulta veterinária.</p></div>
     <div style="text-align:center;font-size:11px;color:var(--muted);font-weight:700;padding:10px 0">PetVida <strong style="color:var(--primary-d)">${APP_VERSION}</strong> · ${APP_VERSION_DATE}</div>`,
     `<button class="btn btn-primary" onclick="closeModal()">Entendi</button>`);
@@ -4015,6 +4252,8 @@ function init(){
   loadDB();
   loadIAConfig();
   loadChatHistory();
+  loadFbAuth();
+  loadFbSync();
   if(state.pets.length > 0) state.petSelecionado = state.pets[0].id;
   if(state.pets.length > 0 && getBackups().length === 0) fazerBackupAutomatico('Inicial');
   $$('.page').forEach((p, idx) => p.classList.toggle('active', idx === 0));
@@ -4022,10 +4261,13 @@ function init(){
   atualizarHeader();
   atualizarFAB();
   atualizarBadgeBackup();
-  console.log(`🐾 PetVida ${APP_VERSION} (${APP_VERSION_DATE}) iniciado`);
-  console.log('🤖 IA:', iaConfig.provider, '· modelo:', iaConfig.model || '(autodetecção)');
-  console.log('🌐 Pesquisa na internet: ativada');
-  console.log('🔑 Chave:', (iaConfig.apiKey || '').slice(0, 25) + '...');
+  atualizarBadgeCloud();
+  console.log(`🐾 PetVida ${APP_VERSION} iniciado`);
+  console.log('☁️ Firebase:', fbAuth.uid ? (fbAuth.isAnonymous ? 'anônimo' : fbAuth.email) : 'não conectado');
+  // Auto-sync na inicialização se já logado
+  if(fbAuth.uid && navigator.onLine){
+    setTimeout(()=> { sincronizarInteligente().catch(()=>{}); }, 1500);
+  }
 }
 init();
 
