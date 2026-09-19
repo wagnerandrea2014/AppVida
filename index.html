@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-<meta name="theme-color" content="#FF7A45" />
+<meta name="theme-color" content="#4FB3C4" />
 <title>PetVida — Cuide bem do seu melhor amigo</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -14,11 +14,11 @@ button{border:0;background:none;cursor:pointer}
 input,select,textarea{outline:none}
 ul{margin:0;padding:0;list-style:none}
 :root{
-  --bg:#F4F6FB;--card:#FFFFFF;--txt:#1B2434;--muted:#7B879C;--line:#EAEEF6;
-  --primary:#FF7A45;--primary-d:#F05A1E;--primary-soft:#FFF0E8;
+  --bg:#F0F6F8;--card:#FFFFFF;--txt:#1B2434;--muted:#7B879C;--line:#E4EEF2;
+  --primary:#4FB3C4;--primary-d:#2A8A99;--primary-soft:#E0F4F8;
   --secondary:#25C2B0;--secondary-soft:#E4F8F5;
-  --accent:#FFB020;--accent-soft:#FFF6E2;
-  --danger:#EF476F;--danger-soft:#FFE9EF;
+  --accent:#E89B4E;--accent-soft:#FFF2E0;
+  --danger:#E63946;--danger-soft:#FFE5E8;
   --blue:#4A7DFF;--blue-soft:#EAF0FF;
   --purple:#9B5DE5;--purple-soft:#F3EAFE;
   --radius:20px;--radius-sm:14px;
@@ -28,7 +28,7 @@ ul{margin:0;padding:0;list-style:none}
   --tab-h: 68px;
 }
 #app{position:fixed;inset:0;display:flex;flex-direction:column;background:var(--bg)}
-.app-header{position:relative;z-index:20;padding:calc(env(safe-area-inset-top,0px) + 14px) 18px 16px;background:linear-gradient(140deg,#FF8A5B 0%,#FF6B35 55%,#F0521B 100%);color:#fff;border-radius:0 0 26px 26px;box-shadow:0 8px 24px rgba(240,90,30,.28);flex-shrink:0}
+.app-header{position:relative;z-index:20;padding:calc(env(safe-area-inset-top,0px) + 14px) 18px 16px;background:linear-gradient(140deg,#5EC0D0 0%,#4FB3C4 55%,#2A8A99 100%);color:#fff;border-radius:0 0 26px 26px;box-shadow:0 8px 24px rgba(42,138,153,.28);flex-shrink:0}
 .app-header::after{content:"";position:absolute;right:-40px;top:-50px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.10)}
 .hdr-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
 .hdr-brand{display:flex;align-items:center;gap:10px}
@@ -71,14 +71,14 @@ ul{margin:0;padding:0;list-style:none}
 .sec-title{font-size:15.5px;font-weight:800;letter-spacing:-.3px;display:flex;align-items:center;gap:7px}
 .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--primary)}
 .sec-link{font-size:12px;font-weight:700;color:var(--primary);padding:4px 0}
-.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:15px;border:1px solid rgba(234,238,246,.9)}
-.empty-hero{background:linear-gradient(140deg,#FFFFFF,#FFF7F2);border:1.5px dashed #FFD3BC;border-radius:var(--radius);padding:26px 20px;text-align:center;box-shadow:var(--shadow)}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:15px;border:1px solid rgba(228,238,242,.9)}
+.empty-hero{background:linear-gradient(140deg,#FFFFFF,#F0FAFC);border:1.5px dashed #B8E3EB;border-radius:var(--radius);padding:26px 20px;text-align:center;box-shadow:var(--shadow)}
 .empty-emoji{font-size:44px;line-height:1;margin-bottom:10px;display:block}
 .empty-hero h3{margin:0 0 6px;font-size:16px;font-weight:800}
 .empty-hero p{margin:0 0 16px;font-size:13px;color:var(--muted);line-height:1.55}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:14px;font-size:14px;font-weight:800;transition:transform .13s ease;width:100%;cursor:pointer}
 .btn:active{transform:scale(.97)}
-.btn-primary{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff;box-shadow:0 8px 20px rgba(240,90,30,.30)}
+.btn-primary{background:linear-gradient(135deg,#5EC0D0,#2A8A99);color:#fff;box-shadow:0 8px 20px rgba(42,138,153,.30)}
 .btn-ghost{background:var(--primary-soft);color:var(--primary-d)}
 .btn-soft{background:#F1F4F9;color:var(--txt)}
 .btn-danger{background:var(--danger-soft);color:var(--danger)}
@@ -86,10 +86,10 @@ ul{margin:0;padding:0;list-style:none}
 .btn-success{background:linear-gradient(135deg,#25C2B0,#4AD4C3);color:#fff;box-shadow:0 8px 20px rgba(37,194,176,.30)}
 .btn-sm{padding:10px 15px;font-size:12.5px;width:auto;border-radius:12px}
 .btn svg{width:17px;height:17px;fill:currentColor}
-.pet-card{display:flex;align-items:center;gap:13px;background:var(--card);border-radius:var(--radius);padding:13px;box-shadow:var(--shadow);margin-bottom:11px;border:1px solid rgba(234,238,246,.9);transition:transform .14s ease;position:relative;overflow:hidden;cursor:pointer}
+.pet-card{display:flex;align-items:center;gap:13px;background:var(--card);border-radius:var(--radius);padding:13px;box-shadow:var(--shadow);margin-bottom:11px;border:1px solid rgba(228,238,242,.9);transition:transform .14s ease;position:relative;overflow:hidden;cursor:pointer}
 .pet-card:active{transform:scale(.985)}
 .pet-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--primary),var(--accent))}
-.pet-avatar{width:54px;height:54px;border-radius:17px;flex-shrink:0;display:grid;place-items:center;font-size:27px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);box-shadow:inset 0 -2px 6px rgba(240,90,30,.10);overflow:hidden}
+.pet-avatar{width:54px;height:54px;border-radius:17px;flex-shrink:0;display:grid;place-items:center;font-size:27px;background:linear-gradient(140deg,#DDF0F4,#C8E8EE);box-shadow:inset 0 -2px 6px rgba(42,138,153,.10);overflow:hidden}
 .pet-avatar.cat{background:linear-gradient(140deg,#DDF6F2,#C6EFE9)}
 .pet-avatar img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
 .pet-info{flex:1;min-width:0}
@@ -104,10 +104,10 @@ ul{margin:0;padding:0;list-style:none}
 .badge-purple{background:var(--purple-soft);color:#6B31B8}
 .badge-neutro{background:#F1F4F9;color:#66738A}
 .pet-chevron{color:#C7CFDD;flex-shrink:0}
-.fab{position:fixed;right:18px;bottom:calc(var(--tab-h) + var(--safe-b) + 16px);width:56px;height:56px;border-radius:19px;z-index:35;background:linear-gradient(135deg,#FF8A5B,#F0521B);display:grid;place-items:center;box-shadow:0 12px 28px rgba(240,90,30,.42);cursor:pointer}
+.fab{position:fixed;right:18px;bottom:calc(var(--tab-h) + var(--safe-b) + 16px);width:56px;height:56px;border-radius:19px;z-index:35;background:linear-gradient(135deg,#5EC0D0,#2A8A99);display:grid;place-items:center;box-shadow:0 12px 28px rgba(42,138,153,.42);cursor:pointer}
 .fab svg{width:26px;height:26px;fill:#fff}
-.next-card{background:linear-gradient(140deg,#FFFFFF,#FFF6F0);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);border:1px solid #FFE3D4;display:flex;gap:13px;align-items:flex-start;cursor:pointer}
-.next-card.alerta{background:linear-gradient(140deg,#FFFFFF,#FFF0F4);border-color:#FFD5E0}
+.next-card{background:linear-gradient(140deg,#FFFFFF,#F0F9FB);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);border:1px solid #C8E8EE;display:flex;gap:13px;align-items:flex-start;cursor:pointer}
+.next-card.alerta{background:linear-gradient(140deg,#FFFFFF,#FFF0F2);border-color:#FFD5DC}
 .next-icon{width:46px;height:46px;border-radius:15px;flex-shrink:0;display:grid;place-items:center;background:var(--primary-soft);font-size:21px}
 .next-card.alerta .next-icon{background:var(--danger-soft)}
 .next-body{flex:1;min-width:0}
@@ -117,7 +117,7 @@ ul{margin:0;padding:0;list-style:none}
 .next-desc{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
 .next-date{font-size:11px;font-weight:800;margin-top:7px;color:var(--primary-d)}
 .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-.quick{background:var(--card);border-radius:var(--radius-sm);padding:13px 6px;display:flex;flex-direction:column;align-items:center;gap:7px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer}
+.quick{background:var(--card);border-radius:var(--radius-sm);padding:13px 6px;display:flex;flex-direction:column;align-items:center;gap:7px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);cursor:pointer}
 .quick:active{transform:scale(.94)}
 .quick-ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center}
 .quick span{font-size:9.5px;font-weight:800;color:#4C5768;text-align:center;line-height:1.2}
@@ -129,19 +129,19 @@ ul{margin:0;padding:0;list-style:none}
 .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:17px;height:17px;fill:#A9B3C4}
 .search-input{width:100%;padding:13px 14px 13px 41px;border-radius:15px;background:var(--card);border:1.5px solid var(--line);font-size:13.5px;font-weight:600;box-shadow:var(--shadow)}
 .search-input:focus{border-color:var(--primary)}
-.seg{display:flex;gap:5px;background:#E9EDF5;border-radius:14px;padding:4px;margin-bottom:14px}
+.seg{display:flex;gap:5px;background:#E4EEF2;border-radius:14px;padding:4px;margin-bottom:14px}
 .seg button{flex:1;padding:9px 8px;border-radius:11px;font-size:12.5px;font-weight:800;color:#7B879C;cursor:pointer}
 .seg button.active{background:#fff;color:var(--primary-d);box-shadow:0 3px 10px rgba(27,36,52,.10)}
 .chips{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px;margin-bottom:13px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chip{flex-shrink:0;padding:8px 14px;border-radius:11px;font-size:12px;font-weight:700;background:var(--card);border:1.5px solid var(--line);color:#66738A;cursor:pointer}
-.chip.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 5px 14px rgba(255,122,69,.32)}
+.chip.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 5px 14px rgba(79,179,196,.32)}
 .subnav{display:flex;gap:6px;overflow-x:auto;padding:4px 2px 10px;margin-bottom:10px;scrollbar-width:none}
 .subnav::-webkit-scrollbar{display:none}
 .subnav-btn{flex-shrink:0;padding:9px 14px;border-radius:12px;font-size:11.5px;font-weight:800;background:#fff;border:1.5px solid var(--line);color:#66738A;display:flex;align-items:center;gap:5px;cursor:pointer}
-.subnav-btn.active{background:linear-gradient(135deg,#FF8A5B,#F0521B);border-color:transparent;color:#fff}
+.subnav-btn.active{background:linear-gradient(135deg,#5EC0D0,#2A8A99);border-color:transparent;color:#fff}
 .breed-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.breed-card{background:var(--card);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);text-align:left;cursor:pointer}
+.breed-card{background:var(--card);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);text-align:left;cursor:pointer}
 .breed-top{height:110px;display:grid;place-items:center;position:relative;overflow:hidden}
 .breed-top svg.raca-svg{width:100%;height:100%;display:block}
 .breed-top .breed-emoji-badge{position:absolute;top:8px;left:8px;font-size:14px;background:rgba(255,255,255,.92);width:26px;height:26px;border-radius:9px;display:grid;place-items:center;z-index:2}
@@ -150,7 +150,7 @@ ul{margin:0;padding:0;list-style:none}
 .breed-name{font-size:12.5px;font-weight:800;line-height:1.25}
 .breed-sub{font-size:10.5px;color:var(--muted);margin-top:3px;font-weight:600}
 .timeline{position:relative;padding-left:30px}
-.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:14px;width:2px;background:linear-gradient(180deg,#FFD3BC,#E9EDF5);border-radius:2px}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:14px;width:2px;background:linear-gradient(180deg,#B8E3EB,#E4EEF2);border-radius:2px}
 .tl-item{position:relative;margin-bottom:13px}
 .tl-node{position:absolute;left:-30px;top:14px;width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid #D8DFEA;display:grid;place-items:center}
 .tl-node svg{width:11px;height:11px;fill:#fff;opacity:0}
@@ -158,9 +158,9 @@ ul{margin:0;padding:0;list-style:none}
 .tl-item.ok .tl-node svg{opacity:1}
 .tl-item.atrasada .tl-node{background:var(--danger);border-color:var(--danger)}
 .tl-item.proxima .tl-node{border-color:var(--accent);background:var(--accent-soft)}
-.vac-card{background:var(--card);border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.vac-card{background:var(--card);border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9)}
 .tl-item.ok .vac-card{border-color:#D3F0EB;background:linear-gradient(140deg,#fff,#F6FDFB)}
-.tl-item.atrasada .vac-card{border-color:#FFD5E0;background:linear-gradient(140deg,#fff,#FFF7F9)}
+.tl-item.atrasada .vac-card{border-color:#FFD5DC;background:linear-gradient(140deg,#fff,#FFF7F9)}
 .vac-head{display:flex;align-items:flex-start;justify-content:space-between;gap:9px}
 .vac-name{font-size:13.5px;font-weight:800;line-height:1.3}
 .vac-obs{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.5}
@@ -172,7 +172,7 @@ ul{margin:0;padding:0;list-style:none}
 .check-btn svg{width:15px;height:15px;fill:#fff;opacity:0}
 .check-btn.done{background:var(--secondary);border-color:var(--secondary)}
 .check-btn.done svg{opacity:1}
-.check-item{display:flex;align-items:flex-start;gap:12px;padding:13px;background:var(--card);border-radius:var(--radius-sm);margin-bottom:9px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:13px;background:var(--card);border-radius:var(--radius-sm);margin-bottom:9px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);cursor:pointer}
 .check-item.done{background:linear-gradient(140deg,#fff,#F6FDFB);border-color:#D3F0EB}
 .check-box{width:23px;height:23px;border-radius:8px;flex-shrink:0;margin-top:1px;border:2px solid #D8DFEA;display:grid;place-items:center}
 .check-box svg{width:13px;height:13px;fill:#fff;opacity:0}
@@ -184,10 +184,10 @@ ul{margin:0;padding:0;list-style:none}
 .check-txt p{margin:4px 0 0;font-size:11.5px;color:var(--muted);line-height:1.5}
 .bar-chart{display:flex;align-items:flex-end;gap:8px;height:110px;padding:12px 4px 0;margin-bottom:6px}
 .bar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
-.bar{width:100%;max-width:34px;border-radius:9px 9px 4px 4px;background:linear-gradient(180deg,#FFA277,#FF7A45);min-height:6px}
+.bar{width:100%;max-width:34px;border-radius:9px 9px 4px 4px;background:linear-gradient(180deg,#7DD0DE,#4FB3C4);min-height:6px}
 .bar-lbl{font-size:9.5px;font-weight:800;color:var(--muted)}
 .bar-val{font-size:10px;font-weight:800;color:var(--primary-d)}
-.food-card{background:var(--card);border-radius:var(--radius);padding:15px;box-shadow:var(--shadow);margin-bottom:11px;border:1px solid rgba(234,238,246,.9)}
+.food-card{background:var(--card);border-radius:var(--radius);padding:15px;box-shadow:var(--shadow);margin-bottom:11px;border:1px solid rgba(228,238,242,.9)}
 .food-head{display:flex;align-items:center;gap:11px;margin-bottom:11px}
 .food-ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:20px;background:var(--accent-soft);flex-shrink:0}
 .food-head h4{margin:0;font-size:14px;font-weight:800}
@@ -208,7 +208,7 @@ ul{margin:0;padding:0;list-style:none}
 .modal-head{padding:6px 20px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-shrink:0}
 .modal-head h3{margin:0;font-size:18px;font-weight:800}
 .modal-head p{margin:3px 0 0;font-size:12px;color:var(--muted);font-weight:600}
-.modal-close{width:34px;height:34px;border-radius:12px;background:#EAEEF6;display:grid;place-items:center;flex-shrink:0;cursor:pointer}
+.modal-close{width:34px;height:34px;border-radius:12px;background:#E4EEF2;display:grid;place-items:center;flex-shrink:0;cursor:pointer}
 .modal-close svg{width:16px;height:16px;fill:#66738A}
 .modal-body{flex:1;overflow-y:auto;padding:0 20px 20px;-webkit-overflow-scrolling:touch}
 .modal-foot{padding:13px 20px calc(20px + var(--safe-b));background:#fff;border-top:1px solid var(--line);display:flex;gap:10px;flex-shrink:0}
@@ -216,7 +216,7 @@ ul{margin:0;padding:0;list-style:none}
 .field label{display:block;font-size:11.5px;font-weight:800;color:#5A6478;margin-bottom:7px}
 .field .hint{font-size:10.5px;color:var(--muted);font-weight:600;margin-top:6px;line-height:1.5}
 .input,.select,.textarea{width:100%;padding:13px 14px;border-radius:14px;background:#fff;border:1.5px solid var(--line);font-size:14px;font-weight:600}
-.input:focus,.select:focus,.textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3.5px rgba(255,122,69,.11)}
+.input:focus,.select:focus,.textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3.5px rgba(79,179,196,.11)}
 .textarea{min-height:80px;resize:vertical;font-family:inherit;line-height:1.5}
 .select{appearance:none;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237B879C'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;background-size:20px;padding-right:38px}
 .row-2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
@@ -234,12 +234,12 @@ ul{margin:0;padding:0;list-style:none}
 .breed-hero h2{margin:8px 0 3px;font-size:20px;font-weight:800}
 .breed-hero .bh-origem{font-size:11.5px;font-weight:700;color:#8A6A55}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px}
-.spec{background:#fff;border-radius:14px;padding:11px 12px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.spec{background:#fff;border-radius:14px;padding:11px 12px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9)}
 .spec-l{font-size:9.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
 .spec-v{font-size:13px;font-weight:800;margin-top:4px;color:var(--txt)}
 .tag-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
 .tag{font-size:11px;font-weight:800;padding:6px 11px;border-radius:10px;background:var(--primary-soft);color:var(--primary-d)}
-.blk{background:#fff;border-radius:var(--radius);padding:15px;margin-bottom:12px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.blk{background:#fff;border-radius:var(--radius);padding:15px;margin-bottom:12px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9)}
 .blk h4{margin:0 0 10px;font-size:13.5px;font-weight:800;display:flex;align-items:center;gap:8px}
 .blk h4 .b-ic{width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-size:13px;background:var(--primary-soft);flex-shrink:0}
 .blk p{margin:0;font-size:12.5px;line-height:1.65;color:#4C5768}
@@ -256,19 +256,19 @@ ul{margin:0;padding:0;list-style:none}
 .anim{animation:fadeUp .38s cubic-bezier(.32,.72,.28,1) both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .foto-upload-wrap{position:relative;width:130px;margin:0 auto 14px}
-.foto-upload{position:relative;display:grid;place-items:center;width:130px;height:130px;border-radius:36px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);font-size:60px;border:3px solid #fff;box-shadow:0 8px 20px rgba(240,90,30,.18);cursor:pointer;overflow:hidden;transition:transform .15s ease}
+.foto-upload{position:relative;display:grid;place-items:center;width:130px;height:130px;border-radius:36px;background:linear-gradient(140deg,#DDF0F4,#C8E8EE);font-size:60px;border:3px solid #fff;box-shadow:0 8px 20px rgba(42,138,153,.18);cursor:pointer;overflow:hidden;transition:transform .15s ease}
 .foto-upload:active{transform:scale(.96)}
 .foto-upload img{width:100%;height:100%;object-fit:cover;display:block}
-.foto-upload .foto-edit{position:absolute;bottom:-2px;right:-2px;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#FF8A5B,#F0521B);display:grid;place-items:center;border:3px solid #fff;pointer-events:none}
+.foto-upload .foto-edit{position:absolute;bottom:-2px;right:-2px;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#5EC0D0,#2A8A99);display:grid;place-items:center;border:3px solid #fff;pointer-events:none}
 .foto-upload .foto-edit svg{width:16px;height:16px;fill:#fff}
 .foto-hint{text-align:center;font-size:10.5px;color:var(--muted);font-weight:700;margin-top:-8px;margin-bottom:14px}
-.album-item{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#F1F4F9;cursor:pointer;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);transition:transform .15s ease}
+.album-item{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#F1F4F9;cursor:pointer;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);transition:transform .15s ease}
 .album-item:active{transform:scale(.95)}
 .album-item img{width:100%;height:100%;object-fit:cover;display:block}
 .album-info{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;padding:18px 6px 5px}
 .album-titulo{font-size:9.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .album-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
-.album-stat{background:#fff;border-radius:14px;padding:12px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);text-align:center}
+.album-stat{background:#fff;border-radius:14px;padding:12px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);text-align:center}
 .album-stat-n{font-size:20px;font-weight:800;color:var(--primary-d);line-height:1}
 .album-stat-l{font-size:9.5px;color:var(--muted);font-weight:800;text-transform:uppercase;margin-top:4px}
 .album-upload-empty{text-align:center;padding:26px 18px}
@@ -276,14 +276,14 @@ ul{margin:0;padding:0;list-style:none}
 .album-preview img{width:100%;display:block;max-height:340px;object-fit:contain;margin:0 auto}
 .album-timeline{display:flex;flex-direction:column;gap:14px}
 .album-tl-group{position:relative;padding-left:26px}
-.album-tl-group::before{content:"";position:absolute;left:8px;top:8px;bottom:-8px;width:2px;background:linear-gradient(180deg,#FFD3BC,#E9EDF5)}
-.album-tl-dot{position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#FF8A5B,#F0521B);border:3px solid #fff}
+.album-tl-group::before{content:"";position:absolute;left:8px;top:8px;bottom:-8px;width:2px;background:linear-gradient(180deg,#B8E3EB,#E4EEF2)}
+.album-tl-dot{position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#5EC0D0,#2A8A99);border:3px solid #fff}
 .album-tl-label{font-size:11px;font-weight:800;color:var(--primary-d);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
 .album-tl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .id-digital{background:linear-gradient(160deg,#1F2A3D,#2B3A52);border-radius:22px;padding:20px;color:#fff;position:relative;overflow:hidden;box-shadow:0 14px 30px rgba(19,25,38,.30);margin-bottom:16px}
 .id-digital .idd-top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2;margin-bottom:14px}
 .id-digital .idd-titulo{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.60)}
-.id-digital .idd-logo{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#FF7A45,#F0521B);display:grid;place-items:center;font-size:16px}
+.id-digital .idd-logo{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#5EC0D0,#2A8A99);display:grid;place-items:center;font-size:16px}
 .id-digital .idd-nome{font-size:22px;font-weight:800;color:#fff;position:relative;z-index:2;margin-bottom:4px}
 .id-digital .idd-sub{font-size:11.5px;color:rgba(255,255,255,.65);font-weight:600;position:relative;z-index:2;margin-bottom:16px}
 .id-digital .idd-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:2;margin-bottom:16px}
@@ -295,7 +295,7 @@ ul{margin:0;padding:0;list-style:none}
 .id-digital .idd-qr-code{font-size:14px;font-weight:800;color:#1B2434;font-family:'Courier New',monospace}
 .id-digital .idd-qr-txt{font-size:9.5px;color:#66738A;font-weight:600;margin-top:3px}
 .id-digital .idd-footer{position:relative;z-index:2;margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.15);font-size:9.5px;color:rgba(255,255,255,.55);font-weight:600;display:flex;justify-content:space-between}
-.hist-card{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;position:relative;display:flex;gap:11px}
+.hist-card{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);margin-bottom:9px;position:relative;display:flex;gap:11px}
 .hist-card .hc-icon{width:38px;height:38px;border-radius:12px;flex-shrink:0;display:grid;place-items:center;font-size:17px}
 .hist-card .hc-body{flex:1;min-width:0}
 .hist-card .hc-title{font-size:13.5px;font-weight:800;line-height:1.3}
@@ -307,13 +307,13 @@ ul{margin:0;padding:0;list-style:none}
 .hist-card.tipo-medicamento .hc-icon{background:var(--accent-soft);color:#B47800}
 .hist-card.tipo-cirurgia .hc-icon{background:var(--danger-soft);color:#C42B50}
 .hist-card.tipo-alergia .hc-icon{background:var(--secondary-soft);color:#12897A}
-.hist-card.tipo-antipulgas .hc-icon{background:#FFE9DC;color:#F05A1E}
+.hist-card.tipo-antipulgas .hc-icon{background:#E0F4F8;color:#2A8A99}
 .escore-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:14px 0}
 .escore-opt{padding:9px 4px;border-radius:12px;text-align:center;background:#F1F4F9;border:2px solid transparent;cursor:pointer}
 .escore-opt.active{border-color:var(--primary);background:var(--primary-soft)}
 .escore-opt .eo-emoji{font-size:22px;display:block;margin-bottom:4px}
 .escore-opt .eo-num{font-size:10px;font-weight:800;color:#66738A}
-.diario-item{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px}
+.diario-item{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);margin-bottom:9px}
 .diario-item .di-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
 .diario-item .di-humor{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:#1B2434}
 .diario-item .di-humor .di-emoji{font-size:20px}
@@ -324,13 +324,13 @@ ul{margin:0;padding:0;list-style:none}
 .humor-opt.active{border-color:var(--primary);background:var(--primary-soft)}
 .humor-opt .ho-emoji{font-size:22px;display:block;margin-bottom:4px}
 .humor-opt .ho-lbl{font-size:9px;font-weight:800;color:#66738A;text-transform:uppercase}
-.tutor-card{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;display:flex;align-items:center;gap:12px}
-.tutor-card .tc-avatar{width:46px;height:46px;border-radius:15px;background:linear-gradient(140deg,#FFE3D4,#FFD0BB);display:grid;place-items:center;font-size:22px;flex-shrink:0}
+.tutor-card{background:#fff;border-radius:var(--radius-sm);padding:13px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);margin-bottom:9px;display:flex;align-items:center;gap:12px}
+.tutor-card .tc-avatar{width:46px;height:46px;border-radius:15px;background:linear-gradient(140deg,#DDF0F4,#C8E8EE);display:grid;place-items:center;font-size:22px;flex-shrink:0}
 .tutor-card .tc-nome{font-size:14px;font-weight:800}
 .tutor-card .tc-role{font-size:10.5px;font-weight:800;color:var(--primary-d);text-transform:uppercase;margin-top:2px}
 .tutor-card .tc-contato{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:4px}
 .ps-list{display:flex;flex-direction:column;gap:10px}
-.ps-item{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.ps-item{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9)}
 .ps-head{padding:14px;display:flex;align-items:center;gap:11px;cursor:pointer}
 .ps-head .ps-emoji{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:18px;background:var(--danger-soft);flex-shrink:0}
 .ps-head .ps-title{flex:1;font-size:13.5px;font-weight:800}
@@ -344,7 +344,7 @@ ul{margin:0;padding:0;list-style:none}
 .ps-body .ps-warn{background:var(--danger-soft);border-radius:10px;padding:10px 12px;font-size:11.5px;font-weight:700;color:#C42B50;line-height:1.5;margin-top:10px}
 .alim-cat{margin-bottom:16px}
 .alim-cat h4{font-size:12.5px;font-weight:800;text-transform:uppercase;color:var(--primary-d);margin:0 0 9px}
-.alim-item{background:#fff;border-radius:12px;padding:11px 13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:7px;display:flex;gap:10px}
+.alim-item{background:#fff;border-radius:12px;padding:11px 13px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);margin-bottom:7px;display:flex;gap:10px}
 .alim-item .ai-icon{font-size:18px;flex-shrink:0}
 .alim-item .ai-nome{font-size:12.5px;font-weight:800;color:#1B2434}
 .alim-item .ai-nota{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
@@ -356,20 +356,20 @@ ul{margin:0;padding:0;list-style:none}
 .marca-chip.active{background:var(--purple-soft);border-color:var(--purple);color:#6B31B8}
 .marca-info{padding:9px 12px;background:#EAF0FF;border-radius:10px;font-size:11px;font-weight:700;color:#3157C9;margin-top:8px;line-height:1.5;display:flex;gap:7px;align-items:flex-start}
 .marca-info .mi-ic{flex-shrink:0}
-.idade-hero{background:linear-gradient(160deg,#FF8A5B,#F0521B);border-radius:22px;padding:22px;color:#fff;text-align:center;margin-bottom:16px}
+.idade-hero{background:linear-gradient(160deg,#5EC0D0,#2A8A99);border-radius:22px;padding:22px;color:#fff;text-align:center;margin-bottom:16px}
 .idade-hero .ih-tag{display:inline-block;font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,.20);padding:5px 11px;border-radius:9px;margin-bottom:12px}
 .idade-hero .ih-emoji{font-size:42px;display:block;margin-bottom:8px}
 .idade-hero .ih-animal{font-size:28px;font-weight:800;margin-bottom:4px}
 .idade-hero .ih-humano{font-size:14px;font-weight:700;color:rgba(255,255,255,.88)}
 .idade-hero .ih-humano strong{font-size:18px;font-weight:800;color:#fff}
 .idade-hero .ih-faixa{display:inline-block;font-size:10.5px;font-weight:800;text-transform:uppercase;background:rgba(255,255,255,.22);padding:5px 12px;border-radius:9px;margin-top:14px}
-.rec-idade{margin-bottom:12px;background:#fff;border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9)}
+.rec-idade{margin-bottom:12px;background:#fff;border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9)}
 .rec-idade .re-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}
 .rec-idade .re-ic{width:32px;height:32px;border-radius:11px;display:grid;place-items:center;font-size:15px;flex-shrink:0}
 .rec-idade .re-titulo{font-size:13px;font-weight:800}
 .rec-idade ul li{display:flex;gap:8px;padding:5px 0;font-size:12px;color:#4C5768;line-height:1.5}
 .rec-idade ul li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--primary);flex-shrink:0;margin-top:7px}
-.doenca-card{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:11px;cursor:pointer}
+.doenca-card{background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);margin-bottom:11px;cursor:pointer}
 .doenca-top{padding:14px;display:flex;align-items:center;gap:11px}
 .doenca-emoji{font-size:28px;flex-shrink:0;width:40px;text-align:center}
 .doenca-info{flex:1;min-width:0}
@@ -391,20 +391,20 @@ ul{margin:0;padding:0;list-style:none}
 .backup-status .bs-ic{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#25C2B0,#4AD4C3);display:grid;place-items:center;font-size:20px;flex-shrink:0;color:#fff}
 .backup-status .bs-titulo{font-size:12px;font-weight:800;color:#12897A;text-transform:uppercase}
 .backup-status .bs-info{font-size:11.5px;color:#2C7A70;font-weight:700;margin-top:4px;line-height:1.4}
-.backup-opt{display:flex;align-items:center;gap:12px;padding:14px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;cursor:pointer;text-align:left;width:100%}
+.backup-opt{display:flex;align-items:center;gap:12px;padding:14px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);margin-bottom:9px;cursor:pointer;text-align:left;width:100%}
 .backup-opt .bo-ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:19px;flex-shrink:0}
 .backup-opt .bo-titulo{font-size:13.5px;font-weight:800}
 .backup-opt .bo-desc{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:3px}
 .backup-opt .bo-arrow{color:#C7CFDD}
 .backup-opt .bo-arrow svg{width:18px;height:18px;fill:currentColor}
-.backup-hist{background:#fff;border-radius:var(--radius-sm);padding:12px 13px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);margin-bottom:9px;display:flex;align-items:center;gap:12px}
+.backup-hist{background:#fff;border-radius:var(--radius-sm);padding:12px 13px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);margin-bottom:9px;display:flex;align-items:center;gap:12px}
 .backup-hist .bh-ic{width:38px;height:38px;border-radius:12px;background:var(--primary-soft);display:grid;place-items:center;font-size:16px;flex-shrink:0}
 .backup-hist .bh-data{font-size:12.5px;font-weight:800}
 .backup-hist .bh-info{font-size:10.5px;color:var(--muted);font-weight:600;margin-top:3px}
 .backup-hist .bh-btn{padding:7px 11px;border-radius:10px;font-size:10.5px;font-weight:800;background:var(--primary-soft);color:var(--primary-d);flex-shrink:0;cursor:pointer}
 .backup-hist .bh-btn.del{background:var(--danger-soft);color:var(--danger);padding:7px 9px}
 .backup-hist .bh-btn.del svg{width:13px;height:13px;fill:currentColor}
-.chat-wrap{display:flex;flex-direction:column;height:100%;background:linear-gradient(180deg,#F8F9FD 0%,#F4F6FB 100%)}
+.chat-wrap{display:flex;flex-direction:column;height:100%;background:linear-gradient(180deg,#F0F9FB 0%,#F0F6F8 100%)}
 .chat-header{padding:14px 16px 12px;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;position:relative;overflow:hidden;flex-shrink:0}
 .chat-header::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.10)}
 .chat-header-top{display:flex;align-items:center;gap:11px;position:relative;z-index:2}
@@ -413,7 +413,7 @@ ul{margin:0;padding:0;list-style:none}
 .chat-header .ia-status{font-size:11px;opacity:.88;font-weight:600;margin-top:2px;display:flex;align-items:center;gap:5px}
 .chat-header .ia-status .ia-dot-online{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 2px rgba(74,222,128,.3)}
 .chat-header .ia-status .ia-dot-warn{width:7px;height:7px;border-radius:50%;background:#FFB020;box-shadow:0 0 0 2px rgba(255,176,32,.3)}
-.chat-header .ia-status .ia-dot-off{width:7px;height:7px;border-radius:50%;background:#EF476F;box-shadow:0 0 0 2px rgba(239,71,111,.3)}
+.chat-header .ia-status .ia-dot-off{width:7px;height:7px;border-radius:50%;background:#E63946;box-shadow:0 0 0 2px rgba(230,57,70,.3)}
 .chat-header-actions{display:flex;gap:6px;margin-left:auto}
 .chat-header-actions button{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.20);display:grid;place-items:center;transition:transform .15s ease;cursor:pointer;border:1px solid rgba(255,255,255,.15)}
 .chat-header-actions button:active{transform:scale(.9);background:rgba(255,255,255,.35)}
@@ -427,19 +427,19 @@ ul{margin:0;padding:0;list-style:none}
 .msg-row.user{flex-direction:row-reverse}
 .msg-avatar{width:32px;height:32px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;font-size:16px;font-weight:800}
 .msg-row.ia .msg-avatar{background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff;font-size:15px}
-.msg-row.user .msg-avatar{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff}
+.msg-row.user .msg-avatar{background:linear-gradient(135deg,#5EC0D0,#2A8A99);color:#fff}
 .msg-bubble{max-width:78%;padding:11px 14px;border-radius:18px;font-size:13.5px;line-height:1.55;font-weight:500;box-shadow:0 2px 10px rgba(27,36,52,.05);word-wrap:break-word}
-.msg-row.ia .msg-bubble{background:#fff;border:1px solid rgba(234,238,246,.9);border-bottom-left-radius:6px;color:#1B2434}
-.msg-row.user .msg-bubble{background:linear-gradient(135deg,#FF8A5B,#F0521B);color:#fff;border-bottom-right-radius:6px}
+.msg-row.ia .msg-bubble{background:#fff;border:1px solid rgba(228,238,242,.9);border-bottom-left-radius:6px;color:#1B2434}
+.msg-row.user .msg-bubble{background:linear-gradient(135deg,#5EC0D0,#2A8A99);color:#fff;border-bottom-right-radius:6px}
 .msg-bubble strong{font-weight:800}
 .msg-bubble a{color:#9B5DE5;text-decoration:underline;font-weight:600;word-break:break-word}
 .msg-time{font-size:9.5px;color:var(--muted);font-weight:700;margin-top:5px;text-align:right;opacity:.7}
 .msg-row.user .msg-time{color:rgba(255,255,255,.65)}
 .msg-tag{display:inline-block;font-size:9.5px;font-weight:800;text-transform:uppercase;padding:3px 7px;border-radius:6px;margin-bottom:6px}
 .msg-tag.info{background:#EAF0FF;color:#3157C9}
-.msg-tag.alerta{background:#FFE9EF;color:#C42B50}
+.msg-tag.alerta{background:#FFE5E8;color:#C42B50}
 .msg-tag.dica{background:#E4F8F5;color:#12897A}
-.msg-tag.emergencia{background:linear-gradient(135deg,#EF476F,#C42B50);color:#fff}
+.msg-tag.emergencia{background:linear-gradient(135deg,#E63946,#C42B50);color:#fff}
 .msg-tag.ia-real{background:linear-gradient(135deg,#9B5DE5,#7B3FE5);color:#fff}
 .typing{display:flex;gap:4px;align-items:center;padding:13px 16px}
 .typing span{width:7px;height:7px;border-radius:50%;background:#9B5DE5;opacity:.4;animation:typingAnim 1.4s infinite}
@@ -465,7 +465,7 @@ ul{margin:0;padding:0;list-style:none}
 .chat-welcome h2{margin:0 0 8px;font-size:19px;font-weight:800;background:linear-gradient(135deg,#9B5DE5,#7B3FE5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .chat-welcome p{margin:0 0 18px;font-size:13px;color:var(--muted);line-height:1.6;font-weight:600}
 .chat-welcome .cw-cat{margin-top:20px;display:flex;flex-direction:column;gap:8px;text-align:left}
-.chat-welcome .cw-cat-btn{display:flex;align-items:center;gap:11px;padding:12px 13px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(234,238,246,.9);cursor:pointer}
+.chat-welcome .cw-cat-btn{display:flex;align-items:center;gap:11px;padding:12px 13px;background:#fff;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(228,238,242,.9);cursor:pointer}
 .chat-welcome .cw-cat-ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:17px;flex-shrink:0}
 .chat-welcome .cw-cat-body{flex:1;text-align:left}
 .chat-welcome .cw-cat-titulo{font-size:13px;font-weight:800;color:#1B2434}
@@ -473,7 +473,7 @@ ul{margin:0;padding:0;list-style:none}
 .chat-welcome .cw-cat-arrow{width:16px;height:16px;fill:#C7CFDD}
 .chat-config-warn{margin:14px;padding:12px 14px;border-radius:14px;font-size:11.5px;line-height:1.55;font-weight:600;display:flex;gap:9px;align-items:flex-start;text-align:left}
 .chat-config-warn.ok{background:linear-gradient(140deg,#F6FDFB,#E4F8F5);border:1.5px solid #C7E8E2;color:#2C7A70}
-.chat-config-warn.err{background:linear-gradient(140deg,#FFF0F4,#FFE9EF);border:1.5px solid #FFD5E0;color:#C42B50}
+.chat-config-warn.err{background:linear-gradient(140deg,#FFF0F4,#FFE5E8);border:1.5px solid #FFD5DC;color:#C42B50}
 .chat-config-warn.warn{background:linear-gradient(140deg,#FFF6E2,#FFEFD0);border:1.5px solid #FFE4B5;color:#8A6420}
 .chat-config-warn .cw-ic{font-size:16px;flex-shrink:0;line-height:1.2}
 .chat-config-warn strong{font-weight:800}
@@ -493,12 +493,52 @@ ul{margin:0;padding:0;list-style:none}
 .sync-status-card .ss-info{font-size:11.5px;font-weight:700;margin-top:4px;line-height:1.4}
 .sync-status-card.on .ss-info{color:#2C7A70}
 .sync-status-card.off .ss-info{color:#8A6420}
-.auth-tabs{display:flex;gap:5px;background:#E9EDF5;border-radius:14px;padding:4px;margin-bottom:14px}
+.auth-tabs{display:flex;gap:5px;background:#E4EEF2;border-radius:14px;padding:4px;margin-bottom:14px}
 .auth-tabs button{flex:1;padding:9px 8px;border-radius:11px;font-size:12px;font-weight:800;color:#7B879C;cursor:pointer}
 .auth-tabs button.active{background:#fff;color:var(--primary-d);box-shadow:0 3px 10px rgba(27,36,52,.10)}
 .auth-msg{padding:11px 13px;border-radius:12px;font-size:12px;font-weight:700;margin-top:10px;line-height:1.5}
 .auth-msg.err{background:var(--danger-soft);color:#C42B50}
 .auth-msg.ok{background:var(--secondary-soft);color:#12897A}
+.carteira{background:linear-gradient(180deg,#FFFFFF 0%,#F0FAFC 100%);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(27,36,52,.10);border:2px solid #C8E8EE;margin-bottom:16px}
+.carteira-header{background:linear-gradient(135deg,#4FB3C4,#2A8A99);padding:18px;color:#fff;position:relative;overflow:hidden}
+.carteira-header .ch-titulo{font-size:9.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;opacity:.85;position:relative;z-index:2}
+.carteira-header h3{margin:4px 0 0;font-size:19px;font-weight:800;position:relative;z-index:2}
+.carteira-header .ch-brasil{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:16px;z-index:2}
+.carteira-pet{padding:16px 18px;display:flex;align-items:center;gap:13px;border-bottom:2px dashed #C8E8EE}
+.carteira-pet .cp-avatar{width:60px;height:60px;border-radius:18px;flex-shrink:0;display:grid;place-items:center;font-size:30px;background:linear-gradient(140deg,#DDF0F4,#C8E8EE);border:2px solid #fff;overflow:hidden}
+.carteira-pet .cp-avatar img{width:100%;height:100%;object-fit:cover}
+.carteira-pet .cp-info{flex:1;min-width:0}
+.carteira-pet .cp-nome{font-size:17px;font-weight:800;color:#1B2434}
+.carteira-pet .cp-sub{font-size:11px;font-weight:700;color:var(--muted);margin-top:3px}
+.carteira-pet .cp-linha{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.carteira-pet .cp-chip{font-size:9px;font-weight:800;padding:3px 7px;border-radius:6px;background:#F1F4F9;color:#66738A;text-transform:uppercase}
+.carteira-info{padding:14px 18px;display:grid;grid-template-columns:1fr 1fr;gap:10px;border-bottom:2px dashed #C8E8EE}
+.carteira-info .ci-item{display:flex;flex-direction:column;gap:3px}
+.carteira-info .ci-label{font-size:8.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.6px}
+.carteira-info .ci-valor{font-size:12.5px;font-weight:800;color:#1B2434}
+.carteira-secao{padding:14px 18px 4px}
+.carteira-secao .cs-titulo{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary-d);margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.carteira-secao .cs-count{font-size:9px;background:var(--primary-soft);color:var(--primary-d);padding:3px 7px;border-radius:6px}
+.carteira-vac{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid #F4F6FB}
+.carteira-vac .cv-num{width:26px;height:26px;border-radius:9px;flex-shrink:0;display:grid;place-items:center;font-size:10px;font-weight:800;background:#F1F4F9;color:#66738A;margin-top:1px}
+.carteira-vac.aplicada .cv-num{background:var(--secondary);color:#fff}
+.carteira-vac.pendente .cv-num{background:var(--accent);color:#fff}
+.carteira-vac.atrasada .cv-num{background:var(--danger);color:#fff}
+.carteira-vac .cv-body{flex:1;min-width:0}
+.carteira-vac .cv-nome{font-size:12.5px;font-weight:800;color:#1B2434}
+.carteira-vac .cv-data{font-size:10.5px;font-weight:700;color:var(--muted);margin-top:3px}
+.carteira-vac .cv-marca{font-size:9.5px;font-weight:800;background:var(--purple-soft);color:#6B31B8;padding:3px 7px;border-radius:6px;margin-top:5px;display:inline-block}
+.carteira-vac .cv-status{font-size:8.5px;font-weight:800;padding:3px 7px;border-radius:6px;text-transform:uppercase;flex-shrink:0}
+.carteira-vac.aplicada .cv-status{background:var(--secondary-soft);color:#12897A}
+.carteira-vac.pendente .cv-status{background:var(--accent-soft);color:#B47800}
+.carteira-vac.atrasada .cv-status{background:var(--danger-soft);color:#C42B50}
+.carteira-assinatura{padding:16px 18px;background:#FBFCFE;display:flex;flex-direction:column;gap:14px}
+.carteira-assinatura .ca-txt{font-size:8.5px;font-weight:800;color:var(--muted);text-transform:uppercase;margin-bottom:22px}
+.carteira-assinatura .ca-trace{border-bottom:1.5px dashed #C7CFDD;padding-bottom:4px;font-size:9px;color:#A9B3C4;text-align:center}
+.carteira-rodape{padding:11px 18px;background:linear-gradient(135deg,#F0F9FB,#E0F4F8);border-top:1px solid #C8E8EE;display:flex;align-items:center;justify-content:space-between;font-size:9px;font-weight:800;color:var(--primary-d);text-transform:uppercase}
+.carteira-rodape .cr-app{display:flex;align-items:center;gap:6px}
+.carteira-rodape .cr-logo{width:16px;height:16px;border-radius:5px;background:linear-gradient(135deg,#5EC0D0,#2A8A99);display:grid;place-items:center;font-size:9px}
+.carteira-alerta{background:linear-gradient(140deg,#F0F9FB,#E0F4F8);border:1.5px solid #C8E8EE;border-radius:14px;padding:11px 13px;font-size:11px;line-height:1.55;color:#2A8A99;font-weight:600;margin-bottom:14px;display:flex;gap:9px}
 @media(max-width:340px){
   .quick span{font-size:8.5px}
   .tab span{font-size:8px}
@@ -517,7 +557,7 @@ ul{margin:0;padding:0;list-style:none}
           <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 4 5 7c0 1.6 1 3 2.5 3.8C5.6 12 4 14 4 16.5 4 19.5 7.5 22 12 22s8-2.5 8-5.5c0-2.5-1.6-4.5-3.5-5.7C18 10 19 8.6 19 7c0-3-3-5-7-5z"/></svg>
         </div>
         <div>
-          <div class="hdr-title">PetVida <span class="hdr-version">v9.5.2</span></div>
+          <div class="hdr-title">PetVida <span class="hdr-version">v9.5.3</span></div>
           <div class="hdr-sub" id="hdrSub">Cuide bem do seu melhor amigo</div>
         </div>
       </div>
@@ -679,7 +719,7 @@ ul{margin:0;padding:0;list-style:none}
 /* ============================================================
    CONFIGURAÇÃO GLOBAL
 ============================================================ */
-const APP_VERSION = 'v9.5.2';
+const APP_VERSION = 'v9.5.3';
 const APP_VERSION_DATE = '2025-01-19';
 
 const FIREBASE_CONFIG = {
@@ -772,8 +812,6 @@ function loadChatHistory(){
     if(raw){ const d = JSON.parse(raw); if(Array.isArray(d)) state.chat = d; }
   }catch(e){}
 }
-
-/* FIREBASE AUTH */
 function loadFbAuth(){ try{ const r = localStorage.getItem(FB_AUTH_KEY); if(r) fbAuth = {...fbAuth, ...JSON.parse(r)}; }catch(e){} }
 function saveFbAuth(){ try{ if(fbAuth.uid) localStorage.setItem(FB_AUTH_KEY, JSON.stringify(fbAuth)); else localStorage.removeItem(FB_AUTH_KEY); }catch(e){} }
 function loadFbSync(){ try{ const r = localStorage.getItem(FB_SYNC_KEY); if(r) fbSync = {...fbSync, ...JSON.parse(r)}; }catch(e){} }
@@ -828,8 +866,6 @@ async function fbGarantirToken(){
   }
   return !!fbAuth.idToken;
 }
-
-/* FIRESTORE */
 function paraFirestore(valor){
   if(valor === null || valor === undefined) return {nullValue: null};
   if(typeof valor === 'string') return {stringValue: valor};
@@ -894,8 +930,6 @@ async function fsGet(colecao, docId){
   if(!res.ok) throw new Error('Erro ' + res.status);
   return firestoreParaObjeto(await res.json());
 }
-
-/* SYNC */
 function atualizarBadgeCloud(){
   const btn = $('#btnCloud');
   if(!btn) return;
@@ -1138,8 +1172,6 @@ function resolveConfirm(v){
   closeModal();
   if(window.__confirmResolve){ window.__confirmResolve(v); window.__confirmResolve = null; }
 }
-
-/* BACKUP LOCAL */
 function getBackups(){ try{ const r = localStorage.getItem(BACKUP_KEY); if(!r) return []; const a = JSON.parse(r); return Array.isArray(a) ? a : []; }catch(e){ return []; } }
 function setBackups(arr){ try{ localStorage.setItem(BACKUP_KEY, JSON.stringify(arr)); }catch(e){} }
 function fazerBackupAutomatico(motivo){
@@ -1278,8 +1310,6 @@ function excluirBackup(id){
   toast('Backup excluído');
   abrirModalBackup();
 }
-
-/* UTILITÁRIOS */
 const $  = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 function uid(){ return 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
@@ -1480,7 +1510,7 @@ const MARCAS_POR_RACA = {
 };
 const INTERVALOS_MARCA = {
   cao: {
-    v10: {'Vanguard (Zoetis)':3,'Nobivac (MSD)':3,'Defensor (Zoetis)':3,'Recombitek (Boehringer)':4,'Canigen (Virbac)':3,'Vanguard Plus V10 (Zoetis)':3,'Vanguard Plus 5 (Zoetis)':3,'Vanguard HTLP (Zoetis)':3,default:3},
+    v10: {'Vanguard (Zoetis)':3,'Nobivac (MSD)':3,'Defensor (Zoetis)':3,'Recombitek (Boehringer)':4,'Canigen (Virbac)':3,default:3},
     rabica: {'Raivac (Biovet)':52,'Defensor R (Zoetis)':52,'Rabisin (Boehringer)':52,'Rabigen (Virbac)':52,default:52},
     gripe: {'Nobivac KC (MSD)':52,'Bronchi-Shield (Elanco)':52,default:52},
     giardia: {'GiardiaVax (Zoetis)':3,default:3},
@@ -1595,39 +1625,39 @@ function avatarRacaSVG(idRaca, especie){
 const RECOMENDACOES_IDADE = {
   cao: {
     filhote:{titulo:'Filhote',emoji:'🐶',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração para filhotes, 3-4 refeições','Proteína mín. 28%','Cálcio/fósforo balanceados']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Protocolo vacinal completo','Vermifugação a cada 15 dias','Castração 6+ meses']},
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Ração para filhotes, 3-4 refeições','Proteína mín. 28%','Cálcio/fósforo balanceados']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['Protocolo vacinal completo','Vermifugação a cada 15 dias','Castração 6+ meses']},
       {ic:'🎾',cor:'#25C2B0',bg:'#E4F8F5',titulo:'Exercícios',itens:['Passeios 15-20 min','Socialização']}
     ]},
     junior:{titulo:'Júnior',emoji:'🐕',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração adulta','2 refeições']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Reforços anuais','Vermifugação 3 meses']}
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Ração adulta','2 refeições']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['Reforços anuais','Vermifugação 3 meses']}
     ]},
     adulto:{titulo:'Adulto',emoji:'🦮',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração premium','2 refeições fixas']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Vacinas anuais','Check-up anual']}
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Ração premium','2 refeições fixas']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['Vacinas anuais','Check-up anual']}
     ]},
     senior:{titulo:'Sênior',emoji:'🐕‍🦺',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração sênior','Condroprotetores']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Check-up 2x ao ano','Exames 6 meses']}
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Ração sênior','Condroprotetores']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['Check-up 2x ao ano','Exames 6 meses']}
     ]}
   },
   gato: {
     filhote:{titulo:'Filhote',emoji:'🐱',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração kitten','Proteína 34%','Taurina']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['V3/V4/V5 6-8 sem','Teste FeLV/FIV']}
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Ração kitten','Proteína 34%','Taurina']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['V3/V4/V5 6-8 sem','Teste FeLV/FIV']}
     ]},
     junior:{titulo:'Júnior',emoji:'🐈',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Proteína 30%+','2-3 refeições']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Reforços anuais','FeLV/FIV']}
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Proteína 30%+','2-3 refeições']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['Reforços anuais','FeLV/FIV']}
     ]},
     adulto:{titulo:'Adulto',emoji:'🐈',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração com taurina','pH urinário']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Vacinas anuais','Check-up anual']}
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Ração com taurina','pH urinário']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['Vacinas anuais','Check-up anual']}
     ]},
     senior:{titulo:'Sênior',emoji:'🐈',categorias:[
-      {ic:'🍖',cor:'#FFB020',bg:'#FFF6E2',titulo:'Alimentação',itens:['Ração sênior baixo fósforo','Ômega 3']},
-      {ic:'💉',cor:'#FF7A45',bg:'#FFF0E8',titulo:'Saúde',itens:['Check-up 2x ao ano','Avaliação renal']}
+      {ic:'🍖',cor:'#E89B4E',bg:'#FFF2E0',titulo:'Alimentação',itens:['Ração sênior baixo fósforo','Ômega 3']},
+      {ic:'💉',cor:'#4FB3C4',bg:'#E0F4F8',titulo:'Saúde',itens:['Check-up 2x ao ano','Avaliação renal']}
     ]}
   }
 };
@@ -1655,7 +1685,6 @@ const PRIMEIROS_CUIDADOS = {
   ]
 };
 
-/* LISTA COMPLETA DE RAÇAS — 35 TOTAL (25 CÃES + 10 GATOS) */
 const RACAS = [
 {id:'srd_c',nome:'SRD (Vira-lata)',esp:'cao',porte:'Variável',emoji:'🐕',peso:'5–40 kg',altura:'25–70 cm',vida:'12–16 anos',origem:'Brasil',temp:['Resistente'],resumo:'Cão mais comum do Brasil.',cuidados:['Escovação semanal'],saude:['Menor predisposição'],racao:'Ração conforme porte.'},
 {id:'mucucho',nome:'Mucucho',esp:'cao',porte:'Grande',emoji:'🐕',peso:'30–50 kg',altura:'56–70 cm',vida:'10–14 anos',origem:'Venezuela',temp:['Rústico'],resumo:'Trabalho.',cuidados:['Exercício intenso'],saude:['Displasia'],racao:'Ração large breed.'},
@@ -1694,7 +1723,6 @@ const RACAS = [
 {id:'noruegues',nome:'Norueguês',esp:'gato',porte:'Grande',emoji:'🐈',peso:'5–9 kg',altura:'25–30 cm',vida:'12–16 anos',origem:'Noruega',temp:['Tranquilo'],resumo:'Robusto.',cuidados:['Escovação'],saude:['Cardiomiopatia'],racao:'Ração gatos grandes.'}
 ];
 
-/* ✅ DOENÇAS COMPLETAS — 11 CÃES + 10 GATOS = 21 TOTAL */
 const DOENCAS = {
   cao: [
     {id:'cinomose',nome:'Cinomose',risco:'muito_alto',mortalidade:'90%',tipo:'Viral',contagio:'Secreções',emoji:'🦠',descricao:'Viral grave.',sintomas:['Febre','Secreção','Vômitos','Convulsões'],prevencao:['Vacinação (V8/V10)'],tratamento:'Suporte.',fonte:'Zoetis'},
@@ -1723,9 +1751,9 @@ const DOENCAS = {
   ]
 };
 const RISCO_INFO = {
-  muito_alto: {label:'Muito alto', cor:'#EF476F', bg:'#FFE9EF', icone:'🚨', ordem:1},
-  alto: {label:'Alto', cor:'#FF7A45', bg:'#FFF0E8', icone:'⚠️', ordem:2},
-  moderado: {label:'Moderado', cor:'#FFB020', bg:'#FFF6E2', icone:'📋', ordem:3}
+  muito_alto: {label:'Muito alto', cor:'#E63946', bg:'#FFE5E8', icone:'🚨', ordem:1},
+  alto: {label:'Alto', cor:'#E89B4E', bg:'#FFF2E0', icone:'⚠️', ordem:2},
+  moderado: {label:'Moderado', cor:'#4FB3C4', bg:'#E0F4F8', icone:'📋', ordem:3}
 };
 
 const PRIMEIROS_SOCORROS = [
@@ -1758,8 +1786,8 @@ const ALIMENTOS = [
   {cat:'toxico',emoji:'🍄',nome:'Cogumelos',nota:'Tóxicos.'}
 ];
 const SAZONAL = [
-  {estacao:'☀️ Verão',cor:'#FFB020',periodo:'Dez-Mar',cuidados:['Água fresca','Evite 10h-16h'],atencao:['Braquicefálicos sofrem']},
-  {estacao:'🍂 Outono',cor:'#E89B5C',periodo:'Abr-Jun',cuidados:['Troca de pelo','Atenção alergias'],atencao:['Tosse frequente']},
+  {estacao:'☀️ Verão',cor:'#E89B4E',periodo:'Dez-Mar',cuidados:['Água fresca','Evite 10h-16h'],atencao:['Braquicefálicos sofrem']},
+  {estacao:'🍂 Outono',cor:'#E89B4E',periodo:'Abr-Jun',cuidados:['Troca de pelo','Atenção alergias'],atencao:['Tosse frequente']},
   {estacao:'❄️ Inverno',cor:'#4A7DFF',periodo:'Jul-Set',cuidados:['Agasalhe','Banhos menos'],atencao:['Dores articulares']},
   {estacao:'🌸 Primavera',cor:'#25C2B0',periodo:'Out-Dez',cuidados:['Pulgas/carrapatos'],atencao:['Alergias']}
 ];
@@ -2043,8 +2071,8 @@ function renderChat(){
         <p>Assistente veterinário inteligente.</p>
         <div class="cw-cat">
           <button class="cw-cat-btn" onclick="enviarSugestao('Quais vacinas meu pet precisa?')"><div class="cw-cat-ic" style="background:#EAF0FF;color:#3157C9">💉</div><div class="cw-cat-body"><div class="cw-cat-titulo">Vacinas</div><div class="cw-cat-desc">Protocolos</div></div><svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></button>
-          <button class="cw-cat-btn" onclick="enviarSugestao('Meu pet está com sintomas estranhos')"><div class="cw-cat-ic" style="background:#FFE9EF;color:#C42B50">🚑</div><div class="cw-cat-body"><div class="cw-cat-titulo">Sintomas</div><div class="cw-cat-desc">Emergências</div></div><svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></button>
-          <button class="cw-cat-btn" onclick="enviarSugestao('Como alimentar meu pet corretamente?')"><div class="cw-cat-ic" style="background:#FFF6E2;color:#B47800">🍖</div><div class="cw-cat-body"><div class="cw-cat-titulo">Alimentação</div><div class="cw-cat-desc">Ração e tóxicos</div></div><svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></button>
+          <button class="cw-cat-btn" onclick="enviarSugestao('Meu pet está com sintomas estranhos')"><div class="cw-cat-ic" style="background:#FFE5E8;color:#C42B50">🚑</div><div class="cw-cat-body"><div class="cw-cat-titulo">Sintomas</div><div class="cw-cat-desc">Emergências</div></div><svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></button>
+          <button class="cw-cat-btn" onclick="enviarSugestao('Como alimentar meu pet corretamente?')"><div class="cw-cat-ic" style="background:#FFF2E0;color:#B47800">🍖</div><div class="cw-cat-body"><div class="cw-cat-titulo">Alimentação</div><div class="cw-cat-desc">Ração e tóxicos</div></div><svg class="cw-cat-arrow" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></button>
         </div>
         ${aviso}
       </div>`;
@@ -2215,7 +2243,6 @@ function salvarConfigIA(){
   saveIAConfig(); closeModal(); toast('Salvo! Toque em 🧪 para testar.'); renderChat();
 }
 
-/* NAVEGAÇÃO */
 function goTo(i){
   if(i < 0 || i > 7) return;
   state.currentPage = i;
@@ -2297,8 +2324,6 @@ function fabAction(){
   if(state.currentPage === 2){ toast('Toque em uma raça 🐾'); return; }
   abrirModalPet();
 }
-
-/* STATUS VACINAL COM CASCADE POR MARCA */
 function normalizarVacina(v){
   if(!v) return null;
   if(typeof v === 'string') return {data: v, marca:'', lote:'', vet:'', clinica:'', obs:''};
@@ -2363,8 +2388,6 @@ function resumoVacinas(pet){
   });
   return {total:lista.length, ok, atrasada, proxima, futura};
 }
-
-/* PÁGINA 0 */
 function renderHome(){
   const el = $('#homeContent');
   const pets = state.pets;
@@ -2379,9 +2402,9 @@ function renderHome(){
       <div class="sec-head"><div class="sec-title"><span class="dot"></span>Recursos</div></div>
       <div class="quick-grid">
         ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
-        ${quickItem('💉','#FF7A45','Vacinas','goTo(3)')}
+        ${quickItem('💉','#4FB3C4','Vacinas','goTo(3)')}
         ${quickItem('☁️','#4A7DFF','Nuvem','abrirModalSync()')}
-        ${quickItem('🩺','#EF476F','Doenças','goTo(6)')}
+        ${quickItem('🩺','#E63946','Doenças','goTo(6)')}
       </div>
       ${blocoDica()}`;
     atualizarHeader();
@@ -2412,7 +2435,7 @@ function renderHome(){
   html += `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Ações rápidas</div></div>
     <div class="quick-grid">
       ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
-      ${quickItem('📸','#FF7A45','Álbum','abrirAlbumSelecionado()')}
+      ${quickItem('📸','#4FB3C4','Álbum','abrirAlbumSelecionado()')}
       ${quickItem('☁️','#4A7DFF','Nuvem','abrirModalSync()')}
       ${quickItem('💾','#25C2B0','Backup','abrirModalBackup()')}
     </div>`;
@@ -2475,8 +2498,6 @@ function petCardHTML(p, i){
     <div class="pet-chevron"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6z"/></svg></div>
   </div>`;
 }
-
-/* PÁGINA 1 */
 function renderPets(){
   const el = $('#petsList');
   if(state.pets.length === 0){
@@ -2485,8 +2506,6 @@ function renderPets(){
   }
   el.innerHTML = state.pets.map((p,i)=> petCardHTML(p,i)).join('') + `<button class="btn btn-ghost" style="margin-top:8px" onclick="abrirModalPet()"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>Adicionar outro pet</button>`;
 }
-
-/* PÁGINA 2 */
 function setEspecie(esp){ state.especieRaca = esp; state.porteFiltro = 'todos'; $$('#segEspecie button').forEach(b=> b.classList.toggle('active', b.dataset.esp === esp)); renderRacas(); }
 function buscarRaca(v){ state.buscaRaca = v.toLowerCase().trim(); renderRacasGrid(); }
 function setPorte(p){ state.porteFiltro = p; renderRacas(); }
@@ -2509,8 +2528,6 @@ function renderRacasGrid(){
       <div class="breed-body"><div class="breed-name">${esc(r.nome)}</div><div class="breed-sub">${esc(r.vida)} · ${esc(r.peso)}</div></div>
     </button>`).join('');
 }
-
-/* PÁGINA 3 - VACINAS */
 function renderVacinas(){
   const picker = $('#vacinasPetPicker');
   const cont = $('#vacinasContent');
@@ -2554,13 +2571,13 @@ function renderVacinas(){
       }
     } else if(st.status === 'atrasada'){
       dateTxt = '⚠️ Atrasada há ' + st.dias + 'd';
-      if(dueVeioDeCascata(pet, v)) cascadeBadge = '<span style="font-size:9px;font-weight:800;background:#FFF6E2;color:#B47800;padding:2px 6px;border-radius:6px;margin-left:4px">🔗 baseada na anterior</span>';
+      if(dueVeioDeCascata(pet, v)) cascadeBadge = '<span style="font-size:9px;font-weight:800;background:#FFF2E0;color:#B47800;padding:2px 6px;border-radius:6px;margin-left:4px">🔗 baseada na anterior</span>';
     } else if(st.status === 'proxima'){
       dateTxt = '🔔 Em ' + st.dias + 'd';
-      if(dueVeioDeCascata(pet, v)) cascadeBadge = '<span style="font-size:9px;font-weight:800;background:#FFF6E2;color:#B47800;padding:2px 6px;border-radius:6px;margin-left:4px">🔗 baseada na anterior</span>';
+      if(dueVeioDeCascata(pet, v)) cascadeBadge = '<span style="font-size:9px;font-weight:800;background:#FFF2E0;color:#B47800;padding:2px 6px;border-radius:6px;margin-left:4px">🔗 baseada na anterior</span>';
     } else {
       dateTxt = '📅 ' + fmtData(st.due.toISOString().slice(0,10));
-      if(dueVeioDeCascata(pet, v)) cascadeBadge = '<span style="font-size:9px;font-weight:800;background:#FFF6E2;color:#B47800;padding:2px 6px;border-radius:6px;margin-left:4px">🔗 baseada na anterior</span>';
+      if(dueVeioDeCascata(pet, v)) cascadeBadge = '<span style="font-size:9px;font-weight:800;background:#FFF2E0;color:#B47800;padding:2px 6px;border-radius:6px;margin-left:4px">🔗 baseada na anterior</span>';
     }
     return `<div class="tl-item ${st.status}">
       <div class="tl-node"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div>
@@ -2744,8 +2761,6 @@ function abrirModalIdadeReal(petId){
   });
   openModal(headPadrao('Idade Real', 'Idade de ' + pet.nome), html, `<button class="btn btn-primary" onclick="closeModal()">Entendi</button>`);
 }
-
-/* PÁGINA 4 - SAÚDE */
 const SAUDE_SUBS = [
   {id:'visao', label:'📋 Visão'},{id:'album', label:'📸 Álbum'},{id:'historico', label:'🏥 Histórico'},{id:'prevencao', label:'💊 Prevenção'},{id:'diario', label:'📔 Diário'},{id:'tutores', label:'👥 Tutores'},{id:'emergencia', label:'🚑 Emergência'},{id:'guias', label:'📚 Guias'}
 ];
@@ -2800,9 +2815,9 @@ function renderSaudeVisao(pet){
   </div>`;
   html += `<div class="quick-grid" style="margin-bottom:16px">
     ${quickItem('🤖','#9B5DE5','Dr. Pet IA','goTo(7)')}
-    ${quickItem('📸','#FF7A45','Álbum',`setSaudeSub('album')`)}
+    ${quickItem('📸','#4FB3C4','Álbum',`setSaudeSub('album')`)}
     ${quickItem('🎂','#25C2B0','Idade',`abrirModalIdadeReal('${pet.id}')`)}
-    ${quickItem('⚖️','#FFB020','Escore',`abrirModalEscore('${pet.id}')`)}
+    ${quickItem('⚖️','#E89B4E','Escore',`abrirModalEscore('${pet.id}')`)}
   </div>`;
   html += `<div class="sec-head"><div class="sec-title"><span class="dot"></span>Peso</div><button class="sec-link" onclick="abrirModalPeso()">+ Registrar</button></div>`;
   const pesos = (pet.pesos || []).slice().sort((a,b)=> new Date(a.data) - new Date(b.data));
@@ -2955,8 +2970,8 @@ function renderSaudeHistorico(pet){
   html += `<div class="quick-grid" style="margin-bottom:16px">
     ${quickItem('🩺','#4A7DFF','Consulta','abrirModalConsulta()')}
     ${quickItem('🔬','#9B5DE5','Exame','abrirModalExame()')}
-    ${quickItem('💊','#FFB020','Remédio','abrirModalMedicamento()')}
-    ${quickItem('🏥','#EF476F','Cirurgia','abrirModalCirurgia()')}
+    ${quickItem('💊','#E89B4E','Remédio','abrirModalMedicamento()')}
+    ${quickItem('🏥','#E63946','Cirurgia','abrirModalCirurgia()')}
   </div>`;
   html += secHist('Consultas', h.consultas, 'tipo-consulta', '🩺', c=>({title:c.motivo,sub:fmtData(c.data),del:`delHistorico('${pet.id}','consultas','${c.id}')`}));
   html += secHist('Exames', h.exames, 'tipo-exame', '🔬', e=>({title:e.nome,sub:fmtData(e.data),del:`delHistorico('${pet.id}','exames','${e.id}')`}));
@@ -3076,8 +3091,6 @@ function delTutor(petId, id){
   pet.tutores = (pet.tutores||[]).filter(x=>x.id !== id);
   saveDB(); renderSaude(); toast('Removido');
 }
-
-/* PÁGINA 5 */
 function renderRacoes(){
   const el = $('#racoesContent');
   if(state.pets.length === 0){
@@ -3102,8 +3115,6 @@ function renderRacoes(){
   el.innerHTML = html;
 }
 function selecionarPetRacao(id){ state.petSelecionado = id; renderRacoes(); }
-
-/* PÁGINA 6 */
 function setDoencaEspecie(esp){
   state.doencaEspecie = esp;
   state.doencaRiscoFiltro = 'todos';
@@ -3159,8 +3170,6 @@ function abrirDetalheDoenca(esp, id){
     `<button class="btn btn-soft" onclick="closeModal()">Fechar</button>
      <button class="btn btn-purple" onclick="closeModal();goTo(7)">🤖 Perguntar</button>`);
 }
-
-/* MODAL GENÉRICO */
 function openModal(headHTML, bodyHTML, footHTML){
   $('#modalHead').innerHTML = headHTML;
   $('#modalBody').innerHTML = bodyHTML;
@@ -3179,8 +3188,6 @@ function headPadrao(titulo, sub){
   return `<div style="flex:1"><h3>${esc(titulo)}</h3>${sub?`<p>${esc(sub)}</p>`:''}</div>
     <button class="modal-close" onclick="closeModal()" type="button"><svg viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg></button>`;
 }
-
-/* MODAIS PET */
 let formPet = { id:null, nome:'', especie:'cao', raca:'', nascimento:'', sexo:'macho', peso:'', emoji:'🐕', foto:null };
 function abrirModalPet(petId){
   const editando = !!petId;
@@ -3278,7 +3285,7 @@ function abrirDetalhePet(id){
     </div>
     <div class="quick-grid" style="margin-bottom:16px">
       ${quickItem('🤖','#9B5DE5','Dr. Pet IA',`closeModal();goTo(7)`)}
-      ${quickItem('📸','#FF7A45','Álbum',`closeModal();abrirAlbumSelecionado()`)}
+      ${quickItem('📸','#4FB3C4','Álbum',`closeModal();abrirAlbumSelecionado()`)}
       ${quickItem('💳','#25C2B0','Carteira',`closeModal();abrirCarteiraVacina('${p.id}')`)}
       ${quickItem('🎂','#4A7DFF','Idade',`closeModal();abrirModalIdadeReal('${p.id}')`)}
     </div>
@@ -3518,8 +3525,6 @@ function compartilharID(petId){
   else if(navigator.clipboard) navigator.clipboard.writeText(texto).then(()=> toast('Copiado! 📋')).catch(()=>{});
   else toast('Indisponível');
 }
-
-/* ESCORE CORPORAL */
 function abrirModalEscore(petId){
   const id = petId || state.petSelecionado;
   const pet = state.pets.find(p=>p.id === id);
@@ -3553,27 +3558,24 @@ function salvarEscore(){
   pet.escore = escoreSelecionado;
   saveDB(); closeModal(); toast('Escore salvo! ⚖️'); renderSaude();
 }
-
 function abrirModalAjuda(){
   openModal(headPadrao('Como usar o PetVida', 'Guia rápido'),
-    `<div class="blk" style="background:linear-gradient(140deg,#EAF0FF,#DCE6FF);border-color:#C4D5FF">
-      <h4><span class="b-ic" style="background:rgba(74,125,255,.18);color:#3157C9">💉</span>Intervalos por marca</h4>
+    `<div class="blk" style="background:linear-gradient(140deg,#E0F4F8,#C8E8EE);border-color:#B8E3EB">
+      <h4><span class="b-ic" style="background:rgba(79,179,196,.20);color:#2A8A99">💉</span>Intervalos por marca</h4>
       <p>Cada marca tem seu intervalo entre doses. Ao aplicar, o app recalcula automaticamente a próxima dose usando o intervalo da marca escolhida (ex: Vanguard = 3 sem, Recombitek = 4 sem).</p>
     </div>
     <div class="blk" style="background:linear-gradient(140deg,#F3EAFE,#E9DDFB);border-color:#D9C4F5">
       <h4><span class="b-ic" style="background:rgba(155,93,229,.20);color:#6B31B8">☁️</span>Nuvem Firebase</h4>
       <p>Toque no ícone <strong>☁️</strong> no topo e ative a sincronização. Escolha <strong>Anônimo</strong> (1 aparelho) ou <strong>E-mail/senha</strong> (vários).</p>
     </div>
-    <div class="blk" style="background:linear-gradient(140deg,#FFF0E8,#FFE3D4);border-color:#FFD3BC">
-      <h4><span class="b-ic" style="background:rgba(255,122,69,.20);color:#F05A1E">📸</span>Álbum</h4>
-      <p>Acesse <strong>Saúde → 📸 Álbum</strong> e registre a evolução.</p>
+    <div class="blk" style="background:linear-gradient(140deg,#FFF2E0,#FFE0B8);border-color:#FFD9A8">
+      <h4><span class="b-ic" style="background:rgba(232,155,78,.20);color:#B47800">🎨</span>Novo tema</h4>
+      <p>O app agora usa <strong>turquesa</strong> inspirado no ícone, com laranja (cachorro) e vermelho (coração) como acentos.</p>
     </div>
     <div class="blk warn"><h4><span class="b-ic">⚕️</span>Aviso</h4><p>Não substitui consulta veterinária. Consulte sempre a bula do fabricante.</p></div>
     <div style="text-align:center;font-size:11px;color:var(--muted);font-weight:700;padding:10px 0">PetVida <strong style="color:var(--primary-d)">${APP_VERSION}</strong> · ${APP_VERSION_DATE}</div>`,
     `<button class="btn btn-primary" onclick="closeModal()">Entendi</button>`);
 }
-
-/* INICIALIZAÇÃO */
 function init(){
   loadDB();
   loadIAConfig();
@@ -3589,6 +3591,7 @@ function init(){
   atualizarBadgeBackup();
   atualizarBadgeCloud();
   console.log(`🐾 PetVida ${APP_VERSION} iniciado`);
+  console.log(`🎨 Tema turquesa aplicado`);
   console.log(`💉 Intervalos por marca: ATIVOS`);
   console.log(`⚖️ Escore corporal: ATIVO`);
   console.log(`📚 ${RACAS.length} raças (${RACAS.filter(r=>r.esp==='cao').length} cães, ${RACAS.filter(r=>r.esp==='gato').length} gatos)`);
@@ -3598,7 +3601,6 @@ function init(){
   }
 }
 init();
-
 let lastTouch = 0;
 document.addEventListener('touchend', e=>{
   const now = Date.now();
@@ -3606,7 +3608,6 @@ document.addEventListener('touchend', e=>{
   lastTouch = now;
 }, {passive:false});
 window.addEventListener('beforeunload', saveDB);
-
 setInterval(()=>{
   if(state.pets.length > 0) fazerBackupAutomatico('Automático');
 }, 30 * 60 * 1000);
